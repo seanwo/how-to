@@ -29,7 +29,7 @@ sudo echo "mediabox" > /etc/hostname
 ```console
 sudo vi /etc/hosts
 ```
-and update to mediabox
+and update the name to mediabox:
 ```
 127.0.0.1	localhost
 127.0.1.1	mediabox
@@ -131,50 +131,61 @@ and uncomment out the the repo which was clobbered during the install:
 deb https://downloads.plex.tv/repo/deb/ public main
 ```
 
-***************************
-*** Install qBittorrent ***
-***************************
-#source: https://www.linuxbabe.com/ubuntu/install-qbittorrent-ubuntu-18-04-desktop-server
+# Install qBittorrent
 
+source: https://www.linuxbabe.com/ubuntu/install-qbittorrent-ubuntu-18-04-desktop-server
+
+```console
 sudo sh -c 'echo "deb http://ppa.launchpad.net/qbittorrent-team/qbittorrent-stable/ubuntu bionic main" >> /etc/apt/sources.list.d/qbittorrent-team-ubuntu-qbittorrent-stable-bionic.list'
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D35164147CA69FC4
 sudo apt update
 sudo apt install qbittorrent
+```
 
-#set qbittorrent to autostart with system
+Set qbittorrent to autostart with system:
+```console
 gnome-session-properties
-#Name: qBittorrent
-#Command: /usr/bin/qbittorrent
+```
 
-#configure the client with PIA proxy settings.
-#tell the system to use the proxy only for torrents; there are problems using it with RSS feeds
-#after configuring the PIA proxy, check your torrent ip using https://torguard.net/checkmytorrentipaddress.php
+Name: qBittorrent
+Command: /usr/bin/qbittorrent
 
+Configure the client with your proxy settings such as one provided by https://www.privateinternetaccess.com.
+
+Tell the system to use the proxy only for torrents; there are problems using it with RSS feeds.
+
+After configuring the you proxy, check your torrent ip using https://torguard.net/checkmytorrentipaddress.php and make sure it is showing the ip address of the proxy torrent; not the one returned by https://www.whatsmyip.org.
+
+```console
 cd ~/Downloads
 wget http://upd.emule-security.org/ipfilter.zip
 unzip ipfilter.zip
 mv guarding.p2p ../guarding.dat
-#add guarding.dat to ip filter list under connections
+```
+Add /home/mediauser/guarding.dat to the ip filter list in qbittorent under connections.
 
-***************************
-*** Install SFTP Server ***
-***************************
-#source: https://websiteforstudents.com/setup-retrictive-sftp-with-chroot-on-ubuntu-16-04-17-10-and-18-04/
+# Install SFTP Server
 
+source: https://websiteforstudents.com/setup-retrictive-sftp-with-chroot-on-ubuntu-16-04-17-10-and-18-04/
+
+```console
 sudo apt update
 sudo apt install openssh-server
 sudo systemctl stop ssh.service
 sudo systemctl enable ssh.service
 sudo systemctl start ssh.service
+```
 
-#edit sudo vi /etc/ssh/sshd_config
-#remove or comment out the following line:
+```console
+sudo vi /etc/ssh/sshd_config
+```
+Remove or comment out the following line:
+```
 Subsystem      sftp    /usr/lib/openssh/sftp-server
-
-#add the following lines:
-
+```
+and add the following lines:
+```
 Subsystem sftp internal-sftp
-
 AllowUsers sftpuser
 Match Group sftp_users
 ForceCommand internal-sftp
@@ -184,13 +195,18 @@ PermitTunnel no
 AllowAgentForwarding no
 AllowTcpForwarding no
 X11Forwarding no
-
+```
+```console
 sudo systemctl restart ssh.service
 sudo groupadd sftp_users
 sudo adduser sftpuser
-#set a strong password you can use connecting externally.
+```
+Set a strong password you can use to connect to sftp externally:
+```console
 sudo usermod -aG sftp_users sftpuser
-
+```
+Setup the restricted root for SFTP:
+```console
 sudo mkdir -p /var/sftp/uploads
 sudo mkdir -p /var/sftp/downloads
 sudo chown root:root /var/sftp
@@ -199,13 +215,13 @@ sudo chown root:sftp_users /var/sftp/uploads
 sudo chown root:sftp_users /var/sftp/downloads
 sudo chmod 775 /var/sftp/uploads
 sudo chmod 755 /var/sftp/downloads
+```
 
-****************************
-*** Install Samba Server ***
-****************************
-#source: https://tutorials.ubuntu.com/tutorial/install-and-configure-samba#0
-#source: https://websiteforstudents.com/create-private-samba-share-ubuntu-17-04-17-10/
+# Install Samba Server
 
+source: https://tutorials.ubuntu.com/tutorial/install-and-configure-samba#0  
+source: https://websiteforstudents.com/create-private-samba-share-ubuntu-17-04-17-10/
+```console
 sudo apt update
 sudo apt install samba
 sudo groupadd samba_users
@@ -215,9 +231,12 @@ sudo chown root:samba_users /var/samba/media
 sudo chmod 755 /var/samba
 sudo chmod 775 /var/samba/media
 sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.bak
-
-#create sudo vi /etc/samba/smb.conf:
-
+```
+Create a new Samba configuration file:
+```console
+sudo vi /etc/samba/smb.conf:
+```
+```
 [global]
 workgroup = WORKGROUP
 server string = Samba Server %v
@@ -237,46 +256,54 @@ bind interfaces only = yes
    create mode = 0777
    directory mode = 0777
    valid users = @samba_users
-
+```
+Put mediauser in the samba_users group:
+```console
 sudo usermod -aG samba_users mediauser
+```
+Set a password you feel comfortable using on your windows network for this user (Do *not* use the same password you use for system login for security reasons):
+```console
 sudo smbpasswd -a mediauser
-#set a password you feel comfortable using on your windows network for this user; does not share password with system password
+```
+```console
 sudo systemctl restart smbd
+```
 
-*******************
-*** Install VLC ***
-*******************
+# Install VLC
 
+```console
 sudo apt update
 sudo apt install vlc
+```
 
-***********************
-*** Install HD-IDLE ***
-***********************
-#source: http://hd-idle.sourceforge.net/
-#source: https://forum.openmediavault.org/index.php/Thread/17101-Guide-How-to-setup-hd-idle-a-HDD-spin-down-SW-together-with-the-OMV-plugin-Autos/
-#source: https://medium.com/@tamashudak/spin-down-hdd-with-raspberry-pi-using-hd-idle-7709e6c921f8
+# Install HD-IDLE
 
+source: http://hd-idle.sourceforge.net/  
+source: https://forum.openmediavault.org/index.php/Thread/17101-Guide-How-to-setup-hd-idle-a-HDD-spin-down-SW-together-with-the-OMV-plugin-Autos/  
+source: https://medium.com/@tamashudak/spin-down-hdd-with-raspberry-pi-using-hd-idle-7709e6c921f8
+```console
 cd ~/Downloads
 mkdir hd-idle_download
 cd hd-idle_download
 wget sourceforge.net/projects/hd-idle/files/hd-idle-1.05.tgz
-
 tar -xvf hd-idle-1.05.tgz
 cd hd-idle
 make
 dpkg-buildpackage -rfakeroot
 cd ..
 sudo dpkg -i hd-idle_1.05_amd64.deb
-
-#edit sudo vi etc/default/hd-idle
-
+```
+Set the spin down time for all drives:
+```console
+sudo vi etc/default/hd-idle
+```
+```
 START_HD_IDLE=true
 HD_IDLE_OPTS="-i 1800"
-#1800 seconds of idle before spinning down all drives
-
+```
+```console
 sudo /etc/init.d/hd-idle start
-
+```
 ***************************
 *** Install SMTP Client ***
 ***************************
