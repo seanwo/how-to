@@ -157,7 +157,7 @@ Tell the system to use the proxy only for torrents; there are problems using it 
 
 After configuring the you proxy, check your torrent ip using https://torguard.net/checkmytorrentipaddress.php and make sure it is showing the ip address of the proxy torrent; not the one returned by https://www.whatsmyip.org.
 
-Apply and IP filter list:
+Apply an IP filter list:
 ```console
 cd ~/Downloads
 wget http://upd.emule-security.org/ipfilter.zip
@@ -483,7 +483,7 @@ sudo crontab -e
 
 source: https://easyengine.io/tutorials/backups/duplicity-amazon-s3
 
-_This assumes you have and AWS account and know how to use it._
+_This assumes you have an AWS account and know how to use it._
 
 AWS S3: Create a new non public bucket.  
 AWS IAM: Create duplicity-backup programmatic user and store off the access and secret keys.  
