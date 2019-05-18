@@ -4,7 +4,7 @@
 
 source: https://www.ubuntu.com/download/desktop
 
-_The default user in these examples is called mediauser and he machine in these examples is called mediabox._
+_The default user in these examples is called **mediauser** and the machine in these examples is called **mediabox**._
 
 Install the latest Ubuntu LTS using the "Minimal install option".
 
@@ -49,7 +49,7 @@ gsettings set org.gnome.desktop.session idle-delay 900
 gsettings set org.gnome.desktop.screensaver lock-enabled false
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 ```
-Update your dhcp reservation hostname if you have one in your router.
+Update your DHCP reservation hostname if you have one in your router.
 
 ## Install Chrome (Browser)
 
@@ -120,7 +120,7 @@ systemctl enable plexmediaserver
 systemctl start plexmediaserver
 ```
 
-Goto http://localhost:32400/web/
+Goto http://localhost:32400/web/ and confirm you have a running Plex server.  Sign into your Plex account.
 
 ```console
 sudo vi /etc/apt/sources.list.d/plexmediaserver.list
@@ -148,7 +148,7 @@ Set qbittorrent to autostart with system:
 gnome-session-properties
 ```
 
-Name: qBittorrent
+Name: qBittorrent  
 Command: /usr/bin/qbittorrent
 
 Configure the client with your proxy settings such as one provided by https://www.privateinternetaccess.com.
@@ -157,6 +157,7 @@ Tell the system to use the proxy only for torrents; there are problems using it 
 
 After configuring the you proxy, check your torrent ip using https://torguard.net/checkmytorrentipaddress.php and make sure it is showing the ip address of the proxy torrent; not the one returned by https://www.whatsmyip.org.
 
+Apply and IP filter list:
 ```console
 cd ~/Downloads
 wget http://upd.emule-security.org/ipfilter.zip
@@ -199,11 +200,11 @@ X11Forwarding no
 ```
 ```console
 sudo systemctl restart ssh.service
-sudo groupadd sftp_users
-sudo adduser sftpuser
 ```
 Set a strong password you can use to connect to sftp externally:
 ```console
+sudo adduser sftpuser
+sudo groupadd sftp_users
 sudo usermod -aG sftp_users sftpuser
 ```
 Setup the restricted root for SFTP:
@@ -330,7 +331,7 @@ sudo chmod 0600 /etc/postfix/sasl/sasl_passwd /etc/postfix/sasl/sasl_passwd.db
 ```console
 sudo vi /etc/postfix/main.cf
 ```
-Uncomment out the relayhost:
+Update the relayhost:
 ```
 relayhost = [smtp.gmail.com]:587
 ```
@@ -351,11 +352,11 @@ smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
 sudo systemctl restart postfix
 sudo apt install mailutils
 ```
-Test that you have sending email working through your new gmail account:
+Test that you can send email:
 ```console
 echo "body" | mail -s "subject" test@email.com
 ```
-where test@email.com is a different email account where you can confirm receipt of a test email from the system.
+where test@email.com is a different email account where you can confirm receipt of a test email.
 
 ## Setup Media Disk Structure (Media Content)
 
@@ -429,7 +430,7 @@ sudo chmod u+rwx,g+rwxs,o+rx Torrents
 sudo chmod u+rwx,g+rwxs,o+rx TorrentTemp
 sudo chmod u+rwx,g+rwxs,o+rx Videos
 ```
-We want all these directories and file to be part of the media group regardless of who puts files in them for playback and backup purposes:
+We want all these directories and files to be part of the media group regardless of who puts files in them for playback and backup purposes:
 ```console
 sudo setfacl -Rdm g:media:rwx Movies
 sudo setfacl -Rdm g:media:rwx Music
@@ -501,9 +502,9 @@ source: https://easyengine.io/tutorials/backups/duplicity-amazon-s3
 
 _This assumes you have and AWS account and know how to use it._
 
-* AWS S3: Create a new non public bucket.
-* AWS IAM: Create duplicity-backup programmatic user and store off the access and secret keys.
-* AWS IAM: Create duplicity-backup policy (replace BUCKET_NAME with your real bucket name):
+AWS S3: Create a new non public bucket.  
+AWS IAM: Create duplicity-backup programmatic user and store off the access and secret keys.  
+AWS IAM: Create duplicity-backup policy (replace BUCKET_NAME with your real bucket name):
 ```
 {
     "Version":"2012-10-17",
@@ -524,17 +525,18 @@ _This assumes you have and AWS account and know how to use it._
     ]
 }
 ```
-* AWS IAM: Sssign duplicity-backup policy to duplicity-backup user.
+AWS IAM: Sssign duplicity-backup policy to duplicity-backup user.
 
 ```console
 sudo apt install duplicity
 sudo apt install python-boto
 ```
-Build your encryption keys:
+Build your encryption public/private key:
 ```console
 gpg --full-generate-key
 ```
-Use defaults.  
+Use the defaults.
+
 real name: duplicity  
 email: your real email  
 comment: duplicity gpg key
@@ -546,7 +548,7 @@ Export your keys:
 gpg --export -a "duplicity" > public.key
 gpg --export-secret-key -a "duplicity" > private.key
 ```
-**Backup these keys (along with the passphrase to unlock the secret key) in a secure location such as https://www.lastpass.com.**
+**Backup these keys (along with the passphrase to unlock the secret key) in a secure location such as https://www.lastpass.com.**  Then remove the .key files.
 
 ```console
 sudo mkdir /var/log/duplicity
