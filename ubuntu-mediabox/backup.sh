@@ -17,8 +17,8 @@ HOST=`hostname`
 DATE=`date +%Y-%m-%d`
 MAILADDR="email@gmail.com"
 TODAY=$(date +%d%m%Y)
-OLDER_THAN="6M"
-FULL_OLDER_THAN="3M"
+OLDER_THAN="1Y"
+FULL_OLDER_THAN="6M"
 SOURCE=/
 
 is_running=$(ps -ef | grep duplicity  | grep python | wc -l)
