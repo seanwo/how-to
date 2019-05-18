@@ -428,6 +428,7 @@ sudo mkdir Recorded
 sudo mkdir Torrents
 sudo mkdir TorrentTemp
 sudo mkdir Videos
+sudo mkdir Uploads
 sudo chown mediauser:media Movies
 sudo chown mediauser:media Music
 sudo chown mediauser:media Pictures
@@ -435,6 +436,7 @@ sudo chown mediauser:media Recorded
 sudo chown mediauser:media Torrents
 sudo chown mediauser:media TorrentTemp
 sudo chown mediauser:media Videos
+sudo chown root:sftp_users Uploads
 sudo chmod u+rwx,g+rwxs,o+rx Movies
 sudo chmod u+rwx,g+rwxs,o+rx Music
 sudo chmod u+rwx,g+rwxs,o+rx Pictures
@@ -442,6 +444,7 @@ sudo chmod u+rwx,g+rwxs,o+rx Recorded
 sudo chmod u+rwx,g+rwxs,o+rx Torrents
 sudo chmod u+rwx,g+rwxs,o+rx TorrentTemp
 sudo chmod u+rwx,g+rwxs,o+rx Videos
+sudo chmod 775 Uploads
 ```
 We want all these directories and files to be part of the media group regardless of who puts files in them for playback and backup purposes:
 ```console
@@ -461,6 +464,7 @@ add:
 ```
 /mnt/media/Movies	/var/sftp/downloads/movies	none	defaults,bind	0	0
 /mnt/media/Torrents	/var/sftp/downloads/torrents	none	defaults,bind	0	0
+/mnt/media/Uploads	/var/sftp/uploads	none	defaults,bind	0	0
 /mnt/media/Torrents	/var/samba/media	none	defaults,bind	0	0
 /mnt/media/Pictures	/var/samba/pictures	none	defaults,bind	0	0
 ```
