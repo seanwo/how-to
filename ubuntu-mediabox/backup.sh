@@ -33,6 +33,7 @@ if [ $is_running -eq 0 ]; then
 
     duplicity \
     	--full-if-older-than ${FULL_OLDER_THAN} \
+        --s3-use-ia \
         --encrypt-key=${GPG_KEY} \
         --sign-key=${GPG_KEY} \
         --include=/mnt/media/Pictures \
