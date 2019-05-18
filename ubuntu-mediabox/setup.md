@@ -370,12 +370,13 @@ sda      8:16   0 465.8G  0 disk
 └─sda1   8:17   0 465.8G  0 part /
 sdc      8:48   0   3.7T  0 disk 
 ```
-*Warning:* this repartions the disk; be careful!:
+**Warning:** this repartions the disk; be careful!:
 ```console
 sudo fdisk /dev/sdc
 ```
 Use the commands g, n, w.
-*Warning:* this formats the disk; be careful!:
+
+**Warning:** this formats the disk; be careful!:
 ```console
 sudo mkfs.ext4 /dev/sdc1
 ```
