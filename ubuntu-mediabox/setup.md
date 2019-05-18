@@ -1,4 +1,4 @@
-# Instructions for Building an Ubuntu Plex Media (System)
+# Instructions for Building an Ubuntu Plex Media System
 
 ## Ubuntu LTS (Operating System)
 
