@@ -1,6 +1,6 @@
 # Instructions for Building an Ubuntu Plex Media (System)
 
-## Ubuntu LTS
+## Ubuntu LTS (Operating System)
 
 source: https://www.ubuntu.com/download/desktop
 
@@ -51,7 +51,7 @@ sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.ta
 ```
 Update your dhcp reservation hostname if you have one in your router.
 
-## Install Chrome
+## Install Chrome (Browser)
 
 source: https://www.linuxbabe.com/ubuntu/install-google-chrome-ubuntu-18-04-lts
 
@@ -62,7 +62,7 @@ sudo apt update
 sudo apt install google-chrome-stable
 ```
 
-## Install TeamViewer
+## Install TeamViewer (Remote Desktop)
 
 source: https://community.teamviewer.com/t5/Knowledge-Base/How-to-update-TeamViewer-on-Linux-via-repository/ta-p/30666
 
@@ -74,7 +74,7 @@ sudo apt install teamviewer
 ```
 Add your machine to your teamviewer account and configure teamviewer at run at startup.
 
-## Install HDHomeRun
+## Install HDHomeRun (Antenna Tuner Drivers)
 
 source: https://www.silicondust.com/support/linux/
 
@@ -107,7 +107,7 @@ _Note: this installs the following files:_
 /usr/local/bin/hdhomerun_config
 ```
 
-## Install Plex Media Server
+## Install Plex Media Server (Media Server)
 
 source: https://linoxide.com/linux-how-to/install-plex-media-server-ubuntu/
 
@@ -132,7 +132,7 @@ and uncomment out the the repo which was clobbered during the install:
 deb https://downloads.plex.tv/repo/deb/ public main
 ```
 
-## Install qBittorrent
+## Install qBittorrent (Supplemental Content from Legal Sources)
 
 source: https://www.linuxbabe.com/ubuntu/install-qbittorrent-ubuntu-18-04-desktop-server
 
@@ -165,7 +165,7 @@ mv guarding.p2p ../guarding.dat
 ```
 Add /home/mediauser/guarding.dat to the ip filter list in qbittorent under connections.
 
-## Install SFTP Server
+## Install SFTP Server (Secure Remote File Access)
 
 source: https://websiteforstudents.com/setup-retrictive-sftp-with-chroot-on-ubuntu-16-04-17-10-and-18-04/
 
@@ -218,7 +218,7 @@ sudo chmod 775 /var/sftp/uploads
 sudo chmod 755 /var/sftp/downloads
 ```
 
-## Install Samba Server
+## Install Samba Server (Local Windows Network Access)
 
 source: https://tutorials.ubuntu.com/tutorial/install-and-configure-samba#0  
 source: https://websiteforstudents.com/create-private-samba-share-ubuntu-17-04-17-10/
@@ -270,14 +270,14 @@ sudo smbpasswd -a mediauser
 sudo systemctl restart smbd
 ```
 
-## Install VLC
+## Install VLC (Video Playback)
 
 ```console
 sudo apt update
 sudo apt install vlc
 ```
 
-## Install HD-IDLE
+## Install HD-IDLE (Drive Spin-Down)
 
 source: http://hd-idle.sourceforge.net/  
 source: https://forum.openmediavault.org/index.php/Thread/17101-Guide-How-to-setup-hd-idle-a-HDD-spin-down-SW-together-with-the-OMV-plugin-Autos/  
@@ -306,7 +306,7 @@ HD_IDLE_OPTS="-i 1800"
 sudo /etc/init.d/hd-idle start
 ```
 
-## Install SMTP Client
+## Install SMTP Client (Outbound Email)
 
 source: https://www.linode.com/docs/email/postfix/configure-postfix-to-send-mail-using-gmail-and-google-apps-on-debian-or-ubuntu/
 
@@ -357,7 +357,7 @@ echo "body" | mail -s "subject" test@email.com
 ```
 where test@email.com is a different email account where you can confirm receipt of a test email from the system.
 
-## Setup Media Disk Structure
+## Setup Media Disk Structure (Media Content)
 
 This part assumes you have an external USB drive you are going to store your media on:
 
@@ -383,6 +383,9 @@ Get the UUID of this disk:
 ```console
 sudo blkid /dev/sdc1
 ```
+```
+/dev/sdc1: UUID="d3ce0032-b588-44fb-9b4d-48c6886a45c5" TYPE="ext4" PARTUUID="4fcc82ea-9297-3740-b41e-c089c5516c32"
+```
 Create a mount point:
 ```console
 sudo mkdir /mnt/media
@@ -390,8 +393,9 @@ sudo mkdir /mnt/media
 ```console
 sudo vi /etc/fstab
 ```
-add the following line:
-```UUID=d3ce0032-b588-44fb-9b4d-48c6886a45c5	/mnt/media	ext4	nofail,x-systemd.device-timeout=120,acl	0	0
+add the following line (replacing it with your UUID):
+```
+UUID=d3ce0032-b588-44fb-9b4d-48c6886a45c5	/mnt/media	ext4	nofail,x-systemd.device-timeout=120,acl	0	0
 ```
 Create a media group and add our default and plex users to it:
 ```console
@@ -445,19 +449,20 @@ add:
 /mnt/media/Torrents	/var/samba/media	none	defaults,bind	0	0
 ```
 
-**********************
-*** Install ClamAV ***
-**********************
-#source: https://websiteforstudents.com/install-clamav-linux-antivirus-on-ubuntu-16-04-17-10-18-04-desktp/
-#source: https://www.howtoforge.com/tutorial/configure-clamav-to-scan-and-notify-virus-and-malware/
+## Install ClamAV (Anti-Malware)
 
+source: https://websiteforstudents.com/install-clamav-linux-antivirus-on-ubuntu-16-04-17-10-18-04-desktp/  
+source: https://www.howtoforge.com/tutorial/configure-clamav-to-scan-and-notify-virus-and-malware/
+
+```console
 sudo apt install clamav clamav-daemon
 sudo apt install clamtk
+```
+```console
+sudo vi /root/clamscan.sh
+```
 
-#create sudo vi /root/clamscan.sh
-#excluding /sys, mounts and bind mount locations
-
-******************************************************************************************
+```
 #!/bin/bash
 LOGFILE="/var/log/clamav/clamav-$(date +'%Y-%m-%d').txt";
 EMAIL_MSG="Please see the log file attached.";
@@ -476,28 +481,29 @@ echo "$EMAIL_MSG" | mail -A "$LOGFILE" -s "Malware Found on $HOSTNAME" -aFrom:"$
 fi 
 
 exit 0
-******************************************************************************************
-
-#lock the script down
+```
+Lock the script down:
+```console
 sudo chmod 0755 /root/clamscan.sh
-
-#run the weekly as root on Sunday at 2am 
+```
+Run the weekly as root on Sunday at 2am:
+```console
 sudo crontab -e
+```
+```
 0 2 * * 0 /root/clamscan.sh >/dev/null 2>&1
+```
 
-#no: sudo ln /root/clamscan.sh /etc/cron.weekly/clamscan_weekly
+## Duplicity w/ S3 (Encrypted Cloud Backup)
 
-***********************
-*** Duplicity w/ S3 ***
-***********************
-#source: https://easyengine.io/tutorials/backups/duplicity-amazon-s3
+source: https://easyengine.io/tutorials/backups/duplicity-amazon-s3
 
-#primarily to backup my pictures and music!
+_This assumes you have and AWS account and know how to use it._
 
-#AWS S3 to create new non public bucket
-#AWS IAM to create duplicity-backup programmatic user and store the access key and secret key
-#AWS IAM to create policy duplicity-backup (replace BUCKET_NAME with real bucket name):
-
+* AWS S3: Create a new non public bucket.
+* AWS IAM: Create duplicity-backup programmatic user and store off the access and secret keys.
+* AWS IAM: Create duplicity-backup policy (replace BUCKET_NAME with your real bucket name):
+```
 {
     "Version":"2012-10-17",
     "Statement": [
@@ -516,27 +522,39 @@ sudo crontab -e
         }
     ]
 }
+```
+* AWS IAM: Sssign duplicity-backup policy to duplicity-backup user.
 
-#AWS IAM to assign duplicity-backup policy to duplicity-backup user
-
+```console
 sudo apt install duplicity
 sudo apt install python-boto
-
+```
+Build your encryption keys:
+```console
 gpg --full-generate-key
-#use defaults, real name: duplicity, email: your email, comment: duplicity gpg key
-#set passphrase
+```
+Use defaults.  
+real name: duplicity  
+email: your real email  
+comment: duplicity gpg key
 
+Set a secure passphrase.
+
+Export your keys:
+```console
 gpg --export -a "duplicity" > public.key
 gpg --export-secret-key -a "duplicity" > private.key
-#backup these keys along with the passphrase in a secure location
+```
+**Backup these keys (along with the passphrase to unlock the secret key) in a secure location such as https://www.lastpass.com.**
 
-#create a place where media user log backup results to
+```console
 sudo mkdir /var/log/duplicity
 sudo chown mediauser:mediauser /var/log/duplicity
-
-#vi ~/backup.sh
-
-******************************************************************************************
+```
+```console
+vi ~/backup.sh
+```
+```
 #!/bin/bash
 
 # Export some ENV variables so you don't have to type anything
@@ -590,34 +608,36 @@ fi
 unset AWS_ACCESS_KEY_ID
 unset AWS_SECRET_ACCESS_KEY
 unset PASSPHRASE
-******************************************************************************************
+```
+```console
 chmod +x ~/backup.sh
-
-#vi ~/restore.sh
-******************************************************************************************
-
-******************************************************************************************
+```
+```console
+vi ~/restore.sh
+```
+```
+```
+```console
 chmod +x ~/restore.sh
-
-#run daily as mediauser at 4am
+```
+Run daily as mediauser at 4am
+```console
 crontab -e
+```
+```
 0 4 * * * /home/mediauser/backup.sh >/dev/null 2>&1
+```
 
-***************
-*** Cleanup ***
-***************
+## Cleanup
+```console
 sudo rm -rf /etc/apt/sources.list.d/*.dpkg-old
+```
 
-***************************
-*** Final Configuration ***
-***************************
-+ Setup HDHomeRun Tunners in PLEX (14.1, 18.1, 18.2, 18.3, 18.4, 24.1, 24.3, 36.1, 36.2, 36.3, 42.1, 54.1, 54.2, 54.3, 62.3, 62.4, 14.3, 24.4)
-+ Configure PLEX Libraries (/mnt/media/Movies, /mnt/media/Recorded, /mnt/media/Torrents, /mnt/media/Videos)
-+ Configure qBittorrent RSS feed
-+ Convert USB NTFS Media Drive to USB Ext4 Media Drive
+## Final Configuration
+* Configure tuners in PLEX.  My channels are: 14.1, 18.1, 18.2, 18.3, 18.4, 24.1, 24.3, 36.1, 36.2, 36.3, 42.1, 54.1, 54.2, 54.3, 62.3, 62.4, 14.3, 24.4.
+* Copy any existing content to the new media drive structure.
+* Configure PLEX Libraries (/mnt/media/Movies, /mnt/media/Recorded, /mnt/media/Torrents, /mnt/media/Videos)
+* Configure qBittorrent RSS feed.
 
-************
-*** TODO ***
-************
-
-# dual drive sync for local backup
+## TODO
+* Nightly sync of media drive to redundant local backup drive.
