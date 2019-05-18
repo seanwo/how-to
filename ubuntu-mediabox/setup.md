@@ -1,5 +1,6 @@
+# Instructions for Building an Ubuntu Plex Media (System)
 
-# Ubuntu LTS
+## Ubuntu LTS
 
 source: https://www.ubuntu.com/download/desktop
 
@@ -17,7 +18,7 @@ sudo apt upgrade
 ```
 Reboot for good measure.
 
-# System Tweaks
+## System Tweaks
 
 In case you need to rename your machines:
 ```console
@@ -50,7 +51,7 @@ sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.ta
 ```
 Update your dhcp reservation hostname if you have one in your router.
 
-# Install Chrome
+## Install Chrome
 
 source: https://www.linuxbabe.com/ubuntu/install-google-chrome-ubuntu-18-04-lts
 
@@ -61,7 +62,7 @@ sudo apt update
 sudo apt install google-chrome-stable
 ```
 
-# Install TeamViewer
+## Install TeamViewer
 
 source: https://community.teamviewer.com/t5/Knowledge-Base/How-to-update-TeamViewer-on-Linux-via-repository/ta-p/30666
 
@@ -73,7 +74,7 @@ sudo apt install teamviewer
 ```
 Add your machine to your teamviewer account and configure teamviewer at run at startup.
 
-# Install HDHomeRun
+## Install HDHomeRun
 
 source: https://www.silicondust.com/support/linux/
 
@@ -99,14 +100,14 @@ make
 sudo make install
 sudo ldconfig
 ```
-Note: this installs the following files:
+_Note: this installs the following files:_
 ```
 /usr/local/bin/hdhomerun_config_gui
 /usr/local/lib/libhdhomerun.so
 /usr/local/bin/hdhomerun_config
 ```
 
-# Install Plex Media Server
+## Install Plex Media Server
 
 source: https://linoxide.com/linux-how-to/install-plex-media-server-ubuntu/
 
@@ -131,7 +132,7 @@ and uncomment out the the repo which was clobbered during the install:
 deb https://downloads.plex.tv/repo/deb/ public main
 ```
 
-# Install qBittorrent
+## Install qBittorrent
 
 source: https://www.linuxbabe.com/ubuntu/install-qbittorrent-ubuntu-18-04-desktop-server
 
@@ -164,7 +165,7 @@ mv guarding.p2p ../guarding.dat
 ```
 Add /home/mediauser/guarding.dat to the ip filter list in qbittorent under connections.
 
-# Install SFTP Server
+## Install SFTP Server
 
 source: https://websiteforstudents.com/setup-retrictive-sftp-with-chroot-on-ubuntu-16-04-17-10-and-18-04/
 
@@ -217,7 +218,7 @@ sudo chmod 775 /var/sftp/uploads
 sudo chmod 755 /var/sftp/downloads
 ```
 
-# Install Samba Server
+## Install Samba Server
 
 source: https://tutorials.ubuntu.com/tutorial/install-and-configure-samba#0  
 source: https://websiteforstudents.com/create-private-samba-share-ubuntu-17-04-17-10/
@@ -269,14 +270,14 @@ sudo smbpasswd -a mediauser
 sudo systemctl restart smbd
 ```
 
-# Install VLC
+## Install VLC
 
 ```console
 sudo apt update
 sudo apt install vlc
 ```
 
-# Install HD-IDLE
+## Install HD-IDLE
 
 source: http://hd-idle.sourceforge.net/  
 source: https://forum.openmediavault.org/index.php/Thread/17101-Guide-How-to-setup-hd-idle-a-HDD-spin-down-SW-together-with-the-OMV-plugin-Autos/  
@@ -304,24 +305,37 @@ HD_IDLE_OPTS="-i 1800"
 ```console
 sudo /etc/init.d/hd-idle start
 ```
-***************************
-*** Install SMTP Client ***
-***************************
-#source: https://www.linode.com/docs/email/postfix/configure-postfix-to-send-mail-using-gmail-and-google-apps-on-debian-or-ubuntu/
 
-#create a gmail account; in this example we use email@gmail.com; replace with your user and real password below
+## Install SMTP Client
+
+source: https://www.linode.com/docs/email/postfix/configure-postfix-to-send-mail-using-gmail-and-google-apps-on-debian-or-ubuntu/
+
+Create a new gmail account. (In this example we use email@gmail.com; replace this with your new gmail address and real password)
+
+```console
 sudo apt install postfix
-# edit sudo vi /etc/postfix/sasl/sasl_passwd
+```
+Configure postfix with your new gmail account:
+```console
+sudo vi /etc/postfix/sasl/sasl_passwd
+```
+```
 [smtp.gmail.com]:587 email@gmail.com:password
-
+```
+```console
 sudo postmap /etc/postfix/sasl/sasl_passwd
 sudo chown root:root /etc/postfix/sasl/sasl_passwd /etc/postfix/sasl/sasl_passwd.db
 sudo chmod 0600 /etc/postfix/sasl/sasl_passwd /etc/postfix/sasl/sasl_passwd.db
-
-#update sudo vi /etc/postfix/main.cf
+```
+```console
+sudo vi /etc/postfix/main.cf
+```
+Uncomment out the relayhost:
+```
 relayhost = [smtp.gmail.com]:587
-
-#add to end sudo vi /etc/postfix/main.cf
+```
+and then add the following lines:
+```
 # Enable SASL authentication
 smtp_sasl_auth_enable = yes
 # Disallow methods that allow anonymous authentication
@@ -332,40 +346,61 @@ smtp_sasl_password_maps = hash:/etc/postfix/sasl/sasl_passwd
 smtp_tls_security_level = encrypt
 # Location of CA certificates
 smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
-
+```
+```console
 sudo systemctl restart postfix
-
 sudo apt install mailutils
+```
+Test that you have sending email working through your new gmail account:
+```console
+echo "body" | mail -s "subject" test@email.com
+```
+where test@email.com is a different email account where you can confirm receipt of a test email from the system.
 
-#test that you have email through gmail working; example sends a sample message to seanwo@gmail.com; send it to yourself instead.
-echo "body" | mail -s "subject" email@gmail.com
+## Setup Media Disk Structure
 
-****************************
-*** SETUP DISK STRUCTURE ***
-****************************
+This part assumes you have an external USB drive you are going to store your media on:
 
-#assumes you have an external USB drive you are going to store your media on:
-
+```console
 lsblk
-# find disk to use for media; in this example it is /dev/sdc
-# sudo fdisk /dev/sdc
-# select g,n,w
-# sudo mkfs.ext4 /dev/sdc1
-
-#get UUID
+```
+Find disk to use for media (in this example it is /dev/sdc)
+```
+sda      8:16   0 465.8G  0 disk 
+└─sda1   8:17   0 465.8G  0 part /
+sdc      8:48   0   3.7T  0 disk 
+```
+*Warning:* this repartions the disk; be careful!:
+```console
+sudo fdisk /dev/sdc
+```
+Use the commands g, n, w.
+*Warning:* this formats the disk; be careful!:
+```console
+sudo mkfs.ext4 /dev/sdc1
+```
+Get the UUID of this disk:
+```console
 sudo blkid /dev/sdc1
-
+```
+Create a mount point:
+```console
 sudo mkdir /mnt/media
-
-#edit sudo vi /etc/fstab
-#we are going to identify the dirve via UUID and use extended acls.  we need to use nofail since it is usb and give a reasonable spinup timeout
-UUID=d3ce0032-b588-44fb-9b4d-48c6886a45c5	/mnt/media	ext4	nofail,x-systemd.device-timeout=120,acl	0	0
-
+```
+```console
+sudo vi /etc/fstab
+```
+add the following line:
+```UUID=d3ce0032-b588-44fb-9b4d-48c6886a45c5	/mnt/media	ext4	nofail,x-systemd.device-timeout=120,acl	0	0
+```
+Create a media group and add our default and plex users to it:
+```console
 sudo addgroup media
 sudo usermod -a -G media mediauser
 sudo usermod -a -G media plex
-
-
+```
+Apply the layout:
+```console
 cd /mnt/media
 sudo mkdir Movies
 sudo mkdir Music
@@ -388,8 +423,9 @@ sudo chmod u+rwx,g+rwxs,o+rx Recorded
 sudo chmod u+rwx,g+rwxs,o+rx Torrents
 sudo chmod u+rwx,g+rwxs,o+rx TorrentTemp
 sudo chmod u+rwx,g+rwxs,o+rx Videos
-
-#we want all these directories and file to be part of the media group regardless of who puts files in them for playback and backup purposes.
+```
+We want all these directories and file to be part of the media group regardless of who puts files in them for playback and backup purposes:
+```console
 sudo setfacl -Rdm g:media:rwx Movies
 sudo setfacl -Rdm g:media:rwx Music
 sudo setfacl -Rdm g:media:rwx Pictures
@@ -397,12 +433,17 @@ sudo setfacl -Rdm g:media:rwx Recorded
 sudo setfacl -Rdm g:media:rwx Torrents
 sudo setfacl -Rdm g:media:rwx TorrentTemp
 sudo setfacl -Rdm g:media:rwx Videos
-
-#use bind mounts to isolate what is available via sftp and samba (windows networking)
-#edit sudo vi /etc/fstab
+```
+Use bind mounts to restrict what is available via sftp and samba (windows networking).
+```console
+sudo vi /etc/fstab
+```
+add:
+```
 /mnt/media/Movies	/var/sftp/downloads/movies	none	defaults,bind	0	0
 /mnt/media/Torrents	/var/sftp/downloads/torrents	none	defaults,bind	0	0
 /mnt/media/Torrents	/var/samba/media	none	defaults,bind	0	0
+```
 
 **********************
 *** Install ClamAV ***
