@@ -258,8 +258,8 @@ bind interfaces only = yes
    guest ok = no
    read only = no
    browsable = yes
-   create mode = 0777
-   directory mode = 0777
+   create mode = 0755
+   directory mode = 0755
    valid users = @samba_users
 
 [pictures]
@@ -268,8 +268,8 @@ bind interfaces only = yes
    guest ok = no
    read only = no
    browsable = yes
-   create mode = 0777
-   directory mode = 0777
+   create mode = 0755
+   directory mode = 0755
    valid users = @samba_users
 ```
 Put mediauser in the samba_users group:
