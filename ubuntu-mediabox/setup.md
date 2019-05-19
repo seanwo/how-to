@@ -49,6 +49,10 @@ gsettings set org.gnome.desktop.session idle-delay 900
 gsettings set org.gnome.desktop.screensaver lock-enabled false
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 ```
+Add support to read exFat drives
+```console
+sudo apt install exfat-fuse exfat-utils
+```
 Update your DHCP reservation hostname if you have one in your router.
 
 ## Install Chrome (Browser)
