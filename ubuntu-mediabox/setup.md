@@ -23,11 +23,7 @@ Reboot for good measure.
 In case you need to rename your machines:
 ```console
 sudo hostname mediabox
-```
-```console
 sudo echo "mediabox" > /etc/hostname
-```
-```console
 sudo vi /etc/hosts
 ```
 and update the name to mediabox:
