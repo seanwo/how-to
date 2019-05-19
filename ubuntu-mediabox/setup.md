@@ -432,7 +432,6 @@ sudo mkdir Recorded
 sudo mkdir Torrents
 sudo mkdir TorrentTemp
 sudo mkdir Videos
-sudo mkdir Uploads
 sudo chown mediauser:media Movies
 sudo chown mediauser:media Music
 sudo chown mediauser:media Pictures
@@ -440,7 +439,6 @@ sudo chown mediauser:media Recorded
 sudo chown mediauser:media Torrents
 sudo chown mediauser:media TorrentTemp
 sudo chown mediauser:media Videos
-sudo chown root:sftp_users Uploads
 sudo chmod u+rwx,g+rwxs,o+rx Movies
 sudo chmod u+rwx,g+rwxs,o+rx Music
 sudo chmod u+rwx,g+rwxs,o+rx Pictures
@@ -448,9 +446,11 @@ sudo chmod u+rwx,g+rwxs,o+rx Recorded
 sudo chmod u+rwx,g+rwxs,o+rx Torrents
 sudo chmod u+rwx,g+rwxs,o+rx TorrentTemp
 sudo chmod u+rwx,g+rwxs,o+rx Videos
+sudo mkdir Uploads
+sudo chown root:sftp_users Uploads
 sudo chmod 775 Uploads
 ```
-We want all these directories and files to be part of the media group regardless of who puts files in them for playback and backup purposes:
+We want the following directories and files to be part of the media group regardless of who puts files in them for playback and backup purposes:
 ```console
 sudo setfacl -Rdm g:media:rwx Movies
 sudo setfacl -Rdm g:media:rwx Music
@@ -493,7 +493,7 @@ Lock the script down:
 ```console
 sudo chmod 0755 /root/clamscan.sh
 ```
-Run the weekly as root on Sunday at 2am:
+Run weekly as root on Sunday at 2am:
 ```console
 sudo crontab -e
 ```
