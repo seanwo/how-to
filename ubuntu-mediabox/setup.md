@@ -151,7 +151,7 @@ gnome-session-properties
 Name: qBittorrent  
 Command: /usr/bin/qbittorrent
 
-Configure the client with your proxy settings such as one provided by https://www.privateinternetaccess.com.  
+Configure the client with your proxy settings such as one provided by https://www.privateinternetaccess.com.
 [Sample QBitTorrent Configuration](qbittorent.preferences.md)
 
 After configuring the you proxy, check your torrent ip using https://torguard.net/checkmytorrentipaddress.php and make sure it is showing the ip address of the proxy torrent; not the one returned by https://www.whatsmyip.org.
@@ -525,7 +525,7 @@ AWS IAM: Create duplicity-backup policy (replace BUCKET_NAME with your real buck
     ]
 }
 ```
-AWS IAM: Sssign duplicity-backup policy to duplicity-backup user.
+AWS IAM: Assign duplicity-backup policy to duplicity-backup user.
 
 ```console
 sudo apt install duplicity
