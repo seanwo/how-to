@@ -489,11 +489,37 @@ sudo vi /root/clamscan.sh
 ```
 Use the following file and update as appropriate for your accounts and directories:
 
-[clamscan.sh](clamscan.sh)
+```
+#!/bin/bash
+rsync -ahPHAXx --delete /mnt/media/ /mnt/backup
+```
 
 Lock the script down:
 ```console
 sudo chmod 0755 /root/clamscan.sh
+```
+Run daily at midnight as root:
+```console
+sudo crontab -e
+```
+```
+0 0 * * * /root/sync.sh
+```
+
+## Configure local drive sync from media to backup drive
+
+source: https://superuser.com/questions/709176/how-to-best-clone-a-running-system-to-a-new-harddisk-using-rsync
+
+```console
+sudo vi /root/sync.sh
+```
+Use the following file and update as appropriate for your accounts and directories:
+
+[clamscan.sh](clamscan.sh)
+
+Lock the script down:
+```console
+sudo chmod 0755 /root/sync.sh
 ```
 Run weekly as root on Sunday at 2am:
 ```console
