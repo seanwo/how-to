@@ -489,21 +489,18 @@ sudo vi /root/clamscan.sh
 ```
 Use the following file and update as appropriate for your accounts and directories:
 
-```
-#!/bin/bash
-rsync -ahPHAXx --delete /mnt/media/ /mnt/backup
-```
+[clamscan.sh](clamscan.sh)
 
 Lock the script down:
 ```console
 sudo chmod 0755 /root/clamscan.sh
 ```
-Run daily at midnight as root:
+Run weekly as root on Sunday at 2am:
 ```console
 sudo crontab -e
 ```
 ```
-0 0 * * * /root/sync.sh
+0 2 * * 0 /root/clamscan.sh >/dev/null 2>&1
 ```
 
 ## Configure local drive sync from media to backup drive
@@ -523,12 +520,12 @@ Lock the script down:
 ```console
 sudo chmod 0755 /root/sync.sh
 ```
-Run weekly as root on Sunday at 2am:
+Run at midnight daily as root:
 ```console
 sudo crontab -e
 ```
 ```
-0 2 * * 0 /root/clamscan.sh >/dev/null 2>&1
+0 0 * * * /root/sync.sh
 ```
 
 ## Duplicity w/ S3 (Encrypted Cloud Backup)
