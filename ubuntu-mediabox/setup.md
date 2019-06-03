@@ -378,7 +378,7 @@ This part assumes you have an external USB drive you are going to store your med
 ```console
 lsblk
 ```
-Find disk to use for media (in this example it is /dev/sdc)
+Find disks to use for media and backup (in this example it is /dev/sdb and /dev/sdc)
 ```
 sda      8:0    0 465.8G  0 disk 
 └─sda1   8:1    0 465.8G  0 part /
@@ -386,11 +386,11 @@ sdb      8:16   0   3.7T  0 disk
 sdc      8:32   0   3.7T  0 disk 
 
 ```
-**Warning:** this repartions the disk; be careful!:
+**Warning:** this repartions the disks; be careful!:
 ```console
 sudo fdisk /dev/sdb
 ```
-Use the commands g, n, w. (repeat for backup /dev/sdc) 
+Use the commands g, n, w. (repeat for /dev/sdc) 
 
 **Warning:** this formats the disk; be careful!:
 ```console
