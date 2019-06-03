@@ -371,7 +371,7 @@ echo "body" | mail -s "subject" test@email.com
 ```
 where test@email.com is a different email account where you can confirm receipt of a test email.
 
-## Setup Media Disk Structure (Media Content)
+## Setup Media Disk Structure (Media Content) and Backup Disk
 
 This part assumes you have an external USB drive you are going to store your media on:
 
@@ -380,37 +380,43 @@ lsblk
 ```
 Find disk to use for media (in this example it is /dev/sdc)
 ```
-sda      8:16   0 465.8G  0 disk 
-└─sda1   8:17   0 465.8G  0 part /
-sdc      8:48   0   3.7T  0 disk 
+sda      8:0    0 465.8G  0 disk 
+└─sda1   8:1    0 465.8G  0 part /
+sdb      8:16   0   3.7T  0 disk 
+sdc      8:32   0   3.7T  0 disk 
+
 ```
 **Warning:** this repartions the disk; be careful!:
 ```console
-sudo fdisk /dev/sdc
+sudo fdisk /dev/sdb
 ```
-Use the commands g, n, w.
+Use the commands g, n, w. (repeat for backup /dev/sdc) 
 
 **Warning:** this formats the disk; be careful!:
 ```console
+sudo mkfs.ext4 /dev/sdb1
 sudo mkfs.ext4 /dev/sdc1
 ```
-Get the UUID of this disk:
+Get the UUIDs of the media and backup disk:
 ```console
-sudo blkid /dev/sdc1
+sudo blkid /dev/sdb1 /dev/sdc1
 ```
 ```
+/dev/sdb1: UUID="cbd95974-0c43-4251-9da1-2be74b8666aa" TYPE="ext4" PARTUUID="a57d02a0-2ec8-8841-91ab-1bcd935f6009"
 /dev/sdc1: UUID="d3ce0032-b588-44fb-9b4d-48c6886a45c5" TYPE="ext4" PARTUUID="4fcc82ea-9297-3740-b41e-c089c5516c32"
 ```
-Create a mount point:
+Create a mount points:
 ```console
 sudo mkdir /mnt/media
+sudo mkdir /mnt/backup
 ```
 ```console
 sudo vi /etc/fstab
 ```
 add the following line (replacing it with your UUID):
 ```
-UUID=d3ce0032-b588-44fb-9b4d-48c6886a45c5	/mnt/media	ext4	nofail,x-systemd.device-timeout=120,acl	0	0
+UUID=cbd95974-0c43-4251-9da1-2be74b8666aa       /mnt/backup      ext4    nofail,x-systemd.device-timeout=120,acl 0       0
+UUID=d3ce0032-b588-44fb-9b4d-48c6886a45c5       /mnt/media       ext4    nofail,x-systemd.device-timeout=120,acl 0       0
 ```
 Create a media group and add our default and plex users to it:
 ```console
