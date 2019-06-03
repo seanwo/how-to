@@ -513,9 +513,11 @@ source: https://superuser.com/questions/709176/how-to-best-clone-a-running-syste
 ```console
 sudo vi /root/sync.sh
 ```
-Use the following file and update as appropriate for your accounts and directories:
 
-[clamscan.sh](clamscan.sh)
+```
+#!/bin/bash
+rsync -ahPHAXx --delete /mnt/media/ /mnt/backup
+```
 
 Lock the script down:
 ```console
