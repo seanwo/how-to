@@ -622,6 +622,3 @@ sudo rm -rf /etc/apt/sources.list.d/*.dpkg-old
 * Copy any existing content to the new media drive structure.
 * Configure PLEX Libraries (/mnt/media/Movies, /mnt/media/Recorded, /mnt/media/Torrents, /mnt/media/Videos)
 * Configure qBittorrent RSS feed.
-
-## TODO
-* Nightly sync of media drive to redundant local backup drive.
