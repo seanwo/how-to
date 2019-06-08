@@ -1,5 +1,7 @@
 # Instructions for Building an Ubuntu Plex Media System
 
+![alt text](mediabox.jpg "mediabox")
+
 ## Ubuntu LTS (Operating System)
 
 source: https://www.ubuntu.com/download/desktop
