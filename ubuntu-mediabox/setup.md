@@ -41,7 +41,7 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ```
 
-Update screen saver timeout, screen locking, disable sleep and hibernate options:
+Update screen saver timeout, screen locking, disable sleep and hibernate options (or use dconf-editor):
 ```console
 gsettings set org.gnome.desktop.session idle-delay 900
 gsettings set org.gnome.desktop.screensaver lock-enabled false
@@ -52,6 +52,14 @@ Add support for exFat drives:
 sudo apt install exfat-fuse exfat-utils
 ```
 Update your DHCP reservation hostname if you have one in your router.
+
+If you have a UPS, tell the system to shutdown on critical battery levels (or use dconf-editor):
+```console
+gsettings set org.gnome.settings-daemon.plugins.power percentage-critical 10
+gsettings set org.gnome.settings-daemon.plugins.power percentage-action 9
+gsettings set org.gnome.settings-daemon.plugins.power critical-battery-action 'shutdown'
+gsettings set org.gnome.settings-daemon.plugins.power use-time-for-policy false
+```
 
 ## Install Chrome (Browser)
 
