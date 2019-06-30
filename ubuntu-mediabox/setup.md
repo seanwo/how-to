@@ -332,7 +332,7 @@ sudo /etc/init.d/hd-idle start
 
 ## Monitor CPU Usage and Temperature
 
-source: https://itsfoss.com/check-laptop-cpu-temperature-ubuntu/ 
+source: https://itsfoss.com/check-laptop-cpu-temperature-ubuntu/  
 source: https://askubuntu.com/questions/15832/how-do-i-get-the-cpu-temperature
 ```console
 sudo apt install lm-sensors
