@@ -232,6 +232,24 @@ mv guarding.p2p ../guarding.dat
 ```
 Add /home/mediauser/guarding.dat to the ip filter list in qbittorent under connections.
 
+Some proxies change their IP addresses which cause long live connections to stall.  Setup a cron job to restart it every 2 hours:
+```console
+vi ~/restartqbittorrent.sh
+```
+Use the following file and update as appropriate for your accounts and directories:
+
+[restartqbittorrent.sh](restartqbittorent.sh)
+```console
+chmod +x ~/restartqbittorent.sh
+```
+
+```console
+crontab -e
+```
+```
+5 */2 * * * /home/mediauser/restartqbittorrent.sh >/dev/null 2>&1
+```
+
 ## Install SFTP Server (Secure Remote File Access)
 
 source: https://websiteforstudents.com/setup-retrictive-sftp-with-chroot-on-ubuntu-16-04-17-10-and-18-04/
