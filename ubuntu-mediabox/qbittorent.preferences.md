@@ -11,8 +11,8 @@ Completed torrents: **"No action"**
 ### Desktop Section
 Show splash screen on start up: **disabled**  
 Start qBittorent minimized: **active**  
-Confirmation on exit when torrents are active: **active**  
-Confirmation on auto-exit when downloads finish: **disabled**  
+Confirmation on exit when torrents are active: **disabled**  
+Confirmation on auto-exit when downloads finish: **active**  
 Show qBittorent in notification area: **active**  
 Minimize qBittorent to notification area: **active**  
 Close qBittorent to notification area: **active**  
