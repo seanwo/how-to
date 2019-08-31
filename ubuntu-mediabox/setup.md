@@ -238,9 +238,9 @@ vi ~/restartqbittorrent.sh
 ```
 Use the following file and update as appropriate for your accounts and directories:
 
-[restartqbittorrent.sh](restartqbittorent.sh)
+[restartqbittorrent.sh](restartqbittorernt.sh)
 ```console
-chmod +x ~/restartqbittorent.sh
+chmod +x ~/restartqbittorrent.sh
 ```
 
 ```console
