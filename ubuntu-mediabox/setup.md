@@ -312,7 +312,7 @@ sudo apt update
 sudo apt install samba
 sudo groupadd samba_users
 sudo mkdir -p /var/samba/media
-sudo mkidr -p /var/samba/pictures
+sudo mkdir -p /var/samba/pictures
 sudo chown root:root /var/samba
 sudo chown root:samba_users /var/samba/media
 sudo chown root:samba_users /var/samba/pictures
