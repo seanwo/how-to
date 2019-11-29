@@ -10,8 +10,12 @@ read -p "Press [Enter] key to remove any older version of samba..."
 
 sudo systemctl stop smbd
 sudo systemctl stop nmbd
-sudo apt -y remove mysamba samba samba-libs --purge
+sudo apt -y remove mysamba --purge
+sudo apt -y remove samba --purge
+sudo apt -y remove samba-libs --purge
 sudo apt -y autoremove
+
+read -p "Press [Enter] key to install mysamba..."
 
 wget https://github.com/seanwo/how-to/raw/master/ubuntu-mediabox/mysamba_4.9.16-1_amd64.deb
 sudo apt -y install samba-libs

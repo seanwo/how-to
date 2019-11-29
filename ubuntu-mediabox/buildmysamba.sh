@@ -20,7 +20,8 @@ read -p "Press [Enter] key to remove any older version of samba completely..."
 
 sudo systemctl stop smbd
 sudo systemctl stop nmbd
-sudo apt -y remove samba samba-libs --purge
+sudo apt -y remove samba --purge
+sudo apt -y remove samba-libs --purge
 sudo apt -y autoremove
 
 read -p "Press [Enter] key to get new samba sources..."
@@ -63,12 +64,12 @@ DEB_HOST_MULTIARCH=$(dpkg-architecture -qDEB_HOST_MULTIARCH)
     
 make
 
-read -p "Press [Enter] key to create samba package..."
+read -p "Press [Enter] key to create mysamba package..."
 
 sudo apt -y install checkinstall
 fakeroot checkinstall --install=no --fstrans --pkgname="my$source_name" --pkgversion="$source_version" --maintainer="seanwo@gmail.com" -y -D make install
 
-read -p "Press [Enter] key to install samba..."
+read -p "Press [Enter] key to install mysamba..."
 
 sudo apt -y install samba-libs
 sudo dpkg -i --force-all ./*.deb
