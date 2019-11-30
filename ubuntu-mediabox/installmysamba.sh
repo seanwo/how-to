@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p "Press [Enter] key to update development system..."
+read -p "Press [Enter] key to update target system applications..."
 
 sudo apt -y update
 sleep 10s
@@ -39,8 +39,6 @@ echo "    directory mask = 0700" | sudo tee -a /etc/samba/smb.conf
 echo "    spotlight = yes" | sudo tee -a /etc/samba/smb.conf
 echo "    vfs objects = catia fruit streams_xattr" | sudo tee -a /etc/samba/smb.conf
 echo "    fruit:time machine = yes" | sudo tee -a /etc/samba/smb.conf
-
-sudo mkdir /var/samba/timemachine
 
 read -p "Press [Enter] key to enable and start samba..."
 
