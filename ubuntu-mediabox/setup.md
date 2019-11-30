@@ -368,6 +368,32 @@ sudo smbpasswd -a mediauser
 sudo systemctl restart smbd
 ```
 
+## Install Apple Time Machine Samba Support (Experimental)
+
+Create a Time Machine user:
+```console
+sudo adduser tmuser
+sudo groupadd tm_users
+sudo usermod -aG tm_users tmuser
+sudo smbpasswd -a tmuser
+```
+Setup a Time Machine share point:
+```console
+sudo mkdir -p /var/samba/timemachine
+sudo chown root:tm_users /var/samba/timemachine
+sudo chmod 775 /var/samba/timemachine
+```
+Use the following script to replace Samba on your system with this one I built:
+
+[installmysamba.sh](installmysamba.sh)
+
+Download it to your system and execute it:
+```console
+wget -O installmysamba.sh https://raw.githubusercontent.com/seanwo/how-to/master/ubuntu-mediabox/installmysamba.sh
+chmod +x installmysamba.sh
+./installmysamba.sh
+```
+
 ## Install VLC (Video Playback)
 
 ```console
@@ -559,6 +585,9 @@ sudo chmod u+rwx,g+rwxs,o+rx Videos
 sudo mkdir Uploads
 sudo chown root:sftp_users Uploads
 sudo chmod 775 Uploads
+sudo mkdir TimeMachine
+sudo chown root:tm_users TimeMachine
+sudo chmod 775 TimeMachine
 ```
 We want the following directories and files to be part of the media group regardless of who puts files in them for playback and backup purposes:
 ```console
@@ -581,6 +610,7 @@ add:
 /mnt/media/Uploads	/var/sftp/uploads	none	defaults,bind	0	0
 /mnt/media/Torrents	/var/samba/media	none	defaults,bind	0	0
 /mnt/media/Pictures	/var/samba/pictures	none	defaults,bind	0	0
+/mnt/media/TimeMachine	/var/samba/timemachine	none	defaults,bind	0	0
 ```
 
 ## Install ClamAV (Anti-Malware)
