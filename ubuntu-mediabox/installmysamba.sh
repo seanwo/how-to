@@ -20,6 +20,7 @@ read -p "Press [Enter] key to install mysamba..."
 wget https://github.com/seanwo/how-to/raw/master/ubuntu-mediabox/mysamba_4.9.16-1_amd64.deb
 sudo apt -y install samba-libs
 sudo dpkg -i --force-all ./*.deb
+sudo apt-mark hold samba-libs
 
 read -p "Press [Enter] key to add timemachine share samba configuration..."
 
