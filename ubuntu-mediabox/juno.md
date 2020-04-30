@@ -27,7 +27,7 @@ sudo mkdir /root/.juno
 ```
 
 Add or create a /root/.juno/config.xml
-Add the juno.jar to /root directory
+Add the [juno.jar](juno.jar) to /root directory
 
 ```console
 sudo vi /root/juno.sh
