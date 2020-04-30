@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+<interval minutes="15"/>
+<smtp host="smtp.gmail.com" password="" user="email@email.com"/>
+<site url="https://login.jupitered.com/0/private.php?000000-0-0000000000" cookie="000000000">
+<email address="email@email.com"/>
+</site>
+</configuration>
