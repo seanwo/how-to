@@ -1,4 +1,5 @@
 # Instructions for Running Juno
+https://github.com/seanwo/juno
 
 ## Install the Latest Java7
 
