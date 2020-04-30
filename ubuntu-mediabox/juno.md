@@ -1,4 +1,4 @@
-# Instructions for Running Juno (Jupiter Notifier)
+# Instructions for Running Juno
 
 ## Install the Latest Java7
 
