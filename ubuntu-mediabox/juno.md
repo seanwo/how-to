@@ -20,7 +20,7 @@ sudo update-alternatives --set javaws /usr/local/java/jdk1.7.0_80/bin/javaws
 java -version
 ```
 
-##Add the Juno Application
+## Add the Juno Application
 
 ```console
 sudo mkdir /root/.juno
