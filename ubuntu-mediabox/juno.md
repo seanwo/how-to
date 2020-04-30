@@ -4,7 +4,7 @@
 
 Get the latest version of Java7 from archives: https://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html
 
-Install Java7 and set Alternatives
+Install Java7 and set alternatives
 ```console
 sudo mkdir /usr/local/java
 sudo cd /usr/local/java
@@ -20,7 +20,7 @@ sudo update-alternatives --set javaws /usr/local/java/jdk1.7.0_80/bin/javaws
 java -version
 ```
 
-#Add the Juno Application
+##Add the Juno Application
 
 ```console
 sudo mkdir /root/.juno
