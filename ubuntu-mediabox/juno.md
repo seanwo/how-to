@@ -1,22 +1,11 @@
 # Instructions for Running Juno
 https://github.com/seanwo/juno
 
-## Install the Latest Java7
+## Install the Latest Java8
 
-Get the latest version of Java7 from archives: https://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html
-
-Install Java7 and set alternatives
+Install Java8 JRE
 ```console
-sudo mkdir /usr/local/java
-sudo cd /usr/local/java
-sudo tar -xvf jdk-7u80-linux-x64.tar.gz
-
-sudo update-alternatives --install "/usr/bin/java" "java" "/usr/local/java/jdk1.7.0_80/bin/java" 1
-sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/local/java/jdk1.7.0_80/bin/javac" 1
-sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/local/java/jdk1.7.0_80/bin/javaws" 1
-sudo update-alternatives --set java /usr/local/java/jdk1.7.0_80/bin/java
-sudo update-alternatives --set javac /usr/local/java/jdk1.7.0_80/bin/javac
-sudo update-alternatives --set javaws /usr/local/java/jdk1.7.0_80/bin/javaws
+sudo apt install openjdk-8-jre-headless
 
 java -version
 ```
