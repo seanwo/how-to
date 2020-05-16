@@ -109,12 +109,21 @@ sudo apt install exfat-fuse exfat-utils
 ```
 Update your DHCP reservation hostname if you have one in your router.
 
-If you have a UPS, tell the system to shutdown on critical battery levels (or use dconf-editor):
+If you have a UPS, tell the system to shutdown on critical battery levels:
 ```console
-gsettings set org.gnome.settings-daemon.plugins.power percentage-critical 10
-gsettings set org.gnome.settings-daemon.plugins.power percentage-action 9
-gsettings set org.gnome.settings-daemon.plugins.power critical-battery-action 'shutdown'
-gsettings set org.gnome.settings-daemon.plugins.power use-time-for-policy false
+sudo vi /etc/UPower/UPower.conf
+```
+and update the following values:
+```
+UsePercentageForPolicy=true
+PercentageLow=30
+PercentageCritical=20
+PercentageAction=15
+CriticalPowerAction=PowerOff
+```
+and then restart the service
+```console
+sudo systemctl restart upowerd
 ```
 
 ## Install Chrome (Browser)
@@ -269,13 +278,15 @@ Remove or comment out the following line:
 ```
 Subsystem      sftp    /usr/lib/openssh/sftp-server
 ```
-and add the following lines:
+add or update the following lines:
 ```
 Subsystem sftp internal-sftp
 AllowUsers sftpuser
 Match Group sftp_users
 ForceCommand internal-sftp
-PasswordAuthentication yes
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+PermitEmptyPasswords no
 ChrootDirectory /var/sftp
 PermitTunnel no
 AllowAgentForwarding no
@@ -285,7 +296,7 @@ X11Forwarding no
 ```console
 sudo systemctl restart ssh.service
 ```
-Set a strong password you can use to connect to sftp externally:
+Create the sftpuser and the sftp_users group:
 ```console
 sudo adduser sftpuser
 sudo groupadd sftp_users
@@ -301,6 +312,31 @@ sudo chown root:sftp_users /var/sftp/uploads
 sudo chown root:sftp_users /var/sftp/downloads
 sudo chmod 775 /var/sftp/uploads
 sudo chmod 755 /var/sftp/downloads
+```
+On another machine generate a public/private keypair:
+```console
+ssh-keygen -t rsa -b 4096 -m PEM -C "sftpuser"
+```
+Store the private key as /Users/username/.ssh/id_rsa_sftpuser
+
+Now setup the public key on the server:
+```console
+sudo su sftpuser
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+cd ~./ssh
+```
+copy the text from /Users/username/.ssh/id_rsa_sftpuser.pub into authorized_keys and save the file.
+```console
+vi authorized_keys
+```
+```console
+chmod 600 ~./ssh/authorized_keys
+exit
+```
+Now from the client machine you should be able to use the private key to connect:
+```console
+sftp -i ~./ssh/id_rsa_sftpuser sftpuser@mediabox
 ```
 
 ## Install Samba Server (Local Windows Network Access)
