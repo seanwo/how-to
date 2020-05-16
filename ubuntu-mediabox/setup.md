@@ -404,7 +404,7 @@ sudo smbpasswd -a mediauser
 sudo systemctl restart smbd
 ```
 
-## Install Apple Time Machine Samba Support (Experimental)
+## Install Apple Time Machine Samba Support
 
 Create a Time Machine user:
 ```console
