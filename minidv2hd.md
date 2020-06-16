@@ -126,7 +126,7 @@ Output format: mpeg4
 ```
 We are using the Artemis LQ model since is is designed for "Enhancement and upscaling for low-quality progressive footage with better motion consistency. Use this for old family recordings, historical footage, etc."
 
-Under the "Process" main menu make sure your GPU is selecte (or CPU if you do not have a GPU and are sampling the output)  
+Under the ```Process``` main menu make sure your GPU is selecte (or CPU if you do not have a GPU and are sampling the output)  
 Adjust the timeline to enhance and encode either the entire video or just a sample.  
 Select ```Process -> Start Processing```
 
@@ -139,8 +139,9 @@ Inspect the final video when processing is complete.
 
 This program requires the installation of NVidia drivers for GPU detection even though Elastic GPUs provide OpenGL support. That means at a minimum you are going to require a G3 accelerated instance.
 
-AWS accelerated computing: https://aws.amazon.com/ec2/instance-types/#Accelerated_Computing  
-AWS pricing: https://aws.amazon.com/ec2/pricing/on-demand/
+Understand instances and costs by reading:  
+- AWS accelerated computing: https://aws.amazon.com/ec2/instance-types/#Accelerated_Computing
+- AWS pricing: https://aws.amazon.com/ec2/pricing/on-demand/
 
 You will need a g3s.xlarge to meet the minimal requirements:  
 https://help.topazlabs.com/hc/en-us/articles/360039302251-Video-Enhance-AI-System-Requirements
@@ -152,9 +153,8 @@ It will take 24 hours to assign the request, and 24-48 hours for a review of you
 
 At the time of writing this, it will cost about $1 per hour to run this machine.  So have everything ready to go before launching your GPU instance.
 
-Personally, I used a T3 instance to create a Volume with all the files I needed on it, detached it, and then attached it to my G3 instance (when I brought it online for processing) so that I was not wasting money setting up a drive to use for video processing.
-
 ### Setting up the video volume using a small T3 instance:
+*Use a T3 instance to setup the video volume so you are not charged for accelerated machine usage during setup.*
 
 Basically, you need to put all the file you need up in S3 from your home machine.
 
@@ -211,5 +211,4 @@ After your G3 limits are increased:
 - Run all processing until complete.
 - Either from you G3 (after each file is processed in a batch or upon batch completion) or from your T3 (reattached the volume to it) copy all processed files back to S3.
 - Download the processed file from S3 to your local system.
-
-Clean up all AWS resources including instances, volumes, s3 buckets, etc.
+- Clean up all AWS resources including instances, volumes, s3 buckets, etc.
