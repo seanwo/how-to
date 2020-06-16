@@ -135,9 +135,10 @@ Inspect the final video when processing is complete.
 
 ## Step 5: Using AWS Cloud Computing to Upscale
 
-I tried to use an Elastic GPU attached to a T3 instance and it would not recognize the GPU.  
-This program requires the installation of NVidia drivers for GPU detection even though Elastic GPUs provide OpenGL support.  
-That means at a minimum you are going to require a G3 accelerated instance.  
+**Note:** I tried to use an Elastic GPU attached to a T3 instance and it would not recognize the GPU.  
+
+This program requires the installation of NVidia drivers for GPU detection even though Elastic GPUs provide OpenGL support. That means at a minimum you are going to require a G3 accelerated instance.
+
 AWS accelerated computing: https://aws.amazon.com/ec2/instance-types/#Accelerated_Computing  
 AWS pricing: https://aws.amazon.com/ec2/pricing/on-demand/
 
@@ -186,8 +187,7 @@ Once you have all the files on the volume, decompress the .avi.gz files:
 ```console
 gzip.exe -d input.avi.gz
 ```
-Lastly, you will need to acquire AWS's specialized NVidia GRID drivers (the ones from NVidia will not work with this application on a cloud instance).  
-Follow the instructions here to get NVIDIA.zip and put it on the D: volume as well:  
+Lastly, you will need to acquire AWS's specialized NVidia GRID drivers (the ones from NVidia will not work with this application on a cloud instance). Follow the instructions here to get NVIDIA.zip and put it on the D: volume as well:  
 https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/install-nvidia-driver.html#nvidia-GRID-driver
 
 Now you have everything you need to quickly attach this volume to your G3 instance and have access to all the files you need.
@@ -197,18 +197,19 @@ Detach the volume from the T3 instance.
 
 ### Spinning up the G3 Instance for Upscaling:
 
-After your G3 limits are increased, spin up a g3s.xlarge instance with default parameters and a role that allows access to your S3 buckets.
-Attach the video volume drive to the instance.
-Install the AWS CLI Tools from the volume to access S3 (in order to put videos back into S3 as they finish if you want)
-Install the NVidia GRID drivers.
-Reboot.
-Install these Windows features: Media Foundation and Quality Windows Audio Video Experience.
-Reboot.
-Install the Topaz Video Enhance AI Tool.
-Launch Topaz and ensure the GPU is select under Process.
-Select each video file to enhance along with the setting from the section above and queue each movie up for processing.
-Run all processing until complete.
-Either from you G3 (after each file is processed in a batch or upon batch completion) or from your T3 (reattached the volume to it) copy all processed files back to S3.
-Download the processed file from S3 to your local system.
+After your G3 limits are increased:
+- Spin up a g3s.xlarge instance with default parameters and a role that allows access to your S3 buckets.
+- Attach the video volume drive to the instance.
+- Install the AWS CLI Tools from the volume to access S3 (in order to put videos back into S3 as they finish if you want)
+- Install the NVidia GRID drivers.
+- Reboot.
+- Install these Windows features: Media Foundation and Quality Windows Audio Video Experience.
+- Reboot.
+- Install the Topaz Video Enhance AI Tool.
+- Launch Topaz and ensure the GPU is select under Process.
+- Select each video file to enhance along with the setting from the section above and queue each movie up for processing.
+- Run all processing until complete.
+- Either from you G3 (after each file is processed in a batch or upon batch completion) or from your T3 (reattached the volume to it) copy all processed files back to S3.
+- Download the processed file from S3 to your local system.
 
 Clean up all AWS resources including instances, volumes, s3 buckets, etc.
