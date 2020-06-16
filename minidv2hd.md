@@ -11,7 +11,7 @@ This dumps the clips without encoding them (lossless).
 You can use this tool to convert other types of file to .dv format as well.  
 In my case, I used iMovie to create a bunch title.mp4 files and subtitle.mp4 files to describe the clips and used Shotcut to turn them into .dv files. 
 
-Example:  
+*Example:*  
 
 00.title.dv (built in iMovie; converted to .dv with Shotcut)  
 05.subtitle.segment.1.dv (built in iMovie; converted to .dv with Shotcut)  
@@ -21,11 +21,11 @@ Example:
 
 Once you have your new edited movie staged and ordered in files you just concatenate them together.  (Yes. really!)  
 
-On Windows:
+*On Windows:*
 ```console
 $ cat *.dv > movie.dv  
 ```
-On Mac:
+*On Mac:*
 ```console
 C:\> copy 00.title.dv + 05.subtitle.segment.1.dv + 10.movie.segment1.dv + 15.subtitle.segment.1.dv + 20.movie.segment2.dv movie.dv  
 ```
@@ -35,15 +35,15 @@ C:\> copy 00.title.dv + 05.subtitle.segment.1.dv + 10.movie.segment1.dv + 15.sub
 Get [FFmpeg](https://ffmpeg.org/download.html) available for all platforms (static library version)  
 
 Determine the media information of your movie.dv using ffmpeg:  
-  
+```console
 ffmpeg -i movie.dv  
-  
+```
 You will get out that contains something like this:  
-  
+```
   Duration: 01:00:00.00, start: 0.000000, bitrate: 28771 kb/s  
     Stream #0:0: Video: dvvideo, yuv411p, 720x480 [SAR 8:9 DAR 4:3], 25000 kb/s, 29.97 fps, 29.97 tbr, 29.97 tbn, 29.97 tbc  
     Stream #0:1: Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s  
-  
+```
 Here are some terms:  
   
 DAR = Display Aspect Ratio  
@@ -71,6 +71,7 @@ We transform and encode the final output:
 ```console
 ffmpeg -y -i movie.dv -vf yadif,scale="1440:1080":flags=lanczos,setsar=1,pad="1920:1080:240:0" -vcodec libx264 -preset veryslow -profile:v high -pix_fmt yuv420p -crf 17 -acodec ac3 -metadata:s:a:0 language=eng final.mp4
 ```
+```
 -vf (video filter)  
 	yadif, (deinterlace the video)  
 	scale="1440x1080":flags=lanczos, (SAR: new resolution using better lanczos method)  
@@ -83,19 +84,21 @@ ffmpeg -y -i movie.dv -vf yadif,scale="1440:1080":flags=lanczos,setsar=1,pad="19
 -crf 17 (visually lossless)  
 -acodec ac3 (bluray compatible audio)  
 -metadata:s:a:0 language=eng (audio metadata: English)  
-
+```
 ## Step 3: Upscaling Option 2 (prepare for AI processing)
 
 For this option we only need to deinterlace and set a PAR of 1:1 without encoding:
-
+```console
 ffmpeg -i movie.dv -vf yadif,scale="640:480",setsar=1 -vcodec rawvideo -acodec copy -pix_fmt yuv420p -metadata:s:a:0 language=eng input.avi
-
+```
 The scale here is 640x40 with a PAR of 1:1 since we are not doing the upscaling with ffmpeg; only achieving 4:3 with square pixels.
-rawvideo and copy on codecs are to ensure no encoding (lossless)
+```
+-vcodec rawvideo (do not encode)
+-acodec copy (copy stream)
 
 (see option 1 for other select parameter descriptions)
-
-Step 4 AI Upscaling
+```
+## Step 4: AI Upscaling
 
 I did a side by side and split video comparison between the Lanczos and AI upscaling and the AI upscaling wins.
 
