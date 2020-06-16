@@ -12,13 +12,13 @@ You can use this tool to convert other types of file to .dv format as well.
 In my case, I used iMovie to create a bunch title.mp4 files and subtitle.mp4 files to describe the clips and used Shotcut to turn them into .dv files. 
 
 *Example:*  
-
+```
 00.title.dv (built in iMovie; converted to .dv with Shotcut)  
 05.subtitle.segment.1.dv (built in iMovie; converted to .dv with Shotcut)  
 10.movie.segment1.dv (used Shotcut to crop out and export this segment)  
 15.subtitle.segment.1.dv (built in iMovie; converted to .dv with Shotcut)  
 20.movie.segment2.dv (used Shotcut to crop out and export this segment)  
-
+```
 Once you have your new edited movie staged and ordered in files you just concatenate them together.  (Yes. really!)  
 
 *On Windows:*
@@ -45,24 +45,24 @@ You will get out that contains something like this:
     Stream #0:1: Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s  
 ```
 Here are some terms:  
-  
+```
 DAR = Display Aspect Ratio  
 PAR = Pixel Aspect Ratio  
 SAR = Storage Aspect Ratio  
-  
+```
 ffmpeg uses the unfortunate term variation:  
-  
+
 SAR = Sample Aspect Ratio (equivalent to PAR).  I will continue to use the terms above.  
-  
+
 The math says:  
-  
+```
 DAR = PAR * SAR  
 4:3 = 8:9 * 720:480  
 4/3 = (8/9) * (720/480)  
 4/3 = (8*720) / (9*480)  
 4/3 = 5760 / 4320  
 1.33 = 1.33  
-  
+```
 To accurately upscale the movie, we need to have a PAR of 1:1 (square pixels) not 8:9!  
   
 ## Step 3: Upscaling Option 1 (not using AI processing):
