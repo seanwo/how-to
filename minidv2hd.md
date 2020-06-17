@@ -120,7 +120,7 @@ Basically, just add the movie.avi file  and select the following options in the 
 ```
 A.I. Models: Artemis-LQ: P,LQ,MC
 Preset: HD(1920x1080)
-Unselect: Crop to fill frame
+Unselect: Crop to fill frame (this will make the video 16:9 and pad black bars on the left and right for tv playback)
 Scale: 225
 Width: 1920
 Height: 1080
