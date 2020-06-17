@@ -90,7 +90,7 @@ ffmpeg -y -i movie.dv -vf yadif,scale="1440:1080":flags=lanczos,setsar=1,pad="19
 ```
 ## Step 3: Upscaling Option 2 (prepare for AI processing)
 
-For this option we only need to deinterlace and set a PAR of 1:1 without encoding:
+For this option, we only need to deinterlace and set a PAR of 1:1 without encoding:
 ```console
 ffmpeg -i movie.dv -vf yadif,scale="640:480",setsar=1 -vcodec rawvideo -acodec copy -pix_fmt yuv420p -metadata:s:a:0 language=eng input.avi
 ```
@@ -153,7 +153,7 @@ It will take 24 hours to assign the request, and 24-48 hours for a review of you
 
 At the time of writing this, it will cost about $1 per hour to run this machine.  So have everything ready to go before launching your GPU instance.
 
-### Setting up the video volume using a small T3 instance:
+### Setting up the Video Volume Using a Small T3 Instance:
 *Use a T3 instance to setup the video volume so you are not charged for accelerated machine usage during setup.*
 
 Basically, you need to put all the file you need up in S3 from your home machine.
