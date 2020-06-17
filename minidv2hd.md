@@ -120,14 +120,15 @@ Basically, just add the movie.avi file  and select the following options in the 
 ```
 A.I. Models: Artemis-LQ: P,LQ,MC
 Preset: HD(1920x1080)
-Unselect: Crop to fill frame (this will make the video 16:9 and pad black bars on the left and right for tv playback)
+Unselect: Crop to fill frame
 Scale: 225
 Width: 1920
 Height: 1080
 Select: Use default output name
 Output format: mpeg4
 ```
-We will use the Artemis LQ model since is is designed for "Enhancement and upscaling for low-quality progressive footage with better motion consistency. Use this for old family recordings, historical footage, etc."
+We will use the Artemis LQ model since is is designed for "Enhancement and upscaling for low-quality progressive footage with better motion consistency. Use this for old family recordings, historical footage, etc."  
+Unselecting ```Crop to fill frame``` will make the video 16:9 (widescreen) with black bar padding on the left and right.
 
 Simple Steps:
 - Open your input source (generated in Step 3 - Option 2)
