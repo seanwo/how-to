@@ -26,11 +26,11 @@ You can use this tool to convert other types of file to .dv format as well.
 ```
 Once you have your new edited movie staged and ordered in files you just concatenate them together.  (Yes. really!)
 
-*On Windows:*
-```console
-$ cat *.dv > movie.dv
-```
 *On Mac:*
+```console
+hostname$ cat *.dv > movie.dv
+```
+*On Windows:*
 ```console
 C:\> copy 00.title.dv + 05.subtitle.segment.1.dv + 10.movie.segment1.dv + 15.subtitle.segment.1.dv + 20.movie.segment2.dv movie.dv
 ```
