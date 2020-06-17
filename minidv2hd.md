@@ -227,8 +227,8 @@ After your G3 limits are increased:
 
 ### Cost Estimates
 
-Encoding Costs:
+Encoding Costs:  
 video (mins) * 0.44(frames/sec) * 0.93(cost/hr) * 0.5 = compute cost of g3s.xlarge instance
 
-Example:
+Example:  
 60(mins) * 0.44(frames/sec) * 0.93(cost/hr) * 0.5 = $12.28
