@@ -224,3 +224,11 @@ After your G3 limits are increased:
 - Either from you G3 instance (after each file is processed or upon batch completion) or from your T3 (reattached the EBS volume) copy all processed files back to S3.
 - Download the processed files from S3 to your local system.
 - Clean up all AWS resources including instances, volumes, s3 buckets, etc.
+
+### Cost Estimates
+
+Encoding Costs:
+video (mins) * 0.44(frames/sec) * 0.93(cost/hr) * 0.5 = compute cost of g3s.xlarge instance
+
+Example:
+60(mins) * 0.44(frames/sec) * 0.93(cost/hr) * 0.5 = $12.28
