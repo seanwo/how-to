@@ -1,6 +1,6 @@
 # Instructions for Upscaling miniDV SD Video to HD
 
-## Step 1: Edit the raw footage
+## Step 1: Edit the Raw Footage
 
 Get [Shotcut](https://shotcut.org/) (available for all platforms).
 
@@ -33,7 +33,7 @@ $ cat *.dv > movie.dv
 C:\> copy 00.title.dv + 05.subtitle.segment.1.dv + 10.movie.segment1.dv + 15.subtitle.segment.1.dv + 20.movie.segment2.dv movie.dv
 ```
 
-## Step 2: Understand the square pixel problem
+## Step 2: Understand the Square Pixel Problem
 
 Get [FFmpeg](https://ffmpeg.org/download.html) available for all platforms (static library version)  
 
@@ -68,7 +68,7 @@ DAR = PAR * SAR
 ```
 To accurately upscale the movie, we need to have a PAR of 1:1 (square pixels) not 8:9!
 
-## Step 3: Upscaling Option 1 (not using AI processing):
+## Step 3: Upscaling - Option 1 (not using AI processing):
 
 We transform and encode the final output:
 ```console
@@ -88,7 +88,7 @@ ffmpeg -y -i movie.dv -vf yadif,scale="1440:1080":flags=lanczos,setsar=1,pad="19
 -acodec ac3 (bluray compatible audio)  
 -metadata:s:a:0 language=eng (audio metadata: English)  
 ```
-## Step 3: Upscaling Option 2 (prepare for AI processing)
+## Step 3: Upscaling - Option 2 (prepare for AI processing)
 
 For this option, we only need to deinterlace and set a PAR of 1:1 without encoding:
 ```console
@@ -153,7 +153,7 @@ It will take 24 hours to assign the request, and 24-48 hours for a review of you
 
 At the time of writing this, it will cost about $1 per hour to run this machine.  So have everything ready to go before launching your GPU instance.
 
-### Setting up the Video Volume Using a Small T3 Instance:
+### Setting Up the Video Volume Using a Small T3 Instance:
 *Use a T3 instance to setup the video volume so you are not charged for accelerated machine usage during setup.*
 
 Basically, you need to put all the file you need up in S3 from your home machine.
@@ -195,7 +195,7 @@ Now you have everything you need to quickly attach this volume to your G3 instan
 Shutdown your T3 instance making sure you do not delete the video volume you made.  
 Detach the volume from the T3 instance.
 
-### Spinning up the G3 Instance for Upscaling:
+### Spinning Up the G3 Instance for Upscaling:
 
 After your G3 limits are increased:
 - Spin up a g3s.xlarge instance with default parameters and a role that allows access to your S3 buckets.
