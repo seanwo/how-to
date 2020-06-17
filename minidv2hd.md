@@ -71,6 +71,7 @@ DAR = PAR * SAR
 To accurately upscale the movie, we need to have a PAR of 1:1 (square pixels) not 8:9!
 
 ## Step 3: Upscaling - Option 1 (not using AI processing):
+*Skip this step if you are going to use AI processing.  This is provided for those that find AI processing too long or costly.  I started down this route until I found option 2.*
 
 We transform and encode the final output:
 ```console
