@@ -1,4 +1,6 @@
-# Instructions for Upscaling miniDV SD Video to HD
+# Upscaling miniDV SD (480p) Video to HD (1080p) Video
+
+This how-to assume you have been able to pull footage off an old camcorder and have .dv files that contain the content you want to edit and upscale from 480p to 1080p.  You can do this by using [WinDV](http://windv.mourek.cz/) to pull data off an old camcorder (or one you get off ebay).
 
 ## Step 1: Edit the Raw Footage
 
