@@ -1,6 +1,58 @@
 # Upscaling miniDV SD (480p) Video to HD (1080p) Video
 
+## Prerequisites
+
 This how-to assumes you have been able to pull footage off an old camcorder and have .dv files that contain the content you want to edit and upscale from 480p to 1080p.  You can do this by using [WinDV](http://windv.mourek.cz/) to extract data off your old camcorder (or one you get off ebay).
+
+## Upscaling Method Comparisons
+
+Here are some video encoding comparisons to show the difference between Bicubic, Lanczos, and Artemis LQ upscaling (from 480p to 1080p) on a sample clip taken from a miniDV camcorder.
+
+Sample upscaling using each method:
+
+<table>
+	<tr>
+		<th>Bicubic</th>
+		<th>Lanczos</th>
+		<th>Artemis</th>
+	</tr>
+	<tr>
+		<td><a href="https://drive.google.com/file/d/18dHpIBo6D94n_xgGodMyX0uAODjSFaQ4/view?usp=sharing"><img src="upscaling/sample.1440x1080.bicubic.jpg"></td></a>
+		<td><a href="https://drive.google.com/file/d/1f-DHb_HQRwJB0qMVCu8ScXOItmT5mbgQ/view?usp=sharing"><img src="upscaling/sample.1440x1080.lanczos.jpg"></td></a>
+		<td><a href="https://drive.google.com/file/d/1rWfJ2rZImn0crlUTz3JzJL3eRt2zqcPX/view?usp=sharing"><img src="upscaling/sample.1440x1080.artemis.jpg"></td></a>
+	</tr>
+</table>
+	
+
+Side by side comparisons of each method:
+
+<table>
+	<tr>
+		<th>Bicubic vs. Lanczos</th>
+		<th>Bicubic vs. Artemis</th>
+		<th>Lanczos vs. Artemis</th>
+	</tr>
+	<tr>
+		<td><a href="https://drive.google.com/file/d/1oUeqMl5Q10lus7rWFZNuXx1k2ke1mn4C/view?usp=sharing"><img src="upscaling/sample.sxs.bicubic.vs.lanczos.jpg"></td></a>
+		<td><a href="https://drive.google.com/file/d/1yzVmM_SlTc5JvNrr1BnLThc1VLNd6CXC/view?usp=sharing"><img src="upscaling/sample.sxs.bicubic.vs.artemis.jpg"></td></a>
+		<td><a href="https://drive.google.com/file/d/180MsjZ8bRWbvbGYWgtvf8dSpelcwv7Hj/view?usp=sharing"><img src="upscaling/sample.sxs.lanczos.vs.artemis.jpg"></td></a>
+	</tr>
+</table>
+
+Split screen comparisons of each method:
+
+<table>
+	<tr>
+		<th>Bicubic vs. Lanczos</th>
+		<th>Bicubic vs. Artemis</th>
+		<th>Lanczos vs. Artemis</th>
+	</tr>
+	<tr>
+		<td><a href="https://drive.google.com/file/d/1FWwZY-d08sEa8ms_iayjidSC5DYjKGXv/view?usp=sharing"><img src="upscaling/sample.split.bicubic.vs.lanczos.jpg"></td></a>
+		<td><a href="https://drive.google.com/file/d/18yuLThkUQGlNh-w-xQGoQhr1QIX_cVsD/view?usp=sharing"><img src="upscaling/sample.split.bicubic.vs.artemis.jpg"></td></a>
+		<td><a href="https://drive.google.com/file/d/12wuVJNXOK-5QZyt0h6vHN_dBoobC2LUw/view?usp=sharing"><img src="upscaling/sample.split.lanczos.vs.artemis.jpg"></td></a>
+	</tr>
+</table>
 
 ## Step 1: Edit the Raw Footage
 
@@ -226,7 +278,7 @@ After your G3 limits are increased:
 - Download the processed files from S3 to your local system.
 - Clean up all AWS resources including instances, volumes, s3 buckets, etc.
 
-### Cost Estimates
+### AWS Cost Estimates
 
 Encoding Costs:  
 video (mins) * 0.44 (frames/sec) * 0.93 (cost/hr) * 0.5 = compute cost of g3s.xlarge instance
