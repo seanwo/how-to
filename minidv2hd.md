@@ -281,6 +281,10 @@ After your G3 limits are increased:
 - Install the NVidia GRID drivers.
 - Reboot.
 - Install these Windows features: Media Foundation and Quality Windows Audio Video Experience.
+```console
+enable-windowsoptionalfeature -online -featureName ServerMediaFoundation -all
+enable-windowsoptionalfeature -online -featureName QWAVE -all
+```
 - Reboot.
 - Install the Topaz Video Enhance AI Tool.
 - Launch Topaz and ensure the GPU is select under Process.
