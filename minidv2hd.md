@@ -174,8 +174,6 @@ ffmpeg -i movie.dv -vf yadif,scale="640:480",setsar=1 -vcodec rawvideo -acodec c
 
 Get [Topaz Video Enhance AI](https://topazlabs.com/video-enhance-ai/) (there is a free trial for 30 days).
 
-I performed a side by side and split video comparison between the Lanczos and AI upscaling methods and the AI method won.
-
 I have powerful Macbook Pro (no GPU) and it would be infeasible to process more than 30 minutes of video without spending days or weeks using only the CPU on my machine.
 
 **You will NEED a GPU!** (*or a cloud instance with one; see below*)
