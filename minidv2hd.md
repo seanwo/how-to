@@ -55,17 +55,18 @@ Split screen comparisons of each method:
 </table>
 
 **Original miniDV Sample Clip**
-<p><a href="https://drive.google.com/file/d/1li2k33yte_PwajIoNXFwGstyBjAR9wOT/view?usp=sharing"><img src="upscaling/sample.jpg" width="50%"></a></p>
+<p><a href="https://drive.google.com/file/d/1li2k33yte_PwajIoNXFwGstyBjAR9wOT/view?usp=sharing"><img src="upscaling/sample.jpg" width="33%"></a></p>
 
-During my research, I also tried [iSIZE Upscaling](https://www.isize.co/upscale/) but ruled it out since there were flashing black frames being encoded by their AI algorithm.
+During my research, I also tried [iSIZE AI Upscaling](https://www.isize.co/upscale/) but ruled it out since there were flashing black frames being encoded by their AI algorithm.
 
 **iSize Sample**
-</p><img src="upscaling/sample.1440x1080.bitsave.jpg" width="50%"><p>
+</p><a href="https://drive.google.com/file/d/1j5iPQe7Vk2AesD6YFdTVQ7n_W9rjJZtY/view?usp=sharing"><img src="upscaling/sample.1440x1080.bitsave.jpg" width="33%"></a><p>
 
-In my opinion, the upscaling methods ranked from worst to best are:
-- Bicubic (worst)
+In my opinion, the upscaling methods ranked from best to worst are:
+- Artemis
 - Lanczos
-- Artemis LQ (best)
+- Bicubic
+- iSize
 
 ## Step 1: Edit the Raw Footage
 
@@ -171,7 +172,7 @@ ffmpeg -i movie.dv -vf yadif,scale="640:480",setsar=1 -vcodec rawvideo -acodec c
 ```
 ## Step 4: AI Upscaling
 
-Get [Topaz Video Enhance AI](https://topazlabs.com/video-enhance-ai/) (there is a free trial for 30 days).
+Get [Topaz **V**ideo **E**nhance **AI**](https://topazlabs.com/video-enhance-ai/) (there is a free trial for 30 days).
 
 I have powerful Macbook Pro (no GPU) and it would be infeasible to process more than 30 minutes of video without spending days or weeks using only the CPU on my machine.
 
@@ -205,9 +206,9 @@ Inspect the final video when processing is complete.
 
 ## Step 5: Using AWS Cloud Computing to Upscale
 
-**Note:** I tried to use an Elastic GPU attached to a T3 instance and Topaz would not recognize the GPU.  
+**Note:** I tried to use an Elastic GPU attached to a T3 instance and VEAI would not recognize the GPU.  
 
-*Topaz requires the installation of NVidia drivers for GPU detection even though Elastic GPUs provide OpenGL support. That means at a minimum you are going to require a G3 accelerated instance.*
+*VEAI requires the installation of NVidia drivers for GPU detection even though Elastic GPUs provide OpenGL support. That means at a minimum you are going to require a G3 accelerated instance.*
 
 Understand AWS instance types and costs by reading these pages:  
 - AWS accelerated computing: https://aws.amazon.com/ec2/instance-types/#Accelerated_Computing
@@ -286,7 +287,7 @@ enable-windowsoptionalfeature -online -featureName QWAVE -all
 ```
 - Reboot.
 - Install the Topaz Video Enhance AI Tool.
-- Launch Topaz and ensure the GPU is select under Process.
+- Launch VEAI and ensure the GPU is select under Process.
 - Select each video file to enhance along with the setting from the section above and queue each movie up for processing.
 - Run all processing until complete.
 - Either from you G3 instance (after each file is processed or upon batch completion) or from your T3 (reattached the EBS volume) copy all processed files back to S3.
