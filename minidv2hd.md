@@ -163,7 +163,7 @@ For this option, we only need to deinterlace and set a PAR of 1:1 without encodi
 ```console
 ffmpeg -i movie.dv -vf yadif,scale="640:480",setsar=1 -vcodec rawvideo -acodec copy -pix_fmt yuv420p -metadata:s:a:0 language=eng movie.avi
 ```
-*The output has a resolution of 640x40 (4:3) with a PAR of 1:1 (square pixels).*  
+*The output has a resolution of 640x480 (4:3) with a PAR of 1:1 (square pixels).*  
 ```
 -vcodec rawvideo (do not encode; lossless)
 -acodec copy (copy stream; lossless)
