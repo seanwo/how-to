@@ -245,9 +245,9 @@ Sample upscaling using each method:
 		<th>Artemis</th>
 	</tr>
 	<tr>
-		<td><img src="upscaling/sample.1440x1080.bicubic.jpg"></td>
-		<td><img src="upscaling/sample.1440x1080.lanczos.jpg"></td>
-		<td><img src="upscaling/sample.1440x1080.artemis.jpg"></td>
+		<td><a href="https://drive.google.com/file/d/18dHpIBo6D94n_xgGodMyX0uAODjSFaQ4/view?usp=sharing"><img src="upscaling/sample.1440x1080.bicubic.jpg"></td></a>
+		<td><a href="https://drive.google.com/file/d/1f-DHb_HQRwJB0qMVCu8ScXOItmT5mbgQ/view?usp=sharing"><img src="upscaling/sample.1440x1080.lanczos.jpg"></td></a>
+		<td><a href="https://drive.google.com/file/d/1rWfJ2rZImn0crlUTz3JzJL3eRt2zqcPX/view?usp=sharing"><img src="upscaling/sample.1440x1080.artemis.jpg"></td></a>
 	</tr>
 </table>
 	
@@ -256,14 +256,14 @@ Side by side comparisons of each method:
 
 <table>
 	<tr>
-		<th>Bicubic</th>
-		<th>Lanczos</th>
-		<th>Artemis</th>
+		<th>Bicubic vs. Lanczos</th>
+		<th>Bicubic vs. Artemis</th>
+		<th>Lanczos vs. Artemis</th>
 	</tr>
 	<tr>
-		<td><img src="upscaling/sample.sxs.bicubic.vs.lanczos.jpg"></td>
-		<td><img src="upscaling/sample.sxs.bicubic.vs.artemis.jpg"></td>
-		<td><img src="upscaling/sample.sxs.lanczos.vs.artemis.jpg"></td>
+		<td><a href="https://drive.google.com/file/d/1oUeqMl5Q10lus7rWFZNuXx1k2ke1mn4C/view?usp=sharing"><img src="upscaling/sample.sxs.bicubic.vs.lanczos.jpg"></td></a>
+		<td><a href="https://drive.google.com/file/d/1yzVmM_SlTc5JvNrr1BnLThc1VLNd6CXC/view?usp=sharing"><img src="upscaling/sample.sxs.bicubic.vs.artemis.jpg"></td></a>
+		<td><a href="https://drive.google.com/file/d/180MsjZ8bRWbvbGYWgtvf8dSpelcwv7Hj/view?usp=sharing"><img src="upscaling/sample.sxs.lanczos.vs.artemis.jpg"></td></a>
 	</tr>
 </table>
 
@@ -271,13 +271,13 @@ Split screen comparisons of each method:
 
 <table>
 	<tr>
-		<th>Bicubic</th>
-		<th>Lanczos</th>
-		<th>Artemis</th>
+		<th>Bicubic vs. Lanczos</th>
+		<th>Bicubic vs. Artemis</th>
+		<th>Lanczos vs. Artemis</th>
 	</tr>
 	<tr>
-		<td><img src="upscaling/sample.split.bicubic.vs.lanczos.jpg"></td>
-		<td><img src="upscaling/sample.split.bicubic.vs.artemis.jpg"></td>
-		<td><img src="upscaling/sample.split.lanczos.vs.artemis.jpg"></td>
+		<td><a href="https://drive.google.com/file/d/1FWwZY-d08sEa8ms_iayjidSC5DYjKGXv/view?usp=sharing"><img src="upscaling/sample.split.bicubic.vs.lanczos.jpg"></td></a>
+		<td><a href="https://drive.google.com/file/d/18yuLThkUQGlNh-w-xQGoQhr1QIX_cVsD/view?usp=sharing"><img src="upscaling/sample.split.bicubic.vs.artemis.jpg"></td></a>
+		<td><a href="https://drive.google.com/file/d/12wuVJNXOK-5QZyt0h6vHN_dBoobC2LUw/view?usp=sharing"><img src="upscaling/sample.split.lanczos.vs.artemis.jpg"></td></a>
 	</tr>
 </table>
