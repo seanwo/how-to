@@ -82,7 +82,7 @@ Select ```camcorder:DV (SD NTSC)``` (*in my case, this is my original format*) a
 You can use this tool to convert other types of file to .dv format as well.  
 *In my case, I used iMovie to create a bunch title.mp4 files and subtitle.mp4 files to describe the clips and used Shotcut to turn them into .dv files.*
 
-*Example List of Files After Editting:*
+*Example list of files after editting:*
 ```
 00.title.dv (built in iMovie; converted to .dv with Shotcut)  
 05.subtitle.segment.1.dv (built in iMovie; converted to .dv with Shotcut)  
