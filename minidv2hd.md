@@ -233,3 +233,51 @@ video (mins) * 0.44 (frames/sec) * 0.93 (cost/hr) * 0.5 = compute cost of g3s.xl
 
 Example:  
 60 (mins) * 0.44 (frames/sec) * 0.93 (cost/hr) * 0.5 = $12.28
+
+## Video Comparisons
+
+Sample upscaling using each method:
+
+<table>
+	<tr>
+		<th>Bicubic</th>
+		<th>Lanczos</th>
+		<th>Artemis</th>
+	</tr>
+	<tr>
+		<td><img src="upscaling/sample.1440x1080.bicubic.jpg"></td>
+		<td><img src="upscaling/sample.1440x1080.lanczos.jpg"></td>
+		<td><img src="upscaling/sample.1440x1080.artemis.jpg"></td>
+	</tr>
+</table>
+	
+
+Side by side comparisons of each method:
+
+<table>
+	<tr>
+		<th>Bicubic</th>
+		<th>Lanczos</th>
+		<th>Artemis</th>
+	</tr>
+	<tr>
+		<td><img src="upscaling/sample.sxs.bicubic.vs.lanczos.jpg"></td>
+		<td><img src="upscaling/sample.sxs.bicubic.vs.artemis.jpg"></td>
+		<td><img src="upscaling/sample.sxs.lanczos.vs.artemis.jpg"></td>
+	</tr>
+</table>
+
+Split screen comparisons of each method:
+
+<table>
+	<tr>
+		<th>Bicubic</th>
+		<th>Lanczos</th>
+		<th>Artemis</th>
+	</tr>
+	<tr>
+		<td><img src="upscaling/sample.split.bicubic.vs.lanczos.jpg"></td>
+		<td><img src="upscaling/sample.split.bicubic.vs.artemis.jpg"></td>
+		<td><img src="upscaling/sample.split.lanczos.vs.artemis.jpg"></td>
+	</tr>
+</table>
