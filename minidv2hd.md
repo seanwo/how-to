@@ -191,7 +191,7 @@ Height: 1080
 Select: Use default output name
 Output format: mpeg4
 ```
-We will use the Artemis LQ model since is is designed for "Enhancement and upscaling for low-quality progressive footage with better motion consistency. Use this for old family recordings, historical footage, etc."  
+We will use the Artemis LQ model since it is designed for "Enhancement and upscaling for low-quality progressive footage with better motion consistency. Use this for old family recordings, historical footage, etc."  
 Unselecting ```Crop to fill frame``` will make the video 16:9 (widescreen) with black bar padding on the left and right.
 
 Simple Steps:
