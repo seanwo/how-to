@@ -17,9 +17,9 @@ Sample upscaling using each method:
 		<th>Artemis</th>
 	</tr>
 	<tr>
-		<td><a href="https://drive.google.com/file/d/18dHpIBo6D94n_xgGodMyX0uAODjSFaQ4/view?usp=sharing"><img src="upscaling/sample.1440x1080.bicubic.jpg"></td></a>
-		<td><a href="https://drive.google.com/file/d/1f-DHb_HQRwJB0qMVCu8ScXOItmT5mbgQ/view?usp=sharing"><img src="upscaling/sample.1440x1080.lanczos.jpg"></td></a>
-		<td><a href="https://drive.google.com/file/d/1rWfJ2rZImn0crlUTz3JzJL3eRt2zqcPX/view?usp=sharing"><img src="upscaling/sample.1440x1080.artemis.jpg"></td></a>
+		<td><a href="https://drive.google.com/file/d/18dHpIBo6D94n_xgGodMyX0uAODjSFaQ4/view?usp=sharing"><img src="upscaling/sample.1440x1080.bicubic.jpg"></a></td>
+		<td><a href="https://drive.google.com/file/d/1f-DHb_HQRwJB0qMVCu8ScXOItmT5mbgQ/view?usp=sharing"><img src="upscaling/sample.1440x1080.lanczos.jpg"></a></td>
+		<td><a href="https://drive.google.com/file/d/1rWfJ2rZImn0crlUTz3JzJL3eRt2zqcPX/view?usp=sharing"><img src="upscaling/sample.1440x1080.artemis.jpg"></a></td>
 	</tr>
 </table>
 	
@@ -33,9 +33,9 @@ Side by side comparisons of each method:
 		<th>Lanczos vs. Artemis</th>
 	</tr>
 	<tr>
-		<td><a href="https://drive.google.com/file/d/1oUeqMl5Q10lus7rWFZNuXx1k2ke1mn4C/view?usp=sharing"><img src="upscaling/sample.sxs.bicubic.vs.lanczos.jpg"></td></a>
-		<td><a href="https://drive.google.com/file/d/1yzVmM_SlTc5JvNrr1BnLThc1VLNd6CXC/view?usp=sharing"><img src="upscaling/sample.sxs.bicubic.vs.artemis.jpg"></td></a>
-		<td><a href="https://drive.google.com/file/d/180MsjZ8bRWbvbGYWgtvf8dSpelcwv7Hj/view?usp=sharing"><img src="upscaling/sample.sxs.lanczos.vs.artemis.jpg"></td></a>
+		<td><a href="https://drive.google.com/file/d/1oUeqMl5Q10lus7rWFZNuXx1k2ke1mn4C/view?usp=sharing"><img src="upscaling/sample.sxs.bicubic.vs.lanczos.jpg"></a></td>
+		<td><a href="https://drive.google.com/file/d/1yzVmM_SlTc5JvNrr1BnLThc1VLNd6CXC/view?usp=sharing"><img src="upscaling/sample.sxs.bicubic.vs.artemis.jpg"></a></td>
+		<td><a href="https://drive.google.com/file/d/180MsjZ8bRWbvbGYWgtvf8dSpelcwv7Hj/view?usp=sharing"><img src="upscaling/sample.sxs.lanczos.vs.artemis.jpg"></a></td>
 	</tr>
 </table>
 
@@ -48,20 +48,19 @@ Split screen comparisons of each method:
 		<th>Lanczos vs. Artemis</th>
 	</tr>
 	<tr>
-		<td><a href="https://drive.google.com/file/d/1FWwZY-d08sEa8ms_iayjidSC5DYjKGXv/view?usp=sharing"><img src="upscaling/sample.split.bicubic.vs.lanczos.jpg"></td></a>
-		<td><a href="https://drive.google.com/file/d/18yuLThkUQGlNh-w-xQGoQhr1QIX_cVsD/view?usp=sharing"><img src="upscaling/sample.split.bicubic.vs.artemis.jpg"></td></a>
-		<td><a href="https://drive.google.com/file/d/12wuVJNXOK-5QZyt0h6vHN_dBoobC2LUw/view?usp=sharing"><img src="upscaling/sample.split.lanczos.vs.artemis.jpg"></td></a>
+		<td><a href="https://drive.google.com/file/d/1FWwZY-d08sEa8ms_iayjidSC5DYjKGXv/view?usp=sharing"><img src="upscaling/sample.split.bicubic.vs.lanczos.jpg"></a></td>
+		<td><a href="https://drive.google.com/file/d/18yuLThkUQGlNh-w-xQGoQhr1QIX_cVsD/view?usp=sharing"><img src="upscaling/sample.split.bicubic.vs.artemis.jpg"></a></td>
+		<td><a href="https://drive.google.com/file/d/12wuVJNXOK-5QZyt0h6vHN_dBoobC2LUw/view?usp=sharing"><img src="upscaling/sample.split.lanczos.vs.artemis.jpg"></a></td>
 	</tr>
 </table>
 
-<table>
-	<tr>
-		<th>Original miniDV Sample Clip</th>
-	</tr>
-	<tr>
-		<td><a href="https://drive.google.com/file/d/1li2k33yte_PwajIoNXFwGstyBjAR9wOT/view?usp=sharing"><img src="upscaling/sample.jpg"></td></a>		
-	</tr>
-</table>
+**Original miniDV Sample Clip**
+<p><a href="https://drive.google.com/file/d/1li2k33yte_PwajIoNXFwGstyBjAR9wOT/view?usp=sharing"><img src="upscaling/sample.jpg" width="50%"></a></p>
+
+During my research, I also tried [iSIZE Upscaling](https://www.isize.co/upscale/) but ruled it out since there were flashing black frames being encoded by their AI algorithm.
+
+**iSize Sample**
+</p><img src="upscaling/sample.1440x1080.bitsave.jpg" width="50%"><p>
 
 In my opinion, the upscaling methods ranked from worst to best are:
 - Bicubic (worst)
