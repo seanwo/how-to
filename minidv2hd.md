@@ -227,7 +227,7 @@ At the time of writing this, it will cost ~$1 per hour to run this machine.  Hav
 ### Setting Up the Video EBS Volume Using a Small T3 Instance:
 *Use a T3 instance to setup the video EBS volume so you are not charged for accelerated machine usage during setup.*
 
-Basically, you need to put all the file you need up in S3 from your local machine.
+Basically, you need to upload all the files you need to S3 from your local machine.
 
 This includes:
 - AWS CLi Tools: https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-windows.html
