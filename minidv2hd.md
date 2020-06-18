@@ -54,6 +54,15 @@ Split screen comparisons of each method:
 	</tr>
 </table>
 
+<table>
+	<tr>
+		<th>Original miniDV Sample Clip</th>
+	</tr>
+	<tr>
+		<td><a href="https://drive.google.com/file/d/1li2k33yte_PwajIoNXFwGstyBjAR9wOT/view?usp=sharing"><img src="upscaling/sample.jpg"></td></a>		
+	</tr>
+</table>
+
 ## Step 1: Edit the Raw Footage
 
 Get [Shotcut](https://shotcut.org/) (available for all platforms).
