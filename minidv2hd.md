@@ -146,7 +146,7 @@ ffmpeg -y -i movie.dv -vf yadif,scale="1440:1080":flags=lanczos,setsar=1,pad="19
 ```
 -vf (video filter)  
 	yadif, (deinterlace the video)  
-	scale="1440x1080":flags=lanczos, (SAR: new resolution using better lanczos method)  
+	scale="1440x1080":flags=lanczos, (SAR: upscaled resolution using lanczos method)  
 	setsar=1, (PAR)  
 	pad="1920:1080:240:0" (pad left and right since original is 4:3 and we are creating 16:9)  
 -vcodec libx264 (encoding codec)  
