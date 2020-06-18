@@ -4,7 +4,7 @@
 
 This how-to assumes you have been able to pull footage off an old camcorder and have .dv files that contain the content you want to edit and upscale from 480p to 1080p.  You can do this by using [WinDV](http://windv.mourek.cz/) to extract data off your old camcorder (or one you get off ebay).
 
-## Video Comparisons
+## Upscaling Method Comparisons
 
 Here are some video encoding comparisons to show the difference between Bicubic, Lanczos, and Artemis LQ upscaling (from 480p to 1080p) on a sample clip taken from a miniDV camcorder.
 
