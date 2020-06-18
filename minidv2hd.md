@@ -276,7 +276,7 @@ Detach the EBS volume from the T3 instance.
 
 After your G3 limits are increased:
 - Spin up a g3s.xlarge instance with default parameters and a role that allows access to your S3 buckets.
-- Attach the video EBS volume drive to the instance.
+- Attach the video EBS volume to the instance.
 - Install the AWS CLI Tools from the EBS volume to access S3 (in order to put videos back into S3 as they finish).
 - Install the NVidia GRID drivers.
 - Reboot.
