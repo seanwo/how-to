@@ -178,7 +178,7 @@ I have powerful Macbook Pro (no GPU) and it would be infeasible to process more 
 
 **You will NEED a GPU!** (*or a cloud instance with one; see below*)
 
-However, you should process a few minutes of video locally to see what he quality is like and to experiment with the tool.
+However, you should process a few minutes of video locally to see what the quality is like and to experiment with the tool.
 
 Basically, just add the movie.avi file  and select the following options in the tool:
 ```
