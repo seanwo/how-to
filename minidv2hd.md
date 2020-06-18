@@ -63,6 +63,11 @@ Split screen comparisons of each method:
 	</tr>
 </table>
 
+In my opinion, the upscaling methods ranked from worst to best are:
+- Bicubic (worst)
+- Lanczos
+- Artemis LQ (best)
+
 ## Step 1: Edit the Raw Footage
 
 Get [Shotcut](https://shotcut.org/) (available for all platforms).
