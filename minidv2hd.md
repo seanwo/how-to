@@ -86,9 +86,9 @@ You can use this tool to convert other types of file to .dv format as well.
 ```
 00.title.dv (built in iMovie; converted to .dv with Shotcut)  
 05.subtitle.segment.1.dv (built in iMovie; converted to .dv with Shotcut)  
-10.movie.segment1.dv (used Shotcut to crop out and export this segment)  
-15.subtitle.segment.1.dv (built in iMovie; converted to .dv with Shotcut)  
-20.movie.segment2.dv (used Shotcut to crop out and export this segment)  
+10.movie.segment.1.dv (used Shotcut to crop out and export this segment)  
+15.subtitle.segment.2.dv (built in iMovie; converted to .dv with Shotcut)  
+20.movie.segment.2.dv (used Shotcut to crop out and export this segment)  
 ```
 Once you have edited your movie and have a list of ordered the clips, you just concatenate them together.  (Yes. really!)
 
