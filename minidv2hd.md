@@ -295,9 +295,16 @@ enable-windowsoptionalfeature -online -featureName QWAVE -all
 - Clean up all AWS resources including instances, volumes, s3 buckets, etc.
 
 ### AWS Cost Estimates
+*costs as of when this page was authored*
 
-Encoding Costs:  
-video (mins) * 0.44 (frames/sec) * 0.93 (cost/hr) * 0.5 = compute cost of g3s.xlarge instance
+EC2 Costs:  
+video length (mins) * 0.44 (frames/sec) * 0.93 (cost/hr) * 0.5 = compute cost of g3s.xlarge instance
 
-Example:  
+Example (60 mins of video):  
 60 (mins) * 0.44 (frames/sec) * 0.93 (cost/hr) * 0.5 = $12.28
+
+EBS Volume Costs:
+video length (mins) * 0.44 (frames/sec) * 0.1 (gb/month) * 1000 (gb) / 720 * 0.5 = storage of 1TB EBS drive
+
+Example (60 mins of video):
+60 (mins) * 0.44 (frames/sec) * 0.1 (gb/month) * 1000 (gb) / 720 * 0.5 = $1.83
