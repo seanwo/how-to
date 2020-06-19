@@ -303,8 +303,8 @@ video length (mins) * 0.44 (frames/sec) * 0.93 (cost/hr) * 0.5 = compute cost of
 Example (60 mins of video):  
 60 (mins) * 0.44 (frames/sec) * 0.93 (cost/hr) * 0.5 = $12.28
 
-EBS Volume Costs:
+EBS Volume Costs:  
 video length (mins) * 0.44 (frames/sec) * 0.1 (gb/month) * 1000 (gb) / 720 * 0.5 = 1TB EBS volume
 
-Example (60 mins of video):
+Example (60 mins of video):  
 60 (mins) * 0.44 (frames/sec) * 0.1 (gb/month) * 1000 (gb) / 720 * 0.5 = $1.83
