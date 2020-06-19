@@ -224,7 +224,7 @@ It will take 24 hours to assign the request, and 24-48 hours for a review of you
 
 At the time of writing this, it will cost ~$1 per hour to run this machine.  Have everything ready to go before launching your GPU instance to minimize costs.
 
-### Setting Up the Video EBS Volume Using a Small T3 Instance:
+### Perparing a Video EBS Volume Using a Small T3 Instance:
 *Use a T3 instance to setup the video EBS volume so you are not charged for accelerated machine usage during setup.*
 
 Basically, you need to upload all the files you need to S3 from your local machine.
@@ -272,7 +272,7 @@ Now you have everything you need to quickly attach this EBS volume to your G3 in
 Shutdown your T3 instance making sure you do not delete the EBS volume you made.  
 Detach the EBS volume from the T3 instance.
 
-### Spinning Up the G3 Instance for Upscaling:
+### Upscaling Using a XLarge G3 Instance:
 
 After your G3 limits are increased:
 - Spin up a g3s.xlarge instance with default parameters and a role that allows access to your S3 buckets.
