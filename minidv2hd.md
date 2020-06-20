@@ -298,10 +298,10 @@ enable-windowsoptionalfeature -online -featureName QWAVE -all
 *costs as of when this page was authored*
 
 EC2 Costs:  
-video length (mins) * 0.44 (frames/sec) * 0.93 (cost/hr) * 0.5 = compute cost of g3s.xlarge instance
+video length (mins) * 0.44 (frames/sec) * 0.934 (cost/hr) * 0.5 = compute cost of g3s.xlarge instance
 
 Example (60 mins of video):  
-60 (mins) * 0.44 (frames/sec) * 0.93 (cost/hr) * 0.5 = $12.28
+60 (mins) * 0.44 (frames/sec) * 0.934 (cost/hr) * 0.5 = $12.33
 
 EBS Volume Costs:  
 video length (mins) * 0.44 (frames/sec) * 0.1 (gb/month) * 1000 (gb) / 720 * 0.5 = 1TB EBS volume
