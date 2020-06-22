@@ -22,7 +22,12 @@ Sample upscaling using each method:
 		<td><a href="https://drive.google.com/file/d/1rWfJ2rZImn0crlUTz3JzJL3eRt2zqcPX/view?usp=sharing"><img src="upscaling/sample.1440x1080.artemis.jpg"></a></td>
 	</tr>
 </table>
-	
+
+```console
+ffmpeg -i sample.dv -vf yadif,scale="1440:1080":flags=bicubic,setsar=1 -vcodec libx264 -preset veryslow -profile:v high -pix_fmt yuv420p -crf 17 -acodec ac3 -metadata:s:a:0 language=eng sample.1440x1080.bicubic.mp4
+ffmpeg -i sample.dv -vf yadif,scale="1440:1080":flags=lanczos,setsar=1 -vcodec libx264 -preset veryslow -profile:v high -pix_fmt yuv420p -crf 17 -acodec ac3 -metadata:s:a:0 language=eng sample.1440x1080.lanczos.mp4
+ffmpeg -i sample.dv -vf yadif,scale="640:480",setsar=1 -vcodec rawvideo -pix_fmt yuv420p -acodec aac -metadata:s:a:0 language=eng sample.640x480.artemis.avi (then upscaled by VEAI)
+```
 
 Side by side comparisons of each method:
 
@@ -39,6 +44,12 @@ Side by side comparisons of each method:
 	</tr>
 </table>
 
+```console
+ffmpeg -y -i sample.1440x1080.bicubic.mp4 -i sample.1440x1080.lanczos.mp4 -filter_complex hstack -crf 17 -preset veryslow sample.sxs.bicubic.vs.lanczos.mp4
+ffmpeg -y -i sample.1440x1080.bicubic.mp4 -i sample.1440x1080.artemis.mp4 -filter_complex hstack -crf 17 -preset veryslow sample.sxs.bicubic.vs.artemis.mp4
+ffmpeg -y -i sample.1440x1080.lanczos.mp4 -i sample.1440x1080.artemis.mp4 -filter_complex hstack -crf 17 -preset veryslow sample.sxs.lanczos.vs.artemis.mp4
+```
+
 Split screen comparisons of each method:
 
 <table>
@@ -53,6 +64,13 @@ Split screen comparisons of each method:
 		<td><a href="https://drive.google.com/file/d/12wuVJNXOK-5QZyt0h6vHN_dBoobC2LUw/view?usp=sharing"><img src="upscaling/sample.split.lanczos.vs.artemis.jpg"></a></td>
 	</tr>
 </table>
+
+```console
+ffmpeg -t 60 -s 4x1080 -f rawvideo -pix_fmt rgb24 -r 30 -i /dev/zero empty.mp4
+ffmpeg -y -i sample.1440x1080.bicubic.mp4 -i empty.mp4 -i sample.1440x1080.lanczos.mp4 -filter_complex "[0]crop=iw/2-2:ih:0:0[left]; [2]crop=iw/2-2:ih:iw/2+2:0[right]; [left][1:v:0][right]hstack=inputs=3" -crf 17 -preset veryslow sample.split.bicubic.vs.lanczos.mp4
+ffmpeg -y -i sample.1440x1080.bicubic.mp4 -i empty.mp4 -i sample.1440x1080.artemis.mp4 -filter_complex "[0]crop=iw/2-2:ih:0:0[left]; [2]crop=iw/2-2:ih:iw/2+2:0[right]; [left][1:v:0][right]hstack=inputs=3" -crf 17 -preset veryslow sample.split.bicubic.vs.artemis.mp4
+ffmpeg -y -i sample.1440x1080.lanczos.mp4 -i empty.mp4 -i sample.1440x1080.artemis.mp4 -filter_complex "[0]crop=iw/2-2:ih:0:0[left]; [2]crop=iw/2-2:ih:iw/2+2:0[right]; [left][1:v:0][right]hstack=inputs=3" -crf 17 -preset veryslow sample.split.lanczos.vs.artemis.mp4
+```
 
 **Original miniDV Sample Clip**
 <p><a href="https://drive.google.com/file/d/1li2k33yte_PwajIoNXFwGstyBjAR9wOT/view?usp=sharing"><img src="upscaling/sample.jpg" width="33%"></a></p>
