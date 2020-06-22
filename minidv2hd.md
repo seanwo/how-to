@@ -8,7 +8,7 @@ This how-to assumes you have been able to pull footage off an old camcorder and 
 
 Here are some video encoding comparisons to show the difference between Bicubic, Lanczos, and Artemis LQ upscaling (from 480p to 1080p) on a sample clip taken from a miniDV camcorder.
 
-Sample upscaling using each method:
+Sample upscaling using each method (see https://ffmpeg.org/ffmpeg-filters.html#subtitles-1 for adding subtitles to comparisons):
 
 <table>
 	<tr>
