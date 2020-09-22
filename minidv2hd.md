@@ -242,7 +242,7 @@ It will take 24 hours to assign the request, and 24-48 hours for a review of you
 
 At the time of writing this, it will cost ~$1 per hour to run this machine.  Have everything ready to go before launching your GPU instance to minimize costs.
 
-### Perparing a Video EBS Volume Using a Small T3 Instance:
+### Preparing a Video EBS Volume Using a Small T3 Instance:
 *Use a T3 instance to setup the video EBS volume so you are not charged for accelerated machine usage during setup.*
 
 Basically, you need to upload all the files you need to S3 from your local machine.
@@ -326,3 +326,23 @@ video length (mins) * 0.44 (frames/sec) * 0.1 (gb/month) * 1000 (gb) / 720 * 0.5
 
 Example (60 mins of video):  
 60 (mins) * 0.44 (frames/sec) * 0.1 (gb/month) * 1000 (gb) / 720 * 0.5 = $1.83
+
+## Step 6: Burning Videos to Blu-rays
+
+There are just so many bad Blu-ray creators (used to author your blu-ray menus and add video content) on the market!
+
+Here is a list of ones I tried before deciding:
+
+- [DVDFab Blu-ray Creator](https://www.dvdfab.cn/blu-ray-creator.htm)
+- [Leawo Blu-ray Creator](https://www.leawo.com/pro/blu-ray-creator.html)
+- [Xilisoft Blu-ray Creator](http://www.xilisoft.com/blu-ray-creator-express.html)
+- [Aiseesoft Blu-ray Creator](https://www.aiseesoft.com/blu-ray-creator/)
+- [Wondershare Blu-ray Creator](https://dvdcreator.wondershare.com/)
+
+I have a mac so I tried either the native MacOS version or used a Windows 10 VM (with burner device passthrough) for products that did not support MacOS.  Some creators created unplayable menus while others were missing sound, etc.  Use a free trial to test whatever you end up using before purchasing!
+
+I purchased DVDFab Blu-ray Creator (MacOS version).  It has a few bugs that I tolerate. Other programs I previously used have slipped into disrepair with each new version released.  As of writing this, I am already using a previous version (11.0.9.7) of DVDFAb due to a bug in the scene selection menus.  So buyer beware!
+
+In general, DVDFab is customizable enough to use and has one key feature. The key feature is the ability to select the bitrate as "same as source". Most other applications make you select a static bitrate such as 15Mbps, 20Mbps, or 30Mbps.  Since you have put all this time and energy into AI enhancing your video, you want to reduce or eliminate any re-encoding when burning it to physical media.  When re-encoding is unavoidable, you want a bitrate that matches or exceeds your original footage to reduce loss.  Selecting "same as source" allows you to match your original encoding bitrate without expanding your filesize with a larger bitrate.  Many products have you select a static bitrate for ALL the files on the disc regardless of the varying bitrates.  DVDFab customizes each video's bitrate when encoding from .mp4 to .m2ts.  This makes the blu-ray folder creation and the streams encoding fast compared to other methods.
+
+You will want to create an .iso output file.  In my case, I created BD50 images (basically a ~50GB Dual Layer Blu-ray disc image).  I then used a 50GB BD-RE (rewritable) disc to test my images on blu-ray players before burning final BD-R DL discs.
