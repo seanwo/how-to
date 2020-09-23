@@ -343,6 +343,15 @@ I have a mac so I tried either the native MacOS version or used a Windows 10 VM 
 
 I purchased DVDFab Blu-ray Creator (MacOS version).  It has a few bugs that I tolerate. Other programs I previously used have slipped into disrepair with each new version released.  As of writing this, I am already using a previous version (11.0.9.7) of DVDFAb due to a bug in the scene selection menus.  So buyer beware!
 
-In general, DVDFab is customizable enough to use and has one key feature. The key feature is the ability to select the bitrate as "same as source". Most other applications make you select a static bitrate such as 15Mbps, 20Mbps, or 30Mbps.  Since you have put all this time and energy into AI enhancing your video, you want to reduce or eliminate any re-encoding when burning it to physical media.  When re-encoding is unavoidable, you want a bitrate that matches or exceeds your original footage to reduce loss.  Selecting "same as source" allows you to match your original encoding bitrate without expanding your filesize with a larger bitrate.  Many products have you select a static bitrate for ALL the files on the disc regardless of the varying bitrates.  DVDFab customizes each video's bitrate when encoding from .mp4 to .m2ts.  This makes the blu-ray folder creation and the streams encoding fast compared to other methods.
+In general, DVDFab is customizable enough to use and has one key feature. The key feature is the ability to select the bitrate as "same as source". Most other applications make you select a static bitrate such as 15Mbps, 20Mbps, or 30Mbps.  Since you have put all this time and energy into AI enhancing your video, you want to reduce or eliminate any re-encoding when burning it to physical media.  When re-encoding is unavoidable, you want a bitrate that matches or exceeds your original footage to reduce loss.  Selecting "same as source" allows you to match your original encoding bitrate without expanding your file size using a higher bitrate.  Many products force you to select a static bitrate for ALL the videos on the disc regardless of the varying bitrates of each video being added.  DVDFab customizes each video's bitrate when encoding from .mp4 to .m2ts.  This makes the blu-ray folder creation and the streams encoding fast compared to other methods.
+
+When you compare your upscaled video to the stream put into the .iso image by DVDFab the [VMAF](https://github.com/Netflix/vmaf) score is in the high 90s (which is considered in the "excellent" range).  Here is a VMAF comparison example using my first upscaled movie source (.mp4) and the resulting stream on the blu-ray (.m2ts) created by DVDFab:
+
+```console
+ffmpeg -i 00000.m2ts -i 00000.mp4 -filter_complex "[0:v]framerate=29.97[distorted];[1:v]framerate=29.97[ref];[distorted][ref]libvmaf" -f null -
+```
+```
+[libvmaf @ 0x7fc37ff33480] VMAF score: 96.855926
+```
 
 You will want to create an .iso output file.  In my case, I created BD50 images (basically a ~50GB Dual Layer Blu-ray disc image).  I then used a 50GB BD-RE (rewritable) disc to test my images on blu-ray players before burning final BD-R DL discs.
