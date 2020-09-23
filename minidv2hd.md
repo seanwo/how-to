@@ -327,7 +327,7 @@ video length (mins) * 0.44 (frames/sec) * 0.1 (gb/month) * 1000 (gb) / 720 * 0.5
 Example (60 mins of video):  
 60 (mins) * 0.44 (frames/sec) * 0.1 (gb/month) * 1000 (gb) / 720 * 0.5 = $1.83
 
-## Step 7: Adding Metadata
+## Step 6: Adding Metadata
 
 VEAI upscaling removes the audio stream language metadata.
 
