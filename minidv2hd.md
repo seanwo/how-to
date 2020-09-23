@@ -327,7 +327,66 @@ video length (mins) * 0.44 (frames/sec) * 0.1 (gb/month) * 1000 (gb) / 720 * 0.5
 Example (60 mins of video):  
 60 (mins) * 0.44 (frames/sec) * 0.1 (gb/month) * 1000 (gb) / 720 * 0.5 = $1.83
 
-## Step 6: Burning Videos to Blu-rays
+## Step 7: Adding Metadata
+
+VEAI upscaling removes the audio stream language metadata.
+
+Here is how you add/change language metadata on an .mp4's audio stream without re-encoding:
+
+```console
+ffmpeg -i in.mp4 -c copy -metadata:s:a:0 language=eng out.mp4
+```
+
+If you are going to put these files on physical media (such as a blu-ray), you might want to consider adding chapter metadata.
+I created a chapter for each clip in a movie.  I set the start time where I put the subtitle video placeholders noted above in the editing section.
+Basically, you take your .mp4 and find the time index of each clip that you want to turn into a chapter and put all that data into a metadata file which you then inject into the .mp4.
+
+Here is what the format of a metadata file should look like:
+
+```
+;FFMETADATA1
+title=2007 Summer and Disneyland
+artist=Sean Wohlgemuth
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=0
+#chapter ends at 00:00:05
+END=5000
+title=Intro
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=5000
+#chapter ends at 00:09:14
+END=554000
+title=At the Shore
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=554000
+#chapter ends at 00:10:41
+END=641000
+title=Granddad and Sadie
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=641000
+#chapter ends at 00:16:26
+END=986000
+title=Character Breakfast
+```
+
+Then to inject that into the .mp4 you execute:
+
+```console
+ffmpeg -i in.mp4 -i in.metadata -map_metadata 1 -codec copy out.mp4 
+```
+
+Test that chapters actually start exactly where you want them too.  I used Quicktime player since it has a nice chapter jump feature.
+Chances are you are off by +/- a second depending on how you identified the time index.  Correct the indexes and try again until you are spot on.  Most DVD/Bluray burning software will honor chapter metadata so that when you play it back on your TV you can jump from clip to clip.
+
+## Step 7: Burning Videos to Blu-rays
 
 There are just so many bad Blu-ray creators (used to author your blu-ray menus and add video content) on the market!
 
