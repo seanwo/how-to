@@ -4,6 +4,7 @@ source: https://superuser.com/questions/709176/how-to-best-clone-a-running-syste
 
 ```console
 sudo su -
+mkdir /var/log/rsync
 sudo vi /root/sync.sh
 ```
 Use the following file and update as appropriate for your accounts and directories:
