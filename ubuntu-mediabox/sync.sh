@@ -8,7 +8,7 @@ rsync -ahPHAXx --delete /mnt/media/ /mnt/backup > ${DAILYLOGFILE} 2>&1
 
 if [ $? -eq 0 ]
 then
-  cat "success!" | mail -s "Sync Log (Success) for $HOST - $DATE" $MAILADDR
+  echo "success!" | mail -s "Sync Log (Success) for $HOST - $DATE" $MAILADDR
 else
   cat "$DAILYLOGFILE" | mail -s "Sync Log (ERROR!) for $HOST - $DATE" $MAILADDR
 fi
