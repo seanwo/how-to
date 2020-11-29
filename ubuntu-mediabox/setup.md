@@ -3,6 +3,9 @@
 ![alt text](mediabox.jpg "mediabox")
 
 [My Hardware Specs](hardware.md)  
+
+**Steps**:  
+
 [Install Ubuntu LTS](ubuntu.md)  
 [Install Chrome](chrome.md)  
 [Install TeamViewer](teamviewer.md)  
