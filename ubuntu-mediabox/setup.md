@@ -11,7 +11,7 @@
 [Install qBittorrent](qbittorrent.md)  
 [Install SFTP Server](sftpserver.md)  
 [Install Samba](samba.md)  
-[Install Apple Time Machine Support](timemachine.md)
+[Install Apple Time Machine Support](timemachine.md)  
 [Install VLC](vlc.md)  
 [Install HD-IDLE](hdidle.md)  
 
