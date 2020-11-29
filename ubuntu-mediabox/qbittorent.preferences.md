@@ -18,7 +18,7 @@ Minimize qBittorent to notification area: **active**
 Close qBittorent to notification area: **active**  
 Tray icon style: **"Monochrome (Dark theme)"**  
 ### Power Management Section
-Inhibit system sleep when torrents are downloading: **disabled**
+Inhibit system sleep when torrents are downloading: **disabled**  
 Inhibit system sleep when torrents are seeding: **disabled**  
 ### Log file Section: **active**  
 Save path: **"/home/mediauser/.local/share/data/qBittorent/logs"**  
