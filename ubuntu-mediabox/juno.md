@@ -16,7 +16,7 @@ java -version
 sudo mkdir /root/.juno
 ```
 
-Add or create a /root/.juno/[config.xml](config.xml)
+Add or create a /root/.juno/[config.xml](juno.config.xml)
 Add the [juno.jar](juno.jar) to /root directory
 
 ```console
