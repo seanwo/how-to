@@ -132,3 +132,7 @@ add:
 /mnt/media/Pictures	/var/samba/pictures	none	defaults,bind	0	0
 /mnt/timemachine/TimeMachine	/var/samba/timemachine	none	defaults,bind	0	0
 ```
+
+Reboot
+
+Go back and configure your PLEX libraries now.
