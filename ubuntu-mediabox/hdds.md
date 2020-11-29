@@ -1,4 +1,4 @@
-## Setup Media Disk Structure (Media Content) and Backup Disk
+## Setup Disk Structure (Media, Mirror, Time Machines, and Security Footage)
 
 This part assumes you have an external USB drive you are going to store your media on:
 
