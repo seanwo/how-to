@@ -128,7 +128,7 @@ add:
 /mnt/media/Torrents	/var/sftp/downloads/torrents	none	defaults,bind	0	0
 /mnt/media/Uploads	/var/sftp/uploads	none	defaults,bind	0	0
 /mnt/media/Movies	/var/samba/movies	none	defaults,bind	0	0
-/mnt/media/Torrents	/var/samba/torrents	none	defaults,bind	0	0
+/mnt/media/Torrents	/var/samba/shows	none	defaults,bind	0	0
 /mnt/media/Pictures	/var/samba/pictures	none	defaults,bind	0	0
 /mnt/timemachine/TimeMachine	/var/samba/timemachine	none	defaults,bind	0	0
 ```
