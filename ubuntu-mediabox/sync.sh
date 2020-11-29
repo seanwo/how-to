@@ -2,7 +2,7 @@
 HOST=`hostname`
 DATE=`date +%Y-%m-%d`
 MAILADDR="email@gmail.com"
-DAILYLOGFILE="/var/log/duplicity/sync.daily.log"
+DAILYLOGFILE="/var/log/rsync/sync.daily.log"
 
 rsync -ahPHAXx --delete /mnt/media/ /mnt/backup > ${DAILYLOGFILE} 2>&1
 
