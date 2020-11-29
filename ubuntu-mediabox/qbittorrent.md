@@ -51,3 +51,6 @@ crontab -e
 ```
 5 */2 * * * /home/mediauser/restartqbittorrent.sh >/dev/null 2>&1
 ```
+
+Confirm that your proxy is working using http://checkmyip.torrentprivacy.com/  
+Configure the qBittorrent RSS feed now.
