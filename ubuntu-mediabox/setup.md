@@ -3,7 +3,7 @@
 ![alt text](mediabox.jpg "mediabox")
 
 [Hardware Specs](hardware.md)  
-[Ubunutu LTS](ubuntu.md)  
+[Ubuntu LTS](ubuntu.md)  
 
 ## Install Chrome (Browser)
 
