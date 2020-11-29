@@ -13,7 +13,7 @@
 [Install Samba](samba.md)  
 [Install Apple Time Machine Support](timemachine.md)
 [Install VLC](vlc.md)  
-[Install HD-IDLE](hd-idle.md)  
+[Install HD-IDLE](hdidle.md)  
 
 ## Monitor CPU Usage and Temperature
 
