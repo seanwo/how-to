@@ -7,10 +7,16 @@ Specs: https://ark.intel.com/content/www/us/en/ark/products/59503/intel-desktop-
 Shop: https://www.google.com/search?tbm=shop&q=dh77df  
 
 Processor  
-Intel Core i5-3570K Processor 3.4 GHz  
+Intel Core i7-3770K Processor 3.9 GHz  
 Quantity: 1  
-Specs: https://ark.intel.com/content/www/us/en/ark/products/65520/intel-core-i5-3570k-processor-6m-cache-up-to-3-80-ghz.html  
-Shop: https://www.google.com/search?tbm=shop&q=+i5-3570K  
+Specs: https://ark.intel.com/content/www/us/en/ark/products/65523/intel-core-i7-3770k-processor-8m-cache-up-to-3-90-ghz.html  
+Shop: https://www.google.com/search?tbm=shop&q=+i7-3770K  
+
+Cooling
+Noctua NH-L9I
+Quantity: 1  
+Specs: https://noctua.at/en/nh-l9i
+Shop: https://www.amazon.com/gp/product/B07Y892M38  
 
 Memory  
 Ballistix Sport 4GB Single DDR3 1600 MT/s (PC3-12800) UDIMM 240-Pin Memory - BLS4G3D1609DS1S00  
