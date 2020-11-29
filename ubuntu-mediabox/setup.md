@@ -104,9 +104,3 @@ crontab -e
 ```
 0 4 * * * /home/mediauser/backup.sh >/dev/null 2>&1
 ```
-
-## Final Configuration
-* Configure tuners in PLEX.  My channels are: 14.1, 18.1, 18.2, 18.3, 18.4, 24.1, 24.3, 36.1, 36.2, 36.3, 42.1, 54.1, 54.2, 54.3, 62.3, 62.4, 14.3, 24.4.
-* Copy any existing content to the new media drive structure.
-* Configure PLEX Libraries (/mnt/media/Movies, /mnt/media/Recorded, /mnt/media/Torrents, /mnt/media/Videos)
-* Configure qBittorrent RSS feed.
