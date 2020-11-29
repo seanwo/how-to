@@ -1,4 +1,4 @@
-## Install qBittorrent
+## Install qBittorrent (Content Acquisition Tool)
 
 source: https://www.linuxbabe.com/ubuntu/install-qbittorrent-ubuntu-18-04-desktop-server
 
