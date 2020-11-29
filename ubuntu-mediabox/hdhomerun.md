@@ -30,3 +30,7 @@ _Note: this installs the following files:_
 /usr/local/lib/libhdhomerun.so
 /usr/local/bin/hdhomerun_config
 ```
+Once PLEX is configured add the following channels:
+```
+14.1, 18.1, 18.2, 18.3, 18.4, 24.1, 24.3, 36.1, 36.2, 36.3, 42.1, 54.1, 54.2, 54.3, 62.3, 62.4, 14.3, 24.4
+```
