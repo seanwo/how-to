@@ -12,10 +12,10 @@ Quantity: 1
 Specs: https://ark.intel.com/content/www/us/en/ark/products/65523/intel-core-i7-3770k-processor-8m-cache-up-to-3-90-ghz.html  
 Shop: https://www.google.com/search?tbm=shop&q=+i7-3770K  
 
-Cooling
-Noctua NH-L9I
+Cooling  
+Noctua NH-L9I  
 Quantity: 1  
-Specs: https://noctua.at/en/nh-l9i
+Specs: https://noctua.at/en/nh-l9i  
 Shop: https://www.amazon.com/gp/product/B07Y892M38  
 
 Memory  
