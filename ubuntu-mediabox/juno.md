@@ -1,4 +1,4 @@
-# Instructions for Running Juno
+# Instructions for Running Juno Grade Monitoring
 https://github.com/seanwo/juno
 
 ## Install the Latest Java8
