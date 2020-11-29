@@ -4,7 +4,7 @@ DATE=`date +%Y-%m-%d`
 MAILADDR="email@gmail.com"
 DAILYLOGFILE="/var/log/duplicity/sync.daily.log"
 
-rsync -ahPHAXx --delete --exclude 'TimeMachine' /mnt/media/ /mnt/backup > ${DAILYLOGFILE} 2>&1
+rsync -ahPHAXx --delete /mnt/media/ /mnt/backup > ${DAILYLOGFILE} 2>&1
 
 if [ $? -eq 0 ]
 then
