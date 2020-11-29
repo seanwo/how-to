@@ -27,3 +27,5 @@ Remove the old package list file now:
 ```console
 sudo rm -rf /etc/apt/sources.list.d/*.dpkg-old
 ```
+
+Configure PLEX Libraries (/mnt/media/Movies, /mnt/media/Recorded, /mnt/media/Torrents, /mnt/media/Videos) after disk structure is complete.
