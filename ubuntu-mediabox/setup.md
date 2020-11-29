@@ -1,4 +1,4 @@
-# Instructions for Building an Ubuntu Plex Media System
+# Instructions for (Re)Building My Home Ubuntu Server
 
 ![alt text](mediabox.jpg "mediabox")
 
