@@ -17,7 +17,8 @@ Configure psensor:
 
 * psensor->Preferences->Startup, select "Launch on session startup" and "Hide Window on startup"
 * psensor->Preferences->Providers, deselect "Enable support of udisk2" or it will prevent HDD spin down
-* psensor->Sensor Preferences->CPU usage->Application Indicator->"Display sensor in the label (experimental)"
+* psensor->Sensor Preferences->CPU->Application Indicator->"Display sensor in the label (experimental)"
+* psensor->Sensor Preferences->CPU Usage->Application Indicator->"Display sensor in the label (experimental)"
 * psensor->Sensor Preferences->fan2->Application Indicator->"Display sensor in the label (experimental)"
 
 Reboot for good measure and make sure the temperature and usage sensor shows up in the task bar after a few minutes.
