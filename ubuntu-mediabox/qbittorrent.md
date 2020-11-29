@@ -21,7 +21,7 @@ Command: /usr/bin/qbittorrent
 
 Configure the client with your proxy settings such as one provided by https://www.privateinternetaccess.com.
 
-[Sample QBitTorrent Configuration](qbittorent.preferences.md)
+[Sample QBitTorrent Configuration](qbittorrent.preferences.md)
 
 After configuring the you proxy, check your torrent ip using https://torguard.net/checkmytorrentipaddress.php and make sure it is showing the ip address of the proxy torrent; not the one returned by https://www.whatsmyip.org.
 
