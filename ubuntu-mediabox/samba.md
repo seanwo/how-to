@@ -6,13 +6,16 @@ source: https://websiteforstudents.com/create-private-samba-share-ubuntu-17-04-1
 sudo apt update
 sudo apt install samba
 sudo groupadd samba_users
-sudo mkdir -p /var/samba/media
+sudo mkdir -p /var/samba/movies
+sudo mkdir -p /var/samba/shows
 sudo mkdir -p /var/samba/pictures
 sudo chown root:root /var/samba
-sudo chown root:samba_users /var/samba/media
+sudo chown root:samba_users /var/samba/movies
+sudo chown root:samba_users /var/samba/shows
 sudo chown root:samba_users /var/samba/pictures
 sudo chmod 755 /var/samba
-sudo chmod 775 /var/samba/media
+sudo chmod 775 /var/samba/shows
+sudo chmod 775 /var/samba/movies
 sudo chmod 775 /var/samba/pictures
 sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.bak
 ```
@@ -31,8 +34,18 @@ name resolve order = bcast host
 dns proxy = no
 bind interfaces only = yes
 
-[media]
-   path = /var/samba/media
+[shows]
+   path = /var/samba/shows
+   writable = yes
+   guest ok = no
+   read only = no
+   browsable = yes
+   create mode = 0755
+   directory mode = 0755
+   valid users = @samba_users
+
+[movies]
+   path = /var/samba/movies
    writable = yes
    guest ok = no
    read only = no
