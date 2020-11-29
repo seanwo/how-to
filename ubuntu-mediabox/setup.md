@@ -64,7 +64,7 @@ source: https://www.ubuntu.com/download/desktop
 
 _The default user in these examples is called **mediauser** and the machine in these examples is called **mediabox**._
 
-Install the latest Ubuntu LTS using the "Minimal install option".
+Install the latest Ubuntu LTS using selecting "Normal installation", "Download updates while installing Ubuntu", and "Install third-party software...".
 
 Set it to not require the user to login on startup.
 
