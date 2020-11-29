@@ -11,32 +11,7 @@
 [Install qBittorrent](qbittorrent.md)  
 [Install SFTP Server](sftpserver.md)  
 [Install Samba](samba.md)  
-
-## Install Apple Time Machine Samba Support
-
-Create a Time Machine user:
-```console
-sudo adduser tmuser
-sudo groupadd tm_users
-sudo usermod -aG tm_users tmuser
-sudo smbpasswd -a tmuser
-```
-Setup a Time Machine share point:
-```console
-sudo mkdir -p /var/samba/timemachine
-sudo chown root:tm_users /var/samba/timemachine
-sudo chmod 775 /var/samba/timemachine
-```
-Use the following script to replace Samba on your system with this one I built:
-
-[installmysamba.sh](installmysamba.sh)
-
-Download it to your system and execute it:
-```console
-wget -O installmysamba.sh https://raw.githubusercontent.com/seanwo/how-to/master/ubuntu-mediabox/installmysamba.sh
-chmod +x installmysamba.sh
-./installmysamba.sh
-```
+[Install Apple Time Machine Support](timemachine.md)
 
 ## Install VLC (Video Playback)
 
