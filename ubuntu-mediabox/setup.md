@@ -18,44 +18,8 @@
 [Install SMTP Client](smtp.md)  
 [Setup Disk Structure](hdds.md)  
 [Install ClamAV](clamav.md)  
+[Setup Drive Mirroring](rsync.md)  
 [Setup Juno Grade Monitoring](juno.md)  
-
-## Configure local drive sync from media to backup drive
-
-source: https://superuser.com/questions/709176/how-to-best-clone-a-running-system-to-a-new-harddisk-using-rsync
-
-```console
-sudo vi /root/sync.sh
-```
-
-```
-#!/bin/bash
-HOST=`hostname`
-DATE=`date +%Y-%m-%d`
-MAILADDR="email@gmail.com"
-DAILYLOGFILE="/var/log/duplicity/sync.daily.log"
-
-rsync -ahPHAXx --delete --exclude 'TimeMachine' /mnt/media/ /mnt/backup > ${DAILYLOGFILE} 2>&1
-
-if [ $? -eq 0 ]
-then
-  cat "$DAILYLOGFILE" | mail -s "Sync Log (Success) for $HOST - $DATE" $MAILADDR
-else
-  cat "$DAILYLOGFILE" | mail -s "Sync Log (ERROR!) for $HOST - $DATE" $MAILADDR
-fi
-```
-
-Lock the script down:
-```console
-sudo chmod 0755 /root/sync.sh
-```
-Run at midnight daily as root:
-```console
-sudo crontab -e
-```
-```
-0 0 * * * /root/sync.sh
-```
 
 ## Duplicity w/ S3 (Encrypted Cloud Backup)
 
