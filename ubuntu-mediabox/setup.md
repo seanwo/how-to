@@ -14,30 +14,7 @@
 [Install Apple Time Machine Support](timemachine.md)  
 [Install VLC](vlc.md)  
 [Install HD-IDLE](hdidle.md)  
-
-## Monitor CPU Usage and Temperature
-
-source: https://itsfoss.com/check-laptop-cpu-temperature-ubuntu/  
-source: https://askubuntu.com/questions/15832/how-do-i-get-the-cpu-temperature
-```console
-sudo apt install lm-sensors
-sudo sensors-detect
-```
-Answer yes to all the questions and yes to add the modules to /etc/modules
-```console
-sudo service kmod start
-sudo apt install psensor
-psensor &
-```
-Configure psensor:
-
-* psensor->Preferences->Startup, select "Launch on session startup" and "Hide Window on startup"
-* psensor->Preferences->Providers, deselect "Enable support of udisk2" or it will prevent HDD spin down
-* psensor->Sensor Preferences->Package id 0->Details->Name->CPU
-* psensor->Sensor Preferences->Package id 0->Application Indicator->"Display sensor in the label (experimental)"
-* psensor->Sensor Preferences->CPU usage->Application Indicator->"Display sensor in the label (experimental)"
-
-Reboot for good measure and make sure the temperature and usage sensor shows up in the task bar after a few minutes.
+[Install Sensor Monitors](sensormonitors.md)  
 
 ## Install SMTP Client (Outbound Email)
 
