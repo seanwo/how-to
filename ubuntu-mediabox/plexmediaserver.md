@@ -22,3 +22,8 @@ and uncomment out the the repo which was clobbered during the install:
 # wget -q https://downloads.plex.tv/plex-keys/PlexSign.key -O - | sudo apt-key add -
 deb https://downloads.plex.tv/repo/deb/ public main
 ```
+
+Remove the old package list file now:
+```console
+sudo rm -rf /etc/apt/sources.list.d/*.dpkg-old
+```
