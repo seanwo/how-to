@@ -7,7 +7,7 @@ Specs: https://ark.intel.com/content/www/us/en/ark/products/59503/intel-desktop-
 Shop: https://www.google.com/search?tbm=shop&q=dh77df  
 
 Processor  
-Intel Core i7-3770K Processor 3.9 GHz  
+Intel Core i7-3770K Processor 3.5 GHz  
 Quantity: 1  
 Specs: https://ark.intel.com/content/www/us/en/ark/products/65523/intel-core-i7-3770k-processor-8m-cache-up-to-3-90-ghz.html  
 Shop: https://www.google.com/search?tbm=shop&q=+i7-3770K  
