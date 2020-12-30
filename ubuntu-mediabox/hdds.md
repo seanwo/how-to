@@ -22,10 +22,10 @@ Use the commands g, n, w. (repeat for /dev/sdc, /dev/sdd, and /dev/sde)
 
 **Warning:** this formats the disk; be careful!:
 ```console
-sudo mkfs.ext4 /dev/sdb1
-sudo mkfs.ext4 /dev/sdc1
-sudo mkfs.ext4 /dev/sdd1
-sudo mkfs.ext4 /dev/sde1
+sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sdb1
+sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sdc1
+sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sdd1
+sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sde1
 ```
 Get the UUIDs of the media and backup disk:
 ```console
