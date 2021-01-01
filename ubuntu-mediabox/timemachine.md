@@ -37,6 +37,11 @@ fruit:aapl = yes
 Optionally, set a quota for each Time Machine share you create:
 ```console
 sudo touch /var/samba/timemachine/.com.apple.timemachine.supported
+sudo touch /var/samba/timemachine/.com.apple.TimeMachine.quota.plist
+sudo chmod 644 /var/samba/timemachine/.com.apple.timemachine.supported
+sudo chmod 644 /var/samba/timemachine/.com.apple.TimeMachine.quota.plist
+sudo chown root:root /var/samba/timemachine/.com.apple.timemachine.supported
+sudo chown root:root /var/samba/timemachine/.com.apple.TimeMachine.quota.plist
 sudo vi /var/samba/timemachine/.com.apple.TimeMachine.quota.plist
 ```
 ```
