@@ -34,6 +34,20 @@ fruit:aapl = yes
     fruit:time machine = yes
     valid users = @tm_users
 ```
+Optionally, set a quota for each Time Machine share you create:
+```console
+sudo touch /var/samba/timemachine/.com.apple.timemachine.supported
+sudo vi /var/samba/timemachine/.com.apple.TimeMachine.quota.plist
+```
+```
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>GlobalQuota</key>
+    <integer>500000000000</integer>
+  </dict>
+</plist>
+```
 Restart the Samba service:
 ```console
 sudo systemctl restart smbd
