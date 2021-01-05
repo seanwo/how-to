@@ -6,6 +6,17 @@ Quantity: 1
 Specs: https://ark.intel.com/content/www/us/en/ark/products/59503/intel-desktop-board-dh77df.html  
 Shop: https://www.google.com/search?tbm=shop&q=dh77df  
 
+*Adjusted BIOS setting for CPU temperature:*
+```
+Temperature:Processor:Settings
+
+Over-Temperature Threshold (°C): 93 (default: 93)
+Control Temperature (°C): 70 (default: 85)
+All-On Temperature (°C): 85 (default: 93)
+Responsiveness: Normal (default: Normal)
+Damping: Normal (default: Normal)
+```
+
 Processor  
 Intel Core i7-3770K Processor 3.5 GHz  
 Quantity: 1  
