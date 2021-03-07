@@ -1,8 +1,8 @@
-# Instructions for (Re)Building My Home Ubuntu Server
+# Home Ubuntu Server
 
 ![alt text](mediabox.jpg "mediabox")
 
-[My Hardware Specs](hardware.md)  
+* [My Hardware Specs](hardware.md)  
 
 **Steps**:  
 
