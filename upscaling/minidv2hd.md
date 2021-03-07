@@ -73,12 +73,12 @@ ffmpeg -y -i sample.1440x1080.lanczos.mp4 -i empty.mp4 -i sample.1440x1080.artem
 ```
 
 **Original miniDV Sample Clip**
-<p><a href="https://drive.google.com/file/d/1li2k33yte_PwajIoNXFwGstyBjAR9wOT/view?usp=sharing"><img src="upscaling/sample.jpg" width="33%"></a></p>
+<p><a href="https://drive.google.com/file/d/1li2k33yte_PwajIoNXFwGstyBjAR9wOT/view?usp=sharing"><img src="sample.jpg" width="33%"></a></p>
 
 During my research, I also tried [iSIZE AI Upscaling](https://www.isize.co/upscale/) but ruled it out since there were flashing black frames being encoded by their AI algorithm.
 
 **iSize Sample**
-</p><a href="https://drive.google.com/file/d/1j5iPQe7Vk2AesD6YFdTVQ7n_W9rjJZtY/view?usp=sharing"><img src="upscaling/sample.1440x1080.bitsave.jpg" width="33%"></a><p>
+</p><a href="https://drive.google.com/file/d/1j5iPQe7Vk2AesD6YFdTVQ7n_W9rjJZtY/view?usp=sharing"><img src="sample.1440x1080.bitsave.jpg" width="33%"></a><p>
 
 In my opinion, the upscaling methods ranked from best to worst are:
 - Artemis
