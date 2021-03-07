@@ -29,6 +29,12 @@ Extend the expiration for "1y":
 gpg> expire
 ```
 
+Set ultimate trust:
+
+```console
+gpg> trust
+```
+
 Persist the changes:
 
 ```console
