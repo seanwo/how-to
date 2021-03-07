@@ -1,4 +1,4 @@
-## DDNS
+## Configure DDNS
 
 ### What is DDNS?
 
