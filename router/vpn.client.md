@@ -4,9 +4,11 @@ The IP address assigned to your router by your ISP will usually reveal your appr
 
 https://iplocation.com/
 
-Using a client VPN in your router will allow you to route some or all traffic through that VPN. By default, all traffic is routed.  Policy rules can be used to selectively route traffic.
+Perhaps you need certain traffic to appear as though it is coming from another geography?
 
-Asuswrt-Merlin supports policy based routing: https://github.com/RMerl/asuswrt-merlin.ng/wiki/Policy-based-routing
+Using the client VPN on your router, you can route some or all traffic through that VPN. By default, all traffic is routed through the VPN.  However, policy rules can be used to selectively route traffic destined for certain ip or CIDR blocks.
+
+Asuswrt-Merlin client VPNs support policy based routing: https://github.com/RMerl/asuswrt-merlin.ng/wiki/Policy-based-routing
 
 ### Identify destination IP addresses for your VPN traffic
 
