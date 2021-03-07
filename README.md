@@ -2,4 +2,4 @@
 
 * [Custom Router Configuration](router/router.md)
 * [Home Ubuntu Server](ubuntu-mediabox/setup.md)
-* [Upscaling miniDV SD Video to HD Video](minidv2hd.md)
+* [Upscaling miniDV SD Video to HD Video](upscaling/minidv2hd.md)
