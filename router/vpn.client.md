@@ -6,6 +6,8 @@ https://iplocation.com/
 
 Using a client VPN in your router will allow you to route some or all traffice through that VPN. By default, all traffic is routed.  Policy rules can be used to selectively route traffic.
 
+Asuswrt-Merlin supports policy based routing: https://github.com/RMerl/asuswrt-merlin.ng/wiki/Policy-based-routing
+
 ### Identify destination IP addresses for your VPN traffic
 
 Isolate the domain name of the service you want to connect to through your VPN (using google, network sniffing, etc.) and then do an nslookup on the domain.
