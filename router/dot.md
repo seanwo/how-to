@@ -36,3 +36,7 @@ TLS Hostname: cloudflare-dns.com
 Please review cloudflare.com's privacy policy:
 
 https://www.cloudflare.com/privacypolicy/
+
+### WebUI:
+
+![DoT](dot.jpg)
