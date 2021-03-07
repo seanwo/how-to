@@ -17,9 +17,9 @@ Sample upscaling using each method (see https://ffmpeg.org/ffmpeg-filters.html#s
 		<th>Artemis</th>
 	</tr>
 	<tr>
-		<td><a href="https://drive.google.com/file/d/18dHpIBo6D94n_xgGodMyX0uAODjSFaQ4/view?usp=sharing"><img src="upscaling/sample.1440x1080.bicubic.jpg"></a></td>
-		<td><a href="https://drive.google.com/file/d/1f-DHb_HQRwJB0qMVCu8ScXOItmT5mbgQ/view?usp=sharing"><img src="upscaling/sample.1440x1080.lanczos.jpg"></a></td>
-		<td><a href="https://drive.google.com/file/d/1rWfJ2rZImn0crlUTz3JzJL3eRt2zqcPX/view?usp=sharing"><img src="upscaling/sample.1440x1080.artemis.jpg"></a></td>
+		<td><a href="https://drive.google.com/file/d/18dHpIBo6D94n_xgGodMyX0uAODjSFaQ4/view?usp=sharing"><img src="sample.1440x1080.bicubic.jpg"></a></td>
+		<td><a href="https://drive.google.com/file/d/1f-DHb_HQRwJB0qMVCu8ScXOItmT5mbgQ/view?usp=sharing"><img src="sample.1440x1080.lanczos.jpg"></a></td>
+		<td><a href="https://drive.google.com/file/d/1rWfJ2rZImn0crlUTz3JzJL3eRt2zqcPX/view?usp=sharing"><img src="sample.1440x1080.artemis.jpg"></a></td>
 	</tr>
 </table>
 
