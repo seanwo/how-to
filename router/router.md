@@ -11,4 +11,5 @@ To get started with Asuswrt-Merlin go to https://github.com/RMerl/asuswrt-merlin
 * [DNS over TLS (DoT)](dot.md)
 * [RSA Keys for SSH](ssh.md)
 * [DDNS](ddns.md)
+* [VPN Server](vpn.server.md)
 * [VPN Client Policy Routing](vpn.client.md)
