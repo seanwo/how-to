@@ -8,7 +8,7 @@ gpg --list-keys
 Edit the key:
 
 ```console
-gpg --edit-key [KeyID]
+gpg --edit-key KEYID
 ```
 
 Extend the expiration for "1y":
@@ -30,6 +30,13 @@ gpg> expire
 ```
 
 Persist the changes:
+
 ```console
 gpg> save
+```
+
+Backup keys:
+```console
+gpg -a --export KEYID > key.public
+gpg -a --export-secret-keys KEYID > key.private
 ```
