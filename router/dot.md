@@ -1,4 +1,4 @@
-## DNS over TLS
+## Configure DNS over TLS (DoT)
 
 ### Why use DNS over TLS instead of your ISPs standard DNS?
 
