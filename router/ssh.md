@@ -1,4 +1,4 @@
-## SSH via RSA Keys
+## Configure RSA Keys for SSH
 
 ### Why use RSA Keys instead of Passwords?
 
