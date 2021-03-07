@@ -1,4 +1,4 @@
-# Instructions for Custom Router Configuration
+# Custom Router Configuration
 
 _"Asuswrt-Merlin is a third party alternative firmware for Asus routers, with a special emphasis on tweaks and fixes rather than radical changes or collecting as many features as possible."_
 
