@@ -1,5 +1,5 @@
 # My personal list of how-tos.
 
-* [Instructions for (Re)Building My Home Ubuntu Server](ubuntu-mediabox/setup.md)
-* [Instructions for Upscaling miniDV SD Video to HD Video](minidv2hd.md)
-* [Instructions for Custom Router Configuration](router/router.md)
+* [Custom Router Configuration](router/router.md)
+* [Home Ubuntu Server](ubuntu-mediabox/setup.md)
+* [Upscaling miniDV SD Video to HD Video](minidv2hd.md)
