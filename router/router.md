@@ -11,4 +11,4 @@ To get started with Asuswrt-Merlin go to https://github.com/RMerl/asuswrt-merlin
 * [Configure DNS over TLS (DoT)](dot.md)
 * [Configure RSA Keys for SSH](ssh.md)
 * [Configure DDNS](ddns.md)
-* [Targeted Geofence Hopping](client.vpn.md)
+* [Targeted Geofence Hopping](vpn.client.md)
