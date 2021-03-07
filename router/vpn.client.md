@@ -88,4 +88,4 @@ Now any traffic from your subnet destined for the ip addresses you added will tr
 
 ### WebUI:
 
-![Client VPN](client.vpn.jpg)
+![VPN Client](vpn.client.jpg)
