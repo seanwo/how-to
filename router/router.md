@@ -9,4 +9,5 @@ To get started with Asuswrt-Merlin go to https://github.com/RMerl/asuswrt-merlin
 **Here some of my custom configurations**:
 
 [Configure DNS over TLS (DoT)](dot.md)  
+[Configure RSA Keys for SSH](ssh.md)  
 [Configure DDNS](ddns.md)
