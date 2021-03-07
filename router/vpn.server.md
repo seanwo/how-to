@@ -86,3 +86,9 @@ Android:
 https://play.google.com/store/apps/details?id=net.openvpn.openvpn
 
 Once you have established a secure VPN connection to your router, you can then safely SSH into it or access the WebUI.
+
+### WebUI:
+
+![VPN Server General](vpn.server.general.jpg)
+
+![VPN Server Advanced](vpn.server.advanced.jpg)
