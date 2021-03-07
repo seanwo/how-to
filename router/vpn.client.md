@@ -4,7 +4,7 @@ The IP address assigned to your router by your ISP will usually reveal your appr
 
 https://iplocation.com/
 
-Using a client VPN in your router will allow you to route some or all traffice through that VPN. By default, all traffic is routed.  Policy rules can be used to selectively route traffic.
+Using a client VPN in your router will allow you to route some or all traffic through that VPN. By default, all traffic is routed.  Policy rules can be used to selectively route traffic.
 
 Asuswrt-Merlin supports policy based routing: https://github.com/RMerl/asuswrt-merlin.ng/wiki/Policy-based-routing
 
