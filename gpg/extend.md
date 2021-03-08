@@ -46,3 +46,5 @@ Backup keys:
 gpg -a --export KEYID > key.public
 gpg -a --export-secret-keys KEYID > key.private
 ```
+
+Upload your updated public key to the online key server.
