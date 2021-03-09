@@ -51,8 +51,7 @@ and then use an editor (vi) to create the custom script /jffs/scripts/ddns-start
 make sure the script has execute permissions and contains *your* afraid.org update key
 
 ```console
-chgrp admin:root /jffs/scripts/ddns-start
-chmod 777 /jffs/scripts/ddns-start
+chmod +x /jffs/scripts/ddns-start
 ```
 
 To test that it is working, set your ip address on afraid.org to 127.0.0.1 and then reboot the router.  
