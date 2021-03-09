@@ -26,7 +26,7 @@ Example:
 10.11.11.6
 ```
 
-**Warning:** IP addresses can change so you will need to update the policy if the ip addresses for a DNS record change.
+**Warning:** IP addresses can change so you will need to update the policy if the ip addresses for a DNS record change or use the scripted method below.
 
 ### Setup your router's client VPN
 
@@ -89,6 +89,44 @@ Service state: ON
 ```
 
 Now any traffic from your subnet destined for the ip addresses you added will travel through the client VPN and show the location of the VPN server during geolocation lookups.
+
+### Automate DNS IP Changes
+
+Since the IP addresses for any DNS can change, you will want to monitor and then update the policy rules when they change.
+
+This can be scripted and then set to run on as a scheduled job.
+
+Here is an example script [client1update](client1update.sh) that does this for VPN client #1.
+
+Place your script file in /jffs/scripts and make it executable.
+
+```console
+vi /jffs/scripts/client1update
+chmod + x /jffs/scripts/client1update
+```
+
+Test that your script does what it is supposed to do by changing the client policy rules in the WebUI and then running this script to correct them.
+
+If that works, set a scheduled job to run the script every 5 minutes:
+
+source: https://www.cyberciti.biz/faq/how-to-add-cron-job-on-asuswrt-merlin-wifi-router/
+
+```console
+cru a client1update "*/5 * * * * /jffs/scripts/client1update"
+```
+
+If you want your scheduled job to survive across router reboots, add the previous command to a file called /jffs/scripts/services-start
+
+```console
+vi /jffs/scripts/services-start
+chmod +x /jffs/scripts/services-start
+```
+
+Reboot the router and make sure the schedule job is set to run.
+
+```console
+cru l
+```
 
 ### WebUI:
 
