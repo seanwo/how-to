@@ -58,6 +58,8 @@ and then add local accounts to from address map entries:
 ```
 user@yourhostname email@gmail.com
 root@yourhostname email@gmail.com
+user@yourhostname.example.com email@gmail.com
+root@yourhostname.example.com email@gmail.com
 ```
 *also if you are using sendgrid apply the generic map:*
 ```console
