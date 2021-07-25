@@ -5,7 +5,7 @@ source: https://docs.sendgrid.com/for-developers/sending-email/postfix
 source: https://docs.sendgrid.com/for-developers/sending-email/smtp-errors-and-troubleshooting#550-unauthenticated-senders-not-allowed  
 source: https://www.cyberciti.biz/tips/howto-postfix-masquerade-change-email-mail-address.html  
 
-Create a new gmail account. (In this example we use email@gmail.com; replace this with your new gmail address and real password).  Creating and using a sendgrid account using using single sender verification will remove the security headaches associated with gmail's less secure apps and geo ip blocking as your ip changes.
+Create a new gmail account. (In this example we use email@gmail.com; replace this with your new gmail address and real password).  Creating and using a sendgrid account using single sender verification will remove the security headaches associated with gmail's less secure apps and geo ip blocking as your ip changes.
 
 ```console
 sudo apt install postfix
