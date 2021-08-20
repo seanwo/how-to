@@ -32,7 +32,7 @@ Do not enable SSH access via WAN.  See VPN Server configuration.
 Connecting to your router via SSH using your RSA key on your LAN (mac example)
 
 ```console
-ssh -i ./ssh/id_rsa_router admin@192.168.0.1
+ssh -i .ssh/id_rsa_router admin@192.168.0.1
 ```
 ### WebUI
 
