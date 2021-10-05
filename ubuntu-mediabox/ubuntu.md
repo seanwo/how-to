@@ -62,3 +62,37 @@ and then restart the service
 ```console
 sudo systemctl restart upower
 ```
+
+If you are adding a NVIDIA GPU, identify the hardware:
+```console
+sudo apt install hwinfo
+hwinfo --gfxcard --short
+```
+
+Find the latest drivers (in my case the latest was version 470):
+```console
+apt search nvidia-driver
+sudo apt install nvidia-driver-470
+sudo sync
+sudo reboot
+```
+
+Check if the drivers are working:
+```console
+nvidia-smi
+```
+
+If the drivers are not connecting, try:
+```console
+sudo apt install linux-headers-$(uname -r)
+sudo update-initramfs -u
+sudo sync
+sudo reboot
+```
+
+Tools for the drivers include:
+```console
+nvidia-smi; #use for monitoring
+nvidia-settings; #use to view the configuration
+sudo nvidia-settings; #use to change the configuration
+```
