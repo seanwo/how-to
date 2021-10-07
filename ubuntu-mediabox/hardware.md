@@ -58,7 +58,7 @@ Specs: https://www.wd.com/products/internal-storage/wd-red.html#WD40EFRX
 Shop: https://www.google.com/search?tbm=shop&q=WD40EFRX&oq=WD40EFRX  
 
 Case and Power  
-RGEEK Mini ITX HTPC Aluminum Case Chassis (L80S USB 3.0, 150W DC-ATX Pico PSU, & 12V 120W Adapter)  
+RGEEK Mini ITX HTPC Aluminum Case Chassis (L80S USB 3.0, 150W DC-ATX Pico PSU, & 12V 150W Adapter)  
 Quantity: 1  
 Shop: https://www.google.com/search?tbm=shop&q=rgeek+l80s+itx  
 
