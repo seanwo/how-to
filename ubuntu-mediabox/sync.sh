@@ -4,7 +4,7 @@ DATE=`date +%Y-%m-%d`
 MAILADDR="email@gmail.com"
 DAILYLOGFILE="/var/log/rsync/sync.daily.log"
 
-rsync -ahPHAXx --delete /mnt/media/ /mnt/backup > ${DAILYLOGFILE} 2>&1
+rsync -ahPHAXx --delete --exclude 'TorrentTemp/*' /mnt/media/ /mnt/backup > ${DAILYLOGFILE} 2>&1
 
 if [ $? -eq 0 ]
 then
