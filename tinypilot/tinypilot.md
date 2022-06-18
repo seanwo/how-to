@@ -1,4 +1,4 @@
-## Build a TinyPilot KVM Switch 
+## Build a TinyPilot KVM Over IP Switch 
 
 source: https://tinypilotkvm.com/blog/build-a-kvm-over-ip-under-100#how-to-build-your-own-tinypilot  
 source: https://www.geekyhacker.com/2021/02/15/configure-ssh-key-based-authentication-on-raspberry-pi/  
