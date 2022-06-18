@@ -86,4 +86,4 @@ curl -sS https://raw.githubusercontent.com/tiny-pilot/tinypilot/master/quick-ins
 sudo reboot
 ```
 
-Access your new TinyPilot KVM at http://tinypilot or http://[hostname you assigned the device]
+Access your new TinyPilot KVM at http://tinypilot (or http://[hostname] where hostname is the hostname you assigned the device and added to your router) (or http://192.168.0.xxx where the ip address is the address of your TinyPilot)
