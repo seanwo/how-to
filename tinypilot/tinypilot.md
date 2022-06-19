@@ -1,8 +1,10 @@
-## Build a TinyPilot KVM Over IP Switch 
+## TinyPilot KVM Over IP Switch 
 
 source: https://tinypilotkvm.com/blog/build-a-kvm-over-ip-under-100#how-to-build-your-own-tinypilot  
 source: https://www.geekyhacker.com/2021/02/15/configure-ssh-key-based-authentication-on-raspberry-pi/  
 source: https://pimylifeup.com/raspberry-pi-update/  
+
+![alt text](tinypilot.jpg "TinyPilot")
 
 Parts List:  
 * [Raspberry Pi 4 2GB](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=raspberry+pi+4+2gb&_sacat=0) ~$100
