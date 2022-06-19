@@ -25,7 +25,7 @@ Operating System: Raspberry Pi OS (other) -> Raspberry Pi OS Lite (32-bit).
    * Set hostname: tinypilot. 
    * Enable SSH: Use password authentication. 
    * Set username and password: tinypilot/[secure password]. 
-   * Set lcoale settings: Time zone: [your timez one]. 
+   * Set lcoale settings: Time zone: [your time zone]. 
 * Select Write to image the card.  
 
 Put the card in the raspberry pi and boot it up on the network.  
@@ -59,7 +59,14 @@ sudo rpi-eeprom-update -a
 sudo reboot
 ```
 
-Generate an RSA keypair (id_rsa_tinypilot & id_rsa_tinypilot.pub) and then copy the public key to the device:  
+Generate an RSA keypair (id_rsa_tinypilot & id_rsa_tinypilot.pub) on the client
+
+```console
+ssh-keygen -t rsa -C "tinypilot@tinypilot"
+```
+
+and then copy the public key to the device:  
+
 ```console
 ssh-copy-id -i ~/.ssh/id_rsa_tinypilot.pub tinypilot@tinypilot
 ```
