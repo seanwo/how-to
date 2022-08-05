@@ -21,11 +21,11 @@ Parts List:
 * [120mm Black Finger Grills (4 Pack)](https://www.amazon.com/dp/B01H0P7OC4) $8
 * [Facmogu DC 12V 3A Power Adapter, 36 Watt AC 100-240V to DC 12V Transformers, Switching Power Supply for LCD Monitor, Wireless Router, CCTV Cameras 2.1mm X 5.5mm US Plug](https://www.amazon.com/dp/B073WSWT34) $12 (optional to replace cheap original)
 
-**Here some of my custom configurations**:
+**Configuration**:
 
 * [Installing pfSense](install.md)
 * Create a LAN Bridge
-* Setup a IPV4 DHCP Server
+* Setup a IPV4 DHCP Server(dhcpserver.md)
 * Add DHCP Reservations
 * Setup DNS over TLS
 * Enable UPnP
