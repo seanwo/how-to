@@ -6,6 +6,6 @@ source: [https://community.spiceworks.com/how_to/126203-dynamicdns-freedns-on-pf
 **Services>Dynamic DNS>Dynamic DNS Client**
 * Service Type: ``freeDNS``
 * Interface to monitor: ``WAN``
-* Hostname: ``[your full freeDNS subdomain]``
-* Username: ``[]`` *leave blank*
+* Hostname: ``[freedns.subdomain.xxx]``
+* Username: ``[blank]`` *leave blank*
 * Password: ``[Authentication Token]`` *freeDNS Direct URL - Token is after the .php?*
