@@ -18,7 +18,7 @@ Connected to the web UI on [http:///192.168.1.1](http://192.168.1.1)
 * WAN Interface: ``DHCP``
 * Block RFC1918 Private Networks: Block private networks from entering via WAN: :white_check_mark:
 * Block bogon networks: Block non-internet routed networks from entering via WAN: :white_check_mark:
-* LAN IP Address: ``192.168.XXX.1`` *where* ``XXX`` *is unique for your network*
+* LAN IP Address: ``192.168.XXX.1`` *(where* ``XXX`` *is unique for your network)*
 * Subnet Mask: ``24``
 * Admin Password: ``[choose a secure password]``
 
