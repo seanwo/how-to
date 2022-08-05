@@ -28,7 +28,7 @@ Parts List:
 * [Setup a IPV4 DHCP Server](dhcpserver.md)
 * [Configure Static DHCP Reservations](dhcpstatic.md)
 * [Setup DNS over TLS](dot.md)
-* Enable UPnP
+* [Enable UPnP](upnp.md)
 * Setup SSH Access
 * Add SSH User Keys
 * Setup Dynamic DNS
