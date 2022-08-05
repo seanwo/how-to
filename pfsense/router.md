@@ -25,7 +25,7 @@ Parts List:
 
 * [Installing pfSense](install.md)
 * Create a LAN Bridge
-* Setup a IPV4 DHCP Server(dhcpserver.md)
+* [Setup a IPV4 DHCP Server](dhcpserver.md)
 * Add DHCP Reservations
 * Setup DNS over TLS
 * Enable UPnP
