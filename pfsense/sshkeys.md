@@ -9,5 +9,4 @@ Mac or Linux: [https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/cr
 Windows: [https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-putty/](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-putty/).  
 
 **System>User Manager>Users>Users>Keys**
-Generate an RSA Public/Private Key pair 
 * Authorized SSH Keys: ``[RSA Public Key]``
