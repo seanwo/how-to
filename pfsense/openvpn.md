@@ -102,9 +102,11 @@ Install openvpn-client-export
 
 ![alt text](openvpn.jpg "openvpn")
 
+![alt text](openvpnbr0rule.jpg "openvpnbr0rule")
+
 ![alt text](openvpnwanrule.jpg "openvpnwanrule")
 
-![alt text](openvpnbr0rule.jpg "openvpnbr0rule")
+![alt text](dnsresolveraccesslist.jpg "dnsresolveraccesslist")
 
 ![alt text](vpnexportpkg.jpg "vpnexportpkg")
 
