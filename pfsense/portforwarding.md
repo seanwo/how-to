@@ -2,7 +2,7 @@
 
 source: [https://docs.netgate.com/pfsense/en/latest/nat/port-forwards.html](https://docs.netgate.com/pfsense/en/latest/nat/port-forwards.html).  
 
-**Firewall>NAT>Port Forward**
+### Firewall>NAT>Port Forward
 * Interface: ``WAN``
 * Address Family: ``IPv4``
 * Protocol: ``TCP``
@@ -11,4 +11,8 @@ source: [https://docs.netgate.com/pfsense/en/latest/nat/port-forwards.html](http
 * Redirect target port: Port: ``[port]`` *(target port)*
 * Description: ``[description]``
 
-Repeat for each forwarding rule.
+Repeat for each forwarding rule.  
+
+### WebUI
+
+![alt text](portforwarding.jpg "portforwarding")
