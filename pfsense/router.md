@@ -24,3 +24,14 @@ Parts List:
 **Here some of my custom configurations**:
 
 * [Installing pfSense](install.md)
+* Create a LAN Bridge
+* Setup a IPV4 DHCP Server
+* Add DHCP Reservations
+* Setup DNS over TLS
+* Enable UPnP
+* Setup SSH Access
+* Add SSH User Keys
+* Setup Dynamic DNS
+* Enable Email Notifications
+* Setup Port Forwarding
+* Setup OpenVPN Server
