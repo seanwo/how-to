@@ -31,7 +31,7 @@ Parts List:
 * [Enable UPnP](upnp.md)
 * [Setup SSH Access](ssh.md)
 * [Configure SSH User Keys](sshkeys.md)
-* Setup Dynamic DNS
+* [Setup Dynamic DNS](ddns.md)
 * Enable Email Notifications
 * Setup Port Forwarding
 * Setup OpenVPN Server
