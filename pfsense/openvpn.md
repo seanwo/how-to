@@ -81,8 +81,13 @@ Initialization Sequence Complete
 * Destination Port Range: ``1194``
 * Description: ``Allow OpenVPN``
 
+**Server>DNS Resolver>Access Lists**
+* Access List name: ``OpenVPN``
+* Action: ``Allow``
+* Networks: ``192.168.YYY.0``/``24`` Description: ``OpenVPN``
+
 **System>Package Manager>Available Packages**  
-Install openvpn-client-export
+Install openvpn-client-export  
 
 **VPN>OpenVPN>Client Export**
 * Hostname Resolution: ``Other``
