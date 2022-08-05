@@ -34,4 +34,4 @@ Parts List:
 * [Setup Dynamic DNS](ddns.md)
 * [Configure Email Notifications](email.md)
 * [Setup Port Forwarding](portforwarding.md)
-* Setup OpenVPN Server
+* [Setup an OpenVPN Server](openvpn.md)
