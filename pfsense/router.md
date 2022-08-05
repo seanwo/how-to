@@ -29,7 +29,7 @@ Parts List:
 * [Configure Static DHCP Reservations](dhcpstatic.md)
 * [Setup DNS over TLS](dot.md)
 * [Enable UPnP](upnp.md)
-* Setup SSH Access
+* [Setup SSH Access](ssh.md)
 * Add SSH User Keys
 * Setup Dynamic DNS
 * Enable Email Notifications
