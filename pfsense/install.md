@@ -1,10 +1,10 @@
 ## Installing pfSense
 
-source: [https://docs.netgate.com/pfsense/en/latest/install/index.html](https://docs.netgate.com/pfsense/en/latest/install/index.html). 
-source: [https://www.pfsense.org/download/](https://www.pfsense.org/download/). 
+source: [https://docs.netgate.com/pfsense/en/latest/install/index.html](https://docs.netgate.com/pfsense/en/latest/install/index.html).  
+source: [https://www.pfsense.org/download/](https://www.pfsense.org/download/).  
 
 Install pfSense on the device via usb memory stick.  
-Configure WAN (on igc0) and LAN1 (on igc1) and get connected to the web UI on 192.168.1.1. 
+Configure WAN (on igc0) and LAN1 (on igc1) and get connected to the web UI on 192.168.1.1.  
 
 **Wizard>pfSense Setup**
 ```
