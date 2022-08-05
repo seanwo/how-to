@@ -30,7 +30,7 @@ Parts List:
 * [Setup DNS over TLS](dot.md)
 * [Enable UPnP](upnp.md)
 * [Setup SSH Access](ssh.md)
-* Add SSH User Keys
+* [Add SSH User Keys](sshkeys.sh)
 * Setup Dynamic DNS
 * Enable Email Notifications
 * Setup Port Forwarding
