@@ -23,7 +23,7 @@ To get started with pfSense go to [https://www.pfsense.org/getting-started/](htt
 
 ## Configuration
 * [Installing pfSense](install.md)
-* Create a LAN Bridge
+* [Setup a LAN Bridge](lanbridge.md)
 * [Setup a IPV4 DHCP Server](dhcpserver.md)
 * [Configure Static DHCP Reservations](dhcpstatic.md)
 * [Setup DNS over TLS](dot.md)
