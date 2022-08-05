@@ -38,6 +38,6 @@ To get started with pfSense go to [https://www.pfsense.org/getting-started/](htt
 
 ## Thermals
 
-Draws 20W during 100% CPU stress testing with the following thermal results:
+The device draws 20W during a 100% CPU (all cores) stress test with the following internal thermal results while keeping the case @ 31C (room @ 27C):
 
 ![alt text](cpuburn.jpg "cpuburn")
