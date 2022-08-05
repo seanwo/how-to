@@ -37,10 +37,9 @@ To get started with pfSense go to [https://www.pfsense.org/getting-started/](htt
 * [Setup an OpenVPN Server](openvpn.md)
 
 ## Thermals
-The device draws 20W during a 100% CPU (all cores) stress test with the following internal thermal results (55C) while keeping the case @ 31C (room @ 27C):
+
+The device draws 10W during normal/idle operation with the cpu cores @ 38C while keeping the case @ 28C (room @ 27C).  
+
+The device draws 20W during a 100% CPU stress test with the cpu cores @ 55C while keeping the case @ 31C (room @ 27C):
 
 ![alt text](cpuburn.jpg "cpuburn")
-
-The device draws 10W during normal/idle operation with the following internal thermal results (38C) while keeping the case @ 28C (room @ 27C):
-
-![alt text](idletemps.jpg "idletemps")
