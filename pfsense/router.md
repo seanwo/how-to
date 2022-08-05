@@ -21,7 +21,7 @@ To get started with pfSense go to [https://www.pfsense.org/getting-started/](htt
 * [120mm Black Finger Grills (4 Pack)](https://www.amazon.com/dp/B01H0P7OC4) $8
 * [Facmogu DC 12V 3A Power Adapter, 36 Watt AC 100-240V to DC 12V Transformers, Switching Power Supply for LCD Monitor, Wireless Router, CCTV Cameras 2.1mm X 5.5mm US Plug](https://www.amazon.com/dp/B073WSWT34) $12 (optional to replace cheap original)
 
-## Configuration
+## Setup
 * [Installing pfSense](install.md)
 * [Setup a LAN Bridge](lanbridge.md)
 * [Setup a IPV4 DHCP Server](dhcpserver.md)
@@ -37,7 +37,6 @@ To get started with pfSense go to [https://www.pfsense.org/getting-started/](htt
 * [Setup an OpenVPN Server](openvpn.md)
 
 ## Thermals
-
 The device draws 20W during a 100% CPU (all cores) stress test with the following internal thermal results (55C) while keeping the case @ 31C (room @ 27C):
 
 ![alt text](cpuburn.jpg "cpuburn")
