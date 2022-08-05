@@ -23,4 +23,4 @@ Parts List:
 
 **Here some of my custom configurations**:
 
-* [DNS over TLS (DoT)](dot.md)
+* [Installing pfSense](install.md)
