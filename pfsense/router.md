@@ -6,6 +6,8 @@ source: [https://www.pfsense.org/about-pfsense/](https://www.pfsense.org/about-p
 
 To get started with pfSense go to [https://www.pfsense.org/getting-started/](https://www.pfsense.org/getting-started/)
 
+![alt text](router.jpg "router")
+
 Parts List:  
 * [KingNovy Intel Celeron N5105 4x 2.5GbE](https://www.aliexpress.com/item/3256803806996430.html) ~$200
 * [Crucial RAM 16GB Kit (2x8GB) DDR4 3200MHz CL22 (running @ 2933MHz) SODIMM](https://www.amazon.com/dp/B08C4WV6FT) $60
