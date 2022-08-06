@@ -9,7 +9,7 @@ Connected to the web UI on [http:///192.168.1.1](http://192.168.1.1)
 
 ### Wizard>pfSense Setup
 * Hostname: ``pfSense``
-* Domain: ``home.arpa``
+* Domain: ~~``home.arpa``~~ ``local.lan``
 * Primary DNS: ``1.1.1.1``
 * Secondary DNS: ``1.0.0.1``
 * Override DNS: :x:
