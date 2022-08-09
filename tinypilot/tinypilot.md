@@ -3,6 +3,7 @@
 source: https://tinypilotkvm.com/blog/build-a-kvm-over-ip-under-100#how-to-build-your-own-tinypilot  
 source: https://www.geekyhacker.com/2021/02/15/configure-ssh-key-based-authentication-on-raspberry-pi/  
 source: https://pimylifeup.com/raspberry-pi-update/  
+source: https://community.ui.com/questions/Step-By-Step-Tutorial-Guide-Raspberry-Pi-with-UniFi-Controller-and-Pi-hole-from-scratch-headless/e8a24143-bfb8-4a61-973d-0b55320101dc  
 
 ![alt text](tinypilot.jpg "TinyPilot")
 
@@ -104,3 +105,9 @@ sudo reboot
 ```
 
 Access your new TinyPilot KVM at http://tinypilot (or http://[hostname] where hostname is the hostname you assigned the device and added to your router) (or http://192.168.0.xxx where the ip address is the address of your TinyPilot)
+
+To install a Ubiquiti Unifi Controller apply and run this script:
+
+[install-unifi.sh](install-unifi.sh)
+
+Then access the controller at [https://tinypilot:8443/manage/account/login] (https://tinypilot:8443/manage/account/login).
