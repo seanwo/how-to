@@ -23,4 +23,3 @@
 * [Install ClamAV](clamav.md)
 * [Setup Drive Mirroring](rsync.md)
 * [Install Duplicity](duplicity.md)
-* [Setup Juno Grade Monitoring](juno.md)
