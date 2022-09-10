@@ -66,6 +66,7 @@ This requires the root account to have a password
 ```console
 sudo su -
 passwd
+exit
 vi /etc/ssh/sshd_config
 ```
 Set the root password and set the sshd configuration parameter ```PermitRootLogin``` to ```no```  
@@ -76,7 +77,7 @@ You will need wget to get and then run the OMV installer script
 ```console
 sudo apt install wget
 ```
-Install OMV  
+Run the OMV installation script  
 ```console
 wget -O - https://raw.githubusercontent.com/OpenMediaVault-Plugin-Developers/installScript/master/install | sudo bash
 sudo reboot
@@ -92,3 +93,29 @@ sudo apt reboot
 
 Hopefully, you can now access OMV on http://pinas  
 
+### Using hd-idle Instead of hdparm
+
+Many older drivers can not be set to spin down on a timer with hdparm so the solution is keep the spindown disabled in OMV and use hd-idle to spin your drive down while not in use.  If you are setting up an active RAID, you don't want to do this but I plan on using SnapRAID and I want my drives spun down as much as possible to keep the noise levels low.  
+
+Installing the latest hd-idle package  
+```console
+wget -O -  http://adelolmo.github.io/andoni.delolmo@gmail.com.gpg.key | sudo apt-key add -
+echo "deb http://adelolmo.github.io/$(lsb_release  -cs) $(lsb_release -cs) main" | sudo tee  /etc/apt/sources.list.d/adelolmo.github.io.list
+sudo apt update
+sudo apt install hd-idle
+```
+Edit the hd-idle configuration file  
+```console
+sudo vi /etc/default/hd-idle
+```
+Make the following changes  
+```
+START_HD_IDLE=true
+HD_IDLE_OPTS="-i 300 -l /var/log/hd-idle.log"
+```
+Set hd-idle to run as a service
+```console
+sudo systemctl unmask hd-idle
+sudo systemctl start hd-idle
+sudo systemctl enable hd-idle
+```
