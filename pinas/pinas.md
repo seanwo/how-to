@@ -59,7 +59,7 @@ sudo apt reboot
 ssh admin@pinas
 ```
 
-###  Enable root account for Emergency Console Access
+###  Enable the root Account for Emergency Console Access
 
 If you make a mistake configuring /etc/fstab later you will need to solve it via emergency console access  
 This requires the root account to have a password  
@@ -69,3 +69,26 @@ passwd
 vi /etc/ssh/sshd_config
 ```
 Set the root password and set the sshd configuration parameter ```PermitRootLogin``` to ```no```  
+
+### Install OMV
+
+You will need wget to get and then run the OMV installer script  
+```console
+sudo apt install wget
+```
+Install OMV  
+```console
+wget -O - https://raw.githubusercontent.com/OpenMediaVault-Plugin-Developers/installScript/master/install | sudo bash
+sudo reboot
+```
+Note: This did not completely install for me the first time. It looked like it completed but the web interface was not available after the reboot. So I repeated the step above and it worked the second time around.  Possible dependency problem.  
+  
+Make sure everything is up-to-date again  
+```console
+sudo apt update
+sudo apt full-upgrade
+sudo apt reboot
+```
+
+Hopefully, you can now access OMV on http://pinas  
+
