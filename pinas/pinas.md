@@ -18,35 +18,35 @@ Parts List:
 * [Hammond Enclosure 140x140x60mm (1554QGY)](http://tinyurl.com/2p8vmdeu) $18
 
 Notes:
-* You will need to drill the holes deeper on one of the 40mm Noctua fans in order to mount it to the Heatsink with the original screws.  Just use the appropriate drill bit and run the drill in reverse to slowly wear away the plastic in the mounting holes to the proper depth.
-* You will need to re-pin Pico PSU side of the the replacement SATA power cable if you use it (instead of the one that came with the Pico PSU).  If you do not re-pin it, YOU WILL DESTROY ANY HARD DRIVE YOU PLUG INTO IT.
+* You will need to drill the holes deeper on one of the 40mm Noctua fans in order to mount it to the Heatsink with the original screws.  Just use the appropriate drill bit and run the drill in reverse to slowly wear away the plastic in the mounting holes to the proper depth
+* You will need to re-pin Pico PSU side of the the replacement SATA power cable if you use it (instead of the one that came with the Pico PSU)  If you do not re-pin it, YOU WILL DESTROY ANY HARD DRIVE YOU PLUG INTO IT
 
 ### Install the Base OS
 
-Get the latest installer from Axzez (Interceptor Linux OS Installer) from https://www.axzez.com/software-downloads.
+Get the latest installer from Axzez (Interceptor Linux OS Installer) from https://www.axzez.com/software-downloads
 
 Make sure you have an imaging tool like Etcher
 ```console
 brew install cask balenaetcher
 ```
-Write the installer image a usb memory stick and then boot the board and CM4 module up with the usb stick.  
-You can test that board and CM4 work first using a live image boot and/or you can select to install it to the eMMC.  
-You will be prompted to set the admin user password during installation.
-Once the OS is installed on eMMC, shutdown, remove the usb stick and boot from eMMC.
+Write the installer image a usb memory stick and then boot the board and CM4 module up with the usb stick  
+You can test that board and CM4 work first using a live image boot and/or you can select to install it to the eMMC  
+You will be prompted to set the admin user password during installation  
+Once the OS is installed on eMMC, shutdown, remove the usb stick and boot from eMMC  
 
 ### Configure the Device Network and Update the OS and Packages
 
-When booting up make sure you plug the network into ethernet port A.
-Get the mac address of the Network Interface
+When booting up make sure you plug the network into ethernet port A  
+Get the mac address of the Network Interface  
 ```console
 sudo ifconfig
 ```
-Create an IP reserveration for the mac address in your router (optional).  
-Rename the device to ```pinas```
+Create an IP reserveration for the mac address in your router (optional)  
+Rename the device to ```pinas```  
 ```console
 sudo vi /etc/hostname
 ```
-Update the OS and OS packages
+Update the OS and OS packages  
 ```console
 sudo apt update
 sudo apt full-upgrade
@@ -54,17 +54,18 @@ sudo apt reboot
 ```
 
 ### Connect to the Device via SSH
+
 ```console
 ssh admin@pinas
 ```
 
 ###  Enable root account for Emergency Console Access
 
-If you make a mistake configuring /etc/fstab later you will need to solve it via emergency console access.  This requires the root account to have a password.
-
+If you make a mistake configuring /etc/fstab later you will need to solve it via emergency console access  
+This requires the root account to have a password  
 ```console
 sudo su -
 passwd
 vi /etc/ssh/sshd_config
 ```
-Set the root password and set the sshd configuration parameter ```PermitRootLogin``` to ```no```.
+Set the root password and set the sshd configuration parameter ```PermitRootLogin``` to ```no```  
