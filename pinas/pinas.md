@@ -19,4 +19,4 @@ Parts List:
 
 Notes:
 * You will need to drill the holes deeper on one of the 40mm Noctua fans in order to mount it to the Heatsink with the original screws.  Just use the appropriate drill bit and run the drill in reverse to slowly wear away the plastic in the mounting holes to the proper depth.
-* YOu will need to re-pin Pico PSU side of the the replacement SATA power cable if you use it (instead of the one that came with the Pico PSU).  If you do not re-pin it, YOU WILL DESTROY ANY HARD DRIVE YOU PLUG INTO IT.
+* You will need to re-pin Pico PSU side of the the replacement SATA power cable if you use it (instead of the one that came with the Pico PSU).  If you do not re-pin it, YOU WILL DESTROY ANY HARD DRIVE YOU PLUG INTO IT.
