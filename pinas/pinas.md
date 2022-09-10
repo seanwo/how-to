@@ -18,42 +18,45 @@ Parts List:
 * [Hammond Enclosure 140x140x60mm (1554QGY)](http://tinyurl.com/2p8vmdeu) $18
 
 Notes:
-* You will need to drill the holes deeper on one of the 40mm Noctua fans in order to mount it to the Heatsink with the original screws.  Just use the appropriate drill bit and run the drill in reverse to slowly wear away the plastic in the mounting holes to the proper depth
-* You will need to re-pin Pico PSU side of the the replacement SATA power cable if you use it (instead of the one that came with the Pico PSU)  If you do not re-pin it, YOU WILL DESTROY ANY HARD DRIVE YOU PLUG INTO IT
+* You will need to drill the holes deeper on one of the 40mm Noctua fans in order to mount it to the Heatsink with the original screws.  Just use the appropriate drill bit and run the drill in reverse to slowly wear away the plastic in the mounting holes to the proper depth.
+* You will need to re-pin Pico PSU side of the the replacement SATA power cable if you use it (instead of the one that came with the Pico PSU)  If you do not re-pin it, YOU WILL DESTROY ANY HARD DRIVE YOU PLUG INTO IT.
 
 ### Install the Base OS
 
-Get the latest installer from Axzez (Interceptor Linux OS Installer) from https://www.axzez.com/software-downloads
+Get the latest installer from Axzez (Interceptor Linux OS Installer) from https://www.axzez.com/software-downloads.
 
-Make sure you have an imaging tool like Etcher
+Make sure you have an imaging tool like Etcher:
 ```console
 brew install cask balenaetcher
 ```
-Write the installer image a usb memory stick and then boot the board and CM4 module up with the usb stick  
-You can test that board and CM4 work first using a live image boot and/or you can select to install it to the eMMC  
-You will be prompted to set the admin user password during installation  
-Once the OS is installed on eMMC, shutdown, remove the usb stick and boot from eMMC  
+Write the installer image a usb memory stick and then boot the board and CM4 module up with the usb stick.  
+You can test that board and CM4 work first using a live image boot and/or you can select to install it to the eMMC.  
+You will be prompted to set the admin user password during installation.  
+Once the OS is installed on eMMC, shutdown, remove the usb stick and boot from eMMC.  
 
-### Configure the Device Network and Update the OS and Packages
+### Configure the Network
 
-When booting up make sure you plug the network into ethernet port A  
-Get the mac address of the Network Interface  
+When booting up make sure you plug the network into ethernet port A.  
+Get the mac address of the Network Interface:
 ```console
 sudo ifconfig
 ```
 Create an IP reserveration for the mac address in your router (optional)  
-Rename the device to ```pinas```  
+Rename the device to ```pinas```:
 ```console
 sudo vi /etc/hostname
+sudo sync; sudo reboot
 ```
-Update the OS and OS packages  
+
+### Update the OS and Packages  
+
 ```console
 sudo apt update
 sudo apt full-upgrade
-sudo apt reboot
+sudo reboot
 ```
 
-### Connect to the Device via SSH
+### Connect via SSH
 
 ```console
 ssh admin@pinas
@@ -61,71 +64,71 @@ ssh admin@pinas
 
 ###  Enable the root Account for Emergency Console Access
 
-If you make a mistake configuring /etc/fstab later you will need to solve it via emergency console access  
-This requires the root account to have a password  
+If you make a mistake configuring /etc/fstab (for example) you will need to resolve it via emergency console access. This requires the root account to have a password:
 ```console
 sudo su -
 passwd
 exit
 vi /etc/ssh/sshd_config
 ```
-Set the root password and set the sshd configuration parameter ```PermitRootLogin``` to ```no```  
+Set the root password and set the sshd configuration parameter ```PermitRootLogin``` to ```no```.  
 
 ### Install OMV
 
-You will need wget to get and then run the OMV installer script  
+You will need wget to get and then run the OMV installer script:
 ```console
 sudo apt install wget
 ```
-Run the OMV installation script  
+Run the OMV installation script.  
 ```console
 wget -O - https://raw.githubusercontent.com/OpenMediaVault-Plugin-Developers/installScript/master/install | sudo bash
 sudo reboot
 ```
 Note: This did not completely install for me the first time. It looked like it completed but the web interface was not available after the reboot. So I repeated the step above and it worked the second time around.  Possible dependency problem.  
   
-Make sure everything is up-to-date again  
+Make sure everything is up-to-date again:
 ```console
 sudo apt update
 sudo apt full-upgrade
-sudo apt reboot
+sudo sync; sudo reboot
 ```
 
-Hopefully, you can now access OMV on http://pinas  
+Hopefully, you can now access OMV on http://pinas.  
 
-### Using hd-idle Instead of hdparm
+### Install hd-idle
 
 Many older drivers can not be set to spin down on a timer with hdparm so the solution is keep the spindown disabled in OMV and use hd-idle to spin your drive down while not in use.  If you are setting up an active RAID, you don't want to do this but I plan on using SnapRAID and I want my drives spun down as much as possible to keep the noise levels low.  
 
-Installing the latest hd-idle package  
+Installing the latest hd-idle package:
 ```console
 wget -O -  http://adelolmo.github.io/andoni.delolmo@gmail.com.gpg.key | sudo apt-key add -
 echo "deb http://adelolmo.github.io/$(lsb_release  -cs) $(lsb_release -cs) main" | sudo tee  /etc/apt/sources.list.d/adelolmo.github.io.list
 sudo apt update
 sudo apt install hd-idle
 ```
-Edit the hd-idle configuration file  
+Edit the hd-idle configuration file:
 ```console
 sudo vi /etc/default/hd-idle
 ```
-Make the following changes  
+Make the following changes:
 ```
 START_HD_IDLE=true
 HD_IDLE_OPTS="-i 300 -l /var/log/hd-idle.log"
 ```
-Set hd-idle to run as a service
+Set hd-idle to run as a service:
 ```console
 sudo systemctl unmask hd-idle
 sudo systemctl start hd-idle
 sudo systemctl enable hd-idle
 ```
 
-### Adding Hard Drives
+### Mounting Hard Drives
 
+List the drive device name:
 ```console
 lsblk
 ```
-Find disks (in this example it is /dev/sda thru dev/sdd; each are 1TB)
+Find disks (in this example it is /dev/sda thru dev/sdd; each are 1TB):
 ```
 NAME         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 sda            8:0    0 931.5G  0 disk 
@@ -139,13 +142,13 @@ mmcblk0      179:0    0  29.1G  0 disk
 mmcblk0boot0 179:32   0     4M  1 disk 
 mmcblk0boot1 179:64   0     4M  1 disk 
 ```
-**Warning:** this repartions the disks and all data on these disks will be lost; be careful!:
+**Warning:** this repartions the disks and all data on these disks will be lost; be careful:
 ```console
 sudo fdisk /dev/sda
 ```
-Use the commands g, n, w. (repeat for /dev/sdb, /dev/sdc, and /dev/sdd) 
+Use the commands g, n, w. (repeat for /dev/sdb, /dev/sdc, and /dev/sdd).  
 
-**Warning:** this formats the partions and all data on these disks will be lost; be careful!:
+**Warning:** this formats the partions and all data on these disks will be lost; be careful:
 ```console
 sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sda1
 sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sdb1
@@ -169,6 +172,7 @@ sudo mkdir /mnt/disk2
 sudo mkdir /mnt/disk3
 sudo mkdir /mnt/disk4
 ```
+Setup permanent mount points:
 ```console
 sudo vi /etc/fstab
 ```
@@ -179,13 +183,15 @@ UUID=fc567465-4f32-4878-9e61-5f092a9d21ad	/mnt/disk2	ext4	defaults,nofail,acl	0	
 UUID=10a8aa2c-1fe0-4cee-8b3f-90d5629e2987	/mnt/disk3	ext4	defaults,nofail,acl	0	0
 UUID=b9936806-889b-4fec-86d0-9c42e36d3432	/mnt/disk4	ext4	defaults,nofail,acl	0	0
 ```
-Reboot the system
-
+Reboot the system:
+```console
+sudo sync; sudo reboot
+```
 Check that the drives are mounted:
 ```console
 mount | grep /dev/sd
 ```
-should include the following mount points:
+Output should include the following mount points:
 ```
 /dev/sda1 on /mnt/disk1 type ext4 (rw,relatime)
 /dev/sdb1 on /mnt/disk2 type ext4 (rw,relatime)
