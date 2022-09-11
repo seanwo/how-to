@@ -124,3 +124,105 @@ To install a Ubiquiti Unifi Controller apply and run this script:
 [install-unifi.sh](install-unifi.sh)
 
 Then access the controller at [https://tinypilot:8443/manage/account/login](https://tinypilot:8443/manage/account/login).
+
+### Install Network UPS Tools
+
+```console
+sudo apt install nut nut-client nut-server
+```
+
+Run the scanner to find your UPS
+
+```console
+sudo nut-scanner -U
+```
+
+You should see something similar to:
+
+```
+```
+
+Make a backup of the original configuraiton files
+
+```console
+cd /etc/nut
+sudo cp nut.conf nut.example.conf
+sudo cp upsd.conf upsd.example.conf
+sudo cp upsd.users ussd.example.users
+sudo cp ups.conf ups.example.conf
+sudo cp upsmon.conf uspmon.example.conf
+```
+
+Edit ups.conf
+
+```console
+sudo vi /etc/ups.conf
+```
+
+```
+pollinterval = 1
+maxretry = 3
+
+[apc-server]
+	driver = "usbhid-ups"
+	port = "auto"
+	desc = "Back-UPS XS 1300 LCD"
+	vendorid = "051D"
+	productid = "0002"
+	serial = "[REDACTED]"
+	ignorelb
+	override.battery.charge.low = 25
+```
+NOTE: ```ignorelb``` and ```override.battery.charge.low``` are set to override the UPS default low charge percentage.
+
+Edit upsmon.conf
+
+```console
+sudo vi /etc/upsmon.conf
+```
+
+```
+RUN_AS_USER root
+MONITOR apc-server@localhost 1 admin secret master
+```
+NOTE: set ```secret``` to an actual secret you will use later on the client.
+
+Edit upsd.conf
+```console
+sudo vi /etc/upsd.conf
+```
+
+```
+LISTEN 0.0.0.0 3493
+```
+
+Edit nut.conf
+```console
+sudo vi /etc/nut.conf
+```
+
+```
+MODE=netserver
+```
+
+Edit nut.conf
+```console
+sudo vi /etc/upsd.users
+```
+
+```
+[monuser]
+ password = secret
+ admin master
+ ```
+NOTE: set ```secret``` to an actual secret you used in upsmon.conf.
+
+Restart all the nut based services
+
+```console
+sudo service nut-server restart
+sudo service nut-client restart
+sudo systemctl restart nut-monitor
+sudo upsdrvctl stop
+suod upsdrvctl start
+```
