@@ -43,7 +43,7 @@ Get the mac address of the Network Interface:
 ```console
 sudo ifconfig
 ```
-Create an IP reserveration for the mac address in your router (optional)  
+Create an IP reservation for the mac address in your router (optional)  
 Rename the device to ```pinas```:
 ```console
 sudo vi /etc/hostname
