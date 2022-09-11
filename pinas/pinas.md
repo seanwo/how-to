@@ -218,4 +218,5 @@ Powervalue: 1
 Shutdown mode: UPS reaches low battery
 ```
 
-NOTE: set secret to an actual secret you used on the nut server.
+NOTE: set ```Netclient password``` to the actual secret you used on the nut server.  
+NOTE: set ```Netclient hostname``` to the actual ip address of the nut server.  
