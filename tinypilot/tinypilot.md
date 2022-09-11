@@ -17,6 +17,11 @@ Parts List:
 * [Amazon Basics USB Type-C to USB-A Male 3.1 Gen2 Adapter Charger Cable - 3 Feet (0.9 Meters) - Black](https://www.amazon.com/dp/B01GGKYR2O) $14
 * [USB Type A to Type A Adapter Up & Down Angled USB 3.0 Adapter A Male to Female Extension 180 Degree 5Gbps](https://www.amazon.com/dp/B08QR95QB8) (optional) $10
 
+### Software Manifest
+* [Base OS](#install-the-base-os)
+* [TinyPilot KVM](#install-tinypilot-kvm-software)
+* [Ubiquiti Unifi Controller](#install-ubiquiti-unifi-controller)
+
 ### Install the Base OS
 
 Goto https://www.raspberrypi.com/software/ and get the imager tool or use brew to install it.
@@ -103,7 +108,7 @@ Confirm that you can only ssh with the rsa private key and not passwords.  To lo
 ssh -i ~./ssh/id_rsa_tinypilot tinypilot@tinypilot
 ```
 
-### Install KVM Software
+### Install TinyPilot KVM Software
  
 ```console
 curl -sS https://raw.githubusercontent.com/tiny-pilot/tinypilot/master/quick-install | bash -
@@ -112,7 +117,7 @@ sudo reboot
 
 Access your new TinyPilot KVM at http://tinypilot (or http://[hostname] where hostname is the hostname you assigned the device and added to your router) (or http://192.168.0.xxx where the ip address is the address of your TinyPilot)
 
-### Setup Ubiquiti Unifi Controller (Cloud Key)
+### Install Ubiquiti Unifi Controller
 
 To install a Ubiquiti Unifi Controller apply and run this script:
 
