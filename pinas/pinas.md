@@ -200,3 +200,22 @@ Output should include the following mount points:
 /dev/sdc1 on /mnt/disk3 type ext4 (rw,relatime)
 /dev/sdd1 on /mnt/disk4 type ext4 (rw,relatime)
 ```
+
+### Setup UPS Communication
+
+We are going to connect the piNAS to a Network UPS Tool server that monitors the UPS that this piNAS is connected to.  
+
+System->Plugins->Search->```openmediavault-nut```->Install  
+Services->UPS:
+```
+Enabled: true
+Identifier: apc-server
+Comment:
+Netclient hostname: 192.168.###.###
+Netclient user name: admin
+Netclient password: secret
+Powervalue: 1
+Shutdown mode: UPS reaches low battery
+```
+
+NOTE: set secret to an actual secret you used on the nut server.
