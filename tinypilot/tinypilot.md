@@ -205,7 +205,7 @@ sudo vi /etc/nut.conf
 MODE=netserver
 ```
 
-Edit nut.conf
+Edit upsd.users
 ```console
 sudo vi /etc/upsd.users
 ```
