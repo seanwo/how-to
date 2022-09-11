@@ -226,3 +226,14 @@ sudo systemctl restart nut-monitor
 sudo upsdrvctl stop
 suod upsdrvctl start
 ```
+
+Check that the service is up and monitoring the UPS
+
+```console
+upsc apc-server@localhost
+```
+
+You should see something similar to:
+
+```
+```
