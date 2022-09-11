@@ -170,7 +170,7 @@ sudo vi /etc/ups.conf
 ```
 
 ```
-pollinterval = 1
+pollinterval = 10
 maxretry = 3
 
 [apc-server]
@@ -195,6 +195,7 @@ sudo vi /etc/upsmon.conf
 ```
 RUN_AS_USER root
 MONITOR apc-server@localhost 1 admin secret master
+POLLFREQ 5
 ```
 NOTE: set ```secret``` to an actual secret you will use later on the client.
 
@@ -204,6 +205,7 @@ sudo vi /etc/upsd.conf
 ```
 
 ```
+MAXAGE 15
 LISTEN 0.0.0.0 3493
 ```
 
