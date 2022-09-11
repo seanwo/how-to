@@ -293,7 +293,7 @@ ups.mfr.date: 2008/01/16
 ups.model: Back-UPS XS 1300 LCD
 ups.productid: 0002
 ups.realpower.nominal: 780
-ups.serial: 8B0803R29816  
+ups.serial: 000000000000  
 ups.status: OL
 ups.test.result: No test initiated
 ups.timer.reboot: 0
