@@ -140,6 +140,16 @@ sudo nut-scanner -U
 You should see something similar to:
 
 ```
+Scanning USB bus.
+[nutdev1]
+	driver = "usbhid-ups"
+	port = "auto"
+	vendorid = "051D"
+	productid = "0002"
+	product = "Back-UPS XS 1300 LCD FW:836.H7 .D USB FW:H7"
+	serial = "000000000000"
+	vendor = "American Power Conversion"
+	bus = "001"
 ```
 
 Make a backup of the original configuraiton files
@@ -169,11 +179,12 @@ maxretry = 3
 	desc = "Back-UPS XS 1300 LCD"
 	vendorid = "051D"
 	productid = "0002"
-	serial = "[REDACTED]"
+	serial = "000000000000"
 	ignorelb
 	override.battery.charge.low = 25
 ```
-NOTE: ```ignorelb``` and ```override.battery.charge.low``` are set to override the UPS default low charge percentage.
+NOTE: ```ignorelb``` and ```override.battery.charge.low``` are set to override the UPS default low charge percentage.  
+NOTE: ```serial``` should be your real serial number.  
 
 Edit upsmon.conf
 
@@ -224,7 +235,7 @@ sudo service nut-server restart
 sudo service nut-client restart
 sudo systemctl restart nut-monitor
 sudo upsdrvctl stop
-suod upsdrvctl start
+sudo upsdrvctl start
 ```
 
 Check that the service is up and monitoring the UPS
@@ -236,4 +247,53 @@ upsc apc-server@localhost
 You should see something similar to:
 
 ```
+Init SSL without certificate database
+battery.charge: 100
+battery.charge.low: 25
+battery.charge.warning: 50
+battery.date: 2030/00/38
+battery.mfr.date: 2008/01/16
+battery.runtime: 8724
+battery.runtime.low: 120
+battery.type: PbAc
+battery.voltage: 27.1
+battery.voltage.nominal: 24.0
+device.mfr: American Power Conversion
+device.model: Back-UPS XS 1300 LCD
+device.serial: 8B0803R29816  
+device.type: ups
+driver.flag.ignorelb: enabled
+driver.name: usbhid-ups
+driver.parameter.pollfreq: 30
+driver.parameter.pollinterval: 1
+driver.parameter.port: auto
+driver.parameter.productid: 0002
+driver.parameter.serial: 000000000000
+driver.parameter.synchronous: no
+driver.parameter.vendorid: 051D
+driver.version: 2.7.4
+driver.version.data: APC HID 0.96
+driver.version.internal: 0.41
+input.sensitivity: medium
+input.transfer.high: 139
+input.transfer.low: 88
+input.transfer.reason: input voltage out of range
+input.voltage: 125.0
+input.voltage.nominal: 120
+ups.beeper.status: disabled
+ups.delay.shutdown: 20
+ups.firmware: 836.H7 .D
+ups.firmware.aux: H7 
+ups.load: 2
+ups.mfr: American Power Conversion
+ups.mfr.date: 2008/01/16
+ups.model: Back-UPS XS 1300 LCD
+ups.productid: 0002
+ups.realpower.nominal: 780
+ups.serial: 8B0803R29816  
+ups.status: OL
+ups.test.result: No test initiated
+ups.timer.reboot: 0
+ups.timer.shutdown: -1
+ups.vendorid: 051d
 ```
