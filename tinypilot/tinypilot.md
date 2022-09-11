@@ -21,6 +21,7 @@ Parts List:
 * [Base OS](#install-the-base-os)
 * [TinyPilot KVM](#install-tinypilot-kvm-software)
 * [Ubiquiti Unifi Controller](#install-ubiquiti-unifi-controller)
+* [Install Network UPS Tools](#install-network-ups-tools)
 
 ### Install the Base OS
 
