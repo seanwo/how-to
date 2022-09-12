@@ -159,7 +159,7 @@ Make a backup of the original configuraiton files
 cd /etc/nut
 sudo cp nut.conf nut.example.conf
 sudo cp upsd.conf upsd.example.conf
-sudo cp upsd.users ussd.example.users
+sudo cp upsd.users upsd.example.users
 sudo cp ups.conf ups.example.conf
 sudo cp upsmon.conf uspmon.example.conf
 ```
