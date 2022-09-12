@@ -224,9 +224,15 @@ sudo vi /etc/upsd.users
 ```
 
 ```
-[monuser]
- password = secret
- admin master
+[admin]
+password = secret
+actions = set
+actions = fsd
+instcmds = ALL
+
+[monmaster]
+password = secret
+upsmon master
  ```
 NOTE: set ```secret``` to an actual secret you used in upsmon.conf.
 
