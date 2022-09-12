@@ -171,7 +171,6 @@ sudo vi /etc/ups.conf
 ```
 
 ```
-pollinterval = 10
 maxretry = 3
 
 [apc-server]
