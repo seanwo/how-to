@@ -214,7 +214,7 @@ NOTIFYFLAG NOCOMM SYSLOG+WALL+EXEC
 NOTIFYFLAG FSD SYSLOG+WALL+EXEC
 RBWARNTIME 43200
 NOCOMMWARNTIME 300
-FINALDELAY 5
+FINALDELAY 120
 ```
 NOTE: set ```secret``` to an actual secret you will use later on the client.
 
@@ -302,7 +302,7 @@ sudo vi /etc/nut/upssched-cmd
           ;;
        powerdown)
           logger -t upssched-cmd "Automatic logout and shutdown proceeding"
-          /usr/sbin/upsmon -c fsd
+          #/usr/sbin/upsmon -c fsd
           ;;
        repbatt)
           logger -t upssched-cmd "The battery needs to be replaced!"
@@ -312,7 +312,7 @@ sudo vi /etc/nut/upssched-cmd
           ;;
        force-shutdown)
           logger -t upssched-cmd "Forced shutdown in progress"
-          /usr/sbin/upsmon -c fsd
+          #/usr/sbin/upsmon -c fsd
           ;;
        noparent)
           logger -t upssched-cmd "upsmon parent process died - shutdown impossible"
