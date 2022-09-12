@@ -167,7 +167,7 @@ sudo cp upsmon.conf uspmon.example.conf
 Edit ups.conf
 
 ```console
-sudo vi /etc/ups.conf
+sudo vi /etc/nut/ups.conf
 ```
 
 ```
@@ -189,7 +189,7 @@ NOTE: ```serial``` should be your real serial number.
 Edit upsmon.conf
 
 ```console
-sudo vi /etc/upsmon.conf
+sudo vi /etc/nut/upsmon.conf
 ```
 
 ```
@@ -220,7 +220,7 @@ NOTE: set ```secret``` to an actual secret you will use later on the client.
 
 Edit upsd.conf
 ```console
-sudo vi /etc/upsd.conf
+sudo vi /etc/nut/upsd.conf
 ```
 
 ```
@@ -230,7 +230,7 @@ LISTEN 0.0.0.0 3493
 
 Edit nut.conf
 ```console
-sudo vi /etc/nut.conf
+sudo vi /etc/nut/nut.conf
 ```
 
 ```
@@ -239,7 +239,7 @@ MODE=netserver
 
 Edit upsd.users
 ```console
-sudo vi /etc/upsd.users
+sudo vi /etc/nut/upsd.users
 ```
 
 ```
@@ -255,6 +255,78 @@ upsmon master
  ```
 NOTE: set ```secret``` to an actual secret you used in upsmon.conf.
 
+Edit upssched.conf
+```console
+sudo vi /etc/nut/upssched.conf
+```
+
+```
+CMDSCRIPT /etc/nut/upssched-cmd
+PIPEFN /etc/nut/upssched.pipe
+LOCKFN /etc/nut/upssched.lock
+
+AT ONLINE * EXECUTE online
+AT ONBATT * EXECUTE onbatt
+AT LOWBATT * EXECUTE lowbatt
+AT COMMOK * EXECUTE commok
+AT COMMBAD * EXECUTE commbad
+AT SHUTDOWN * EXECUTE powerdown
+AT REPLBATT * EXECUTE replbatt
+AT NOCOMM * EXECUTE nocomm
+AT FSD * EXECUTE force-shutdown
+AT NOPARENT * EXECUTE noparent
+```
+
+Edit upssched-cmd
+```console
+sudo vi /etc/nut/upssched-cmd
+```
+
+```
+#!/bin/sh
+ case $1 in
+       online)
+          logger -t upssched-cmd "Running on line power"
+          ;;
+       onbatt)
+          logger -t upssched-cmd "Line Power Fail, system running on battery power"
+          ;;
+       lowbatt)
+          logger -t upssched-cmd "Low battery power"
+          ;;
+       commok)
+          logger -t upssched-cmd "Communications with the UPS are established"
+          ;;
+       commbad)
+          logger -t upssched-cmd "Communications with the UPS are lost"
+          ;;
+       powerdown)
+          logger -t upssched-cmd "Automatic logout and shutdown proceeding"
+          /usr/sbin/upsmon -c fsd
+          ;;
+       repbatt)
+          logger -t upssched-cmd "The battery needs to be replaced!"
+          ;;
+       nocomm)
+          logger -t upssched-cmd "The battery needs to be replaced!"
+          ;;
+       force-shutdown)
+          logger -t upssched-cmd "Forced shutdown in progress"
+          /usr/sbin/upsmon -c fsd
+          ;;
+       noparent)
+          logger -t upssched-cmd "upsmon parent process died - shutdown impossible"
+          ;;
+       *)
+          logger -t upssched-cmd "Unrecognized command: $1"
+          ;;
+ esac
+```
+
+Make upssched-cmd executable
+```console
+sudo chmod +x /etc/nut/upssched-cmd
+```
 Restart all the nut based services
 
 ```console
