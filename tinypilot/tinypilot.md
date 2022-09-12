@@ -214,6 +214,7 @@ NOTIFYFLAG NOCOMM SYSLOG+WALL+EXEC
 NOTIFYFLAG FSD SYSLOG+WALL+EXEC
 RBWARNTIME 43200
 NOCOMMWARNTIME 300
+#Configure time for all secondary systems to shutdown properly then power off the UPS load; make sure you leave enough battery percentage for this
 FINALDELAY 120
 ```
 NOTE: set ```secret``` to an actual secret you will use later on the client.
@@ -302,6 +303,7 @@ sudo vi /etc/nut/upssched-cmd
           ;;
        powerdown)
           logger -t upssched-cmd "Automatic logout and shutdown proceeding"
+          #prevents FINALDELAY from running:
           #/usr/sbin/upsmon -c fsd
           ;;
        repbatt)
@@ -312,7 +314,8 @@ sudo vi /etc/nut/upssched-cmd
           ;;
        force-shutdown)
           logger -t upssched-cmd "Forced shutdown in progress"
-          #/usr/sbin/upsmon -c fsd
+          #prevents FINALDELAY from running:
+	  #/usr/sbin/upsmon -c fsd
           ;;
        noparent)
           logger -t upssched-cmd "upsmon parent process died - shutdown impossible"
