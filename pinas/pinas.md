@@ -206,7 +206,7 @@ Output should include the following mount points:
 /dev/sdd1 on /mnt/disk4 type ext4 (rw,relatime)
 ```
 
-### Setup UPS Communication
+### Setup UPS Communications (Network UPS Tool Client)
 
 We are going to connect the piNAS to a Network UPS Tool server that monitors the UPS that this piNAS is connected to.  
 
