@@ -1,5 +1,10 @@
 ## Raspberry Pi NAS 
 
+### 360 Views
+
+![alt text](cover.off.small.gif "pinas open")
+![alt text](cover.on.small.gif "pinas closed")
+
 ### Parts Needed
 
 Parts list:
