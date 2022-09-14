@@ -129,7 +129,7 @@ sudo systemctl start hd-idle
 sudo systemctl enable hd-idle
 ```
 
-### Mounting Hard Drives
+### Manually Formatting Hard Drives (Optional)
 
 List the drive device name:
 ```console
@@ -161,49 +161,6 @@ sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sda1
 sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sdb1
 sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sdc1
 sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sdd1
-```
-Get the UUIDs of the disks:
-```console
-sudo blkid /dev/sd?1
-```
-```
-/dev/sda1: UUID="f19c5055-31ff-489b-a190-93397d826f54" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="f2b86f61-5a9f-ca4f-9635-0eba6eada9c7"
-/dev/sdb1: UUID="fc567465-4f32-4878-9e61-5f092a9d21ad" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="922fcab7-636b-994a-8e1a-2ce1996ac1f2"
-/dev/sdc1: UUID="10a8aa2c-1fe0-4cee-8b3f-90d5629e2987" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="76351ce4-3891-6c49-bd55-44132c2f5bf3"
-/dev/sdd1: UUID="b9936806-889b-4fec-86d0-9c42e36d3432" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="666dc5a6-db81-b04f-90e1-324cf589e69e"
-```
-Create mount points:
-```console
-sudo mkdir /mnt/disk1
-sudo mkdir /mnt/disk2
-sudo mkdir /mnt/disk3
-sudo mkdir /mnt/disk4
-```
-Setup permanent mount points:
-```console
-sudo vi /etc/fstab
-```
-add the following line (replacing it with your UUID):
-```
-UUID=f19c5055-31ff-489b-a190-93397d826f54	/mnt/disk1	ext4	defaults,nofail,acl	0	0
-UUID=fc567465-4f32-4878-9e61-5f092a9d21ad	/mnt/disk2	ext4	defaults,nofail,acl	0	0
-UUID=10a8aa2c-1fe0-4cee-8b3f-90d5629e2987	/mnt/disk3	ext4	defaults,nofail,acl	0	0
-UUID=b9936806-889b-4fec-86d0-9c42e36d3432	/mnt/disk4	ext4	defaults,nofail,acl	0	0
-```
-Reboot the system:
-```console
-sudo sync; sudo reboot
-```
-Check that the drives are mounted:
-```console
-mount | grep /dev/sd
-```
-Output should include the following mount points:
-```
-/dev/sda1 on /mnt/disk1 type ext4 (rw,relatime)
-/dev/sdb1 on /mnt/disk2 type ext4 (rw,relatime)
-/dev/sdc1 on /mnt/disk3 type ext4 (rw,relatime)
-/dev/sdd1 on /mnt/disk4 type ext4 (rw,relatime)
 ```
 
 ### Setup UPS Communications (Network UPS Tool Client)
