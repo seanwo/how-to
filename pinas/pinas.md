@@ -80,26 +80,6 @@ vi /etc/ssh/sshd_config
 ```
 Set the root password and set the sshd configuration parameter ```PermitRootLogin``` to ```no```.  
 
-### Install OMV
-
-You will need wget to get and then run the OMV installer script:
-```console
-sudo apt install wget
-```
-Run the OMV installation script.  
-```console
-wget -O - https://raw.githubusercontent.com/OpenMediaVault-Plugin-Developers/installScript/master/install | sudo bash
-sudo reboot
-```
-Note: This did not completely install for me the first time. It looked like it completed but the web interface was not available after the reboot. So I repeated the step above and it worked the second time around.  Possible dependency problem.  
-  
-Make sure everything is up-to-date again:
-```console
-sudo apt update
-sudo apt full-upgrade
-sudo sync; sudo reboot
-```
-
 Hopefully, you can now access OMV on http://pinas.  
 
 ### Install hd-idle
@@ -108,6 +88,8 @@ Many older drivers can not be set to spin down on a timer with hdparm so the sol
 
 Installing the latest hd-idle package:
 ```console
+sudo apt install wget
+sudo apt install lsb-release
 wget -O -  http://adelolmo.github.io/andoni.delolmo@gmail.com.gpg.key | sudo apt-key add -
 echo "deb http://adelolmo.github.io/$(lsb_release  -cs) $(lsb_release -cs) main" | sudo tee  /etc/apt/sources.list.d/adelolmo.github.io.list
 sudo apt update
@@ -161,6 +143,26 @@ sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sda1
 sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sdb1
 sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sdc1
 sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sdd1
+```
+
+### Install OMV
+
+You will need wget to get and then run the OMV installer script:
+```console
+sudo apt install wget
+```
+Run the OMV installation script.  
+```console
+wget -O - https://raw.githubusercontent.com/OpenMediaVault-Plugin-Developers/installScript/master/install | sudo bash
+sudo reboot
+```
+Note: This did not completely install for me the first time. It looked like it completed but the web interface was not available after the reboot. So I repeated the step above and it worked the second time around.  Possible dependency problem.  
+  
+Make sure everything is up-to-date again:
+```console
+sudo apt update
+sudo apt full-upgrade
+sudo sync; sudo reboot
 ```
 
 ### Setup UPS Communications (Network UPS Tool Client)
