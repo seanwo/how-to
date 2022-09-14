@@ -154,7 +154,7 @@ sudo apt install wget
 Run the OMV installation script.  
 ```console
 wget -O - https://raw.githubusercontent.com/OpenMediaVault-Plugin-Developers/installScript/master/install | sudo bash
-sudo reboot
+sudo sync; sudo reboot
 ```
 Note: This did not completely install for me the first time. It looked like it completed but the web interface was not available after the reboot. So I repeated the step above and it worked the second time around.  Possible dependency problem.  
   
