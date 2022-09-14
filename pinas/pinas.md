@@ -225,3 +225,16 @@ Shutdown mode: UPS reaches low battery
 
 NOTE: set ```Netclient password``` to the actual secret you used on the nut server.  
 NOTE: set ```Netclient hostname``` to the actual ip address of the nut server.  
+
+I don't want the NAS to control shutting down the UPS itself so we have to alter a configuration file:
+```console
+sudo vi /etc/nut/upsmon.conf
+```
+Comment out the following line:
+```
+#POWERDOWNFLAG /etc/killpower
+```
+Now reboot for the change to take effect:
+```console
+sudo reboot
+```
