@@ -52,6 +52,7 @@ Create an IP reservation for the mac address in your router (optional)
 Rename the device to ```pinas```:
 ```console
 sudo vi /etc/hostname
+sudo vi /etc/hosts
 sudo sync; sudo reboot
 ```
 
