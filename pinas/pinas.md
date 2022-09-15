@@ -198,3 +198,29 @@ Now reboot for the change to take effect:
 ```console
 sudo reboot
 ```
+
+### Install Utilities (Optional)
+
+Install IOTop in case you want to monitor the device IO performance:
+```console
+brew install iotop
+```
+
+Install IPerf in case you want to run a network performance test:
+```console
+brew install iperf3
+```
+
+Create shell script to get the CPU temperature:
+```console
+vi ~/gettemp.sh
+```
+
+```
+#!/bin/bash
+/usr/bin/vcgencmd measure_temp
+```
+
+```console
+chmod +x ~/gettemp.sh
+```
