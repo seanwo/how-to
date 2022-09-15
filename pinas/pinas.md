@@ -206,7 +206,7 @@ Install IOTop in case you want to monitor the device IO performance:
 brew install iotop
 ```
 
-Install IPerf in case you want to run a network performance test:
+Install IPerf3 in case you want to run a network performance test:
 ```console
 brew install iperf3
 ```
