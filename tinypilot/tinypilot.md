@@ -2,13 +2,6 @@
 
 ![alt text](tinypilot.jpg "TinyPilot")
 
-## Sources
-
-https://tinypilotkvm.com/blog/build-a-kvm-over-ip-under-100#how-to-build-your-own-tinypilot  
-https://www.geekyhacker.com/2021/02/15/configure-ssh-key-based-authentication-on-raspberry-pi/  
-https://pimylifeup.com/raspberry-pi-update/  
-https://community.ui.com/questions/Step-By-Step-Tutorial-Guide-Raspberry-Pi-with-UniFi-Controller-and-Pi-hole-from-scratch-headless/e8a24143-bfb8-4a61-973d-0b55320101dc  
-
 ## Parts Needed
 
 Parts List:  
