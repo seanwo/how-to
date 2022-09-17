@@ -27,8 +27,8 @@ Assembly Notes:
 
 ## Setup
 * [Install the Base OS](baseos.md)
-* [Install HD-IDLE](hdidle.md)
 * [Manually Formatting Hard Drives (Optional)](drives.md)
+* [Install HD-IDLE](hdidle.md)
 * [Install OpenMediaVault (OMV)](omv.md)
 * [Setup Network UPS Tool (NUT) Client](nut.md)
 * [Install Utilities (Optional)](utilities.md)
