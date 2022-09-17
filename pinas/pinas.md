@@ -173,7 +173,7 @@ sudo omv-salt stage run prepare
 sudo omv-salt stage run deploy
 ```
 
-### Setup UPS Communications (Network UPS Tool Client)
+### Setup a Network UPS Tool (NUT) Client
 
 I have a Network UPS Tool (NUT) Server running elsewhere that monitors the UPS that this NAS is plugged into.  I want to setup the NUT client on the NAS to be informed when to shutdown during the low power warning.
 
