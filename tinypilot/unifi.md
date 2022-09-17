@@ -1,5 +1,7 @@
 ## Install Ubiquiti Unifi Controller
 
+This will allow your Raspberry Pi to become a Ubiquiti Unifi Controller.  
+
 To install a Ubiquiti Unifi Controller apply and run this script:
 
 [install-unifi.sh](install-unifi.sh)
