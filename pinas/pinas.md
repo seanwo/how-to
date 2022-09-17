@@ -1,4 +1,4 @@
-## Raspberry Pi NAS 
+## Raspberry Pi NAS (PiNAS)
 
 ![alt text](cover.on.small.gif "pinas")
 
