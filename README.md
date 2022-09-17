@@ -1,4 +1,5 @@
-# My personal list of how-tos.
+# Personal How-Tos
+_"Because I can't remember any of this stuff weeks later."_
 
 * [pfSense Router](pfsense/router.md)
 * [Raspberry Pi Management Server](tinypilot/tinypilot.md)
