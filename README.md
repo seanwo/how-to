@@ -1,6 +1,6 @@
 # My personal list of how-tos.
 
-* [pfSense Router Configuration](pfsense/router.md)
+* [pfSense Router](pfsense/router.md)
 * [Raspberry Pi Management Server](tinypilot/tinypilot.md)
 * [Home Ubuntu Server](ubuntu-mediabox/setup.md)
 * [PiNAS](pinas/pinas.md)
