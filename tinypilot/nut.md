@@ -1,5 +1,8 @@
 ## Install Network UPS Tools
 
+source: https://docs.technotim.live/posts/NUT-server-guide/  
+source: https://networkupstools.org/docs/user-manual.chunked/ar01s06.html  
+
 This will all your Raspberry Pi to monitor your attached UPS and act as a Network UPS Tools (NUT) server for all devices connected to the UPS.
 
 ```console
