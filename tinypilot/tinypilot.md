@@ -14,7 +14,7 @@ Parts List:
 
 ## Setup
 * [Install the Base OS](baseos.md)
-* [Setup SSH Keypair Only Login](ssh.d)
+* [Setup SSH Keypair Only Login](ssh.md)
 * [Install TinyPilot KVM Software](kvm.md)
 * [Install Ubiquiti Unifi Controller](unifi.md)
 * [Install Network UPS Tools](nut.md)
