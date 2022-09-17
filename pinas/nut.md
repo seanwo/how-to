@@ -1,8 +1,8 @@
 ## Setup a Network UPS Tool (NUT) Client
 
 source: https://forum.openmediavault.org/index.php?thread/41186-how-to-use-the-openmediavault-nut-plugin/  
-source: https://networkupstools.org/docs/user-manual.chunked/ar01s06.html
-source: https://docs.openmediavault.org/en/6.x/various/advset.html
+source: https://networkupstools.org/docs/user-manual.chunked/ar01s06.html  
+source: https://docs.openmediavault.org/en/6.x/various/advset.html  
 
 I have a Network UPS Tool (NUT) Server running on a [Raspberry Pi Management Server](/tinypilot/tinypilot.md) that monitors the UPS that this NAS is plugged into.  I want to setup a NUT client on this NAS to be informed when to shutdown during the low power warning.
 
