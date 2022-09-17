@@ -1,4 +1,4 @@
-Install a Network UPS Tool (NUT) Client
+Setup Network UPS Tool (NUT) Client
 
 source: https://forum.openmediavault.org/index.php?thread/41186-how-to-use-the-openmediavault-nut-plugin/  
 source: https://networkupstools.org/docs/user-manual.chunked/ar01s06.html  
