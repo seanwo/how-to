@@ -1,5 +1,7 @@
 ## Setup SSH Keypair Only Login
 
+This will setup your Raspberry Pi so that you can only SSH into it using a private/public keypair.  
+
 Generate an RSA keypair (id_rsa_tinypilot & id_rsa_tinypilot.pub) on the client
 
 ```console
