@@ -173,6 +173,8 @@ Hopefully, you can now access OMV on http://pinas.
 
 I have a Network UPS Tool (NUT) Server running on a [Raspberry Pi Management Server](/tinypilot/tinypilot.md#install-network-ups-tools) that monitors the UPS that this NAS is plugged into.  I want to setup a NUT client on this NAS to be informed when to shutdown during the low power warning.
 
+In the OMV6 GUI:  
+
 #### System>Plugins>Search>```openmediavault-nut```>Install  
 
 #### Services->UPS:
