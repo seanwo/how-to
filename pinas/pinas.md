@@ -166,7 +166,7 @@ sudo apt full-upgrade
 sudo sync; sudo reboot
 ```
 
-In order for network discovery (avahi-daemon) to work properly with the interceptor board, you need to make it aware of the "wan" VLAN.
+In order for network discovery (avahi-daemon) to work properly (with the interceptor board) you need to make it aware of the "wan" VLAN.
 ```console
 sudo omv-env set -- OMV_AVAHIDAEMON_ALLOW_INTERFACES "wan"
 sudo omv-salt stage run prepare
