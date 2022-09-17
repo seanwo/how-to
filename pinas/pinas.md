@@ -2,7 +2,7 @@
 
 ### 360 Views
 
-![alt text](cover.on.small.gif "pinas closed")
+![alt text](cover.on.small.gif "pinas")
 
 ### Parts Needed
 
