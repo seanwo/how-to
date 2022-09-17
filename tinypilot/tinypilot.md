@@ -2,9 +2,7 @@
 
 ![alt text](tinypilot.jpg "TinyPilot")
 
-## Parts Needed
-
-Parts List:  
+## Parts List
 * [Raspberry Pi 4 2GB](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=raspberry+pi+4+2gb&_sacat=0) ~$100
 * [SanDisk 16GB Ultra microSDHC UHS-I Memory Card](https://www.amazon.com/Sandisk-Ultra-Micro-UHS-I-Adapter/dp/B073K14CVB) (or any class 10 card you have lying around). $10
 * [Raspberry Pi 4 B Heavy Metal Case](https://www.amazon.com/dp/B07TVS5GWV) (or other case to your liking). $11
