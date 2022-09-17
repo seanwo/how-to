@@ -1,5 +1,6 @@
 ## Install TinyPilot KVM Software
  
+This will install TinyPilot KVM software on your Raspberry Pi so that you can control attached devices using hdmi and usb.
 ```console
 curl -sS https://raw.githubusercontent.com/tiny-pilot/tinypilot/master/quick-install | bash -
 sudo reboot
