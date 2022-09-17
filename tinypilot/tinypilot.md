@@ -181,7 +181,7 @@ maxretry = 3
 	productid = "0002"
 	serial = "000000000000"
 	ignorelb
-	override.battery.charge.low = 25
+	override.battery.charge.low = 15
 ```
 NOTE: ```ignorelb``` and ```override.battery.charge.low``` are set to override the UPS default low charge percentage.  
 NOTE: ```serial``` should be your real serial number.  
