@@ -291,3 +291,29 @@ In the OMV6 GUI:
 * Hosts deny:
 * Audit file operations: :x:
 * Extra options:
+
+Set a universal quota to limit the size of each time machine backup (quota applies **per** time machine backup; this is **not** a quota for the sum of all backups):
+
+```console
+cd /srv/dev-disk-by-uuid-00000000-0000-0000-0000-000000000000/
+sudo touch ./timemachine/.com.apple.timemachine.supported
+sudo touch ./timemachine/.com.apple.TimeMachine.quota.plist
+sudo chmod 644 ./timemachine/.com.apple.timemachine.supported
+sudo chmod 644 ./timemachine/.com.apple.TimeMachine.quota.plist
+sudo chown root:root ./timemachine/.com.apple.timemachine.supported
+sudo chown root:root ./timemachine/.com.apple.TimeMachine.quota.plist
+sudo vi ./timemachine/.com.apple.TimeMachine.quota.plist
+```
+```
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>GlobalQuota</key>
+    <integer>100000000000</integer>
+  </dict>
+</plist>
+```
+
+I set the quota at 1TB per Time Machine backup (for a max of 4 machines each with size 1TB SSDs in them) on a 4TB drive in the NAS.
+
+### Setup Plex Media Library Support
