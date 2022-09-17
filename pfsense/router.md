@@ -6,7 +6,11 @@ source: [https://www.pfsense.org/about-pfsense/](https://www.pfsense.org/about-p
 
 To get started with pfSense go to [https://www.pfsense.org/getting-started/](https://www.pfsense.org/getting-started/)
 
-![alt text](router.jpg "router")
+| ![routerfront] | ![routerback] |
+|----------------|---------------|
+
+[routerfront]: router.front.jpg
+[routerback]: router.back.jpg
 
 ## Parts List  
 * [KingNovy Intel Celeron N5105 4x 2.5GbE](https://www.aliexpress.com/item/3256803806996430.html) ~$200
