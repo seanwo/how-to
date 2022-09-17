@@ -166,9 +166,16 @@ sudo apt full-upgrade
 sudo sync; sudo reboot
 ```
 
+In order for network discovery (avahi-daemon) to work properly with the interceptor board, you need to make it aware of the "wan" VLAN.
+```console
+sudo omv-env set -- OMV_AVAHIDAEMON_ALLOW_INTERFACES "wan"
+sudo omv-salt stage run prepare
+sudo omv-salt stage run deploy
+```
+
 ### Setup UPS Communications (Network UPS Tool Client)
 
-We are going to connect the piNAS to a Network UPS Tool server that monitors the UPS that this piNAS is connected to.  
+I have a Network UPS Tool (NUT) Server running elsewhere that monitors the UPS that this NAS is plugged into.  I want to setup the NUT client on the NAS to be informed when to shutdown during the low power warning.
 
 System->Plugins->Search->```openmediavault-nut```->Install  
 Services->UPS:
@@ -183,20 +190,15 @@ Powervalue: 1
 Shutdown mode: UPS reaches low battery
 ```
 
-NOTE: set ```Netclient password``` to the actual secret you used on the nut server.  
-NOTE: set ```Netclient hostname``` to the actual ip address of the nut server.  
+NOTE: set ```Identifier``` to the name/identifier of the NUT server.  
+NOTE: set ```Netclient hostname``` to the actual ip address of the NUT server.  
+NOTE: set ```Netclient password``` to the actual secret you used on the NUT server.  
 
-I don't want the NAS to control shutting down the UPS itself so we have to alter a configuration file:
+I don't want the NAS to control shutting down the UPS itself so we have to alter a configuration file vi an OVM environment variable:
 ```console
-sudo vi /etc/nut/upsmon.conf
-```
-Comment out the following line:
-```
-#POWERDOWNFLAG /etc/killpower
-```
-Now reboot for the change to take effect:
-```console
-sudo reboot
+sudo omv-env set -- OMV_UPSMON_POWERDOWNFLAG "/dev/null"
+sudo omv-salt stage run prepare
+sudo omv-salt stage run deploy
 ```
 
 ### Install Utilities (Optional)
