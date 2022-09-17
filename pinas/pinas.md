@@ -172,7 +172,7 @@ sudo omv-salt stage run deploy
 
 ### Setup a Network UPS Tool (NUT) Client
 
-I have a Network UPS Tool (NUT) Server running on a [Raspberry Pi Management Server](/tinypilot/tinypilot.md#install-network-ups-tools) that monitors the UPS that this NAS is plugged into.  I want to setup the NUT client on the NAS to be informed when to shutdown during the low power warning.
+I have a Network UPS Tool (NUT) Server running on a [Raspberry Pi Management Server](/tinypilot/tinypilot.md#install-network-ups-tools) that monitors the UPS that this NAS is plugged into.  I want to setup a NUT client on this NAS to be informed when to shutdown during the low power warning.
 
 System->Plugins->Search->```openmediavault-nut```->Install  
 Services->UPS:
