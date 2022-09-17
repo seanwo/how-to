@@ -1,0 +1,36 @@
+## Setup SSH Keypair Only Login
+
+Generate an RSA keypair (id_rsa_tinypilot & id_rsa_tinypilot.pub) on the client
+
+```console
+ssh-keygen -t rsa -C "tinypilot@tinypilot"
+```
+
+and then copy the public key to the device:  
+
+```console
+ssh-copy-id -i ~/.ssh/id_rsa_tinypilot.pub tinypilot@tinypilot
+```
+
+Remove the ablity login with a password (only using rsa private key):  
+
+```console
+sudo vim /etc/ssh/sshd_config
+```
+
+Change the following parameters in the file:  
+```
+PermitRootLogin no
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+UsePAM no
+```
+
+```console
+sudo systemctl reload sshd
+```
+
+Confirm that you can only ssh with the rsa private key and not passwords.  To login with the rsa private key use this command from the client:  
+```console
+ssh -i ~./ssh/id_rsa_tinypilot tinypilot@tinypilot
+```
