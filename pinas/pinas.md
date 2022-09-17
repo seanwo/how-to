@@ -78,8 +78,6 @@ vi /etc/ssh/sshd_config
 ```
 Set the root password and set the sshd configuration parameter ```PermitRootLogin``` to ```no```.  
 
-Hopefully, you can now access OMV on http://pinas.  
-
 ### Install hd-idle
 
 Many older drivers can not be set to spin down on a timer with hdparm so the solution is keep the spindown disabled in OMV and use hd-idle to spin your drive down while not in use.  If you are setting up an active RAID, you don't want to do this but I plan on using SnapRAID and I want my drives spun down as much as possible to keep the noise levels low.  
@@ -169,22 +167,24 @@ sudo omv-salt stage run prepare
 sudo omv-salt stage run deploy
 ```
 
+Hopefully, you can now access OMV on http://pinas.  
+
 ### Setup a Network UPS Tool (NUT) Client
 
 I have a Network UPS Tool (NUT) Server running on a [Raspberry Pi Management Server](/tinypilot/tinypilot.md#install-network-ups-tools) that monitors the UPS that this NAS is plugged into.  I want to setup a NUT client on this NAS to be informed when to shutdown during the low power warning.
 
-System->Plugins->Search->```openmediavault-nut```->Install  
-Services->UPS:
-```
-Enabled: true
-Identifier: apc-server
-Comment:
-Netclient hostname: 192.168.###.###
-Netclient user name: admin
-Netclient password: secret
-Powervalue: 1
-Shutdown mode: UPS reaches low battery
-```
+#### System>Plugins>Search>```openmediavault-nut```>Install  
+
+#### Services->UPS:
+
+* Enabled: true
+* Identifier: apc-server
+* Comment:
+* Netclient hostname: 192.168.###.###
+* Netclient user name: admin
+* Netclient password: secret
+* Powervalue: 1
+* Shutdown mode: UPS reaches low battery
 
 NOTE: set ```Identifier``` to the name/identifier of the NUT server.  
 NOTE: set ```Netclient hostname``` to the actual ip address of the NUT server.  
