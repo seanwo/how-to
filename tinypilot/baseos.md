@@ -1,5 +1,7 @@
 ## Install the Base OS
 
+source: https://pimylifeup.com/raspberry-pi-update/  
+
 ### Write the OS Image to the SD Card
 
 Goto https://www.raspberrypi.com/software/ and get the imager tool or use brew to install it.
