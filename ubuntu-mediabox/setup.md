@@ -1,4 +1,4 @@
-# Home Ubuntu Server
+# Ubuntu Home Server
 
 ![alt text](mediabox.jpg "mediabox")
 
