@@ -133,15 +133,14 @@ mmcblk0boot1 179:64   0     4M  1 disk
 ```console
 sudo fdisk /dev/sda
 ```
-Use the commands g, n, w. (repeat for /dev/sdb, /dev/sdc, and /dev/sdd).  
+Use the commands g, n, w.  
+Repeat for /dev/sdb, /dev/sdc, and /dev/sdd.  
 
 **Warning:** this formats the partions and all data on these disks will be lost; be careful:
 ```console
 sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sda1
-sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sdb1
-sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sdc1
-sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sdd1
 ```
+Repeat for /dev/sdb1, /dev/sdc1, and /dev/sdd1
 
 ### Install OMV
 
@@ -223,3 +222,72 @@ vi ~/gettemp.sh
 ```console
 chmod +x ~/gettemp.sh
 ```
+
+### Setup Time Machine Support
+
+In the OMV6 GUI:
+
+#### Storage>File Systems>Mount
+* File system: ```/dev/sd?1```
+* Usage Warning Threshold: 85%
+* Comment:
+
+#### Storage>Shared Folders
+* Name: timemachine
+* File system: /dev/sd?1
+* Relative path: timemachine/
+* Permissions: Administrators: read/write, Others: read/write, Others: read-only
+* Comment:
+
+#### Storage>Shared Folders>```timemachine```>ACL
+* Name: timemachine [on /dev/sd?1, timemachine/]
+* User/Group permissions: none
+* Onwer: tmuser Permissions: Read/Write/Execute
+* Group: users Permissions: Read/Write/Execute
+* Others: Read/Execute
+* Replace: :white_check_mark:
+* Recursive: :white_check_mark: (if you need to update a folder coming from another system) otherwise :x:
+
+#### Storage>Shared Folders>```timemachine```>Privleges
+* tmuser: Read/Write
+
+#### Services>SMB/CIFS/Settings
+* Enabled: :white_check_mark:
+* Workgroup: WORKGROUP
+* Description: %h server
+* Time server: :x:
+
+#### Services>SMB/CIFS/Settings>Home directories
+* Enabled: :x:
+* Browsable: :white_check_mark:
+* Enable recycle bin: :x:
+
+#### Services>SMB/CIFS/Settings>WINS
+* Enable WINS server :x:
+
+#### Services>SMB/CIFS/Settings>Advanced settings
+* Use sendfile: :white_check_mark:
+* Asynchronous I/O: :white_check_mark:
+* Extra options: min receivefile size = 16384
+* Extra options: getwd cache = yes
+
+#### Services>SMB>CIFS>Shares>Create
+* Enabled: :white_check_mark:
+* Shared Folder: ```timemachine```
+* Comment:= Time Machine Backups
+* Read-only: :x:
+* Public: No
+* Browsable: :white_check_mark:
+* Time Machine support: :white_check_mark:
+* Inherit ACLS: :x:
+* Inherit permissions: :x:
+* Enable recycle bin: :x:
+* Maximum files size: Unrestricted
+* Retention time: 0
+* Hide dot files: :white_check_mark:
+* Extended attributes: :x:
+* Store DOS attributes: :x:
+* Hosts allow:
+* Hosts deny:
+* Audit file operations: :x:
+* Extra options:
