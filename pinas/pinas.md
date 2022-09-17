@@ -30,6 +30,6 @@ Assembly Notes:
 * [Install HD-IDLE](hdidle.md)
 * [Manually Formatting Hard Drives (Optional)](drives.md)
 * [Install OpenMediaVault (OMV)](omv.md)
-* [Setup Network UPS Tool (NUT) Client](nutmd)
+* [Setup Network UPS Tool (NUT) Client](nut.md)
 * [Install Utilities (Optional)](utilities.md)
 * [Setup Apple Time Machine Support](timemachine.md)
