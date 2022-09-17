@@ -1,7 +1,5 @@
 ## Raspberry Pi NAS 
 
-### 360 Views
-
 ![alt text](cover.on.small.gif "pinas")
 
 ### Parts Needed
