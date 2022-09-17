@@ -213,7 +213,7 @@ brew install iperf3
 
 Create shell script to get the CPU temperature:
 ```console
-vi ~/gettemp.sh
+vi ~/temperature.sh
 ```
 
 ```
@@ -222,7 +222,7 @@ vi ~/gettemp.sh
 ```
 
 ```console
-chmod +x ~/gettemp.sh
+chmod +x ~/temperature.sh
 ```
 
 ### Setup Time Machine Support
