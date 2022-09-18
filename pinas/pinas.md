@@ -28,8 +28,8 @@ Assembly Notes:
 ## Setup
 * [Install the Base OS](baseos.md)
 * [Manually Formatting Hard Drives (Optional)](drives.md)
+* [Install Utilities (Optional)](utilities.md)
 * [Install HD-IDLE](hdidle.md)
 * [Install OpenMediaVault (OMV)](omv.md)
 * [Setup Network UPS Tool (NUT) Plugin](nut.md)
-* [Install Utilities (Optional)](utilities.md)
 * [Setup Apple Time Machine Support](timemachine.md)
