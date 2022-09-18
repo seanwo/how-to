@@ -4,20 +4,18 @@ source: https://www.geekyhacker.com/2021/02/15/configure-ssh-key-based-authentic
 
 This will setup your Raspberry Pi so that you can only SSH into it using a private/public keypair.  
 
-Generate an RSA keypair (id_rsa_tinypilot & id_rsa_tinypilot.pub) on the client
+Generate an RSA keypair (id_rsa_tinypilot@tinypilot & id_rsa_tinypilot@tinypilot.pub) on the client
 
 ```console
-ssh-keygen -t rsa -C "tinypilot@tinypilot"
+ssh-keygen -C "tinypilot@tinypilot"
 ```
 
-and then copy the public key to the device:  
-
+Copy the public key to the device:  
 ```console
-ssh-copy-id -i ~/.ssh/id_rsa_tinypilot.pub tinypilot@tinypilot
+ssh-copy-id -i ~/.ssh/id_rsa_tinypilot@tinypilot.pub tinypilot@tinypilot
 ```
 
 Remove the ablity login with a password (only using rsa private key):  
-
 ```console
 sudo vim /etc/ssh/sshd_config
 ```
@@ -36,5 +34,5 @@ sudo systemctl reload sshd
 
 Confirm that you can only ssh with the rsa private key and not passwords.  To login with the rsa private key use this command from the client:  
 ```console
-ssh -i ~./ssh/id_rsa_tinypilot tinypilot@tinypilot
+ssh -i ~./ssh/id_rsa_tinypilot@tinypilot tinypilot@tinypilot
 ```
