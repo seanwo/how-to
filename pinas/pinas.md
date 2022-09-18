@@ -31,5 +31,6 @@ Assembly Notes:
 * [Install Utilities (Optional)](utilities.md)
 * [Install HD-IDLE](hdidle.md)
 * [Install OpenMediaVault (OMV)](omv.md)
+* [Install OMV Plugins](plugins.md)
 * [Setup Network UPS Tool (NUT) Plugin](nut.md)
 * [Setup Apple Time Machine Support](timemachine.md)
