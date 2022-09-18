@@ -18,11 +18,6 @@ User Management>Users>Create
 * Disallow account modification: :x:
 * Comment:
 
-Confirm that you can sftp with the rsa private key and not passwords.  To login with the rsa private key use this command from the client:  
-```console
-sftp -i id_rsa_sftpuser\@pinas -P 222 sftpuser@pinas
-```
-
 Now turn off root and password based ssh logins.
 
 In the OMV6 GUI:  
@@ -35,3 +30,8 @@ Services>sftp
 * AllowGroups: :white_check_mark:
 * Rsyslog: :white_check_mark:
 * Extra options:
+
+Confirm that you can only sftp with the rsa private key and not passwords.  To login with the rsa private key use this command from the client:  
+```console
+sftp -i id_rsa_sftpuser\@pinas -P 222 sftpuser@pinas
+```
