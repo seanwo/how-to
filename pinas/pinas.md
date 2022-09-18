@@ -41,3 +41,5 @@ Assembly Notes:
 * [Setup SFTP Keypair Only Access](sftp.md)
 * [Setup Network UPS Tool (NUT) Plugin](nut.md)
 * [Setup Apple Time Machine Support](timemachine.md)
+* Setup Plex Media Shares
+* Setup SFTP Shares
