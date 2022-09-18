@@ -1,5 +1,7 @@
 ## Manually Formatting Hard Drives (Optional)
 
+You can wipe and format drives later using OMV, but I like to force the inode table and journal initialization to complete upfront and not use lazy initialization for hours afterwards.  
+
 List the drive device names:
 ```console
 lsblk
