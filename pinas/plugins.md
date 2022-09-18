@@ -2,7 +2,7 @@
 
 It is wise to install all the OMV plugins you plan on using since some plugins add users/groups and change system configuration.  
 
-From the OMV GUI:
+In the OMV6 GUI:
 
 ### System>Plugins
 
