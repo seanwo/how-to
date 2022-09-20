@@ -6,13 +6,13 @@ source: https://docs.openmediavault.org/en/6.x/various/advset.html
 
 I have a Network UPS Tool (NUT) Server running on a [Raspberry Pi Management Server](/tinypilot/tinypilot.md) that monitors the UPS that this NAS is plugged into.  I want to setup a NUT client on this NAS to be informed when to shutdown during the low power warning.
 
-In the OMV6 GUI:  
-
 Install the openmediavault plugin if you have not already:  
 
-### System>Plugins>Search>```openmediavault-nut```>Install  
+OMV6 GUI:  
 
-### Services->UPS:
+System>Plugins>Search>```openmediavault-nut```>Install  
+
+Services->UPS:
 
 * Enabled: true
 * Identifier: apc-server
