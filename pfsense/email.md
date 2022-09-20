@@ -1,4 +1,4 @@
-## Configure Email Notifications (via SendGrid)
+## Setup Email Notifications (via SendGrid)
 
 source: [https://docs.netgate.com/pfsense/en/latest/config/advanced-notifications.html](https://docs.netgate.com/pfsense/en/latest/config/advanced-notifications.html)
 
