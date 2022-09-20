@@ -1,4 +1,4 @@
-## Enable UPnP
+## Setup UPnP
 
 source: [https://docs.netgate.com/pfsense/en/latest/services/upnp.html](https://docs.netgate.com/pfsense/en/latest/services/upnp.html).  
 
