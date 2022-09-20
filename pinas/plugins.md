@@ -2,9 +2,9 @@
 
 It is wise to install all the OMV plugins you plan on using since some plugins add users/groups and change system configuration.  
 
-In the OMV6 GUI:
+OMV6 GUI:
 
-### System>Plugins
+System>Plugins
 
 Install the following plugins:
 * openmediavault-nut (only if you are connected to UPS that you want to integrate with for graceful shutdowns on a critical battery alert)
