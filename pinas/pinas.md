@@ -38,8 +38,8 @@ Assembly Notes:
 * [Install OpenMediaVault (OMV)](omv.md)
 * [Install OMV Plugins](plugins.md)
 * [Setup SSH Keypair Only Access](ssh.md)
-* [Setup SFTP Keypair Only Access](sftp.md)
 * [Setup Network UPS Tool (NUT) Plugin](nut.md)
 * [Setup Apple Time Machine Support](timemachine.md)
 * Setup Plex Media Shares
+* [Setup SFTP Keypair Only Access](sftp.md)
 * Setup SFTP Shares
