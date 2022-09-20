@@ -1,4 +1,4 @@
-## Configure Static DHCP Reservations
+## Setup Static DHCP Reservations
 source: [https://docs.netgate.com/pfsense/en/latest/services/dhcp/mappings-in-pools.html](https://docs.netgate.com/pfsense/en/latest/services/dhcp/mappings-in-pools.html).  
 
 ### Services/DHCP Server>BR0>DHCP Static Mappings for this Interface
