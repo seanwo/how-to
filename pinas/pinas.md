@@ -19,15 +19,18 @@
 * [COMeap (2-Pack) 4 Pin to SATA Female Hard Drive Power Adapter Cable 19cm](https://www.amazon.com/dp/B07JHBJWD4) $11 (optional)
 * [Hammond Enclosure 140x140x60mm (1554QGY)](http://tinyurl.com/2p8vmdeu) $18
 
-Assembly Notes:
-* You will need to drill the holes deeper on one of the 40mm Noctua fans in order to mount it to the Heatsink with the original screws.  Just use the appropriate drill bit and run the drill in reverse to slowly wear away the plastic in the mounting holes to the proper depth.
-* You will need to re-pin the Pico PSU side of the the replacement SATA power cable if you use it (instead of the one that came with the Pico PSU)  If you do not re-pin it, YOU WILL DESTROY ANY HARD DRIVE YOU PLUG INTO IT.  
-* You can find the fan hole vent patterns (top and side) here: https://www.miklor.com/COM/images/Fan5001/VentPatterns.jpg
-* Depending on the operating environment, you can adjust the fan configuration to meet specific cooling and acoustic profiles. Sound is created due to static pressure and drag within the plastic case. The CM4 operating temperature range is between -20°C and +85°C.  Each test was run for one hour @ 24°C ambient room temperature.
+<details>
+  <summary>Assembly Notes</summary>
+ 
+  * You will need to drill the holes deeper on one of the 40mm Noctua fans in order to mount it to the Heatsink with the original screws.  Just use the appropriate drill bit and run the drill in reverse to slowly wear away the plastic in the mounting holes to the proper depth.
+  * You will need to re-pin the Pico PSU side of the the replacement SATA power cable if you use it (instead of the one that came with the Pico PSU)  If you do not re-pin it, YOU WILL DESTROY ANY HARD DRIVE YOU PLUG INTO IT.  
+  * You can find the fan hole vent patterns (top and side) here: https://www.miklor.com/COM/images/Fan5001/VentPatterns.jpg
+  * Depending on the operating environment, you can adjust the fan configuration to meet specific cooling and acoustic profiles. Sound is created due to static pressure and drag within the plastic case. The CM4 operating temperature range is between -20°C and +85°C.  Each test was run for one hour @ 24°C ambient room temperature.
   * CPU + Case Fan: CPU @ ~50°C @ 100% load; loudest acoustic profile (ample drag)
   * CPU Fan only: CPU @ ~60°C @ 100% load; midrange acoustic profile (minimal drag)
   * CPU Fan only w/ reducer: CPU @ ~65°C @ 100% load; low acoustic profile (no drag)
-
+</details>
+ 
 ## Setup
 * [Install the Base OS](baseos.md)
 * [Manually Formatting Hard Drives (Optional)](drives.md)
