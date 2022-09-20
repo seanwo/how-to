@@ -5,7 +5,7 @@ Generate an RSA keypair (id_rsa_admin@pinas & id_rsa_admin@pinas.pub) on the cli
 ssh-keygen -t rsa -C "admin@pinas"
 ```
 
-In the OMV6 GUI:  
+OMV6 GUI:  
 
 User Management>Users>```admin```>Edit
 * SSH public keys: ```[contents of id_rsa_admin@pinas.pub]```
@@ -18,7 +18,7 @@ ssh -i ~./ssh/id_rsa_admin@pinas admin@pinas
 
 Now turn off root and password based ssh logins.
 
-In the OMV6 GUI:  
+OMV6 GUI:  
 
 Services>SSH
 * Enabled: :white_check_mark:
