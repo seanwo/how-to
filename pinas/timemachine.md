@@ -4,21 +4,21 @@ source: https://dannyda.com/2020/01/02/how-to-create-apple-time-machine-in-open-
 
 Adding Apple Time Machine support to your NAS.
 
-In the OMV6 GUI:
+### OMV6 GUI:
 
-### Storage>File Systems>Mount
+Storage>File Systems>Mount
 * File system: ```/dev/sd?1```
 * Usage Warning Threshold: 85%
 * Comment:
 
-### Storage>Shared Folders
+Storage>Shared Folders
 * Name: timemachine
 * File system: /dev/sd?1
 * Relative path: timemachine/
 * Permissions: Administrators: read/write, Others: read/write, Others: read-only
 * Comment:
 
-### Storage>Shared Folders>```timemachine```>ACL
+Storage>Shared Folders>```timemachine```>ACL
 * Name: timemachine [on /dev/sd?1, timemachine/]
 * User/Group permissions: none
 * Onwer: tmuser Permissions: Read/Write/Execute
@@ -27,30 +27,30 @@ In the OMV6 GUI:
 * Replace: :white_check_mark:
 * Recursive: :white_check_mark: (if you need to update a folder coming from another system) otherwise :x:
 
-### Storage>Shared Folders>```timemachine```>Privleges
+Storage>Shared Folders>```timemachine```>Privleges
 * tmuser: Read/Write
 
-### Services>SMB/CIFS/Settings
+Services>SMB/CIFS/Settings
 * Enabled: :white_check_mark:
 * Workgroup: WORKGROUP
 * Description: %h server
 * Time server: :x:
 
-### Services>SMB/CIFS/Settings>Home directories
+Services>SMB/CIFS/Settings>Home directories
 * Enabled: :x:
 * Browsable: :white_check_mark:
 * Enable recycle bin: :x:
 
-### Services>SMB/CIFS/Settings>WINS
+Services>SMB/CIFS/Settings>WINS
 * Enable WINS server :x:
 
-### Services>SMB/CIFS/Settings>Advanced settings
+Services>SMB/CIFS/Settings>Advanced settings
 * Use sendfile: :white_check_mark:
 * Asynchronous I/O: :white_check_mark:
 * Extra options: min receivefile size = 16384
 * Extra options: getwd cache = yes
 
-### Services>SMB>CIFS>Shares>Create
+Services>SMB>CIFS>Shares>Create
 * Enabled: :white_check_mark:
 * Shared Folder: ```timemachine```
 * Comment:= Time Machine Backups
