@@ -37,12 +37,12 @@
 * [Install Utilities (Optional)](utilities.md)
 * [Install HD-IDLE](hdidle.md)
 * [Install OpenMediaVault (OMV)](omv.md)
-* [Setup OMV Container Support](containers.md)
 * [Setup SSH](ssh.md)
 * [Setup Network UPS Tool (NUT) Plugin](nut.md)
 * [Setup Apple Time Machine Support](timemachine.md)
 * Setup Plex Media Shares
 * [Setup SFTP](sftp.md)
+* [Setup OMV Container Support](containers.md)
 * [Setup qBittorrent through a VPN](qbittorrent.md)
 
 ## Local URLs
