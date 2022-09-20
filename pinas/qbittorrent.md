@@ -1,4 +1,4 @@
-## Install and Setup qBittorrent Over an OpenVPN Client
+## Setup qBittorrent through a VPN
 
 This procedure will install a qBittorrent container and tunnel it through an OpenVPN client container.  
 The example uses a PrivateInternetAccess (PIA) server in Switzerland.  
