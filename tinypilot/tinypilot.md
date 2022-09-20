@@ -12,7 +12,7 @@
 
 ## Setup
 * [Install the Base OS](baseos.md)
-* [Setup SSH Keypair Only Access](ssh.md)
+* [Setup SSH](ssh.md)
 * [Install TinyPilot KVM Software](kvm.md)
 * [Install Ubiquiti Unifi Controller](unifi.md)
 * [Install Network UPS Tools](nut.md)
