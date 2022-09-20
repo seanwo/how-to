@@ -1,4 +1,4 @@
-## Install HD-IDLE
+## Setup HD-IDLE
 
 source: http://hd-idle.sourceforge.net/  
 source: https://forum.openmediavault.org/index.php/Thread/17101-Guide-How-to-setup-hd-idle-a-HDD-spin-down-SW-together-with-the-OMV-plugin-Autos/  
