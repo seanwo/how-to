@@ -1,4 +1,4 @@
-## Setup SSH Keypair Only Access
+## Setup SSH
 
 Generate an RSA keypair (id_rsa_admin@pinas & id_rsa_admin@pinas.pub) on the client:
 ```console
