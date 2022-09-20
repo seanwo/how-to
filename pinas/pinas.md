@@ -44,3 +44,8 @@
 * Setup Plex Media Shares
 * [Setup SFTP](sftp.md)
 * [Setup qBittorrent through a VPN](qbittorrent.md)
+
+## Local URLs
+* OMV @ http://pinas
+* Portainer @ http://pinas:9000
+* qBittorrent @ http://pinas:8080
