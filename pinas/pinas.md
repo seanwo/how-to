@@ -2,7 +2,7 @@
 
 ![alt text](cover.on.small.gif "pinas")
 
-## Parts Needed
+## Parts List
 * [Raspberry Pi 4 Compute Module (CM4) 4GB RAM 32GB eMMC (CM4004032)](https://shopping.google.com/search?q=CM4004032) $110
 * [Interceptor Carrier Board](https://www.axzez.com/product-page/interceptor-carrier-board) $119
 * [Hard Drive Cage](https://www.amazon.com/dp/B0854QRSC2) $27
