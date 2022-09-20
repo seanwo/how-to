@@ -29,7 +29,7 @@
 * [Setup SSH](ssh.md)
 * [Configure SSH User Keys](sshkeys.md)
 * [Setup Dynamic DNS](ddns.md)
-* [Configure Email Notifications](email.md)
+* [Setup Email Notifications](email.md)
 * [Setup Port Forwarding](portforwarding.md)
 * [Setup Wake on LAN](wol.md)
 * [Setup an OpenVPN Server](openvpn.md)
