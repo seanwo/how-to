@@ -7,8 +7,7 @@ ssh-keygen -t rsa -C "sftpuser@pinas"
 
 OMV6 GUI:  
 
-System>Plugins
-* Install the following plugin:
+System>Plugins>Search>```openmediavault-sftp```>Install 
 
 openmediavault-nut
 User Management>Users>Create
