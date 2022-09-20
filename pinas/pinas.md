@@ -37,11 +37,11 @@ Assembly Notes:
 * [Install HD-IDLE](hdidle.md)
 * [Install OpenMediaVault (OMV)](omv.md)
 * [Install OMV Plugins](plugins.md)
+* [Install OMV Container Support](containers.md)
 * [Setup SSH Keypair Only Access](ssh.md)
 * [Setup Network UPS Tool (NUT) Plugin](nut.md)
 * [Setup Apple Time Machine Support](timemachine.md)
 * Setup Plex Media Shares
 * [Setup SFTP Keypair Only Access](sftp.md)
 * Setup SFTP Shares
-* [Install Docker Container Support](containers.md)
 * [Install qBittorrent](qbittorrent.md)
