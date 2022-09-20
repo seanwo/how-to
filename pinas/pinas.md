@@ -53,6 +53,7 @@
 * [Setup Apple Time Machine Support](timemachine.md)
 * Setup Plex Media Shares
 * [Setup SFTP](sftp.md)
+* [Setup ClamAV (Antimalware)](clamav.md)
 * [Setup OMV Container Support](containers.md)
 * [Setup qBittorrent through a VPN](qbittorrent.md)
 </details>
