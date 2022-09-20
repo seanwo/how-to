@@ -41,4 +41,10 @@ Services>Antivirus>Scheduled Scans
 * Verbose: :x:
 * Send email: :white_check_mark:
 
-_Repeat for all `Shared Folders` to scan_
+_Repeat for all `Shared Folders` to scan_  
+
+To test the detection of a virus place a file in one of the ``Shared Folders`` with the following text:
+```
+X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+```
+Then run the job and receive and email with the detection details.
