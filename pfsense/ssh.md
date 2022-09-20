@@ -1,4 +1,4 @@
-## Setup SSH Access
+## Setup SSH
 
 source: [https://docs.netgate.com/pfsense/en/latest/recipes/ssh-access.html](https://docs.netgate.com/pfsense/en/latest/recipes/ssh-access.html).  
 
