@@ -18,7 +18,7 @@ User Management>Users>Create
 * Shell: /bin/sh
 * Groups: sftp-access, users
 * SSH public keys: ```[contents of id_rsa_sftpuser@pinas.pub]```
-* Disallow account modification: :x:
+* Disallow account modification: :white_check_mark:
 * Comment:
 
 Now turn off root and password based ssh logins.
