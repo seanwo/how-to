@@ -11,8 +11,6 @@ You can test that board and CM4 work first using a live image boot and/or you ca
 You will be prompted to set the admin user password during installation.  
 Once the OS is installed on eMMC, shutdown, remove the usb stick and boot from eMMC.  
 
-### Configure the Network
-
 When booting up make sure you plug the network into ethernet port A.  
 Get the mac address of the Network Interface:
 ```console
