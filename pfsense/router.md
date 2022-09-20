@@ -6,7 +6,11 @@
 [routerfront]: router.front.jpg
 [routerback]: router.back.jpg
 
-## Parts List  
+## Parts List
+
+<details>
+  <summary>Parts</summary>
+  
 * [KingNovy Intel Celeron N5105 4x 2.5GbE](https://www.aliexpress.com/item/3256803806996430.html) ~$200
 * [Crucial RAM 16GB Kit (2x8GB) DDR4 3200MHz CL22 (running @ 2933MHz) SODIMM](https://www.amazon.com/dp/B08C4WV6FT) $60
 * [Intel SSDSA2CW120G3 320 Series 120GB SATA 3Gb/s 2.5" SSD](https://www.ebay.com/sch/i.html?_nkw=SSDSA2CW120G3) $20-$40 (I had one lying around)
@@ -18,8 +22,13 @@
 * [Noctua NA-SAV4, Silicone Anti-Vibration Fan Mount Set (16-Pack, Brown)](https://www.amazon.com/dp/B071W6KYCG) $9
 * [120mm Black Finger Grills (4 Pack)](https://www.amazon.com/dp/B01H0P7OC4) $8
 * [Facmogu DC 12V 3A Power Adapter, 36 Watt AC 100-240V to DC 12V Transformers, Switching Power Supply for LCD Monitor, Wireless Router, CCTV Cameras 2.1mm X 5.5mm US Plug](https://www.amazon.com/dp/B073WSWT34) $12 (optional to replace cheap original)
+</details>
 
 ## Setup
+
+<details>
+  <summary>Steps</summary>
+  
 * [Installing pfSense](install.md)
 * [Setup a LAN Bridge](lanbridge.md)
 * [Setup a IPV4 DHCP Server](dhcpserver.md)
@@ -33,6 +42,7 @@
 * [Setup Port Forwarding](portforwarding.md)
 * [Setup Wake on LAN](wol.md)
 * [Setup an OpenVPN Server](openvpn.md)
+</details>
 
 ## Thermals
 
