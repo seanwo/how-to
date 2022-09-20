@@ -44,3 +44,4 @@ Assembly Notes:
 * [Setup SFTP Keypair Only Access](sftp.md)
 * Setup SFTP Shares
 * [Install Docker Container Support](containers.md)
+* [Install qBittorrent](qbittorrent.md)
