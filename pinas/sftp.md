@@ -21,10 +21,6 @@ User Management>Users>Create
 * Disallow account modification: :white_check_mark:
 * Comment:
 
-Now turn off root and password based ssh logins.
-
-In the OMV6 GUI:  
-
 Services>sftp
 * Enabled: :white_check_mark:
 * Port: 222
@@ -34,7 +30,22 @@ Services>sftp
 * Rsyslog: :white_check_mark:
 * Extra options:
 
+Storage>Shared Folders>```Shares Folder```>Privileges
+* Name: sftpuser
+* Type: User
+* Permissions: Read/Write or Read-only (depending on what level of SFTP access you want to grant)
+
+_Repeat for each ```Shared Folder```_
+
+Services>sftp>Shares>Create
+* Username: sftpuser
+* Shared folder: ```Shared Folder```
+
+_Repeat for each ```Shared Folder```_
+
 Confirm that you can only sftp with the rsa private key and not passwords.  To login with the rsa private key use this command from the client:  
 ```console
 sftp -i id_rsa_sftpuser\@pinas -P 222 sftpuser@pinas
 ```
+
+Confirm that each sftp share has the proper read/write or read-only access for sftpuser.
