@@ -1,5 +1,9 @@
 ## Setup qBittorrent through a VPN
 
+source: https://github.com/dperson/openvpn-client/  
+source: https://github.com/linuxserver/docker-qbittorrent  
+source: https://github.com/dperson/openvpn-client/issues/238  
+
 This procedure will install a qBittorrent container and tunnel it through an OpenVPN client container.  
 The example uses a PrivateInternetAccess (PIA) server in Switzerland.  
 
