@@ -1,4 +1,4 @@
-## Setup SSH Keypair Only Access
+## Setup SSH
 
 source: https://www.geekyhacker.com/2021/02/15/configure-ssh-key-based-authentication-on-raspberry-pi/ 
 
