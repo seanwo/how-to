@@ -38,7 +38,7 @@ services:
 ```
 Change the volume uuids to be the disk uuid that contains your torrent, movies, and shows shared folders.  
 
-In portainer, create a stack named vpn-depends using the customized .yaml by uploading it and pressing "Deploy the stack".  
+Go to portainer at http://pinas:9000 and create a stack named vpn-depends using the customized .yaml by uploading it and pressing "Deploy the stack".  
 
 Check the vpn container log to ensure the vpn is online.
 
