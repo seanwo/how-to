@@ -1,4 +1,4 @@
-# Raspberry Pi NAS (PiNAS)
+# Raspberry Pi Network Attached Storage (NAS)
 
 ![alt text](cover.on.small.gif "pinas")
 
