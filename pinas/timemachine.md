@@ -71,8 +71,6 @@ Services>SMB>CIFS>Shares>Create
 * Audit file operations: :x:
 * Extra options:
 
-### Global Quota
-
 Set a universal quota to limit the size of each time machine backup (quota applies **per** time machine backup; this is **not** a quota for the sum of all backups):
 
 ```console
