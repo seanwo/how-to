@@ -44,4 +44,4 @@ Assembly Notes:
 * Setup Plex Media Shares
 * [Setup SFTP Keypair Only Access](sftp.md)
 * Setup SFTP Shares
-* [Install and Setup qBittorrent Over an OpenVPN Client](qbittorrent.md)
+* [Setup qBittorrent through a VPN](qbittorrent.md)
