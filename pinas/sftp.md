@@ -5,9 +5,9 @@ Generate an RSA keypair (id_rsa_sftpuser@pinas & id_rsa_sftpuser@pinas.pub) on t
 ssh-keygen -t rsa -C "sftpuser@pinas"
 ```
 
-In the OMV6 GUI:  
+OMV6 GUI:  
 
-### User Management>Users>Create
+User Management>Users>Create
 * Name: sftpuser
 * Email:
 * Password: ```[generate a strong random password]```
@@ -22,7 +22,7 @@ Now turn off root and password based ssh logins.
 
 In the OMV6 GUI:  
 
-### Services>sftp
+Services>sftp
 * Enabled: :white_check_mark:
 * Port: 222
 * Password authentication: :x:
