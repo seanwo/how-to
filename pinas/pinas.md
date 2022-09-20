@@ -43,3 +43,4 @@ Assembly Notes:
 * Setup Plex Media Shares
 * [Setup SFTP Keypair Only Access](sftp.md)
 * Setup SFTP Shares
+* [Install Docker Container Support](containers.md)
