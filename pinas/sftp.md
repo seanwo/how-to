@@ -1,4 +1,4 @@
-## Setup SFTP Keypair Only Access
+## Setup SFTP
 
 Generate an RSA keypair (id_rsa_sftpuser@pinas & id_rsa_sftpuser@pinas.pub) on the client:
 ```console
