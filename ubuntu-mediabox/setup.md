@@ -6,6 +6,10 @@
 * [My Hardware Specs](hardware.md)  
 
 ## Setup 
+
+<details>
+  <summary>Steps</summary>
+  
 * [Install Ubuntu LTS](ubuntu.md)
 * [Install Chrome](chrome.md)
 * [Install TeamViewer](teamviewer.md)
@@ -23,3 +27,4 @@
 * [Install ClamAV](clamav.md)
 * [Setup Drive Mirroring](rsync.md)
 * [Install Duplicity](duplicity.md)
+</details>
