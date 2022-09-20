@@ -36,12 +36,10 @@ Assembly Notes:
 * [Install Utilities (Optional)](utilities.md)
 * [Install HD-IDLE](hdidle.md)
 * [Install OpenMediaVault (OMV)](omv.md)
-* [Install OMV Plugins](plugins.md)
 * [Install OMV Container Support](containers.md)
-* [Setup SSH Keypair Only Access](ssh.md)
+* [Setup SSH](ssh.md)
 * [Setup Network UPS Tool (NUT) Plugin](nut.md)
 * [Setup Apple Time Machine Support](timemachine.md)
 * Setup Plex Media Shares
-* [Setup SFTP Keypair Only Access](sftp.md)
-* Setup SFTP Shares
+* [Setup SFTP](sftp.md)
 * [Setup qBittorrent through a VPN](qbittorrent.md)
