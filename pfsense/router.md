@@ -26,7 +26,7 @@
 * [Configure Static DHCP Reservations](dhcpstatic.md)
 * [Setup DNS over TLS](dot.md)
 * [Enable UPnP](upnp.md)
-* [Setup SSH Access](ssh.md)
+* [Setup SSH](ssh.md)
 * [Configure SSH User Keys](sshkeys.md)
 * [Setup Dynamic DNS](ddns.md)
 * [Configure Email Notifications](email.md)
