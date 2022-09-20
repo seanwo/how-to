@@ -27,7 +27,7 @@ NOTE: set ```Identifier``` to the name/identifier of the NUT server.
 NOTE: set ```Netclient hostname``` to the actual ip address of the NUT server.  
 NOTE: set ```Netclient password``` to the actual secret you used on the NUT server.  
 
-I don't want the NAS to control shutting down the UPS itself so we have to alter a configuration file vi an OVM environment variable:
+I don't want the NAS to control shutting down the UPS itself so we have to alter a configuration file via an OVM environment variable:
 ```console
 sudo omv-env set -- OMV_UPSMON_POWERDOWNFLAG "/dev/null"
 sudo omv-salt stage run prepare
