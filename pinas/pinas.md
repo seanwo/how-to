@@ -38,6 +38,7 @@
 * [Install HD-IDLE](hdidle.md)
 * [Install OpenMediaVault (OMV)](omv.md)
 * [Setup SSH](ssh.md)
+* [Setup Email Notifications](smtp.md)
 * [Setup Network UPS Tool (NUT) Plugin](nut.md)
 * [Setup Apple Time Machine Support](timemachine.md)
 * Setup Plex Media Shares
