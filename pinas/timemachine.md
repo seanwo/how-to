@@ -4,7 +4,7 @@ source: https://dannyda.com/2020/01/02/how-to-create-apple-time-machine-in-open-
 
 Adding Apple Time Machine support to your NAS.
 
-### OMV6 GUI:
+OMV6 GUI:
 
 Storage>File Systems>Mount
 * File system: ```/dev/sd?1```
