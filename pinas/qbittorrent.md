@@ -6,6 +6,7 @@ source: https://github.com/dperson/openvpn-client/issues/238
 source: https://docs.docker.com/compose/compose-file/compose-file-v3/  
 
 This procedure will install a qBittorrent container and tunnel it through an OpenVPN client container.  
+These containers will be monitored and restarted using an autoheal container.  
 The example uses a PrivateInternetAccess (PIA) server in Switzerland.  
 
 Create appdata directories for the vpn and qBittorrent containers:
