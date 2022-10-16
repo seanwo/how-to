@@ -1,0 +1,96 @@
+version: "3.9"
+services:
+
+  openvpn:
+    container_name: openvpn
+    image: dperson/openvpn-client:latest #https://github.com/dperson/openvpn-client
+    restart: always
+    labels:
+      autoheal: "true"
+    ports:
+      - "8080:8080"
+    dns:
+      - 1.1.1.1
+      - 1.0.0.1	
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - "/dev/net/tun:/dev/net/tun:rwm"
+    environment:
+         
+      #https://github.com/dperson/openvpn-client
+      
+      #CERT_AUTH - As above (-c) provide authentication to access certificate
+      #DNS - As above (-d) use the VPN provider's DNS resolvers
+      #DEFAULT_GATEWAY - As above (-D) if set to 'false', don't use default route
+      #FIREWALL - As above (-f) setup firewall to disallow net access w/o the VPN
+      #CIPHER - Set openvpn cipher option when generating conf file with -v
+      #AUTH - Set openvpn auth option when generating conf file with -v
+      #MSS - As above (-m) set Maximum Segment Size
+      #OTHER_ARGS - As above (-o) pass arguments directly to openvpn
+      #ROUTE6 - As above (-R) add a route to allow replies to your private network
+      #ROUTE - As above (-r) add a route to allow replies to your private network
+      #TZ - Set a timezone, IE EST5EDT
+      #VPN_FILES - specify the '[;cert]' files to use (relative to /vpn)
+      #VPN - As above (-v) setup a VPN connection
+      #VPN_AUTH - As above (-a) provide authentication to vpn server
+      #VPNPORT - As above (-p) setup port forwarding (See NOTE below)
+      #GROUPID - Set the GID for the vpn      
+
+      FIREWALL: ''
+      TZ: America/Chicago
+      OTHER_ARGS: '--inactive 3600 --ping 10 --ping-exit 60'
+      VPN_FILES: 'switzerland.ovpn;ca.rsa.2048.crt'
+      VPN_AUTH: 'pia_username;pia_password'
+
+    networks:
+      - vpn
+    tmpfs:
+      - /run
+      - /tmp
+    security_opt:
+      - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+      - /srv/appdata/openvpn/:/vpn
+
+  qbittorrent:
+    container_name: qbittorrent  
+    image: lscr.io/linuxserver/qbittorrent:latest #https://github.com/linuxserver/docker-qbittorrent
+    restart: always
+    labels:
+      autoheal: "true"
+    network_mode: "service:openvpn"
+    depends_on:
+      - openvpn
+    environment:
+    
+      #https://github.com/linuxserver/docker-qbittorrent
+      
+      #PUID - UserID
+      #PGID - GroupID
+      #TZ - Specify a timezone to use EG Europe/London
+      #WEBUI_PORT - for changing the port of the webui 
+         
+      PUID: 1003
+      PGID: 100
+      TZ: America/Chicago
+      WEBUI_PORT: 8080
+      
+    volumes:
+      - /srv/appdata/qbittorrent/config:/config
+      - /srv/dev-disk-by-uuid-00000000-0000-0000-0000-000000000000/torrents:/downloads
+      - /srv/dev-disk-by-uuid-00000000-0000-0000-0000-000000000000/movies:/movies
+      - /srv/dev-disk-by-uuid-00000000-0000-0000-0000-000000000000/shows:/shows
+      
+    #https://docs.docker.com/engine/reference/builder/#healthcheck
+    healthcheck:
+      test: curl --fail http://www.gstatic.com/generate_204 || exit 1
+      interval: 30s
+      retries: 3
+      start_period: 30s
+      timeout: 10s
+
+networks:
+  vpn:

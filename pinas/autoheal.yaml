@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+
+  autoheal:
+    container_name: autoheal
+    image: willfarrell/autoheal:latest #https://github.com/willfarrell/docker-autoheal
+    restart: always
+    environment:
+      
+      #https://github.com/willfarrell/docker-autoheal
+      #AUTOHEAL_CONTAINER_LABEL=autoheal
+      #AUTOHEAL_INTERVAL - check every N seconds
+      #AUTOHEAL_START_PERIOD - wait N seconds before first health check
+      #AUTOHEAL_DEFAULT_STOP_TIMEOUT - Docker waits max N seconds (the Docker default) for a container to stop before killing during restarts (container overridable via label, see below)
+      #DOCKER_SOCK=/var/run/docker.sock - Unix socket for curl requests to Docker API
+      #CURL_TIMEOUT - max-time in seconds for curl requests to Docker API
+      #WEBHOOK_URL - post message to the webhook if a container was restarted (or restart failed)
+      
+      AUTOHEAL_CONTAINER_LABEL: autoheal
+      
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/localtime:/etc/localtime:ro

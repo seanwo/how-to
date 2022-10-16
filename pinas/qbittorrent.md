@@ -9,7 +9,7 @@ The example uses a PrivateInternetAccess (PIA) server in Switzerland.
 
 Create appdata directories for the vpn and qBittorrent containers:
 ```console
-sudo mkdir /srv/appdata/vpn
+sudo mkdir /srv/appdata/openvpn
 sudo mkdir /srv/appdata/qbittorrent/config
 ```
 
@@ -22,11 +22,11 @@ sudo unzip ./openvpn.zip
 sudo rm ./openvpn.zip
 ```
 
-Customize this .yaml file: [vpn-depends.yaml](vpn-depends.yaml)
+Customize this .yaml file: [openvpn-qbittorrent.yaml](openvpn-qbittorrent.yaml)
 
 ```
 services:
-  vpn:
+  openvpn:
     environment:
       VPN_AUTH: 'pia_username;pia_password'
 ```
@@ -42,9 +42,10 @@ services:
 ```
 Change the volume uuids to be the disk uuid that contains your torrent, movies, and shows shared folders.  
 
-Go to portainer at http://pinas:9000 and create a stack named vpn-depends using the customized .yaml by uploading it and pressing "Deploy the stack".  
+Go to portainer at http://pinas:9000 and create a stack named openvpn-qbittorrent using the customized .yaml by uploading it and pressing "Deploy the stack".  
+Go to portainer at http://pinas:9000 and create a stack named autoheal using the [autoheal.yaml](autoheal.yaml) by uploading it and pressing "Deploy the stack".  
 
-Check the vpn container log to ensure the vpn is online.
+Check the openvpn container log to ensure the openvpn client is online.
 
 Login to qBittorrent at http://pinas:8080 (default credentials: admin:adminadmin).  
 
