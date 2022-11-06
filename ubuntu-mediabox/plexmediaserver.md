@@ -28,4 +28,11 @@ Remove the old package list file now:
 sudo rm -rf /etc/apt/sources.list.d/*.dpkg-old
 ```
 
+Starting with build 12.9.1 you are now required to select your GPU in the Preferences.xml file by adding the HardwareDevicePath of the GPU you want to use.  For me the Nvidia Quaddro P400 is located at /dev/dri/renderD129.
+
+Add parameter to /var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Preferences.xml:
+```
+HardwareDevicePath="/dev/dri/renderD129"
+```
+
 Configure PLEX Libraries (/mnt/media/Movies, /mnt/media/Recorded, /mnt/media/Torrents, /mnt/media/Videos) after disk structure is complete.
