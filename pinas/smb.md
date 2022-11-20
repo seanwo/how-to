@@ -22,7 +22,7 @@ Storage>Shared Folders>```movies```>ACL
 * Name: ```movies``` [on /dev/sd?1, movies/]
 * User/Group permissions: none
 * Owner: ```mediauser``` Permissions: Read/Write/Execute
-* Group: ```mediauser``` Permissions: Read/Write/Execute
+* Group: users Permissions: Read/Write/Execute
 * Others: Read/Execute
 * Replace: :white_check_mark:
 * Recursive: :white_check_mark: (if you need to update a folder coming from another system) otherwise :x:
