@@ -51,6 +51,7 @@
 * [Setup Email Notifications](smtp.md)
 * [Setup Network UPS Tool (NUT) Plugin](nut.md)
 * [Setup Apple Time Machine Support](timemachine.md)
+* [Setup Windows SMB Support](smb.md)
 * Setup Plex Media Shares
 * [Setup SFTP](sftp.md)
 * [Setup ClamAV (Antimalware)](clamav.md)
