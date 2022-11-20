@@ -57,7 +57,7 @@ Services>SMB>CIFS>Shares>Create
 * Public: No
 * Read-only: :x:
 * Browsable: :white_check_mark:
-* Time Machine support: :white_check_mark:
+* Time Machine support: :x:
 * Inherit ACLS: :x:
 * Inherit permissions: :x:
 * Enable recycle bin: :x:
