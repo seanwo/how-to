@@ -1,4 +1,4 @@
-## Setup OMV Container Support
+## Setup Container Support
 
 source: https://nerdiy.de/en/howto-raspberry-pi-docker-container-mit-openmediavault-omv-und-portainer-nutzen/
 
