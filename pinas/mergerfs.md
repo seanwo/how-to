@@ -2,6 +2,8 @@
 
 A way to merge drive space together into a pool.
 
+source: https://github.com/trapexit/mergerfs  
+
 CLI:
 
 On each data drive that will be in the pool:
