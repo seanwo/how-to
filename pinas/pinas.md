@@ -55,6 +55,7 @@
 * [Setup Media Folders](mediafolders.md) 
 * [Setup SnapRaid]
 * [Setup Windows SMB Support](smb.md)
+* [Setup NFS Support]
 * [Setup SFTP](sftp.md)
 * [Setup ClamAV (Antimalware)](clamav.md)
 * [Setup Container Support](containers.md)
