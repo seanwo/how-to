@@ -4,9 +4,16 @@ A way to merge drive space together into a pool.
 
 source: https://github.com/trapexit/mergerfs  
 
+OMV6 GUI:
+
+Storage>File Systems>Mount (for each data drive)
+* File system: ```/dev/sd?1```
+* Usage Warning Threshold: 85%
+* Comment:
+
 CLI:
 
-On each data drive that will be in the pool:
+For each data drive...
 ```console
 cd /srv/dev-disk-by-uuid-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/
 sudo mkdir mergerfs-pool1
@@ -21,9 +28,9 @@ Storage>mergerfs>Create
 * Filesystems:
 * Shared folders:
 * Paths:
-  * /srv/dev-disk-by-uuid-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx1/mergerfs-pool1/ [data drive 1]
+  * /srv/dev-disk-by-uuid-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx1/mergerfs-pool1/ (data drive 1)
   * ...
-  * /srv/dev-disk-by-uuid-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx2/mergerfs-pool1/ [data drive n]
+  * /srv/dev-disk-by-uuid-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxn/mergerfs-pool1/ (data drive n)
 * Create policy: Existing path - most free space
 * Minimum free space: 4
 * Unit: Gigabytes
