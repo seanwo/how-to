@@ -1,6 +1,6 @@
 ## Setup Windows SMB Support
 
-Adding Windows SMB share support to your NAS.
+Adding Windows SMB sharing support to your NAS.
 
 This example sets up a SMB share called ```movies``` that is accessible by the ```mediauser``` account.
 
