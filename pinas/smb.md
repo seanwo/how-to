@@ -17,7 +17,7 @@ User Management>Users>Create
 * Disallow account modification: :white_check_mark:
 * Comment
 
-* Storage>File Systems>Mount
+Storage>File Systems>Mount
 * File system: ```/dev/sd?1```
 * Usage Warning Threshold: 85%
 * Comment:
