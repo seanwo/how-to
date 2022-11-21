@@ -73,16 +73,16 @@ services:
       #TZ - Specify a timezone to use EG Europe/London
       #WEBUI_PORT - for changing the port of the webui 
          
-      PUID: 1003
+      PUID: 2001
       PGID: 100
       TZ: America/Chicago
       WEBUI_PORT: 8080
       
     volumes:
       - /srv/appdata/qbittorrent/config:/config
-      - /srv/dev-disk-by-uuid-00000000-0000-0000-0000-000000000000/torrents:/downloads
-      - /srv/dev-disk-by-uuid-00000000-0000-0000-0000-000000000000/movies:/movies
-      - /srv/dev-disk-by-uuid-00000000-0000-0000-0000-000000000000/shows:/shows
+      - /srv/mergerfs/mergerfs-pool1/torrents:/downloads
+      - /srv/mergerfs/mergerfs-pool1/movies:/movies
+      - /srv/mergerfs/mergerfs-pool1/shows:/shows
       
     #https://docs.docker.com/engine/reference/builder/#healthcheck
     healthcheck:
