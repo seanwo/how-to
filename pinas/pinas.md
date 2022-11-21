@@ -50,9 +50,9 @@
 * [Setup SSH](ssh.md)
 * [Setup Email Notifications](smtp.md)
 * [Setup Network UPS Tool (NUT) Plugin](nut.md)
-* [Setup Apple Time Machine Support](timemachine.md)
+* [Setup MergerFS](mergerfs.md)
 * [Setup Windows SMB Support](smb.md)
-* Setup Plex Media Shares
+* [Setup Apple Time Machine Support](timemachine.md)
 * [Setup SFTP](sftp.md)
 * [Setup ClamAV (Antimalware)](clamav.md)
 * [Setup OMV Container Support](containers.md)
