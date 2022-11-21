@@ -53,12 +53,13 @@
 * [Setup Apple Time Machine Support](timemachine.md)
 * [Setup MergerFS](mergerfs.md)
 * [Setup Media Folders](mediafolders.md) 
-* [Setup SnapRaid](snapraid.md)
+* [Setup SnapRaid]
 * [Setup Windows SMB Support](smb.md)
 * [Setup SFTP](sftp.md)
 * [Setup ClamAV (Antimalware)](clamav.md)
 * [Setup Container Support](containers.md)
 * [Setup qBittorrent & OpenVPN Containers](qbittorrent.md)
+* [Setup AutoHeal Container]
 </details>
 
 ## Local URLs
