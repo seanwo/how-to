@@ -6,7 +6,18 @@ This example sets up a SMB share called ```movies``` that is accessible by the `
 
 OMV6 GUI:
 
-Storage>File Systems>Mount
+User Management>Users>Create
+* Name: mediauser
+* Email:
+* Password: ```[generate a strong random password]```
+* Confirm Password:
+* Shell: /bin/sh
+* Groups: users
+* SSH public keys: 
+* Disallow account modification: :white_check_mark:
+* Comment
+
+* Storage>File Systems>Mount
 * File system: ```/dev/sd?1```
 * Usage Warning Threshold: 85%
 * Comment:
