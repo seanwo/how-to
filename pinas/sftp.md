@@ -9,7 +9,6 @@ OMV6 GUI:
 
 System>Plugins>Search>```openmediavault-sftp```>Install 
 
-openmediavault-nut
 User Management>Users>Create
 * Name: sftpuser
 * Email:
