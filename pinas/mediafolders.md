@@ -28,10 +28,10 @@ ls -la /srv/mergerfs/mergerfs-pool1
 total 20
 drwxr-xr-x  5 root      root  4096 Nov 20 16:02 .
 drwxrwxrwx  3 root      root  4096 Nov 20 14:15 ..
-drwxrwsr-x  2 mediauser users 4096 Nov 20 14:34 movies
-drwxrwsr-x  2 mediauser users 4096 Nov 20 14:34 music
-drwxrwsr-x  2 mediauser users 4096 Nov 20 14:34 pictures
-drwxrwsr-x  2 mediauser users 4096 Nov 20 14:34 recorded
-drwxrwsr-x  2 mediauser users 4096 Nov 20 14:34 torrents
-drwxr-xr-x  2 mediauser users 4096 Nov 20 14:34 videos
+drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 movies
+drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 music
+drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 pictures
+drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 recorded
+drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 torrents
+drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 videos
 ```
