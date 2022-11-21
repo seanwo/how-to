@@ -38,9 +38,9 @@ Change VPN_AUTH to be your vpn (in my case PIA) username and password.
 services:
   qbittorrent:
     volumes:
-      - /srv/dev-disk-by-uuid-00000000-0000-0000-0000-000000000000/torrents:/downloads
-      - /srv/dev-disk-by-uuid-00000000-0000-0000-0000-000000000000/movies:/movies
-      - /srv/dev-disk-by-uuid-00000000-0000-0000-0000-000000000000/shows:/shows
+      - /srv/mergerfs/mergerfs-pool1/torrents:/downloads
+      - /srv/mergerfs/mergerfs-pool1/movies:/movies
+      - /srv/mergerfs/mergerfs-pool1/shows:/shows
 ```
 Change the volume uuids to be the disk uuid that contains your torrent, movies, and shows shared folders.  
 
