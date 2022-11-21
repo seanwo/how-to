@@ -17,14 +17,9 @@ User Management>Users>Create
 * Disallow account modification: :white_check_mark:
 * Comment
 
-Storage>File Systems>Mount
-* File system: ```/dev/sd?1```
-* Usage Warning Threshold: 85%
-* Comment:
-
 Storage>Shared Folders
 * Name: ```movies```
-* File system: /dev/sd?1
+* File system: mergerfs-pool1
 * Relative path: ```movies/```
 * Permissions: Administrators: read/write, Others: read/write, Others: read-only
 * Comment:
