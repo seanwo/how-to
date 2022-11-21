@@ -6,6 +6,17 @@ Adding Apple Time Machine support to your NAS.
 
 OMV6 GUI:
 
+User Management>Users>Create
+* Name: tmpuser
+* Email:
+* Password: ```[generate a strong random password]```
+* Confirm Password:
+* Shell: /bin/sh
+* Groups: users
+* SSH public keys: 
+* Disallow account modification: :white_check_mark:
+* Comment:
+
 Storage>File Systems>Mount
 * File system: ```/dev/sd?1```
 * Usage Warning Threshold: 85%
