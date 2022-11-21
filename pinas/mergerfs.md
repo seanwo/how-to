@@ -6,18 +6,20 @@ source: https://github.com/trapexit/mergerfs
 
 OMV6 GUI:
 
-Storage>File Systems>Mount (for each data drive)
+Storage>File Systems>Mount
 * File system: ```/dev/sd?1```
 * Usage Warning Threshold: 85%
 * Comment:
 
+_Repeat for each data drive_
+
 CLI:
 
-For each data drive...
 ```console
 cd /srv/dev-disk-by-uuid-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/
 sudo mkdir mergerfs-pool1
 ```
+_Repeat for each data drive_
 
 OMV6 GUI:
 
