@@ -34,16 +34,6 @@ services:
 ```
 Change VPN_AUTH to be your vpn (in my case PIA) username and password.  
 
-```
-services:
-  qbittorrent:
-    volumes:
-      - /srv/mergerfs/mergerfs-pool1/torrents:/downloads
-      - /srv/mergerfs/mergerfs-pool1/movies:/movies
-      - /srv/mergerfs/mergerfs-pool1/shows:/shows
-```
-Change the volume uuids to be the disk uuid that contains your torrent, movies, and shows shared folders.  
-
 Go to portainer at http://pinas:9000 and create a stack named openvpn-qbittorrent using the customized .yaml by uploading it and pressing "Deploy the stack".  
 Go to portainer at http://pinas:9000 and create a stack named autoheal using the [autoheal.yaml](autoheal.yaml) by uploading it and pressing "Deploy the stack".  
 
