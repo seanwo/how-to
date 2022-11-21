@@ -1,4 +1,4 @@
-## Setup qBittorrent through a VPN
+## Setup qBittorrent & OpenVPN Containers
 
 source: https://github.com/dperson/openvpn-client/  
 source: https://github.com/linuxserver/docker-qbittorrent  
