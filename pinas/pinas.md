@@ -57,7 +57,7 @@
 * [Setup Windows SMB Support](smb.md)
 * [Setup SFTP](sftp.md)
 * [Setup ClamAV (Antimalware)](clamav.md)
-* [Setup OMV Container Support](containers.md)
+* [Setup Container Support](containers.md)
 * [Setup qBittorrent through a VPN](qbittorrent.md)
 </details>
 
