@@ -55,7 +55,7 @@
 * [Setup Network UPS Tool (NUT) Plugin](nut.md)
 * [Setup Apple Time Machine](timemachine.md)
 * [Setup MergerFS](mergerfs.md)
-* [Setup Media Folders](mediafolders.md) 
+* [Setup Media Shared Folders](mediafolders.md) 
 * [Setup SnapRAID](snapraid.md)
 * [Setup Windows SMB](smb.md)
 * [Setup NFS]
