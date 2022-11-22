@@ -52,7 +52,7 @@
 * [Install OpenMediaVault](omv.md)
 * [Setup SSH](ssh.md)
 * [Setup Email Notifications](smtp.md)
-* [Setup Network UPS Tool Plugin](nut.md)
+* [Setup Network UPS Tool](nut.md)
 * [Setup Apple Time Machine](timemachine.md)
 * [Setup MergerFS](mergerfs.md)
 * [Setup Media Shared Folders](mediafolders.md) 
