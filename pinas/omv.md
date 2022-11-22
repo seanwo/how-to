@@ -3,6 +3,8 @@
 source: https://pimylifeup.com/raspberry-pi-openmediavault/  
 source: https://docs.openmediavault.org/en/6.x/various/advset.html  
 
+CLI:
+
 You will need wget to get and then run the OMV installer script:
 ```console
 sudo apt install wget
