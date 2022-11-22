@@ -6,17 +6,6 @@ This example sets up a SMB share called ```movies``` that is accessible by the `
 
 OMV6 GUI:
 
-User Management>Users>Create
-* Name: mediauser
-* Email:
-* Password: ```[generate a strong random password]```
-* Confirm Password:
-* Shell: /bin/sh
-* Groups: users
-* SSH public keys: 
-* Disallow account modification: :white_check_mark:
-* Comment
-
 Services>SMB/CIFS/Settings
 * Enabled: :white_check_mark:
 * Workgroup: WORKGROUP
