@@ -13,6 +13,6 @@ Services>NFS>Shares>Create
 * Prviledge: Read/Write
 * Extra options: subtree_check,insecure,all_squash,anonuid=2001,anongid=100
 
-_where uid=2001 is the mediauser and gid=100 is the users group_
+Where uid=2001 is the mediauser and gid=100 is the users group.
 
 _Repeat for each media shared folder_
