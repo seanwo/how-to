@@ -59,7 +59,7 @@
 * [Setup SFTP](sftp.md)
 * [Setup ClamAV (Antimalware)](clamav.md)
 * [Setup Container Support](containers.md)
-* [Setup Containers (qBittorrent, OpenVPN, and AutoHeal)](qbittorrent.md)
+* [Setup Containers (qBittorrent, OpenVPN, and Autoheal)](qbittorrent.md)
 </details>
 
 ## Local URLs
