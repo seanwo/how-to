@@ -1,4 +1,4 @@
-## Setup Windows SMB Support
+## Setup Windows SMB
 
 Adding Windows SMB sharing support to your NAS.
 
