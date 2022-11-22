@@ -1,6 +1,8 @@
-## Manually Formatting Hard Drives (Optional)
+## Preparing Drives
 
 You can wipe and format drives later using OMV, but I like to force the inode table and journal initialization to complete upfront and not use lazy initialization for hours afterwards.  
+
+CLI:
 
 List the drive device names:
 ```console
@@ -31,4 +33,13 @@ Repeat for /dev/sdb, /dev/sdc, and /dev/sdd.
 ```console
 sudo mkfs.ext4 -E lazy_itable_init=0,lazy_journal_init=0 /dev/sda1
 ```
-Repeat for /dev/sdb1, /dev/sdc1, and /dev/sdd1
+_Repeat for each drive_
+
+OMV6 GUI:
+
+Storage>File Systems>Mount
+* File system: ```/dev/sd?1```
+* Usage Warning Threshold: 85%
+* Comment:
+
+_Repeat for each drive_
