@@ -47,7 +47,7 @@
   
 * [Install the Base OS](baseos.md)
 * [Preparing Drives](drives.md)
-* [Install Utilities (Optional)](utilities.md)
+* [Install Utilities](utilities.md)
 * [Install HD-IDLE](hdidle.md)
 * [Install OpenMediaVault (OMV)](omv.md)
 * [Setup SSH](ssh.md)
