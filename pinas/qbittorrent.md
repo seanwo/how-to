@@ -1,4 +1,4 @@
-## Setup qBittorrent & OpenVPN Containers
+## Setup Containers (qBittorrent, OpenVPN, and AutoHeal)
 
 source: https://github.com/dperson/openvpn-client/  
 source: https://github.com/linuxserver/docker-qbittorrent  
