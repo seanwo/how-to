@@ -65,7 +65,7 @@ Change VPN_AUTH to be your vpn (in my case PIA) username and password.
 
 Portainer GUI:
 
-* Create a stack named openvpn-qbittorrent using the customized .yaml by uploading it and pressing "Deploy the stack".  
+* Create a stack named openvpn-qbittorrent using the customized [openvpn-qbittorrent.yaml](openvpn-qbittorrent.yaml) above by uploading it and pressing "Deploy the stack".  
 * Create a stack named autoheal using the [autoheal.yaml](autoheal.yaml) by uploading it and pressing "Deploy the stack".  
 
 Check the openvpn container log to ensure the openvpn client is online.
