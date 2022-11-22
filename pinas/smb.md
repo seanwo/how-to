@@ -28,7 +28,7 @@ Services>SMB/CIFS/Settings>Advanced settings
 
 Services>SMB>CIFS>Shares>Create
 * Enabled: :white_check_mark:
-* Shared Folder: ```movies```
+* Shared Folder: ```share```
 * Comment:
 * Public: No
 * Read-only: :x:
@@ -50,4 +50,4 @@ Services>SMB>CIFS>Shares>Create
 The ```vfs objects =``` extra option is only needed if you have a time machine share enabled.  
 This is workaround for a bug between the intergration of MacOS and OMV.  
 
-_Repeat for all SMB shares_
+_Repeat media shared folder_
