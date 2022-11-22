@@ -23,6 +23,9 @@
 * [Up Angled Standard HMMI Male to Female Extension Data Flat Slim FFC FPV Cable 20cm](https://www.amazon.com/dp/B07BWG2XT5) $18 (optional; recommended)
 * [COMeap (2-Pack) 4 Pin to SATA Female Hard Drive Power Adapter Cable 19cm](https://www.amazon.com/dp/B07JHBJWD4) $11 (optional)
 * [Hammond Enclosure 140x140x60mm (1554QGY)](http://tinyurl.com/2p8vmdeu) $18
+* [Samsung 64GB USB 3.1 Flash Drive](https://www.amazon.com/dp/B07D7P4SY4) $12
+* [Samsung 128GB USB 3.1 Flash Drive](https://www.amazon.com/dp/B07D7PDLXC) $18 * 2
+* [Sabrent 4 Port Portable USB 2.0 Hub](https://www.amazon.com/dp/B00L2442H0?) $7
 </details>
 
 <details>
