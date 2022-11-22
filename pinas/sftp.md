@@ -29,7 +29,7 @@ Services>sftp
 * Rsyslog: :white_check_mark:
 * Extra options:
 
-Storage>Shared Folders>```Shares Folder```>Privileges
+Storage>Shared Folders>```Shared Folder```>Privileges
 * Name: sftpuser
 * Type: User
 * Permissions: Read/Write or Read-only (depending on what level of SFTP access you want to grant)
