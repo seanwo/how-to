@@ -1,4 +1,4 @@
-## Setup Apple Time Machine Support
+## Setup Apple Time Machine
 
 source: https://dannyda.com/2020/01/02/how-to-create-apple-time-machine-in-open-media-vault-5-omv-5-with-shared-folder-smb-share-windows-share-shared-folder-cifs/
 
