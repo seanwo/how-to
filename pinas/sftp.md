@@ -37,7 +37,7 @@ Storage>Shared Folders>```Shared Folder```>Privileges
 _Repeat for each ```Shared Folder```_
 
 Services>sftp>Shares>Create
-* Username: sftpuser
+* Username: ```sftpuser```
 * Shared folder: ```Shared Folder```
 
 _Repeat for each ```Shared Folder```_
