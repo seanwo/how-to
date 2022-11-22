@@ -48,4 +48,6 @@ Services>SMB>CIFS>Shares>Create
 * Extra options: vfs objects = 
 
 The ```vfs objects =``` extra option is only needed if you have a time machine share enabled.  
-This is workaround for a bug between the intergration of MacOS and OMV.
+This is workaround for a bug between the intergration of MacOS and OMV.  
+
+_Repeat for all SMB shares_
