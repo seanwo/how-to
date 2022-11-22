@@ -53,7 +53,7 @@
 * [Setup Apple Time Machine Support](timemachine.md)
 * [Setup MergerFS](mergerfs.md)
 * [Setup Media Folders](mediafolders.md) 
-* [Setup SnapRaid]
+* [Setup SnapRAID](snapraid.md)
 * [Setup Windows SMB Support](smb.md)
 * [Setup NFS Support]
 * [Setup SFTP](sftp.md)
