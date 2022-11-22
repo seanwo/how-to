@@ -1,4 +1,4 @@
-## Setup ClamAV (Antimalware)
+## Setup ClamAV
 
 OMV6 GUI:  
 
