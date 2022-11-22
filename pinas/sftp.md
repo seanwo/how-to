@@ -30,7 +30,7 @@ Services>sftp
 * Extra options:
 
 Storage>Shared Folders>```Shared Folder```>Privileges
-* Name: sftpuser
+* Name: ```sftpuser```
 * Type: User
 * Permissions: Read/Write or Read-only (depending on what level of SFTP access you want to grant)
 
