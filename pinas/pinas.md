@@ -50,12 +50,12 @@
 * [Setup SSH](ssh.md)
 * [Setup Email Notifications](smtp.md)
 * [Setup Network UPS Tool (NUT) Plugin](nut.md)
-* [Setup Apple Time Machine Support](timemachine.md)
+* [Setup Apple Time Machine](timemachine.md)
 * [Setup MergerFS](mergerfs.md)
 * [Setup Media Folders](mediafolders.md) 
 * [Setup SnapRAID](snapraid.md)
-* [Setup Windows SMB Support](smb.md)
-* [Setup NFS Support]
+* [Setup Windows SMB](smb.md)
+* [Setup NFS]
 * [Setup SFTP](sftp.md)
 * [Setup ClamAV (Antimalware)](clamav.md)
 * [Setup Container Support](containers.md)
