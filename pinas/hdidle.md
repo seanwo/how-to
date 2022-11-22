@@ -6,6 +6,8 @@ source: https://medium.com/@tamashudak/spin-down-hdd-with-raspberry-pi-using-hd-
 
 Many older drivers can not be set to spin down on a timer with hdparm so the solution is keep the spindown disabled in OMV and use hd-idle to spin your drive down while not in use.  If you are setting up an active RAID, you don't want to do this but I plan on using SnapRAID and I want my drives spun down as much as possible to keep the noise levels low.  
 
+CLI:
+
 Installing the latest hd-idle package:
 ```console
 sudo apt install wget
