@@ -10,7 +10,7 @@ OMV6 GUI:
 System>Plugins>Search>```openmediavault-sftp```>Install 
 
 User Management>Users>Create
-* Name: sftpuser
+* Name: ```sftpuser```
 * Email:
 * Password: ```[generate a strong random password]```
 * Confirm Password:
