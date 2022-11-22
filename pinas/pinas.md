@@ -58,8 +58,8 @@
 * [Setup NFS]
 * [Setup SFTP](sftp.md)
 * [Setup ClamAV (Antimalware)](clamav.md)
-* [Setup Container Support](containers.md)
-* [Setup Containers (qBittorrent, OpenVPN, and Autoheal)](qbittorrent.md)
+* [Setup Containers](containers.md)
+* [Setup qBittorrent](qbittorrent.md)
 </details>
 
 ## Local URLs
