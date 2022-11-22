@@ -43,7 +43,7 @@
   <summary>Steps</summary>
   
 * [Install the Base OS](baseos.md)
-* [Manually Formatting Hard Drives (Optional)](drives.md)
+* [Preparing Drives](drives.md)
 * [Install Utilities (Optional)](utilities.md)
 * [Install HD-IDLE](hdidle.md)
 * [Install OpenMediaVault (OMV)](omv.md)
