@@ -1,4 +1,4 @@
-## Setup Media Folders
+## Setup Media Shared Folders
 
 CLI:
 
@@ -35,3 +35,26 @@ drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 recorded
 drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 torrents
 drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 videos
 ```
+
+OMV6 GUI:
+
+Storage>Shared Folders
+* Name: ```movies```
+* File system: mergerfs-pool1
+* Relative path: ```movies/```
+* Permissions: Administrators: read/write, Others: read/write, Others: read-only
+* Comment:
+
+Storage>Shared Folders>```movies```>ACL
+* Name: ```movies``` [on /dev/sd?1, movies/]
+* User/Group permissions: none
+* Owner: ```mediauser``` Permissions: Read/Write/Execute
+* Group: users Permissions: Read/Write/Execute
+* Others: Read/Execute
+* Replace: :white_check_mark:
+* Recursive: :white_check_mark: (if you need to update a folder coming from another system) otherwise :x:
+
+Storage>Shared Folders>```movies```>Privleges
+* ```mediauser```: Read/Write
+
+_Repeat for all media shares_
