@@ -38,6 +38,17 @@ drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 videos
 
 OMV6 GUI:
 
+User Management>Users>Create
+* Name: mediauser
+* Email:
+* Password: ```[generate a strong random password]```
+* Confirm Password:
+* Shell: /bin/sh
+* Groups: users
+* SSH public keys: 
+* Disallow account modification: :white_check_mark:
+* Comment
+
 Storage>Shared Folders
 * Name: ```movies```
 * File system: mergerfs-pool1
