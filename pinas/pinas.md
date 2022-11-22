@@ -60,7 +60,6 @@
 * [Setup ClamAV (Antimalware)](clamav.md)
 * [Setup Container Support](containers.md)
 * [Setup qBittorrent & OpenVPN Containers](qbittorrent.md)
-* [Setup AutoHeal Container]
 </details>
 
 ## Local URLs
