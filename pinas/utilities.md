@@ -1,4 +1,4 @@
-## Install Utilities (Optional)
+## Install Utilities
 
 CLI:
 
