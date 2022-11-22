@@ -17,7 +17,7 @@ OMV6 GUI:
 System>Plugins>Search>openmediavault-mergerfs>Install
 
 Storage>mergerfs>Create
-* Name: mergerfs-pool1
+* Name: ```mergerfs-pool1```
 * Filesystems:
 * Shared folders:
 * Paths:
