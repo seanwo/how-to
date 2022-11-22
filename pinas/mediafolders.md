@@ -50,14 +50,16 @@ User Management>Users>Create
 * Comment
 
 Storage>Shared Folders
-* Name: ```movies```
+* Name: ```share```
 * File system: mergerfs-pool1
-* Relative path: ```movies/```
+* Relative path: ```share/```
 * Permissions: Administrators: read/write, Others: read/write, Others: read-only
 * Comment:
 
-Storage>Shared Folders>```movies```>ACL
-* Name: ```movies``` [on /dev/sd?1, movies/]
+_Repeat for each media folder_
+
+Storage>Shared Folders>```share```>ACL
+* Name: ```share``` [on /dev/sd?1, share/]
 * User/Group permissions: none
 * Owner: ```mediauser``` Permissions: Read/Write/Execute
 * Group: users Permissions: Read/Write/Execute
@@ -65,7 +67,9 @@ Storage>Shared Folders>```movies```>ACL
 * Replace: :white_check_mark:
 * Recursive: :white_check_mark: (if you need to update a folder coming from another system) otherwise :x:
 
-Storage>Shared Folders>```movies```>Privleges
+_Repeat for each media folder_
+
+Storage>Shared Folders>```share```>Privleges
 * ```mediauser```: Read/Write
 
-_Repeat for all media shares_
+_Repeat for each media folder_
