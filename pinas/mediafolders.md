@@ -60,7 +60,7 @@ Storage>Shared Folders
 
 _Repeat for each media folder_
 
-Storage>Shared Folders>```share```>ACL
+Storage>Shared Folders>```Share Folder```>ACL
 * Name: ```share``` [on /dev/sd?1, share/]
 * User/Group permissions: none
 * Owner: ```mediauser``` Permissions: Read/Write/Execute
@@ -71,7 +71,7 @@ Storage>Shared Folders>```share```>ACL
 
 _Repeat for each media folder_
 
-Storage>Shared Folders>```share```>Privleges
+Storage>Shared Folders>```Shared Folder```>Privleges
 * ```mediauser```: Read/Write
 
 _Repeat for each media folder_
