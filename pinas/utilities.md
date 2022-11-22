@@ -1,5 +1,7 @@
 ## Install Utilities (Optional)
 
+CLI:
+
 Install IOTop in case you want to monitor the device IO performance:
 ```console
 sudo apt install iotop
