@@ -1,4 +1,4 @@
-## Install OpenMediaVault (OMV)
+## Install OpenMediaVault
 
 source: https://pimylifeup.com/raspberry-pi-openmediavault/  
 source: https://docs.openmediavault.org/en/6.x/various/advset.html  
