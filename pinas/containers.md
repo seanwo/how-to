@@ -23,7 +23,8 @@ sudo mkdir /srv/appdata
 _I recommend creating the appdata on a seperate flash drive to extend the life of the CM4 eMMC_
 
 ```console
-ln -s /srv/appdata /srv/dev-disk-by-uuid-00000000-0000-0000-0000-000000000000/appdata/
+sudo mkdir /srv/dev-disk-by-uuid-00000000-0000-0000-0000-000000000000/appdata/
+sudo ln -s /srv/appdata /srv/dev-disk-by-uuid-00000000-0000-0000-0000-000000000000/appdata/
 ```
 
 _where the target is a permanently mounted ext4 formatted flashdrive_
