@@ -2,8 +2,6 @@
 
 Adding Windows SMB sharing support to your NAS.
 
-This example sets up a SMB share called ```movies``` that is accessible by the ```mediauser``` account.
-
 OMV6 GUI:
 
 Services>SMB/CIFS/Settings
