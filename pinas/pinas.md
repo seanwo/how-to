@@ -58,7 +58,7 @@
 * [Setup Media Shared Folders](mediafolders.md) 
 * [Setup SnapRAID](snapraid.md)
 * [Setup Windows SMB](smb.md)
-* [Setup NFS]
+* [Setup NFS](nfs.md)
 * [Setup SFTP](sftp.md)
 * [Setup ClamAV (Antimalware)](clamav.md)
 * [Setup Containers](containers.md)
