@@ -77,4 +77,5 @@ Services>SMB>CIFS>Shares>Create
 * Audit file operations: :x:
 * Extra options: vfs objects = 
 
-The ```vfs objects =``` extra option is only needed if you have a time machine share enabled.  This is workaround for a bug between the intergration of MacOS and OMV.
+The ```vfs objects =``` extra option is only needed if you have a time machine share enabled.  
+This is workaround for a bug between the intergration of MacOS and OMV.
