@@ -12,8 +12,18 @@ System>omv-extras>Portainer>Open web
 
 Set a password for the admin account.
 
+CLI:
+
 From the console, create a top level directory to store our container appdata.
 
 ```console
 sudo mkdir /srv/appdata
 ```
+
+_I recommend creating the appdata on a seperate flash drive to extend the life of the CM4 eMMC_
+
+```console
+ln -s /srv/appdata /srv/dev-disk-by-uuid-00000000-0000-0000-0000-000000000000/appdata/
+```
+
+_where the target is a permanently mounted ext4 formatted flashdrive_
