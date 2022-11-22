@@ -1,17 +1,8 @@
 ## Setup MergerFS
 
-A way to merge drive space together into a pool.
+A way to merge data drive space together into a pool.
 
 source: https://github.com/trapexit/mergerfs  
-
-OMV6 GUI:
-
-Storage>File Systems>Mount
-* File system: ```/dev/sd?1```
-* Usage Warning Threshold: 85%
-* Comment:
-
-_Repeat for each data drive_
 
 CLI:
 
