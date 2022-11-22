@@ -17,25 +17,6 @@ User Management>Users>Create
 * Disallow account modification: :white_check_mark:
 * Comment
 
-Storage>Shared Folders
-* Name: ```movies```
-* File system: mergerfs-pool1
-* Relative path: ```movies/```
-* Permissions: Administrators: read/write, Others: read/write, Others: read-only
-* Comment:
-
-Storage>Shared Folders>```movies```>ACL
-* Name: ```movies``` [on /dev/sd?1, movies/]
-* User/Group permissions: none
-* Owner: ```mediauser``` Permissions: Read/Write/Execute
-* Group: users Permissions: Read/Write/Execute
-* Others: Read/Execute
-* Replace: :white_check_mark:
-* Recursive: :white_check_mark: (if you need to update a folder coming from another system) otherwise :x:
-
-Storage>Shared Folders>```movies```>Privleges
-* ```mediauser```: Read/Write
-
 Services>SMB/CIFS/Settings
 * Enabled: :white_check_mark:
 * Workgroup: WORKGROUP
