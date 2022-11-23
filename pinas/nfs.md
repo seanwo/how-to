@@ -16,3 +16,9 @@ Services>NFS>Shares>Create
 Where uid=2001 is the mediauser and gid=100 is the users group.
 
 _Repeat for each media shared folder_
+
+You can now add the following line to a linux client to mount the NFS share:  
+
+```
+192.168.###.###:/share /mnt/nas/share nfs defaults,nofail 0 0
+```
