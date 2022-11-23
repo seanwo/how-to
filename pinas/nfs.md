@@ -1,5 +1,7 @@
 ## Setup NFS
 
+source: https://linux.die.net/man/5/exports  
+
 Adding NFS sharing support to your NAS.
 
 OMV6 GUI:
