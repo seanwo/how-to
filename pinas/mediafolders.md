@@ -1,5 +1,7 @@
 ## Setup Media Shared Folders
 
+source: https://kerneltalks.com/tips-tricks/how-to-change-uid-or-gid-safely-in-linux/  
+
 OMV6 GUI:
 
 User Management>Users>Create
@@ -14,6 +16,24 @@ User Management>Users>Create
 * Comment
 
 CLI:
+
+If you want to sync the ```mediauser``` account user id across systems for use with NFS, you will want to change the uid right after you create it.  For example, if you want to change the uid from 1000 to 2001:
+
+```console
+id mediauser
+```
+```
+uid=1000(mediauser) gid=100(users) groups=100(users)
+```
+```console
+sudo usermod -u 2001 mediauser
+id mediauser
+```
+```
+uid=2001(mediauser) gid=100(users) groups=100(users)
+```
+
+Now create each media folder on each data drive:
 
 ```console
 cd /srv/dev-disk-by-uuid-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/mergerfs-pool1
