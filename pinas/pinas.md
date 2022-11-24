@@ -70,7 +70,8 @@
 <details>
   <summary>URLs</summary>
   
-* OMV @ http://pinas
+* OpenMediaVault @ http://pinas
 * Portainer @ http://pinas:9000
 * qBittorrent @ http://pinas:8080
+* Duplicati @ http://pinas:8200
 </details>
