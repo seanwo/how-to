@@ -10,7 +10,6 @@ do
     do
         find $f -type f -name "$i" -exec rm {} \;
     done
-    find $f -type d -empty -delete
 done
 
 #cleanup extra files in video content folders
