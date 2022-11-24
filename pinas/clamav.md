@@ -32,7 +32,7 @@ Services>Antivirus>Scheduled Scans
 * Enabled: :white_check_mark:
 * Shared folder: ``[Shared Folder]``
 * Minute: 0
-* Hour: 2
+* Hour: 1
 * Day of the month: *
 * Month: *
 * Day of week: Sunday
