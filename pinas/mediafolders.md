@@ -110,7 +110,7 @@ _Repeat for each media folder_
 System>Scheduled Tasks>Create
 * Enabled: :white_check_mark:
 * Minute: 0
-* Hour: 5
+* Hour: 0
 * Day of month: *
 * Month: *
 * Day of week: *
