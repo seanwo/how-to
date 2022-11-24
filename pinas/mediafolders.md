@@ -41,12 +41,14 @@ sudo mkdir movies
 sudo mkdir music
 sudo mkdir pictures
 sudo mkdir recorded
+sudo mkdir shows
 sudo mkdir torrents
 sudo mkdir videos
 sudo chown mediauser:users movies
 sudo chown mediauser:users music
 sudo chown mediauser:users pictures
 sudo chown mediauser:users recorded
+sudo chown mediauser:users shows
 sudo chown mediauser:users torrents
 sudo chown mediauser:users videos
 ```
@@ -65,8 +67,17 @@ drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 movies
 drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 music
 drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 pictures
 drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 recorded
+drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 shows
 drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 torrents
 drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 videos
+```
+
+Place a copy of [beautify.sh](beautify.sh) on /srv/ and make it executable:
+
+```console
+sudo vi /srv/beautify.sh
+sudo chown root:root /srv/beautify.sh
+sudo chmod +x /srv/beautify.sh
 ```
 
 OMV6 GUI:
@@ -95,3 +106,14 @@ Storage>Shared Folders>```Shared Folder```>Privleges
 * ```mediauser```: Read/Write
 
 _Repeat for each media folder_
+
+System>Scheduled Tasks>Create
+* Enabled: :white_check_mark:
+* Minute: 0
+* Hour: 5
+* Day of month: *
+* Month: *
+* Day of week: *
+* User: root
+* Command: /srv/beautify.sh
+* Send command output via email: :x:
