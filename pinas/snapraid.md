@@ -41,8 +41,8 @@ Services>SnapRAID>Settings>Scheduled Diff
 
 * Enabled: :white_check_mark:
 * Time of execution: Certain date
-* Minute: 5
-* Hour: 5
+* Minute: 0
+* Hour: 2
 * Day of month: *
 * Month: *
 * Day of week: *
