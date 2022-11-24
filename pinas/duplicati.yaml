@@ -19,6 +19,7 @@ services:
       - /srv/appdata/duplicati/config:/config
       - /srv/backups:/backups
       - /srv/mergerfs/mergerfs-pool1/pictures:/pictures
+      - /srv/mergerfs/mergerfs-pool1/music:/music
 
     ports:
       - "8200:8200"
