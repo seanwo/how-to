@@ -12,7 +12,7 @@ do
     done
 done
 
-#cleanup extra files in video content folders
+#cleanup extra files in downloaded video content folders
 
 declare -a extensions=("*.exe" "*.db" "*.jpg" "*.txt")
 declare -a folders=("/srv/mergerfs/mergerfs-pool1/movies" "/srv/mergerfs/mergerfs-pool1/shows")
