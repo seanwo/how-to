@@ -2,7 +2,8 @@
 
 source: https://duplicati.readthedocs.io/en/latest/  
 
-AWS Console:
+AWS Console:  
+Goto https://aws.amazon.com/console/  
 
 S3>Buckets>Create bucket
 * Bucket name: pinas-duplicati
@@ -55,7 +56,8 @@ IAM>Users>Add
 
 _store off the users AWS ID and AWS KEY for programmatic access below_
 
-Duplicati GUI:
+Duplicati GUI:  
+Goto http://pinas:8200  
 
 First run setup: No, my machine has only a single account
 
