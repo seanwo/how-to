@@ -63,6 +63,7 @@
 * [Setup ClamAV](clamav.md)
 * [Setup Containers](containers.md)
 * [Setup qBittorrent](qbittorrent.md)
+* [Setup Duplicati](duplicati.md)
 </details>
 
 ## Local URLs
