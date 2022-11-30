@@ -16,7 +16,7 @@ sudo sync; sudo reboot
 ```
 Note: This did not completely install for me the first time. It looked like it completed but the web interface was not available after the reboot. So I repeated the step above and it worked the second time around.  Possible dependency problem.  
   
-If it complains about usrmerge the run the following and then try the above installer again:
+If it complains about usrmerge then run the following commands and then try the above installer again:
 ```console
 sudo apt install usrmerge
 sudo sync; sudo reboot
