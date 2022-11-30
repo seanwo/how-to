@@ -14,7 +14,8 @@ System>Plugins>Search>```openmediavault-nut```>Install
 
 Services->UPS:
 
-* Enabled: true
+* Mode: Netclient
+* Enabled: :white_check_mark:
 * Identifier: apc-server
 * Comment:
 * Netclient hostname: 192.168.###.###
