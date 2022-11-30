@@ -45,6 +45,6 @@ If you make a mistake configuring /etc/fstab (for example) you will need to reso
 sudo su -
 passwd
 exit
-vi /etc/ssh/sshd_config
+sudo vi /etc/ssh/sshd_config
 ```
 Set the root password and set the sshd configuration parameter ```PermitRootLogin``` to ```no```. 
