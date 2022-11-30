@@ -28,3 +28,5 @@ Storage>mergerfs>Create
 * Minimum free space: 4
 * Unit: Gigabytes
 * Options: defaults,allow_other,cache.files=partial,use_ino,dropcacheonclose=true
+
+Note: this may fail when you go to apply it.  Just reboot and then apply.
