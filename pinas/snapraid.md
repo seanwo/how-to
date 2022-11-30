@@ -26,7 +26,7 @@ Services>SnapRAID>Drives>Create
 All other drives can be data drives.
 
 * Drive: /dev/sd?#
-* Name: parity
+* Name: data#
 * Content: :white_check_mark:
 * Data: :white_check_mark:
 * Parity: :x:
