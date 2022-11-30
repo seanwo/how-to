@@ -108,6 +108,7 @@ Storage>Shared Folders>```Shared Folder```>Privleges
 _Repeat for each media folder_
 
 System>Scheduled Tasks>Create
+* Time of execution: Certain date
 * Enabled: :white_check_mark:
 * Minute: 0
 * Hour: 0
