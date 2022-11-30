@@ -27,6 +27,7 @@ Services>Antivirus>Settings
 * Algorithmic detection: :white_check_mark:
 * Follow diretory symlinks: :x:
 * Follow file symlinks: :x:
+* Extra options: ConcurrentDatabaseReload no
 
 Services>Antivirus>Scheduled Scans
 * Enabled: :white_check_mark:
