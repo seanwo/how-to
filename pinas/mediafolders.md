@@ -37,20 +37,20 @@ Now create each media folder on each data drive:
 
 ```console
 cd /srv/dev-disk-by-uuid-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/mergerfs-pool1
-sudo mkdir movies
-sudo mkdir music
-sudo mkdir pictures
-sudo mkdir recorded
-sudo mkdir shows
-sudo mkdir torrents
-sudo mkdir videos
-sudo chown mediauser:users movies
-sudo chown mediauser:users music
-sudo chown mediauser:users pictures
-sudo chown mediauser:users recorded
-sudo chown mediauser:users shows
-sudo chown mediauser:users torrents
-sudo chown mediauser:users videos
+sudo mkdir Movies
+sudo mkdir Music
+sudo mkdir Pictures
+sudo mkdir Recorded
+sudo mkdir Shows
+sudo mkdir Torrents
+sudo mkdir Videos
+sudo chown mediauser:users Movies
+sudo chown mediauser:users Music
+sudo chown mediauser:users Pictures
+sudo chown mediauser:users Recorded
+sudo chown mediauser:users Shows
+sudo chown mediauser:users Torrents
+sudo chown mediauser:users Videos
 ```
 _Repeat for each data drive_
 
@@ -63,13 +63,13 @@ ls -la /srv/mergerfs/mergerfs-pool1
 total 20
 drwxr-xr-x  5 root      root  4096 Nov 20 16:02 .
 drwxrwxrwx  3 root      root  4096 Nov 20 14:15 ..
-drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 movies
-drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 music
-drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 pictures
-drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 recorded
-drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 shows
-drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 torrents
-drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 videos
+drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 Movies
+drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 Music
+drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 Pictures
+drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 Recorded
+drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 Shows
+drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 Torrents
+drwxrwxr-x  2 mediauser users 4096 Nov 20 14:34 Videos
 ```
 
 Place a copy of [beautify.sh](beautify.sh) on /srv/ and make it executable:
@@ -83,16 +83,16 @@ sudo chmod +x /srv/beautify.sh
 OMV6 GUI:
 
 Storage>Shared Folders
-* Name: ```share```
+* Name: ```Share```
 * File system: mergerfs-pool1
-* Relative path: ```share/```
+* Relative path: ```Share/```
 * Permissions: Administrators: read/write, Others: read/write, Others: read-only
 * Comment:
 
 _Repeat for each media folder_
 
 Storage>Shared Folders>```Share Folder```>ACL
-* Name: ```share``` [on /dev/sd?1, share/]
+* Name: ```Share``` [on /dev/sd?1, share/]
 * User/Group permissions: none
 * Owner: ```mediauser``` Permissions: Read/Write/Execute
 * Group: users Permissions: Read/Write/Execute
