@@ -15,7 +15,7 @@ done
 #cleanup extra files in downloaded video content folders
 
 declare -a extensions=("*.exe" "*.db" "*.jpg" "*.txt")
-declare -a folders=("/srv/mergerfs/mergerfs-pool1/movies" "/srv/mergerfs/mergerfs-pool1/shows")
+declare -a folders=("/srv/mergerfs/mergerfs-pool1/Movies" "/srv/mergerfs/mergerfs-pool1/Shows")
 for f in "${folders[@]}"
 do
     for i in "${extensions[@]}"
