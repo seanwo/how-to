@@ -26,7 +26,7 @@ Services>sftp
 * Password authentication: :x:
 * Public key authentication: :white_check_mark:
 * AllowGroups: :white_check_mark:
-* Rsyslog: :white_check_mark:
+* Rsyslog: :x:
 * Extra options:
 
 Storage>Shared Folders>```Shared Folder```>Privileges
