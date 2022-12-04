@@ -2,7 +2,7 @@
 
 source: https://pimylifeup.com/raspberry-pi-openmediavault/  
 source: https://docs.openmediavault.org/en/6.x/various/advset.html  
-source: https://www.axzez.com/forum/interceptor-carrier-board/getting-avahi-to-work-on-omv6-w-interceptor-on-wan-vlan-service-discovery
+source: https://www.axzez.com/forum/interceptor-carrier-board/getting-avahi-to-work-on-omv6-w-interceptor-on-wan-vlan-service-discovery  
 source: https://forum.openmediavault.org/index.php?thread/37920-cron-job-checkarray-checkarray-e-md-subsystem-not-loaded-or-proc-unavailable/&postID=310582#post310582  
 
 CLI:
