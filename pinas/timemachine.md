@@ -96,7 +96,7 @@ sudo vi ./timemachine/.com.apple.TimeMachine.quota.plist
 <plist version="1.0">
 <dict>
   <key>GlobalQuota</key>
-    <integer>100000000000</integer>
+    <integer>1000000000000</integer>
   </dict>
 </plist>
 ```
