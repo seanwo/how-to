@@ -16,7 +16,7 @@ System>Notification>Settings
 System>Notification>Settings
 * CPU usage: :white_check_mark:
 * File System: :white_check_mark:
-* Load average: :white_check_mark:
+* Load average: :x:
 * Memory usage: :white_check_mark:
 * S.M.A.R.T: :white_check_mark:
 * Software RAID: :white_check_mark:
