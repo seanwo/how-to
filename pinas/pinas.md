@@ -46,13 +46,13 @@
   <summary>Steps</summary>
   
 * [Install the Base OS](baseos.md)
-* [Preparing Drives](drives.md)
 * [Install Utilities](utilities.md)
 * [Install HD-IDLE](hdidle.md)
 * [Install OpenMediaVault](omv.md)
 * [Setup SSH](ssh.md)
 * [Setup Email Notifications](smtp.md)
 * [Setup Network UPS Tool](nut.md)
+* [Preparing Drives](drives.md)
 * [Setup Apple Time Machine](timemachine.md)
 * [Setup MergerFS](mergerfs.md)
 * [Setup Media Shared Folders](mediafolders.md) 
