@@ -35,4 +35,4 @@ Add parameter to /var/lib/plexmediaserver/Library/Application Support/Plex Media
 HardwareDevicePath="/dev/dri/renderD129"
 ```
 
-Configure PLEX Libraries (/mnt/media/Movies, /mnt/media/Recorded, /mnt/media/Torrents, /mnt/media/Videos) after disk structure is complete.
+Configure PLEX Libraries (/mnt/media/Movies, /mnt/media/Recorded, /mnt/media/Shows, /mnt/media/Videos) after disk structure is complete.
