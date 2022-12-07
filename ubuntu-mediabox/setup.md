@@ -11,7 +11,6 @@
   <summary>Steps</summary>
   
 * [Install Ubuntu LTS](ubuntu.md)
-* [Install HD-IDLE](hdidle.md)
 * [Install Sensor Monitors](sensormonitors.md)
 * [Install HDHomeRun](hdhomerun.md)
 * [Install SMTP Client](smtp.md)
@@ -20,6 +19,7 @@
 * [Install VLC](vlc.md)
 * [Install Plex Media Server](plexmediaserver.md)
 * [Install ClamAV](clamav.md)
+* [Install HD-IDLE](hdidle.md) _Deprecated_
 * [Setup Disk Structure](hdds.md) _Deprecated_
 * [Install qBittorrent](qbittorrent.md) _Deprecated_
 * [Install SFTP Server](sftpserver.md) _Deprecated_
