@@ -12,11 +12,11 @@
   
 * [Install Ubuntu LTS](ubuntu.md)
 * [Install Sensor Monitors](sensormonitors.md)
-* [Install HDHomeRun](hdhomerun.md)
 * [Install SMTP Client](smtp.md)
 * [Install Chrome](chrome.md)
 * [Install TeamViewer](teamviewer.md)
 * [Install VLC](vlc.md)
+* [Install HDHomeRun](hdhomerun.md)
 * [Install Plex Media Server](plexmediaserver.md)
 * [Install ClamAV](clamav.md)
 * [Install HD-IDLE](hdidle.md) _Deprecated_
