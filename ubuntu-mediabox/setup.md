@@ -17,8 +17,8 @@
 * [Install TeamViewer](teamviewer.md)
 * [Install VLC](vlc.md)
 * [Install HDHomeRun](hdhomerun.md)
-* [Install Plex Media Server](plexmediaserver.md)
 * [Install ClamAV](clamav.md)
+* [Install Plex Media Server](plexmediaserver.md)
 * [Install HD-IDLE](hdidle.md) _Deprecated_
 * [Setup Disk Structure](hdds.md) _Deprecated_
 * [Install qBittorrent](qbittorrent.md) _Deprecated_
