@@ -63,7 +63,7 @@ root@yourhostname.example.com email@gmail.com
 ```
 *also if you are using sendgrid apply the generic map:*
 ```console
-postmap /etc/postfix/generic
+sudo postmap /etc/postfix/generic
 ```
 now complete the setup:
 ```console
