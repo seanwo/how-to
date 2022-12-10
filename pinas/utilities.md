@@ -25,3 +25,20 @@ vi ~/temperature.sh
 ```console
 chmod +x ~/temperature.sh
 ```
+
+Create shell script to spin down hard drives:
+```console
+vi ~/spindown.sh
+```
+
+```
+#!/bin/bash
+sudo hdparm -Y /dev/sda
+sudo hdparm -Y /dev/sdb
+sudo hdparm -Y /dev/sdc
+sudo hdparm -Y /dev/sdd
+```
+
+```console
+chmod +x ~/spindown.sh
+```
