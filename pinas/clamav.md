@@ -1,5 +1,7 @@
 ## Setup ClamAV
 
+source: https://betatim.github.io/posts/clamav-memory-usage/  
+
 OMV6 GUI:  
 
 System>Plugins>Search>```openmediavault-clamav```>Install 
