@@ -1,5 +1,5 @@
 
-## Install Chrome (Browser)
+## Install Chrome
 
 source: https://www.linuxbabe.com/ubuntu/install-google-chrome-ubuntu-18-04-lts  
 source: https://askubuntu.com/questions/867/how-can-i-stop-being-prompted-to-unlock-the-default-keyring-on-boot  
