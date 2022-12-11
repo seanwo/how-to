@@ -1,4 +1,4 @@
-## Install SMTP Client (Outbound Email)
+## Install SMTP Client
 
 source: https://www.linode.com/docs/email/postfix/configure-postfix-to-send-mail-using-gmail-and-google-apps-on-debian-or-ubuntu/  
 source: https://docs.sendgrid.com/for-developers/sending-email/postfix  
