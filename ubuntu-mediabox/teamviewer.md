@@ -1,4 +1,4 @@
-## Install TeamViewer (Remote Desktop)
+## Install TeamViewer
 
 source: https://community.teamviewer.com/t5/Knowledge-Base/How-to-update-TeamViewer-on-Linux-via-repository/ta-p/30666
 
