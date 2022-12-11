@@ -4,7 +4,7 @@ source: https://www.ubuntu.com/download/desktop
 
 _The default user in these examples is called **mediauser** and the machine in these examples is called **mediabox**._
 
-Instal Ubuntu 20.04 LTS by selecting "Normal installation", "Download updates while installing Ubuntu", and "Install third-party software...".
+Instal Ubuntu 22.04.1 LTS by selecting "Normal installation", "Download updates while installing Ubuntu", and "Install third-party software...".
 
 Set it to not require the user to login on startup.
 
@@ -46,23 +46,6 @@ gsettings set org.gnome.desktop.screensaver lock-enabled false
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 ```
 
-If you have a UPS directly connected to the system, tell the system to shutdown on critical battery levels:
-```console
-sudo vi /etc/UPower/UPower.conf
-```
-and update the following values:
-```
-UsePercentageForPolicy=true
-PercentageLow=30
-PercentageCritical=20
-PercentageAction=15
-CriticalPowerAction=PowerOff
-```
-and then restart the service
-```console
-sudo systemctl restart upower
-```
-
 If you are adding a NVIDIA GPU, identify the hardware:
 ```console
 sudo apt install hwinfo
@@ -72,7 +55,7 @@ hwinfo --gfxcard --short
 Find the latest drivers (in my case the latest was version 470):
 ```console
 apt search nvidia-driver
-sudo apt install nvidia-driver-470
+sudo apt install nvidia-driver-515
 sudo sync
 sudo reboot
 ```
