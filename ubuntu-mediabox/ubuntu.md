@@ -1,4 +1,4 @@
-## Ubuntu 22.04.1 LTS (Operating System)
+## Ubuntu LTS
 
 source: https://www.ubuntu.com/download/desktop
 
