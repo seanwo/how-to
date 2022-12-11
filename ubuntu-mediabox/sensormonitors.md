@@ -1,4 +1,4 @@
-## Monitor CPU Usage and Temperature
+## Install Sensor Monitors
 
 source: https://itsfoss.com/check-laptop-cpu-temperature-ubuntu/  
 source: https://askubuntu.com/questions/15832/how-do-i-get-the-cpu-temperature
