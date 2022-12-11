@@ -1,4 +1,4 @@
-## Install ClamAV (Anti-Malware)
+## Install ClamAV
 
 source: https://websiteforstudents.com/install-clamav-linux-antivirus-on-ubuntu-16-04-17-10-18-04-desktp/  
 source: https://www.howtoforge.com/tutorial/configure-clamav-to-scan-and-notify-virus-and-malware/
