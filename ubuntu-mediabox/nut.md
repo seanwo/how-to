@@ -4,7 +4,7 @@ source: https://networkupstools.org/docs/user-manual.chunked/ar01s06.html
 
 I have a Network UPS Tool (NUT) Server running on a [Raspberry Pi Management Server](/tinypilot/tinypilot.md) that monitors the UPS that this NAS is plugged into.  I want to setup a NUT client on this NAS to be informed when to shutdown during the low power warning.  
 
-Make a backup of the original configuraiton files
+Make a backup of the original configuration files
 
 ```console
 cd /etc/nut
