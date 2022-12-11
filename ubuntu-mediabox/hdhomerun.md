@@ -1,4 +1,4 @@
-## Install HDHomeRun (Antenna Tuner Drivers)
+## Install HDHomeRun
 
 source: https://www.silicondust.com/support/linux/
 
