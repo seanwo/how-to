@@ -1,6 +1,7 @@
-## Install Plex Media Server (Media Server)
+## Install Plex Media Server
 
-source: https://linoxide.com/linux-how-to/install-plex-media-server-ubuntu/
+source: https://linoxide.com/linux-how-to/install-plex-media-server-ubuntu/  
+source: https://support.plex.tv/articles/201370363-move-an-install-to-another-system/  
 
 ```console
 wget -q -O - https://downloads.plex.tv/plex-keys/PlexSign.key | sudo apt-key add -
@@ -35,4 +36,4 @@ Add parameter to /var/lib/plexmediaserver/Library/Application Support/Plex Media
 HardwareDevicePath="/dev/dri/renderD129"
 ```
 
-Configure PLEX Libraries (/mnt/media/Movies, /mnt/media/Recorded, /mnt/media/Shows, /mnt/media/Videos) after disk structure is complete.
+Configure PLEX Libraries (/mnt/media/Movies, /mnt/media/Recorded, /mnt/media/Shows, /mnt/media/Videos) after disk structure is complete or bring an existing configuration by moving the data directory over and having it owned by the plex user https://support.plex.tv/articles/201370363-move-an-install-to-another-system/.
