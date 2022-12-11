@@ -1,4 +1,4 @@
-## Ubuntu 20.04 LTS (Operating System)
+## Ubuntu 22.04.1 LTS (Operating System)
 
 source: https://www.ubuntu.com/download/desktop
 
