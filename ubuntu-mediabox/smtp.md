@@ -10,6 +10,8 @@ Create a new gmail account. (In this example we use email@gmail.com; replace thi
 ```console
 sudo apt install postfix
 ```
+Note: select to set it up for internet email.
+
 Configure postfix with your new gmail account:
 ```console
 sudo vi /etc/postfix/sasl/sasl_passwd
