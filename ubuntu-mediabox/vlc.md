@@ -1,4 +1,4 @@
-## Install VLC (Video Playback)
+## Install VLC
 
 ```console
 sudo apt update
