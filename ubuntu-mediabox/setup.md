@@ -11,6 +11,7 @@
   <summary>Steps</summary>
   
 * [Install Ubuntu LTS](ubuntu.md)
+* [Setup Network UPS Tool](nut.md)
 * [Install Sensor Monitors](sensormonitors.md)
 * [Install SMTP Client](smtp.md)
 * [Install Chrome](chrome.md)
