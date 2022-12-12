@@ -1,4 +1,4 @@
-# Ubuntu Home Server
+# Ubuntu Plex Server
 
 ![alt text](mediabox.jpg "mediabox")
 
