@@ -48,7 +48,7 @@ sudo mkdir /srv/appdata/duplicati
 
 Put your ca cert and ovpn files in the vpn appdata directory:
 ```console
-cd /srv/appdata/vpn
+cd /srv/appdata/openvpn
 sudo wget https://www.privateinternetaccess.com/openvpn/openvpn.zip
 sudo apt install unzip
 sudo unzip ./openvpn.zip
