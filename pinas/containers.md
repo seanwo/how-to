@@ -54,6 +54,7 @@ sudo apt install unzip
 sudo unzip ./openvpn.zip
 sudo rm ./openvpn.zip
 ```
+_Note: if you want to use TCP for a more stable VPN connection then use https://www.privateinternetaccess.com/openvpn/openvpn-tcp.zip_
 
 Customize this .yaml file: [openvpn-qbittorrent.yaml](openvpn-qbittorrent.yaml)
 
