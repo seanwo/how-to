@@ -55,6 +55,15 @@ services:
     volumes:
       - /srv/appdata/openvpn/:/vpn
 
+    #https://docs.docker.com/engine/reference/builder/#healthcheck
+    #override default
+    healthcheck:
+      test: curl --fail http://www.gstatic.com/generate_204 || exit 1
+      interval: 30s
+      retries: 3
+      start_period: 30s
+      timeout: 10s
+      
   qbittorrent:
     container_name: qbittorrent  
     image: lscr.io/linuxserver/qbittorrent:latest #https://github.com/linuxserver/docker-qbittorrent
