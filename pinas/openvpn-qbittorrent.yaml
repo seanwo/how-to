@@ -89,9 +89,9 @@ services:
       
     volumes:
       - /srv/appdata/qbittorrent/config:/config
-      - /srv/mergerfs/mergerfs-pool1/torrents:/downloads
-      - /srv/mergerfs/mergerfs-pool1/movies:/movies
-      - /srv/mergerfs/mergerfs-pool1/shows:/shows
+      - /srv/mergerfs/mergerfs-pool1/Torrents:/downloads
+      - /srv/mergerfs/mergerfs-pool1/Movies:/movies
+      - /srv/mergerfs/mergerfs-pool1/Shows:/shows
       
     #https://docs.docker.com/engine/reference/builder/#healthcheck
     healthcheck:
