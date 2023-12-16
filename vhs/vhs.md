@@ -1,4 +1,4 @@
-# Digitizing VHS Tapes
+# Digitizing and Enhancing VHS Tapes
 
 ## Hardware
 
