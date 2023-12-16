@@ -20,4 +20,4 @@ VCR -> (S-Video) -> ClearClick -> (USB-C) -> PC/Mac
 ## Capturing Raw Footage
 
 I followed a great article by Tim Ford on how to setup OBS for lossless digitizing VHS tapes [here](https://timfordphoto.com/lossless-422-digitizing-of-video-tapes-using-obs/).  
-I am archiving this page so that I never lose the instructions [here]().
+I am archiving this page so that I never lose the instructions [here](lossless.4.2.2.digitizing.of.video.tapes.using.obs.tim.ford.photography.and.videography.pdf).
