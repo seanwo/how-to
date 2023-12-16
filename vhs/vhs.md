@@ -2,7 +2,7 @@
 
 ## Hardware
 
-I used a VCR that had an S-Video output to get slightly higher quality as opposed to RCA (composite) output and tried several cheap capture devices from Amazon.  This generic [device](https://www.amazon.com/gp/product/B06X42H9VZ) created color distortions and the [Elgato USB 2.0](https://www.amazon.com/gp/product/B0029U2YSA) was not supported on M1/M2 macs even though it was highly recommended.  Basically any low end capture device can cause artifacts and rainbow effects.
+I used a VCR that had an S-Video output to get slightly higher quality as opposed to RCA (composite) output and tried several cheap capture devices from Amazon.  This generic [device](https://www.amazon.com/gp/product/B06X42H9VZ) created color distortions and the [Elgato USB 2.0](https://www.amazon.com/gp/product/B0029U2YSA) was not supported on M1/M2 macs even though it was highly recommended.  Basically any low end capture device can cause artifacts and rainbow effects.  Your choice of VCR will also impact quality. After some research, I settled on the one listed below as a good compromise between price and quality.
 
 * [ClearClick Video to USB 1080P Audio Video Capture & Live Streaming Device VIDEO2USB](https://www.clearclick.com/products/video-to-usb-audio-video-capture-live-streaming-device) @ [Amazon](https://www.amazon.com/gp/product/B0BVDVZGR2) ~$65
 * [JVC HR-S3600U](https://support.jvc.com/consumer/product.jsp?modelId=MODL022105&pathId=49&page=1&archive=true) @ [eBay](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2332490.m570.l1313&_nkw=JVC+HR-S3600U&_sacat=0) ~$75
@@ -13,6 +13,8 @@ I used a VCR that had an S-Video output to get slightly higher quality as oppose
 * [FFmpeg](https://ffmpeg.org/) - for general video manipulation
 * [Topaz Video AI](https://www.topazlabs.com/topaz-video-ai) - for AI enhancement including sharpening and noise reduction
 * [iMovie](https://support.apple.com/imovie) - to create video titles and subsection dividers
+* [VLC Player](https://www.videolan.org/vlc/) - video player
+* [Quicktime Player](https://support.apple.com/downloads/quicktime) - video player that is good for checking chapter timestamps
 
 ## Hardware Setup
 
