@@ -7,3 +7,4 @@ _"Because I can't remember any of this stuff weeks later."_
 * [Ubuntu Plex Server](ubuntu-mediabox/setup.md)
 * [Extending your GPG Key](gpg/gpg.extend.md)
 * [Upscaling miniDV SD Video to HD Video](upscaling/minidv2hd.md)
+* [Digitizing and Enhancing VHS Tapes](vhs/vhs.md)
