@@ -2,7 +2,7 @@
 
 ## Hardware
 
-I used a VCR that had an S-Video output to get slightly higher quality as opposed to RCA (composite) output and tried several cheap capture devices from Amazon.  This generic [device](https://www.amazon.com/gp/product/B06X42H9VZ) created color distortions and the [Elgato USB 2.0](https://www.amazon.com/gp/product/B0029U2YSA) was not supported on M1/M2 macs even though it was highly recommended.  Basically any low end capture device can cause artifacts and rainbow effects.  Your choice of VCR will also impact quality. After some research, I settled on the one listed below as a good compromise between price and quality.
+I used a VCR that had an S-Video output to get slightly higher quality as opposed to RCA (composite) output and tried several cheap capture devices from Amazon.  This generic [device](https://www.amazon.com/gp/product/B06X42H9VZ) created color distortions and the [Elgato USB 2.0](https://www.amazon.com/gp/product/B0029U2YSA) was not supported on M1/M2 macs even though it was highly recommended.  Basically, any low end capture device can cause artifacts and rainbow effects.  Your choice of VCR will also impact quality. After some research, I settled on the devices listed below as a good compromise between price and quality.
 
 * [ClearClick Video to USB 1080P Audio Video Capture & Live Streaming Device VIDEO2USB](https://www.clearclick.com/products/video-to-usb-audio-video-capture-live-streaming-device) @ [Amazon](https://www.amazon.com/gp/product/B0BVDVZGR2) ~$65
 * [JVC HR-S3600U](https://support.jvc.com/consumer/product.jsp?modelId=MODL022105&pathId=49&page=1&archive=true) @ [eBay](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2332490.m570.l1313&_nkw=JVC+HR-S3600U&_sacat=0) ~$75
@@ -40,9 +40,9 @@ Topaz Video AI Settings:
 * Output Settings Container: mp4
 * Include Live Preview: unchecked 
 
-I would suggest using AI Model Iris or Artemis since both are designed for low quality input sources.  You can read more about each model [here](https://docs.topazlabs.com/video-ai/filters/enhancement). Iris worked best for me.  You can test the models on small clips you have captured understand what will work best for your source footage.  
+I would suggest using the AI model Iris or Artemis since both are designed for low quality input sources.  You can read more about each model [here](https://docs.topazlabs.com/video-ai/filters/enhancement). You can test the models on small clips you have captured to understand what will work best for your source footage. The Iris model worked best for me.  
 
-Select "Export As" and save your footage to ```enhanced.mp4```. Processing may take hours depending on the length of your footage and power of you PC/Mac.
+Select "Export As" and save your footage to ```enhanced.mp4```. Processing may take hours depending on the length of your footage and power of your PC/Mac.
 
 ## Trimming
 
@@ -54,9 +54,9 @@ The copy parameters ensure that the video does not get reencoded again at a lowe
 
 ## Creating Introductions and Subsection Dividers
 
-Use any video creation tool to create nice introduction scenes and subsection divider scenes.
+Use any video creation tool to create nice introduction and subsection divider scenes.
 I used iMovie.
-Since the divider resolution (probably widescreen 1080p or 720p) does not match the original (720 x 480) you need to shrink and letterbox them.
+Since these scene resolutions (probably widescreen 1080p or 720p) do not match the original (720 x 480) you need to shrink and letterbox them.
 ```console
 ffmpeg -i intro.mp4 -vf scale="720:-2",pad="720:480:0:37" intro.scaled.mp4
 ```
@@ -67,7 +67,7 @@ ffmpeg -i intro.scaled.mp4 -f lavfi -i anullsrc=channel_layout=stereo:sample_rat
 ```
 ## Clip Assembly
 
-If you have multiple clips (introductions, enhanced footage, clip dividers, etc.) you want to assemble them without reencoding.
+If you have multiple clips (introductions, enhanced footage, clip dividers, etc.) you will want to assemble them without reencoding.
 ```console
 ffmpeg -f concat -safe 0 -i files.txt -c copy assembled.mp4
 ```
@@ -80,15 +80,15 @@ file './enhanced.mp4'
 
 ## Adding Language Metadata
 
-If your video is in English apply, the this metadata:
+If your video is in English, apply this metadata:
 ```console
 ffmpeg -i assembled.mp4 -c copy -metadata:s:a:0 language=eng assembled.eng.mp4
 ```
 ## Adding Chapter Metadata
 
-Adding chapter metadata is great for players that support and if you are going to burn them physical media.
+Adding chapter metadata is great for players that support it and if you are going to burn them physical media.
 
-Using a video player that shows the time index during playback record all timestamps where you want chapters.
+Using a video player that shows the time index during playback and make note of all timestamps where you want chapters.
 
 ```console
 ffmpeg -i assembled.eng.mp4 -i my.metadata -map_metadata 1 -codec copy remastered.mp4
@@ -128,18 +128,18 @@ END=6127000
 title=Joanna's Performance
 ```
 Notice that the START and END timestamps are in milliseconds.  
-You can then test these chapter timestamps and adjust them as necessary with player that supports chapters like Quicktime.
+You can then test these chapter timestamps and adjust them as necessary with a player that supports chapters like Quicktime.
 
 ## Generating a Thumbnail
 
-If you want to extract a frame from your video at a timestamp to use as a thumbnail use the following command:
+If you want to extract a single frame from your video at a specified timestamp to use as a thumbnail use the following command:
 ```console
 ffmpeg -ss 00:00:03 -i remastered.mp4 -frames:v 1 thumbnail.jpg
 ```
 
 ## Upload to YouTube
 
-Use YouTube studio to upload your content, check for copyright violations, and set your metadata before publishing.  
+Use YouTube Studio to upload your content, check for copyright violations, and set your metadata before publishing.  
 
 Similiar to chapter metadata your descriptions can contain chapter timestamps.  
 
