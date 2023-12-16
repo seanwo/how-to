@@ -67,7 +67,7 @@ ffmpeg -i intro.scaled.mp4 -f lavfi -i anullsrc=channel_layout=stereo:sample_rat
 
 If you have multiple clips (introductions, enhanced footage, clip dividers, etc.) you want to assemble them without reencoding.
 ```console
-ffmpeg -y -f concat -safe 0 -i files.txt -c copy assembled.mp4
+ffmpeg -f concat -safe 0 -i files.txt -c copy assembled.mp4
 ```
 
 where ```files.txt``` looks something like this:
@@ -76,10 +76,69 @@ file './intro.scaled.silence.mp4'
 file './enhanced.mp4'
 ```
 
-## Adding language metadata
+## Adding Language Metadata
 
 If your video is in English apply, the this metadata:
 ```console
-ffmpeg -y -i assembled.mp4 -c copy -metadata:s:a:0 language=eng assembled.eng.mp4
+ffmpeg -i assembled.mp4 -c copy -metadata:s:a:0 language=eng assembled.eng.mp4
+```
+## Adding Chapter Metadata
+
+Adding chapter metadata is great for players that support and if you are going to burn them physical media.
+
+Using a video player that shows the time index during playback record all timestamps where you want chapters.
+
+```console
+ffmpeg -i assembled.eng.mp4 -i my.metadata -map_metadata 1 -codec copy remastered.mp4
+```
+where ```my.metadata``` contains something like this:
+```
+;FFMETADATA1
+title=1993 Barnum
+artist=Davis Remastered
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=0
+#chapter ends at 00:00:05
+END=5000
+title=Intro
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=5000
+#chapter ends at 00:44:30
+END=2670000
+title=Barnum
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=2670000
+#chapter ends at 00:51:27
+END=3087000
+title=Stephen's Performance
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=3087000
+#chapter ends at 01:42:07
+END=6127000
+title=Joanna's Performance
+```
+Notice that the START and END timestamps are in milliseconds.  
+You can then test these chapter timestamps and adjust them as necessary with player that supports chapters like Quicktime.
+
+## Generating a Thumbnail
+
+If you want to extract a frame from your video at a timestamp to use as a thumbnail use the following command:
+```console
+ffmpeg -ss 00:00:03 -i remastered.mp4 -frames:v 1 thumbnail.jpg
 ```
 
+## Upload to YouTube
+
+Use YouTube studio to upload your content, check for copyright violations, and set your metadata before publishing.  
+
+Similiar to chapter metadata your descriptions can contain chapter timestamps.  
+
+Here is an [article](https://support.google.com/youtube/answer/9884579?hl=en) to help you setup YouTube chapters.
