@@ -192,3 +192,24 @@ Setting the Video Quality manually will ensure that your output quality matches 
 Hours later you will have a Bluray ISO you can burn to a physical Bluray disc.
 
 If you crack open the ISO and look at the package contents you can find the video file ```00000.m2ts``` and see that is similiar in size to your ```remastered.mp4``` (the file you made prior to letterboxing it with a lossless codec)
+
+```console
+ffmpeg -i 00000.m2ts
+```
+output:
+```
+Input #0, mpegts, from '00000.m2ts':
+  Duration: 01:42:07.69, start: 10.000000, bitrate: 12276 kb/s
+  Program 1 
+    Stream #0:0[0x1011]: Video: h264 (High) (HDMV / 0x564D4448), yuv420p(tv, bt709, progressive), 1280x720, 29.97 fps, 29.97 tbr, 90k tbn, 59.94 tbc
+    Stream #0:1[0x1100]: Audio: ac3 (AC-3 / 0x332D4341), 48000 Hz, stereo, fltp, 192 kb/s
+```
+as you can see the bitrate is 12276 kb/s using a h264 high profile which is similar to the original:
+```console
+ffmpeg -i remastered.mp4
+```
+output:
+```
+Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 720x480 [SAR 406:405 DAR 203:135], 10714 kb/s, 29.97 fps, 29.97 tbr, 30k tbn, 59.94 tbc (default)
+```
+which has a bit rate of 10714 kb/s using a h264 high profile.
