@@ -15,6 +15,7 @@ I used a VCR that had an S-Video output to get slightly higher quality as oppose
 * [iMovie](https://support.apple.com/imovie) - to create video titles and subsection dividers
 * [VLC Player](https://www.videolan.org/vlc/) - video player
 * [Quicktime Player](https://support.apple.com/downloads/quicktime) - video player that is good for checking chapter timestamps
+* [DVDfab](https://dvdfab.us/) - the best of the worst DVD/Bluray creator software. I use this because of my need to set the video bitrate when creating blurays; see below.  I take the extra step to preserve the footage on video blurays and my license for this product has survived several years without a forced upgrade.
 
 ## Hardware Setup
 
@@ -144,3 +145,48 @@ Use YouTube Studio to upload your content, check for copyright violations, and s
 Similiar to chapter metadata your descriptions can contain chapter timestamps.  
 
 Here is an [article](https://support.google.com/youtube/answer/9884579?hl=en) to help you setup YouTube chapters.
+
+## Creating a Physical Bluray Video Disc
+
+Similar to etching stone tablets, here is the process for putting the enhanced footage on a physical bluray video disc.  
+
+Since enhanced footage maintains the original VHS resolution (720x480), it will need to be transformed to fit on a bluray disc.  The lowest resolution for a bluray disc is 720p (1280x720).  Streching or enlarging the footage will pixelate or distort its aspect ratio.  I chose to leterbox (both horizontal and vertical) the footage in order to prevent distortion.  Some people call this making a "postage stamp" but there is only so much upscaling you can do before the footage becomes unwatchable on a large screen TV.  
+
+Prior to transforming the footage for use with a bluray disc, we need to look at what the enhanced mp4's video bitrate is:
+
+```console
+ffmpeg -i remastered.mp4
+```
+Look for the video stream in the output:
+```
+Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 720x480 [SAR 406:405 DAR 203:135], 10714 kb/s, 29.97 fps, 29.97 tbr, 30k tbn, 59.94 tbc (default)
+```
+The bitrate on the above video is ~11000 Kbps.  
+
+When adding letterboxing, you will be reencoding the video which can reduce its quality.  To overcome this we use mp4 lossless encoding.  This will significantly increase the size of the output file but we will deal with that in the next step.
+
+```console
+ffmpeg -i remastered.mp4 -filter:v "pad=1280:720:280:120,setsar=1" -crf 0 -c:a copy -c:v libx264 -preset veryslow -pix_fmt yuv420p -crf 0 remastered.lossless.bluray.mp4
+```
+
+The above command will give you 720p (1280x720) video with the orginal 480p (720x480) video surrounded by black space.  The size of this file will be enormous.  
+
+Next, use DVDfab to create the Blu-ray iso:
+* Open DVDfab -> Creator -> Blu-ray Creator
+* Add your lossless.mp4 video file to the system.
+* Select Advanced Settings
+* Set your Volume Label
+* Set your Output to BD9 720p or BD25 720p or BD50 720p (depending on whether you are burning 9G, 25G, or 50GB blurays)
+* Set Video Quality to Customize
+* Set the Kbps to to something slightly above the original you analyzed.  In my case, we can set it to 11000 or 12000.
+* Set "Start from menu and play all titles sequentially"
+* Select OK
+* Select Menu Settings
+* Get creative and build your Bluray menu
+* Select OK
+* Set your save to location and select ISO to build an image for burning later
+* Double check everything and select Start
+
+Setting the Video Quality manually will ensure that your output quality matches the footage quality prior to creating a lossless version.  
+
+Hours later you will have a Bluray ISO you can burn to a physical Bluray disc.
