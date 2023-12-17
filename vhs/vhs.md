@@ -190,3 +190,5 @@ Next, use DVDfab to create the Blu-ray iso:
 Setting the Video Quality manually will ensure that your output quality matches the footage quality prior to creating a lossless version.  
 
 Hours later you will have a Bluray ISO you can burn to a physical Bluray disc.
+
+If you crack open the ISO and look at the package contents you can find the video file ```00000.m2ts``` and see that is similiar in size to your ```remastered.mp4``` (the file you made prior to letterboxing it with a lossless codec)
