@@ -11,6 +11,10 @@
 * [Seagate Barracuda 8TB HDD](https://www.amazon.com/dp/B07H289S7C) $120 (optional - to store all ISOs from Internet Archives locally)
 * [HDD Protective Case](https://www.amazon.com/dp/B0C6GWFT21) ~$9 (optional - to protect any HDDs you are using for offline storage of ISOs)
 * [CASEMATIX Mixer Travel Case](https://www.amazon.com/dp/B083ZK7NZY) $60 (optional - custom foam case for long term storage)
+* [PINCEL Soldering Iron](https://www.amazon.com/dp/B096X6SG13) $40 (optional - you will need a soldering iron)
+* [0.8mm Tin Lead Rosin Core Solder](https://www.amazon.com/dp/B075WB98FJ?) $9 (optional - you will need solder)
+* [Soldering Flux](https://www.amazon.com/dp/B008ZIV85A) $9 (optional - helpful when soldering electronics)
+* [Solder Sucker](https://www.amazon.com/gp/product/B08FDY2SGS) $20 (optional - you will need a solder sucker or wick to clean solder holes)
 
 ## Steps
 
