@@ -1,9 +1,6 @@
 # Modded Xbox Instructions
 
 ## Parts List
-
-<details>
-  <summary>Parts</summary>
   
 * [Xbox Console](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=original%20xbox&_sacat=0) Various prices and conditions
 * [Project Stellar Mod Chip](https://makemhz.com/products/stellar) $100
@@ -15,39 +12,36 @@
 * [HDD Protective Case](https://www.amazon.com/dp/B0C6GWFT21) ~$9 (optional - to protect any HDDs you are using for offline storage of ISOs)
 * [CASEMATIX Mixer Travel Case](https://www.amazon.com/dp/B083ZK7NZY) $60 (optional - custom foam case for long term storage)
 
-</details>
-
 ## Steps
 
 ### Basic Xbox Maintenance
 
-* Complete teardown: https://www.ifixit.com/Guide/Xbox+Disassembly/1308
-* Deep clean: https://youtu.be/8P82bs8FJO0?si=ui64rMTL2ULFd_EO
-* Clean and reapply thermal paste to CPU and GPU https://youtu.be/LSS3U1pxTlc?si=ZR4Fsc3QGWUassUf
-* Remove clock capacitor https://youtu.be/LSS3U1pxTlc?si=ZR4Fsc3QGWUassUf and https://consolemods.org/wiki/Xbox:Clock_Capacitor
-* If your metal RF shield is rusted, consider sanding and spraypainting with it rustoleum. Tape off all grounding points (the points that come in contact with the mobo) and do not use self etching paint.
+* Complete teardown guide: https://www.ifixit.com/Guide/Xbox+Disassembly/1308
+* Deep clean instructions: https://youtu.be/8P82bs8FJO0?si=ui64rMTL2ULFd_EO
+* Cleaning instructions (with thermal paste reaplication to CPU/GPU): https://youtu.be/LSS3U1pxTlc?si=ZR4Fsc3QGWUassUf
+* Removing the clock capacitor https://youtu.be/LSS3U1pxTlc?si=ZR4Fsc3QGWUassUf and https://consolemods.org/wiki/Xbox:Clock_Capacitor
+* If your metal RF shield is rusted, consider sanding and then spraypainting with it rustoleum. Tape off all grounding points (the points that come in contact with the motherboard) and do not use self etching paint.
 
 ### Modchip Installation and Configuration (New Dashboard and Insignia Setup)
 
-* Prepare your modchip: https://support.makemhz.com/project-stellar/initial-setup using https://archive.org/details/MicrosoftXboxBIOS-Redump.org2010-09-13
-* Use your soldering skills and install your modchip: https://support.makemhz.com/project-stellar/installation-guide
-* Boot the Xbox up and enter modchip setup menu.
-* Store your EEPROM off to a file and FTP off the box.
-* Store your HDD key off.
-* Replace the original drive and format the new 2TB HDD (usign the new SATA to IDE adapter and replacment 80 wire IDE cable)
-* FTP XBMC4 gamers to E:\Dashboard https://support.makemhz.com/project-stellar/user-guide/custom-dashboard/overview and https://github.com/Rocky5/Xbox-Softmodding-Tool/tree/master/Extras%20Disc/Softmod/dashboards/msdash/retail
-* Reboot into XBMC4Gamers
+* Prepare your Project Stellar modchip: https://support.makemhz.com/project-stellar/initial-setup using https://archive.org/details/MicrosoftXboxBIOS-Redump.org2010-09-13
+* Use your soldering skills and install your Project Stellar modchip: https://support.makemhz.com/project-stellar/installation-guide
+* Boot the sytem up and enter modchip setup menu.
+* Save your EEPROM to a file and FTP off the box for save keeping.
+* Store your HDD key offline.
+* Replace the original drive and then format the new 2TB HDD (using the new SATA to IDE adapter and replacment 80 wire IDE cable): https://support.makemhz.com/project-stellar/user-guide/new-hdd/setup-hdd-stellar
+* FTP teh XBMC4 gamers dashboard to E:\Dashboard: https://support.makemhz.com/project-stellar/user-guide/custom-dashboard/overview and https://github.com/Rocky5/Xbox-Softmodding-Tool/tree/master/Extras%20Disc/Softmod/dashboards/msdash/retail
+* Reboot into the XBMC4Gamers dashboard
 * FTP games to F:\Games or pull the drive and do a direct copy with FatXplorer (mentioned below in the following steps)
 * Setup Insignia for online gameplay: https://insignia.live/connect
   
 ### Game Selection
 
-Although [Metacritic](https://www.metacritic.com/browse/game/xbox/all/all-time/metascore/?releaseYearMin=1958&releaseYearMax=2024&platform=xbox) does a good job of ranking original Xbox games, there are some gaps.  I supplemented the original rankings with individual metascores 
- for missing games and when an Xbox metascore was not available, I used a compatible (same generaton) consoles' game metascore.  This table provides the game's rank, title id, Internet Archive filename, and the simple name you should use when you transfer them to your Xbox so that artwork can be matched to the game (the artwork installer is very particular, so I extracted its fuzzy match names to ensure a perfect match everytime).  There are about 876 games that match the following criteria.  You will not be able to fit all games on to a 2TB drive but now you can take N ranked games and add your favorites to the list if they are not in the top N.  There are "HDD Ready" archives out that could save you time but beaware that they have removed files (usually language files other than US and some XBE files related to online use) and re-encoded some video files to be lower quality within games.  I chose to transfer my games from straigh ISO images; I only remove 2 files when I go to transfer them to the Xbox. If you want DLC, you will have to download that seperately and add it.  These games are as if they were played from a disc.
+Although [Metacritic](https://www.metacritic.com/browse/game/xbox/all/all-time/metascore/?releaseYearMin=1958&releaseYearMax=2024&platform=xbox) does a good job of ranking original Xbox games, there are some gaps.  I have supplemented the original metacritic rankings with individual metascores 
+ for missing games. When an Xbox metascore was unavailable, I used a compatible (same generaton) console's game's metascore.  The table below provides the game's rank, title id, Internet Archive filename, and the simple name you should use when you transfer them to your Xbox.  The simple name is used so that artwork can be matched for the game (the artwork installer is very particular, so I extracted its fuzzy match names to ensure a perfect match everytime).  There are ~875 games that match the following criteria.  You will not be able to fit all games on to a 2TB drive but now you can take the top N ranked games and add your favorites to the list (if they are not included).  There are "HDD Ready" archives out that could save you time but beaware that they have removed files (non-us language files and some XBE files related to online use) along with re-encoding some video files to be lower quality within games to reduce the size.  I chose to transfer my games straight from ISO images; I only exclude two files when I transfer them to the Xbox. If you want DLC, you will have to download that seperately and then add it. This is similar to ripping an actual game disc.
 
-<details>
-  <summary>Game Criteria</summary>
-  
+#### Game Selection Criteria
+
 * Only USA region (e.g., "USA", "USA, Asia", "USA, Australia", "USA, Europe", "USA, Japan", "USA, Korea", "World") discs
 * Only a "Collectors" or "Limited Edition" disc instead of an original disc
 * Only the latest revision (e.g., "Rev 1", "Rev 2", etc.) of a disc
@@ -60,10 +54,8 @@ Although [Metacritic](https://www.metacritic.com/browse/game/xbox/all/all-time/m
 * Not a non-game disc (utility, recovery, starter kit, etc.)
 * Optional: You may want to exclude "Bonus Discs"
 
-</details>
-
 <details>
-  <summary>Rankings</summary>
+  <summary>Game Rankings</summary>
 
 | Rank | TitleID | Internet Archive File | Simple Name |
 | --- | -------- | -------------------------------------------------------------------------------- | ---------------------------------------- |
@@ -948,10 +940,10 @@ Although [Metacritic](https://www.metacritic.com/browse/game/xbox/all/all-time/m
 
 ### Downloading Games
 
-I stored the full game ISOs off on an 8TB drive from Internet Archive.  Downloading will take days on average.  I suggest you automate the process.
-
+I store the full game ISOs on an 8TB drive from Internet Archive since downloading will take days for hundreds of games.  I suggest you automate the process as much as possible.
+</br>
 Personally, I downloaded all the metadata for each of the redump libraries and then create a file list from it.
-
+</br>
 ia.identifiers.txt (you can use this to automate the processing of all libraries, scripts below show usage per library for simplicity):  
 
 ```
@@ -1040,7 +1032,7 @@ redump.create.file.list.sh microsoft_xbox_b
 ```
 
 Now I just go through and comment out the ISOs I don't need to use as the source file for downloading.
-
+</br>
 microsoft_xbox_a.file.list.txt:  
 
 ```
@@ -1056,8 +1048,8 @@ microsoft_xbox_a.file.list.txt:
 ...
 ```
 
-You can now use the filelist to download all the ISOs.  
-
+You can now use the filelist to download all the ISOs.
+</br>
 redump.download.isos (requires https://github.com/john-corcoran/internetarchive-downloader):
 
 ```console
@@ -1075,8 +1067,8 @@ python3 ia_downloader.py download --verify --resume --split 5 -i $1 -f "$line"
 fi
 done
 ```
-Note: I had to patch the internetarchive-downloader tools since it could not do exact matches.  [Patch](ia_downloader.patch)  
-
+Note: I had to patch the internetarchive-downloader tools since it could not do exact matches.  [Patch](ia_downloader.patch)
+</br>
 download the ISOs in each library you want:  
 
 ```console
@@ -1087,7 +1079,7 @@ redump.download.isos.sh microsoft_xbox_b
 ```
 
 Since Internet Archives is pretty unreliable, I had corrupted downloads.  As such I would validate the SHA hashes against the metadata we downloaded above for each library.
-
+</br>
 redump.sha.check.sh:
 
 ```console
@@ -1125,8 +1117,8 @@ redump.sha.check.sh microsoft_xbox_b
 
 ### Archiving Games
 
-The redump ISO are enormous in size (6-7GB per ISO uncompressed).  The next step is to extract just the files and store them in compressed archives along with a text file that contains a dump of the default XBE header information for descriptive purposes.  
-
+The redump ISO are enormous in size (6-7GB per ISO uncompressed).  The next step is to extract just the files and store them in compressed archives along with a text file that contains a dump of the default XBE header information for descriptive purposes.
+</br>
 redump.extract.isos.sh (requires https://github.com/XboxDev/extract-xiso and https://github.com/XboxDev/xbedump):
 
 ```console
@@ -1196,9 +1188,10 @@ redump.extract.isos.sh microsoft_xbox_b
 
 From here you have a game.tar.gz file that can be extracted and either FTP'd or copied (using https://fatxplorer.eaton-works.com/) to your 2TB Xbox drive (F:\Games).  Remember to use the target naming convention in the ranking table above if you want reliable artwork matching.  
 </br>
-On my mac, I prepared a secondary hdd I could use to just to a direct copy to the Xbox hdd.  
-
+On my mac, I prepared a secondary hdd I could use to just to a direct copy to the Xbox hdd.
+</br>
 prepare.games.sh:
+
 ```console
 #!/bin/bash
 map=map.txt
@@ -1231,12 +1224,15 @@ find "${targetdir}" -type f -name '.DS_Store' -delete
 fi
 done
 ```
+
 where map.txt looks similar to:
+
 ```
 001|4D530004|Halo - Combat Evolved (USA) (Rev 2).tar.gz|halo - combat evolved|3625218048
 002|54540073|Grand Theft Auto - Vice City (USA) (Rev 1).tar.gz|gta vice city|1385124864
 003|5454000E|Grand Theft Auto III (USA).tar.gz|grand theft auto iii|769473536
 ```
+
 the fields being rank, archive filename, simple game name, and decompressed size; where only archive filename and simple game name are used for extraction/preparation.  
 </br>
 I copied my games using a Windows VM and FatXplorer since FTP would have taken weeks.  Assuming your Xbox F: partition is mapped to Windows X:\, here is how you copy one game.  Create a script for the list of ranked games you want to copy.
@@ -1244,7 +1240,9 @@ I copied my games using a Windows VM and FatXplorer since FTP would have taken w
 ```console
 xcopy "halo - combat evolved" "x:\Games\halo - combat evolved\" /e /v /f /h /r /y /exclude:exclude.txt
 ```
+
 where exclude.txt is:
+
 ```
 dashupdate.xbe
 update.xbe
@@ -1266,4 +1264,3 @@ Here is a list of games that I encountered that had filesname that were too long
 * toca race driver 3
 * toca race driver 2
 * tony hawk's american wasteland
-
