@@ -931,7 +931,7 @@ I stored the full game ISOs off on an 8TB drive from Internet Archive.  Download
 
 Personally, I downloaded all the metadata for each of the redump libraries and then create a file list from it.
 
-ia.identifiers.txt:  
+ia.identifiers.txt (you can use this to automate the processing of all libraries, scripts below show usage per library for simplicity):  
 
 ```
 microsoft_xbox_numberssymbols
@@ -1054,6 +1054,8 @@ python3 ia_downloader.py download --verify --resume --split 5 -i $1 -f "$line"
 fi
 done
 ```
+Note: I had to patch the internetarchive-downloader tools since it could not do exact matches.  [Patch](ia_downloader.patch)  
+
 download the ISOs in each library you want:  
 
 ```console
@@ -1063,4 +1065,108 @@ redump.download.isos.sh microsoft_xbox_b
 ...
 ```
 
-Note: I had to patch the internetarchive-downloader tools since it could not do exact matches.  [Patch](ia_downloader.patch)
+Since Internet Archives is pretty unreliable, I had corrupted downloads.  As such I would validate the SHA hashes against the metadata we downloaded above for each library.
+
+redump.sha.check.sh:
+
+```console
+#!/bin/bash
+if [ -z "$1" ]
+then
+echo usage: $0 ia.identifier
+exit
+fi
+
+iapath=internet_archive_downloads/$1
+
+cpath=$(pwd)
+cd "$iapath"
+
+for file in *.zip; do
+fsha=$( shasum "$file" | awk '{print $1}')
+msha=$( jq -r ".files[] | select(.name==\"$file\") | .sha1" $cpath/$1.json )
+if [ $? -ne 0 ]; then
+echo BAD SHA1 "$file": file: $fsha metadata: $msha
+else
+echo MATCH "$file": file: $fsha metadata: $msha 
+fi
+done
+```
+
+validate your downloads:
+
+```console
+redump.sha.check.sh microsoft_xbox_numberssymbols
+redump.sha.check.sh microsoft_xbox_a
+redump.sha.check.sh microsoft_xbox_b
+...
+```
+
+The redump ISO are enormous in size (6-7GB per ISO uncompressed).  The next step is to extract just the files and store them in compressed archives along with a text file that contains a dump of the default XBE header information for descriptive purposes.  
+
+redump.extract.isos.sh (requires https://github.com/XboxDev/extract-xiso and https://github.com/XboxDev/xbedump):
+
+```console
+#!/bin/bash
+if [ -z "$1" ]
+then
+echo usage: $0 ia.identifier
+exit
+fi
+iapath=internet_archive_downloads/$1
+cpath=$(pwd)
+cd "$iapath"
+for file in *.zip; do
+game="${file%.*}"
+if ! test -f "$game.done"; then
+unzip "$file"
+if [ $? -ne 0 ]; then
+echo $file: error unzipping iso >> $cpath/badextract.txt
+continue
+fi
+if ! test -f "$game.iso"; then
+echo $file: missing unzipped iso >> $cpath/badextract.txt
+continue
+fi
+"$cpath"/extract-xiso -d "$game" "$game.iso"
+if [ $? -ne 0 ]; then
+echo $file: error extracing files from iso >> $cpath/badextract.txt
+rm -f "$game.iso"
+continue
+fi
+rm -f "$game.iso"
+"$cpath"/xbedump "$game"/default.xbe -da >"$game".xbe.header.txt
+if [ $? -ne 0 ]; then
+echo $file: error dumping header from default.xbe >> $cpath/badextract.txt
+continue
+fi
+cd "$game"
+tar --disable-copyfile --exclude='.DS_Store' --exclude='._*' -cvf "../$game.tar" *
+if [ $? -ne 0 ]; then
+echo $file: error archiving game files >> $cpath/badextract.txt
+cd ..
+rm -rf "$game"
+continue
+fi
+cd ..
+rm -rf "$game"
+gzip --best "$game".tar
+if [ $? -ne 0 ]; then
+echo $file: error compressing archive >> $cpath/badextract.txt
+fi
+mkdir "$cpath"/extracted
+mv "$game".tar.gz "$cpath"/extracted
+mv "$game".xbe.header.txt "$cpath"/extracted
+touch "$game.done"
+fi
+done
+```
+
+```console
+redump.extract.isos.sh microsoft_xbox_numberssymbols
+redump.extract.isos.sh microsoft_xbox_a
+redump.extract.isos.sh microsoft_xbox_b
+...
+```
+
+From here you have a game.tar.gz file that can be extracted and either FTP'd or copied (using https://fatxplorer.eaton-works.com/) to your 2TB Xbox drive (F:\Games).  Remember to use the target naming convention in the ranking table above if you want reliable artwork matching.
