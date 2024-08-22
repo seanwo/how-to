@@ -17,8 +17,29 @@
 
 </details>
 
-## Setup
+## Steps
 
+### Basic Xbox Maintenance
+
+* Complete teardown: https://www.ifixit.com/Guide/Xbox+Disassembly/1308
+* Deep clean: https://youtu.be/8P82bs8FJO0?si=ui64rMTL2ULFd_EO
+* Clean and reapply thermal paste to CPU and GPU https://youtu.be/LSS3U1pxTlc?si=ZR4Fsc3QGWUassUf
+* Remove clock capacitor https://youtu.be/LSS3U1pxTlc?si=ZR4Fsc3QGWUassUf and https://consolemods.org/wiki/Xbox:Clock_Capacitor
+* If your metal RF shield is rusted, consider sanding and spraypainting with it rustoleum. Tape off all grounding points (the points that come in contact with the mobo) and do not use self etching paint.
+
+### Modchip Installation and Configuration (New Dashboard and Insignia Setup)
+
+* Prepare your modchip: https://support.makemhz.com/project-stellar/initial-setup using https://archive.org/details/MicrosoftXboxBIOS-Redump.org2010-09-13
+* Use your soldering skills and install your modchip: https://support.makemhz.com/project-stellar/installation-guide
+* Boot the Xbox up and enter modchip setup menu.
+* Store your EEPROM off to a file and FTP off the box.
+* Store your HDD key off.
+* Replace the original drive and format the new 2TB HDD (usign the new SATA to IDE adapter and replacment 80 wire IDE cable)
+* FTP XBMC4 gamers to E:\Dashboard https://support.makemhz.com/project-stellar/user-guide/custom-dashboard/overview and https://github.com/Rocky5/Xbox-Softmodding-Tool/tree/master/Extras%20Disc/Softmod/dashboards/msdash/retail
+* Reboot into XBMC4Gamers
+* FTP games to F:\Games or pull the drive and do a direct copy with FatXplorer (mentioned below in the following steps)
+* Setup Insignia for online gameplay: https://insignia.live/connect
+  
 ### Game Selection
 
 Although [Metacritic](https://www.metacritic.com/browse/game/xbox/all/all-time/metascore/?releaseYearMin=1958&releaseYearMax=2024&platform=xbox) does a good job of ranking original Xbox games, there are some gaps.  I supplemented the original rankings with individual metascores 
