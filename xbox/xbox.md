@@ -1190,7 +1190,7 @@ redump.extract.isos.sh microsoft_xbox_b
 
 ### Preparing and Transferring Games to Xbox
 
-From here you have a game.tar.gz file that can be extracted and either FTP'd or copied (using https://fatxplorer.eaton-works.com/) to your 2TB Xbox drive (F:\Games).  Remember to use the target naming convention in the ranking table above if you want reliable artwork matching.  
+From here you have a game.tar.gz file that can be extracted and either FTP'd or copied (using https://fatxplorer.eaton-works.com/) to your 2TB Xbox drive (F:\Games).  Remember to use the target naming convention in the ranking table above if you want reliable artwork matching.
 </br></br>
 On my mac, I prepared a secondary hdd I could use to just to a direct copy to the Xbox hdd.
 </br></br>
@@ -1201,7 +1201,7 @@ prepare.games.sh:
 map=map.txt
 
 src="/Volumes/redump/extracted"
-dst="/Volumes/games2"
+dst="/Volumes/games"
 
 cpath=$(pwd)
 
