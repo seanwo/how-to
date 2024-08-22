@@ -1237,7 +1237,7 @@ where map.txt looks similar to:
 003|5454000E|Grand Theft Auto III (USA).tar.gz|grand theft auto iii|769473536
 ```
 
-the fields being rank, archive filename, simple game name, and decompressed size; where only archive filename and simple game name are used for extraction/preparation.  
+the fields being rank, archive filename, simple game name, and decompressed size; where only archive filename and simple game name are used for extraction/preparation.
 </br></br>
 I copied my games using a Windows VM and FatXplorer since FTP would have taken weeks.  Assuming your Xbox F: partition is mapped to Windows X:\, here is how you copy one game.  Create a script for the list of ranked games you want to copy.
 
@@ -1251,9 +1251,9 @@ where exclude.txt is:
 dashupdate.xbe
 ```
 
-Files dashupdate.xbe is for updating the dashboard.  I leave update.xbe, download.xbe, and stats.xbe if they exist for possible use with Insignia and to reduce game crashes when accessed.  
+Files dashupdate.xbe is for updating the dashboard.  I leave update.xbe, download.xbe, and stats.xbe if they exist for possible use with Insignia and to reduce game crashes when accessed.
 </br></br>
-Do a final check that all files copied over to X:\Games\xxx.  
+Do a final check that all files copied over to X:\Games\xxx.
 </br></br>
 Here is a list of games that I encountered that had filesname that were too long (or had unsupported symbols in the the filename that caused them to not be copied properly and hence were excluded from my library):
 
