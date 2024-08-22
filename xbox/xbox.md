@@ -1063,4 +1063,4 @@ redump.download.isos.sh microsoft_xbox_b
 ...
 ```
 
-Note: I had to patch the internetarchive-downloader tools since it could not do exact matches.  [Patch](ia_download.patch)
+Note: I had to patch the internetarchive-downloader tools since it could not do exact matches.  [Patch](ia_downloader.patch)
