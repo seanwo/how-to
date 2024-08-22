@@ -31,10 +31,10 @@
 * Prepare your Project Stellar modchip: https://support.makemhz.com/project-stellar/initial-setup using https://archive.org/details/MicrosoftXboxBIOS-Redump.org2010-09-13
 * Use your soldering skills and install your Project Stellar modchip: https://support.makemhz.com/project-stellar/installation-guide
 * Boot the sytem up and enter modchip setup menu.
-* Save your EEPROM to a file and FTP off the box for save keeping.
+* Save your EEPROM to a file and FTP it off the box for save keeping.
 * Store your HDD key offline.
 * Replace the original drive and then format the new 2TB HDD (using the new SATA to IDE adapter and replacment 80 wire IDE cable): https://support.makemhz.com/project-stellar/user-guide/new-hdd/setup-hdd-stellar
-* FTP teh XBMC4 gamers dashboard to E:\Dashboard: https://support.makemhz.com/project-stellar/user-guide/custom-dashboard/overview and https://github.com/Rocky5/Xbox-Softmodding-Tool/tree/master/Extras%20Disc/Softmod/dashboards/msdash/retail
+* FTP the XBMC4 gamers dashboard to E:\Dashboard: https://support.makemhz.com/project-stellar/user-guide/custom-dashboard/overview and https://github.com/Rocky5/Xbox-Softmodding-Tool/tree/master/Extras%20Disc/Softmod/dashboards/msdash/retail
 * Reboot into the XBMC4Gamers dashboard
 * FTP games to F:\Games or pull the drive and do a direct copy with FatXplorer (mentioned below in the following steps)
 * Setup Insignia for online gameplay: https://insignia.live/connect
