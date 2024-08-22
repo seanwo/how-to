@@ -22,7 +22,7 @@
 
 * Complete teardown guide: https://www.ifixit.com/Guide/Xbox+Disassembly/1308
 * Deep clean instructions: https://youtu.be/8P82bs8FJO0?si=ui64rMTL2ULFd_EO
-* Cleaning instructions (with thermal paste reaplication to CPU/GPU): https://youtu.be/LSS3U1pxTlc?si=ZR4Fsc3QGWUassUf
+* Cleaning instructions (with thermal paste reapplication to CPU/GPU): https://youtu.be/LSS3U1pxTlc?si=ZR4Fsc3QGWUassUf
 * Removing the clock capacitor https://youtu.be/LSS3U1pxTlc?si=ZR4Fsc3QGWUassUf and https://consolemods.org/wiki/Xbox:Clock_Capacitor
 * If your metal RF shield is rusted, consider sanding and then spraypainting with it rustoleum. Tape off all grounding points (the points that come in contact with the motherboard) and do not use self etching paint.
 
