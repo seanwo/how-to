@@ -1102,6 +1102,8 @@ redump.sha.check.sh microsoft_xbox_b
 ...
 ```
 
+### Archiving Games
+
 The redump ISO are enormous in size (6-7GB per ISO uncompressed).  The next step is to extract just the files and store them in compressed archives along with a text file that contains a dump of the default XBE header information for descriptive purposes.  
 
 redump.extract.isos.sh (requires https://github.com/XboxDev/extract-xiso and https://github.com/XboxDev/xbedump):
@@ -1168,6 +1170,8 @@ redump.extract.isos.sh microsoft_xbox_a
 redump.extract.isos.sh microsoft_xbox_b
 ...
 ```
+
+### Preparing and Transferring Games to Xbox
 
 From here you have a game.tar.gz file that can be extracted and either FTP'd or copied (using https://fatxplorer.eaton-works.com/) to your 2TB Xbox drive (F:\Games).  Remember to use the target naming convention in the ranking table above if you want reliable artwork matching.  
 </br>
