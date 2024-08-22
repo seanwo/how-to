@@ -1255,7 +1255,7 @@ Files dashupdate.xbe is for updating the dashboard.  I leave update.xbe, downloa
 </br></br>
 Do a final check that all files copied over to X:\Games\xxx.
 </br></br>
-Here is a list of games that I encountered that had filesname that were too long (or had unsupported symbols in the the filename that caused them to not be copied properly and hence were excluded from my library):
+Here is a list of games that I encountered that had filesnames that were too long (or had unsupported symbols in the the filename that caused them to not be copied properly and hence were excluded from my library):
 
 * alter echo
 * enter the matrix
