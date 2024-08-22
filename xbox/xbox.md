@@ -1026,7 +1026,7 @@ jq '.files[].name' $line.json | grep -i ".zip">$line.file.list.txt
 done
 ``` 
 
-create downlaod file lists:
+create download file lists:
 
 ```console
 redump.create.file.list.sh microsoft_xbox_numberssymbols
