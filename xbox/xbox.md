@@ -941,9 +941,9 @@ Although [Metacritic](https://www.metacritic.com/browse/game/xbox/all/all-time/m
 ### Downloading Games
 
 I store the full game ISOs on an 8TB drive from Internet Archive since downloading will take days for hundreds of games.  I suggest you automate the process as much as possible.
-</br>
+</br></br>
 Personally, I downloaded all the metadata for each of the redump libraries and then create a file list from it.
-</br>
+</br></br>
 ia.identifiers.txt (you can use this to automate the processing of all libraries, scripts below show usage per library for simplicity):  
 
 ```
@@ -1032,7 +1032,7 @@ redump.create.file.list.sh microsoft_xbox_b
 ```
 
 Now I just go through and comment out the ISOs I don't need to use as the source file for downloading.
-</br>
+</br></br>
 microsoft_xbox_a.file.list.txt:  
 
 ```
@@ -1049,7 +1049,7 @@ microsoft_xbox_a.file.list.txt:
 ```
 
 You can now use the filelist to download all the ISOs.
-</br>
+</br></br>
 redump.download.isos (requires https://github.com/john-corcoran/internetarchive-downloader):
 
 ```console
@@ -1068,7 +1068,7 @@ fi
 done
 ```
 Note: I had to patch the internetarchive-downloader tools since it could not do exact matches.  [Patch](ia_downloader.patch)
-</br>
+</br></br>
 download the ISOs in each library you want:  
 
 ```console
@@ -1079,7 +1079,7 @@ redump.download.isos.sh microsoft_xbox_b
 ```
 
 Since Internet Archives is pretty unreliable, I had corrupted downloads.  As such I would validate the SHA hashes against the metadata we downloaded above for each library.
-</br>
+</br></br>
 redump.sha.check.sh:
 
 ```console
@@ -1118,7 +1118,7 @@ redump.sha.check.sh microsoft_xbox_b
 ### Archiving Games
 
 The redump ISO are enormous in size (6-7GB per ISO uncompressed).  The next step is to extract just the files and store them in compressed archives along with a text file that contains a dump of the default XBE header information for descriptive purposes.
-</br>
+</br></br>
 redump.extract.isos.sh (requires https://github.com/XboxDev/extract-xiso and https://github.com/XboxDev/xbedump):
 
 ```console
@@ -1187,9 +1187,9 @@ redump.extract.isos.sh microsoft_xbox_b
 ### Preparing and Transferring Games to Xbox
 
 From here you have a game.tar.gz file that can be extracted and either FTP'd or copied (using https://fatxplorer.eaton-works.com/) to your 2TB Xbox drive (F:\Games).  Remember to use the target naming convention in the ranking table above if you want reliable artwork matching.  
-</br>
+</br></br>
 On my mac, I prepared a secondary hdd I could use to just to a direct copy to the Xbox hdd.
-</br>
+</br></br>
 prepare.games.sh:
 
 ```console
@@ -1234,7 +1234,7 @@ where map.txt looks similar to:
 ```
 
 the fields being rank, archive filename, simple game name, and decompressed size; where only archive filename and simple game name are used for extraction/preparation.  
-</br>
+</br></br>
 I copied my games using a Windows VM and FatXplorer since FTP would have taken weeks.  Assuming your Xbox F: partition is mapped to Windows X:\, here is how you copy one game.  Create a script for the list of ranked games you want to copy.
 
 ```console
@@ -1249,9 +1249,9 @@ update.xbe
 ```
 
 Files dashupdate.xbe is for updating the dashboard and update.xbe is for updating the game.  I leave download.xbe and stats.xbe if they exist for possible use with Insignia and to reduce game crashes when accessed.  
-</br>
+</br></br>
 Do a final check that all files copied over to X:\Games\xxx.  
-</br>
+</br></br>
 Here is a list of games that I encountered that had filesname that were too long (or had unsupported symbols in the the filename that caused them to not be copied properly and hence were excluded from my library):
 
 * alter echo
