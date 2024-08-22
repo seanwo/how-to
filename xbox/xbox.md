@@ -55,7 +55,7 @@ Although [Metacritic](https://www.metacritic.com/browse/game/xbox/all/all-time/m
 * Optional: You may want to exclude "Bonus Discs"
 
 <details>
-  <summary>Game Rankings</summary>
+  <summary>Game Rankings (expandable)</summary>
 
 | Rank | TitleID | Internet Archive File | Simple Name |
 | --- | -------- | -------------------------------------------------------------------------------- | ---------------------------------------- |
