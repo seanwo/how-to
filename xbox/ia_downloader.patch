@@ -1,0 +1,22 @@
+--- ia_downloader.py	2022-04-27 18:55:55
++++ no.timemachine/xbox/ia_downloader.py	2024-07-23 14:24:23
+@@ -1070,8 +1070,8 @@
+                 cache_file_handler.write(log_write_str)
+             if file_filters is not None:
+                 if not invert_file_filtering:
+-                    if not any(
+-                        substring.lower() in file["name"].lower() for substring in file_filters
++                    if not (
++                        file["name"] in file_filters
+                     ):
+                         continue
+                 else:
+@@ -1692,7 +1692,7 @@
+         "-f",
+         "--filefilters",
+         type=str,
+-        nargs="+",
++        #nargs="+",
+         help=(
+             "One or more (space separated) file name filters; only files that contain any of the"
+             " provided filter strings (case insensitive) will be downloaded. If multiple filters"
