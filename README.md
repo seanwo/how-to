@@ -8,3 +8,4 @@ _"Because I can't remember any of this stuff weeks later."_
 * [Extending your GPG Key](gpg/gpg.extend.md)
 * [Upscaling miniDV SD Video to HD Video](upscaling/minidv2hd.md)
 * [Digitizing and Enhancing VHS Tapes](vhs/vhs.md)
+* [Modded Xbox Instructions](xbox/xbox.md)
