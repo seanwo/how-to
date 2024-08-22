@@ -22,7 +22,7 @@
 ### Game Selection
 
 Although [Metacritic](https://www.metacritic.com/browse/game/xbox/all/all-time/metascore/?releaseYearMin=1958&releaseYearMax=2024&platform=xbox) does a good job of ranking original Xbox games, there are some gaps.  I supplemented the original rankings with individual metascores 
- for missing games and when an Xbox metascore was not available, I used a compatible (same generaton) consoles' game metascore.  This table provides the game's rank, title id, Internet Archive filename, and the simple name you should use when you transfer them to your Xbox so that artwork can be matched to the game (the artwork installer is very particular, so I extracted its fuzzy match names to ensure a perfect match everytime).  There are about 876 games that match the following criteria.  You will not be able to fit all games on to a 2TB drive but now you can take N ranked games and add your favorites to the list if they are not in the top N.
+ for missing games and when an Xbox metascore was not available, I used a compatible (same generaton) consoles' game metascore.  This table provides the game's rank, title id, Internet Archive filename, and the simple name you should use when you transfer them to your Xbox so that artwork can be matched to the game (the artwork installer is very particular, so I extracted its fuzzy match names to ensure a perfect match everytime).  There are about 876 games that match the following criteria.  You will not be able to fit all games on to a 2TB drive but now you can take N ranked games and add your favorites to the list if they are not in the top N.  There are "HDD Ready" archives out that could save you time but beaware that they have removed files (usually language files other than US and some XBE files related to online use) and re-encoded some video files to be lower quality within games.  I chose to transfer my games from straigh ISO images; I only remove 2 files when I go to transfer them to the Xbox. If you want DLC, you will have to download that seperately and add it.  These games are as if they were played from a disc.
 
 <details>
   <summary>Game Criteria</summary>
@@ -1169,4 +1169,76 @@ redump.extract.isos.sh microsoft_xbox_b
 ...
 ```
 
-From here you have a game.tar.gz file that can be extracted and either FTP'd or copied (using https://fatxplorer.eaton-works.com/) to your 2TB Xbox drive (F:\Games).  Remember to use the target naming convention in the ranking table above if you want reliable artwork matching.
+From here you have a game.tar.gz file that can be extracted and either FTP'd or copied (using https://fatxplorer.eaton-works.com/) to your 2TB Xbox drive (F:\Games).  Remember to use the target naming convention in the ranking table above if you want reliable artwork matching.  
+</br>
+On my mac, I prepared a secondary hdd I could use to just to a direct copy to the Xbox hdd.  
+
+prepare.games.sh:
+```console
+#!/bin/bash
+map=map.txt
+
+src="/Volumes/redump/extracted"
+dst="/Volumes/games2"
+
+cpath=$(pwd)
+
+cat $map | while read line
+do
+if [[ ${line:0:1} != "#" ]]
+then 
+archive=$(echo $line | awk -F'[|]' '{print $3}')
+targetdir=$(echo $line | awk -F'[|]' '{print $4}')
+cd $dst
+if [[ -d ${targetdir} ]]; then
+echo Skipping $archive
+continue;
+fi
+mkdir "${targetdir}"
+tar -xvf "$src/$archive" -C "${targetdir}" 
+if [ $? -ne 0 ]; then
+echo $archive: error extracing files from iso >> $cpath/prep.error.txt
+rm -rf "${targetdir}"
+continue
+fi
+find "${targetdir}" -type f -name '._*' -delete
+find "${targetdir}" -type f -name '.DS_Store' -delete
+fi
+done
+```
+where map.txt looks similar to:
+```
+001|4D530004|Halo - Combat Evolved (USA) (Rev 2).tar.gz|halo - combat evolved|3625218048
+002|54540073|Grand Theft Auto - Vice City (USA) (Rev 1).tar.gz|gta vice city|1385124864
+003|5454000E|Grand Theft Auto III (USA).tar.gz|grand theft auto iii|769473536
+```
+the fields being rank, archive filename, simple game name, and decompressed size; where only archive filename and simple game name are used for extraction/preparation.  
+</br>
+I copied my games using a Windows VM and FatXplorer since FTP would have taken weeks.  Assuming your Xbox F: partition is mapped to Windows X:\, here is how you copy one game.  Create a script for the list of ranked games you want to copy.
+
+```console
+xcopy "halo - combat evolved" "x:\Games\halo - combat evolved\" /e /v /f /h /r /y /exclude:exclude.txt
+```
+where exclude.txt is:
+```
+dashupdate.xbe
+update.xbe
+```
+
+Files dashupdate.xbe is for updating the dashboard and update.xbe is for updating the game.  I leave download.xbe and stats.xbe if they exist for possible use with Insignia and to reduce game crashes when accessed.  
+</br>
+Do a final check that all files copied over to X:\Games\xxx.  
+</br>
+Here is a list of games that I encountered that had filesname that were too long (or had unsupported symbols in the the filename that caused them to not be copied properly and hence were excluded from my library):
+
+* alter echo
+* enter the matrix
+* gun
+* harry potter and the prisoner of azkaban
+* midnight club 3 dub edition remix
+* monster garage
+* mtx mototrax
+* toca race driver 3
+* toca race driver 2
+* tony hawk's american wasteland
+
