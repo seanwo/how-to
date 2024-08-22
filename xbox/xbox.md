@@ -19,8 +19,10 @@
 
 ## Setup
 
+### Game Selection
+
 Although [Metacritic](https://www.metacritic.com/browse/game/xbox/all/all-time/metascore/?releaseYearMin=1958&releaseYearMax=2024&platform=xbox) does a good job of ranking original Xbox games, there are some gaps.  I supplemented the original rankings with individual metascores 
- for missing games and when an Xbox metascore was not available, I used a compatible (same generaton) consoles' game metascore.  This table provides the game's rank, title id, Internet Archive filename, and the simple name you should use when you transfer them to your Xbox so that artwork can be matched to the game (the artwork installer is very particular, so I extracted its fuzzy match names to ensure a perfect match everytime).  There are about 876 games that match the following criteria.
+ for missing games and when an Xbox metascore was not available, I used a compatible (same generaton) consoles' game metascore.  This table provides the game's rank, title id, Internet Archive filename, and the simple name you should use when you transfer them to your Xbox so that artwork can be matched to the game (the artwork installer is very particular, so I extracted its fuzzy match names to ensure a perfect match everytime).  There are about 876 games that match the following criteria.  You will not be able to fit all games on to a 2TB drive but now you can take N ranked games and add your favorites to the list if they are not in the top N.
 
 <details>
   <summary>Game Criteria</summary>
@@ -922,3 +924,143 @@ Although [Metacritic](https://www.metacritic.com/browse/game/xbox/all/all-time/m
 | 876 | 4D530084 | Volvo - Drive for Life (USA).zip | volvo - drive for life |
 
 </details>
+
+### Downloading Games
+
+I stored the full game ISOs off on an 8TB drive from Internet Archive.  Downloading will take days on average.  I suggest you automate the process.
+
+Personally, I downloaded all the metadata for each of the redump libraries and then create a file list from it.
+
+ia.identifiers.txt:  
+
+```
+microsoft_xbox_numberssymbols
+microsoft_xbox_a
+microsoft_xbox_b
+microsoft_xbox_c_part1
+microsoft_xbox_c_part2
+microsoft_xbox_d_part1
+microsoft_xbox_d_part2
+microsoft_xbox_e
+microsoft_xbox_f
+microsoft_xbox_g
+microsoft_xbox_h
+microsoft_xbox_i
+microsoft_xbox_j
+microsoft_xbox_k
+microsoft_xbox_l
+microsoft_xbox_m_part1
+microsoft_xbox_m_part2
+microsoft_xbox_n_part1
+microsoft_xbox_n_part2
+microsoft_xbox_o_part1
+microsoft_xbox_o_part2
+microsoft_xbox_p
+microsoft_xbox_q
+microsoft_xbox_r
+microsoft_xbox_s_part1
+microsoft_xbox_s_part2
+microsoft_xbox_t_part1
+microsoft_xbox_t_part2
+microsoft_xbox_u
+microsoft_xbox_v
+microsoft_xbox_w
+microsoft_xbox_x
+microsoft_xbox_y
+microsoft_xbox_z
+```
+
+redump.create.metadata.sh (requires https://archive.org/developers/internetarchive/cli.html):  
+
+```console
+#!/bin/bash
+if [ -z "$1" ]
+then
+echo usage: $0 ia.identifier
+exit
+fi
+cat $1 | while read line
+do
+./ia metadata $line>$line.json
+done
+```  
+  
+create metadata files:
+
+```console
+redump.create.metadata.sh microsoft_xbox_numberssymbols
+redump.create.metadata.sh microsoft_xbox_a
+redump.create.metadata.sh microsoft_xbox_b
+...
+```
+
+redump.create.file.list.sh (require https://github.com/jqlang/jq):  
+
+```console
+#!/bin/bash
+if [ -z "$1" ]
+then
+echo usage: $0 ia.identifier
+exit
+fi
+cat $1 | while read line
+do
+jq '.files[].name' $line.json | grep -i ".zip">$line.file.list.txt
+done
+``` 
+
+create downlaod file lists:
+
+```console
+redump.create.file.list.sh microsoft_xbox_numberssymbols
+redump.create.file.list.sh microsoft_xbox_a
+redump.create.file.list.sh microsoft_xbox_b
+...
+```
+
+Now I just go through and comment out the ISOs I don't need to use as the source file for downloading.
+
+microsoft_xbox_a.file.list.txt:  
+
+```
+#"AFL Live 2003 (Australia).zip"
+#"AFL Live 2004 (Australia).zip"
+#"AFL Live Premiership Edition (Australia) (Rev 1).zip"
+#"AFL Live Premiership Edition (Australia).zip"
+#"AFL Premiership (Australia).zip"
+"AMF Bowling 2004 (USA).zip"
+"AMF Xtreme Bowling (USA).zip"
+"AND 1 Streetball (World) (En,Fr,De,Es,It).zip"
+#"ATV - Quad Power Racing 2 (Europe) (En,Fr,De,Es,It).zip"
+...
+```
+
+You can now use the filelist to download all the ISOs.  
+
+redump.download.isos (requires https://github.com/john-corcoran/internetarchive-downloader):
+
+```console
+#!/bin/bash
+if [ -z "$1" ]
+then
+echo usage: $0 ia.identifier
+exit
+fi
+cat $1.file.list.txt | while read line
+do
+if [[ ${line:0:1} != "#" ]]
+then 
+python3 ia_downloader.py download --verify --resume --split 5 -i $1 -f "$line"
+fi
+done
+```
+download the ISOs in each library you want:  
+
+```console
+redump.download.isos.sh microsoft_xbox_numberssymbols
+redump.download.isos.sh microsoft_xbox_a
+redump.download.isos.sh microsoft_xbox_b
+...
+```
+
+Note: I had to patch the internetarchive-downloader tools since it could not do exact matches.  [Patch](ia_download.patch)
