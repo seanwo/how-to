@@ -34,6 +34,7 @@
 * Save your EEPROM to a file and FTP it off the box for save keeping.
 * Store your HDD key offline.
 * Replace the original drive and then format the new 2TB HDD (using the new SATA to IDE adapter and replacment 80 wire IDE cable): https://support.makemhz.com/project-stellar/user-guide/new-hdd/setup-hdd-stellar
+* Restore the original dashboard to the C and E partitions using https://www.mediafire.com/file/95s2c0tf8873dyb/Clean_C_and_E_Files_for_Xbox.7z/file (most other copies of the dashboard out there are missing the Audio directory for whatever reason)
 * FTP the XBMC4 gamers dashboard to E:\Dashboard: https://support.makemhz.com/project-stellar/user-guide/custom-dashboard/overview and https://github.com/Rocky5/Xbox-Softmodding-Tool/tree/master/Extras%20Disc/Softmod/dashboards/msdash/retail
 * Reboot into the XBMC4Gamers dashboard
 * FTP games to F:\Games or pull the drive and do a direct copy with FatXplorer (mentioned below in the following steps)
