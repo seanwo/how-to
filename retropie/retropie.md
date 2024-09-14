@@ -1,5 +1,7 @@
 # RetroPie Instructions
 
+![alt text](nespi.case.jpg "retropie")
+
 ## Parts List
   
 * [Raspberry Pi 3 - Model B](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/) $35
