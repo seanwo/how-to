@@ -65,4 +65,14 @@ This will take a long time.  Once it is complete, reboot the pi.
 
 ### Setup USB drive or External SSD for Games (optional)
 
+source: https://retropie.org.uk/docs/Running-ROMs-from-a-USB-drive/<br>
 
+Basically, format your SSD as exFat, place folder on it called "retropie-mount", boot your raspberry pi up with the drive plugged in, wait for the drive to stop flashing and it will be initialized for games.
+
+### RetroPie Packages
+
+RetroPi has the following packages it uses: core, main, opt (optional) and exp (experimental). Core packages are basically the RetroPi UI and drivers. Main packages are the emulators it installs by default. Optional packages are alternative emulators to the ones in the main packages and/or extra emulators you can install.  Experimental packages extend the optional packages but are less likely to be stable.</br>
+</br>
+Each emulator can be a snowflake on what is needed to get ROMs (games) running on them.  The next section covers my adventures and choices for running ROMS and ports on selected emulators.  Your decisions may vary.
+
+### Emulators
