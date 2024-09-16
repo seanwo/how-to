@@ -78,3 +78,31 @@ RetroPi has the following packages it uses: core, main, opt (optional) and exp (
 Each emulator can be a snowflake on what is needed to get ROMs (games) running on them.  The next section covers my adventures and choices for running ROMS and ports on selected emulators.  Your decisions may vary.
 
 ### Emulators
+
+| directory | rp_module_id | roms | bios | bios.name | bios.source | setup notes |
+| --------- | ------------ | ---- | ---- | --------- | ----------- | ----------- |
+| amstradcpc | lr-caprice32 | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Amstrad%20-%20CPC.zip | none |  |  | use start+Y for virtual keyboard |
+| atari2600 | lr-stella2014 | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Atari%20-%202600.zip | none |  |  |  |
+| atari5200 | lr-atari800 | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Atari%20-%205200.zip | required | 5200.rom | [BIOS] Atari 5200 (USA).zip | https://youtu.be/u2nj73mNgAE?si=-mP15IKaJIe7Dvoj</br>https://youtu.be/D8eZDq3xyBA?si=ZA8AogZAAm8ot4LU |
+| atari7800 | lr-prosystem | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Atari%20-%207800.zip | optional | 7800 BIOS (U).rom | [BIOS] Atari 7800 (USA).zip |  |
+| atarilynx | lr-handy | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Atari%20-%20Lynx.zip | optional | lynxboot.img | [BIOS] Atari Lynx (USA |  Europe).zip |  |
+| channelf | lr-freechaf | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Fairchild%20-%20Channel%20F.zip | required | sl31253.bin</br>sl31254.bin</br>sl90025.bin | [BIOS] Fairchild Channel F (USA) (SL31253).zip</br>[BIOS] Fairchild Channel F (USA) (SL31254).zip</br>[BIOS] Fairchild Channel F (USA) (SL90025).zip |  |
+| coleco | coolcv | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Coleco%20-%20ColecoVision.zip | none |  |  | requires real keyboard |
+| fds | lr-nestopia | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Nintendo%20-%20Nintendo%20Entertainment%20System.zip | required | disksys.rom | [BIOS] Family Computer Disk System (Japan) (Rev 1).zip |  |
+| gamegear | lr-genesis-plus-gx | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Sega%20-%20Game%20Gear.zip | optional | bios.gg | [BIOS] Sega Game Gear (USA) (Majesco).zip |  |
+| gb | lr-gambatte | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Nintendo%20-%20Game%20Boy.zip | optional | gb_bios.bin | [BIOS] Nintendo Game Boy Boot ROM (World) (Rev 1).zip |  |
+| gba | lr-mgba | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Nintendo%20-%20Game%20Boy%20Advance.zip | optional | gba_bios.bin | [BIOS] Game Boy Advance (World).zip |  |
+| gbc | lr-gambatte | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Nintendo%20-%20Game%20Boy%20Color.zip | optional | gbc_bios.bin | [BIOS] Nintendo Game Boy Color Boot ROM (World) (Rev 1).zip |  |
+| mastersystem | lr-genesis-plus-gx | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Sega%20-%20Master%20System%20-%20Mark%20III.zip | optional | bios_E.sms</br>bios_J.sms</br>bios_U.sms | [BIOS] Sega Master System (USA |  Europe) (v1.3).zip</br>[BIOS] Sega Master System (Japan) (v2.1).zip</br>[BIOS] Sega Master System (USA |  Europe) (v1.3).zip |  |
+| megadrive | lr-genesis-plus-gx | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Sega%20-%20Mega%20Drive%20-%20Genesis.zip | optional | bios_MD.bin | [BIOS] Sega Mega Drive - Genesis Boot ROM (World).zip |  |
+| n64 | mupen64plus | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Nintendo%20-%20Nintendo%2064.zip | none |  |  | uncompress all .zip files to .z64 |
+| nes | lr-fceumm | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Nintendo%20-%20Nintendo%20Entertainment%20System.zip | optional |  |  | no roms needed for nes; only fds |
+| ngp | lr-beetle-ngp | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/SNK%20-%20Neo%20Geo%20Pocket.zip | none |  |  |  |
+| ngpc | lr-beetle-ngp | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/SNK%20-%20Neo%20Geo%20Pocket%20Color.zip | none |  |  |  |
+| pcengine | lr-beetle-supergrafx | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/NEC%20-%20PC%20Engine%20SuperGrafx.zip | required | syscard3.pce | [BIOS] Super CD-ROM System (Japan) (v3.0).zip | make lr-beetle-supergrafx default engine |
+| sega32x | lr-picodrive | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Sega%20-%2032X.zip | none |  |  |  |
+| segacd | lr-genesis-plus-gx | no games; add on periphal | required | bios_CD_U.bin</br>bios_CD_E.bin</br>bios_CD_J.bin | [BIOS] Sega CD (USA) (Rev B).zip</br>[BIOS] Mega-CD (Europe).zip</br>[BIOS] Mega-CD (Asia) (Ja) (Rev H).zip |  |
+| sg-1000 | lr-genesis-plus-gx | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Sega%20-%20SG-1000.zip | none |  |  |  |
+| snes | lr-snes9x2010 | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System.zip | required (satellaview) | BS-X.bin | https://archive.org/download/bsx-bios | uncompress satellaview from .zip to .bs |
+| vectrex | lr-vecx | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/GCE%20-%20Vectrex.zip | none |  |  |  |
+| zxspectrum | lr-fuse | https://myrient.erista.me/files/TOSEC/Sinclair/ZX%20Spectrum/Games/%5BZ80%5D/Sinclair%20ZX%20Spectrum%20-%20Games%20-%20%5BZ80%5D.zip | none |  |  | select for virtual keyboard; hotkey-x to configure kempston joystick
