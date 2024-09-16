@@ -79,6 +79,18 @@ Each emulator can be a snowflake on what is needed to get ROMs (games) running o
 
 ### Emulators
 
+In the package manager, remove the following main (arcade) packages:
+
+* lr-fbneo
+* lr-mame2003
+
+Add the following optional & experimental (replacment) packages:
+
+* coolcv (optiona)
+* lr-freechaf (experimental)
+
+Here are the notes for configuring the packages, getting roms, and BIOS files:
+
 | directory | rp_module_id | roms | bios | bios.name | bios.source | setup notes |
 | --------- | ------------ | ---- | ---- | --------- | ----------- | ----------- |
 | amstradcpc | lr-caprice32 | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Amstrad%20-%20CPC.zip | none |  |  | use start+Y for virtual keyboard |
