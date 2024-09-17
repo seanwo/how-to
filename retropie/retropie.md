@@ -112,6 +112,7 @@ Here are the notes for configuring the packages, getting roms, and BIOS files:
 | ngp | lr-beetle-ngp | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/SNK%20-%20Neo%20Geo%20Pocket.zip | none |  |  |  |
 | ngpc | lr-beetle-ngp | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/SNK%20-%20Neo%20Geo%20Pocket%20Color.zip | none |  |  |  |
 | pcengine | lr-beetle-supergrafx | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/NEC%20-%20PC%20Engine%20SuperGrafx.zip | required | syscard3.pce | [BIOS] Super CD-ROM System (Japan) (v3.0).zip | make lr-beetle-supergrafx default engine |
+| psx | lr-pcsx-rearmed | https://archive.org/download/chd_psx/CHD-PSX-USA/ | required | psxonpsp660.bin & scph101.bin & scph7001.bin & scph5501.bin & scph1001.bin | https://github.com/Abdess/retroarch_system/tree/libretro/Sony%20-%20PlayStation | |
 | sega32x | lr-picodrive | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Sega%20-%2032X.zip | none |  |  |  |
 | segacd | lr-genesis-plus-gx | no games; add on periphal | required | bios_CD_U.bin</br>bios_CD_E.bin</br>bios_CD_J.bin | [BIOS] Sega CD (USA) (Rev B).zip</br>[BIOS] Mega-CD (Europe).zip</br>[BIOS] Mega-CD (Asia) (Ja) (Rev H).zip |  |
 | sg-1000 | lr-genesis-plus-gx | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Sega%20-%20SG-1000.zip | none |  |  |  |
