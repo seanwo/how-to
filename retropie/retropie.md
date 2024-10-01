@@ -6,7 +6,7 @@
   
 * [Raspberry Pi 3 - Model B](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/) $35
 * [Retroflag NESPi Case Plus](https://www.amazon.com/dp/B07BRHDVTN) $20
-* [8Bitdo Ultimate 2C Wired Controller](https://www.amazon.com/dp/B003VAHYQY) $20
+* [8Bitdo Ultimate 2C Wired Controller](https://www.amazon.com/dp/B0D72RVDLH) $20
 * [SAMSUNG EVO Select 128GB microSD](https://www.amazon.com/SAMSUNG-microSDXC-Nintendo-Switch-MB-ME256SA-AM/dp/B0CWPN662Q) $15
 * [Crucial BX500 1TB](https://www.amazon.com/Crucial-BX500-NAND-2-5-Inch-Internal/dp/B07YD579WM) $65 (Optional to store games on SSD)
 * [UGREEN 2.5" Hard Drive Enclosure](https://www.amazon.com/gp/product/B06XWRRMYX/) $10 (Optional to store games on SSD)
