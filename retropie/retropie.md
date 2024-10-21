@@ -122,11 +122,13 @@ Here are the notes for configuring the packages, getting roms, and BIOS files:
 
 ### Scraping
 
-Metadata and box art is achieved through scraping. RetroPie has a scraper built in but it will store the metadata (gamelist.xml) and images on the SD card instead of on the USB drive if you have your games stored on an external device. To overcome this we will need to install the actual command line [scraper](https://github.com/sselph/scraper/wiki) and run it on each rom directory individually.
-
-First, go to [ScreenScaper](https://screenscraper.fr/index.php) and create an account with a username and password.
-
-In the package manager, install the scaper supplemental package.
+Metadata and box art is achieved through scraping. RetroPie has a scraper built in but it will store the metadata (gamelist.xml) and images on the SD card instead of on the USB drive if you have your games stored on an external device. To overcome this we will need to install the actual command line [scraper](https://github.com/sselph/scraper/wiki) and run it on each rom directory individually.</br>
+</br>
+First, go to [ScreenScaper](https://screenscraper.fr/index.php) and create an account with a username and password.</br>
+</br>
+Second, in the package manager, install the scaper supplemental package.</br>
+</br>
+Lastly, run the scraper on each system's roms.</br>
 
 SSH into the raspberry pi:
 ```console
