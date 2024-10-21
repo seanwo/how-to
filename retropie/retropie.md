@@ -119,3 +119,24 @@ Here are the notes for configuring the packages, getting roms, and BIOS files:
 | snes | lr-snes9x2010 | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System.zip | required (satellaview) | BS-X.bin | https://archive.org/download/bsx-bios | uncompress satellaview from .zip to .bs |
 | vectrex | lr-vecx | https://archive.org/download/hearto-1g1r-collection/hearto_1g1r_collection/GCE%20-%20Vectrex.zip | none |  |  |  |
 | zxspectrum | lr-fuse | https://myrient.erista.me/files/TOSEC/Sinclair/ZX%20Spectrum/Games/%5BZ80%5D/Sinclair%20ZX%20Spectrum%20-%20Games%20-%20%5BZ80%5D.zip | none |  |  | select for virtual keyboard; hotkey-x to configure kempston joystick
+
+### Scraping
+
+Metadata and box are is achieved through scraping. RetroPie has a scraper built in but it will store the metadata (gamelist.xml) and images on the SD card instead of on the USB drive if you have your games stored on an external device. To overcome this we will need to install the actual command line [scraper](https://github.com/sselph/scraper/wiki) and run it on each rom directory individually.
+
+First, go to [ScreenScaper](https://screenscraper.fr/index.php) and create an account with a username and password.
+
+In the package manager, install the scaper supplemental package.
+
+SSH into the raspberry pi:
+```console
+ssh pi@retropie
+```
+
+run the following command:
+```console
+cd Retro/roms/[systemname]
+/opt/retropie/supplementary/scraper/scraper -console_src ss -ss_user=username -ss_password password -missing missing.txt
+```
+
+Repeat the above command for each system.
