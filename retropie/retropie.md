@@ -8,7 +8,8 @@
 * [Retroflag NESPi Case Plus](https://www.amazon.com/dp/B07BRHDVTN) $20
 * [8Bitdo Ultimate C 2.4g Wireless Controller](https://www.amazon.com/dp/B0C2V6JLNJ) $20
 * [Micro Center SuperSpeed 5 Pack 64GB USB 3.0 Flash Drive](https://www.amazon.com/gp/product/B07T4J6X1N/) $5 (per drive)
-* [PNY P-SDU32GX5U1100EL-MP 32GB Elite Class 10 U1 microSDHC Flash Memory Card](https://www.amazon.com/PNY-Elite-microSDHC-Memory-5-Pack/dp/B09WW69YRD) $4 (per card)  
+* [PNY P-SDU32GX5U1100EL-MP 32GB Elite Class 10 U1 microSDHC Flash Memory Card](https://www.amazon.com/PNY-Elite-microSDHC-Memory-5-Pack/dp/B09WW69YRD) $4 (per card)
+* [GeeKPi Fan for Raspberry Pi, 0x30x7mm DC 5V with 7PCS Heatsink (4-Pack)](https://www.amazon.com/gp/product/B07PHGTJKK/) $3 (per fan)
 
 ## Steps
 
