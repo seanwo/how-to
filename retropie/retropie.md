@@ -7,12 +7,9 @@
 * [Raspberry Pi 3 - Model B](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/) $35
 * [Retroflag NESPi Case Plus](https://www.amazon.com/dp/B07BRHDVTN) $20
 * [8Bitdo Ultimate C 2.4g Wireless Controller](https://www.amazon.com/dp/B0C2V6JLNJ) $20
-* [SAMSUNG EVO Select 128GB microSD](https://www.amazon.com/SAMSUNG-microSDXC-Nintendo-Switch-MB-ME256SA-AM/dp/B0CWPN662Q) $15
-* [Crucial BX500 1TB](https://www.amazon.com/Crucial-BX500-NAND-2-5-Inch-Internal/dp/B07YD579WM) $65 (Optional to store games on SSD)
-* [UGREEN 2.5" Hard Drive Enclosure](https://www.amazon.com/gp/product/B06XWRRMYX/) $10 (Optional to store games on SSD)
-* [HDMI to VGA Adapter](https://www.amazon.com/dp/B07XZ22KCD) $10 (for development purposes on old monitor)
-* [PC Speakers](https://www.amazon.com/dp/B0BZCMM17X) $12 (for development purposes on old monitor)
-  
+* [Micro Center SuperSpeed 5 Pack 64GB USB 3.0 Flash Drive](https://www.amazon.com/gp/product/B07T4J6X1N/) $5 (per drive)
+* [PNY P-SDU32GX5U1100EL-MP 32GB Elite Class 10 U1 microSDHC Flash Memory Card](https://www.amazon.com/PNY-Elite-microSDHC-Memory-5-Pack/dp/B09WW69YRD) $4 (per card)  
+
 ## Steps
 
 ### Preparing the Hardware
