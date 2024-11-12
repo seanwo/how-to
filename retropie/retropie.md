@@ -135,7 +135,7 @@ ssh pi@retropie
 
 run the following command:
 ```console
-cd Retro/roms/[systemname]
+cd RetroPie/roms/[systemname]
 /opt/retropie/supplementary/scraper/scraper -console_src ss -ss_user=username -ss_password password -missing missing.txt
 ```
 
@@ -160,6 +160,8 @@ mv /home/pi/.emulationstation/gamelists/psx/gameslist.xml.bak /home/pi/.emulatio
 ```
 
 Now, update all image references in the /home/pi/RetroPie/roms/psx/gameslist.xml to point to the external storage directory you moved them to.</br>
+
+### Favorites
 
 Add the top 10 games for each major console to the favorites collection:
 
