@@ -9,5 +9,13 @@
 * If you lose audio, shut the system down and reseat the hdmi cable. Go into the RetroPie menu option and scroll up and down until you hear the menu sound effects again. Also try rebooting your TV until audio is coming across the hdmi cable.
 * Each different gaming console emulator has different controller mappings. See the links below to help understand what buttons do what of reach console emulator.
 
+## Quick Setup
+
+Plug the things in and press the power button the console...
+![alt text](setup.jpeg "quick setup")
+
 ## Controller Button Mapping
+
+Press and hold the "hotkey"/power button the controller until it vibrates and connects to the console...
 ![alt text](controller.labeled.jpeg "controller mapping")
+
