@@ -8,6 +8,7 @@
 * **DO NOT** run the scrapper (to get metadata and artwork). Artwork and metadata have already been stored on the USB ROMS drive. If you run the scrapper, you will override the existing artwork and metadata and it may begin to fill up the internal SD card that is dedicated for the operating system.
 * If you lose audio, shut the system down and reseat the hdmi cable. Go into the RetroPie menu option and scroll up and down until you hear the menu sound effects again. Also try rebooting your TV until audio is coming across the hdmi cable.
 * Each different gaming console emulator has different controller mappings. See the links below to help understand what buttons do what of reach console emulator.
+* I have only included the top 10 Playstation games since there are over 1600 discs that take up more than 400GB of space. If you desperately need any or all titles reach out to me and we can solve that problem (you can provide me a bigger more expensive USB flash drive).
 
 ## Quick Setup
 
