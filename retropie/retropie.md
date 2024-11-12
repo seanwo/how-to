@@ -160,3 +160,109 @@ mv /home/pi/.emulationstation/gamelists/psx/gameslist.xml.bak /home/pi/.emulatio
 ```
 
 Now, update all image references in the /home/pi/RetroPie/roms/psx/gameslist.xml to point to the external storage directory you moved them to.</br>
+
+Add the top 10 games for each major console to the favorites collection:
+
+#### Atari 2600
+
+1. Pac-Man
+2. Space Invaders
+3. Donkey Kong
+4. Pitfall!
+5. Frogger
+6. Asteroids
+7. Defender
+8. E.T. the Extra-Terrestrial
+9. Ms. Pac-Man
+10. Demon Attack
+
+#### GB/GBC
+
+1. Pokémon Red / Green / Blue / Yellow
+2. Tetris
+3. Pokémon Gold / Silver / Crystal
+4. Super Mario Land
+5. Super Mario Land 2: 6 Golden Coins
+6. Dr. Mario
+7. Pokémon Pinball
+8. Wario Land: Super Mario Land 3
+9. Kirby's Dream Land
+10. Super Mario Bros. Deluxe
+
+#### GBA
+
+1. Pokémon Ruby and Sapphire
+2. Pokémon FireRed and LeafGreen
+3. Pokémon Emerald
+4. Mario Kart: Super Circuit
+5. Super Mario World: Super Mario Advance 2
+6. Super Mario Advance
+7. Super Mario Advance 4: Super Mario Bros. 3
+8. Namco Museum
+9. Pac-Man Collection
+10. Yoshi's Island: Super Mario Advance 3
+
+#### MegaDrive
+
+1. Sonic the Hedgehog
+2. Sonic the Hedgehog 2
+3. Mortal Kombat
+4. Disney's Aladdin
+5. Sonic the Hedgehog 3 Sonic & Knuckles
+6. Jurassic Park
+7. NBA Jam
+8. Mortal Kombat II
+9. Street Fighter II': Special Champion Edition
+10. Eternal Champions
+
+#### N64
+
+1. Super Mario 64
+2. Mario Kart 64
+3. GoldenEye 007
+4. The Legend of Zelda: Ocarina of Time
+5. Super Smash Bros.
+6. Pokémon Stadium
+7. Donkey Kong 64
+8. Diddy Kong Racing
+9. Star Fox 64
+10. Banjo-Kazooie
+
+#### NES
+
+1. Super Mario Bros.
+2. Duck Hunt
+3. Super Mario Bros. 3
+4. Tetris
+5. Super Mario Bros. 2 (international version)
+6. The Legend of Zelda
+7. Dr. Mario
+8. Zelda II: The Adventure of Link
+9. Excitebike
+10. Golf
+
+#### PSX
+
+1. Gran Turismo
+2. Final Fantasy VII
+3. Gran Turismo 2
+4. Final Fantasy VIII
+5. Tekken 3
+6. Harry Potter and the Philosopher's Stone
+7. Crash Bandicoot 2: Cortex Strikes Back
+8. Crash Bandicoot: Warped
+9. Tomb Raider
+10. Metal Gear Solid
+
+#### SNES
+
+1. Super Mario World
+2. Super Mario All-Stars
+3. Donkey Kong Country
+4. Super Mario Kart
+5. Street Fighter II: The World Warrior
+6. Donkey Kong Country 2: Diddy's Kong Quest
+7. The Legend of Zelda: A Link to the Past
+8. Super Mario World 2: Yoshi's Island
+9. Street Fighter II Turbo
+10. Star Fox
