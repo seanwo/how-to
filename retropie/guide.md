@@ -1,4 +1,4 @@
-# User's Guide
+# RetroPie User's Guide
 
 ## Important
 
