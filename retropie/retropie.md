@@ -139,4 +139,24 @@ cd Retro/roms/[systemname]
 /opt/retropie/supplementary/scraper/scraper -console_src ss -ss_user=username -ss_password password -missing missing.txt
 ```
 
-Repeat the above command for each system.
+Repeat the above command for each system.</br>
+
+Alternately, if you want to use the built in scraper, you will need to download the images and them move them to the external storage. This is an example of doing that for the psx console:
+
+```console
+cp /home/pi/.emulationstation/gamelists/psx/gamelist.xml /home/pi/.emulationstation/gamelists/psx/gamelist.xml.bak
+```
+
+Run scrapper on psx console only via the UI
+
+```console
+mkdir /home/pi/RetroPie/roms/psx/images
+cp /home/pi/.emulationstation/gamelists/psx/gameslist.xml /home/pi/RetroPie/roms/psx
+cd /home/pi/RetroPie/roms/psx/images
+cp /home/pi/.emulationstation/downloaded_images/psx/* .
+rm -rf /home/pi/.emulationstation/downloaded_images/psx
+rm /home/pi/.emulationstation/gamelists/psx/gameslist.xml
+mv /home/pi/.emulationstation/gamelists/psx/gameslist.xml.bak /home/pi/.emulationstation/gamelists/psx/gameslist.xml
+```
+
+Now, update all image references in the /home/pi/RetroPie/roms/psx/gameslist.xml to point to the external storage directory you moved them to.</br>
