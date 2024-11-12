@@ -1,4 +1,4 @@
-# Users Guide
+# User's Guide
 
 ## Important
 
