@@ -9,6 +9,7 @@
 * If you lose audio, shut the system down and reseat the hdmi cable. Go into the RetroPie menu option and scroll up and down until you hear the menu sound effects again. Also try rebooting your TV until audio is coming across the hdmi cable.
 * Each different gaming console emulator has different controller mappings. See the links below to help understand what buttons do what of reach console emulator.
 * I have only included the top 10 Playstation games since there are over 1600 discs that take up more than 400GB of space. If you desperately need any or all titles reach out to me and we can solve that problem (you can provide me a bigger more expensive USB flash drive).
+* The system is a Raspberry Pi 3B which means it can only emulate certain consoles. Playstation and N64 sometimes push its limits. Raspberry Pi 4 or 5s can emulate even more consoles. Here is the [blueprint](https://github.com/seanwo/how-to/blob/master/retropie/retropie.md) I used to build this system that can be used as a starting point for building one on a Pi 4/5/beyond.
 
 ## Quick Setup
 
