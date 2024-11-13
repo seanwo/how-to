@@ -21,3 +21,33 @@ Plug the things in and press the power button the console...
 Press and hold the "hotkey"/power button the controller until it vibrates and connects to the console...
 ![alt text](controller.labeled.jpeg "controller mapping")
 
+## Console Specific Details
+
+If you need help or need to see button mappings on a specific console emulator reference these links:
+
+* [amstradcpc](https://retropie.org.uk/docs/Amstrad-CPC/)
+* [atari2600](https://retropie.org.uk/docs/Atari-2600/)
+* [atari5200](https://retropie.org.uk/docs/Atari-800-and-5200/)
+* [atari7800](https://retropie.org.uk/docs/Atari-7800/)
+* [atarilynx](https://retropie.org.uk/docs/Atari-Lynx/)
+* [channelf](https://retropie.org.uk/docs/Fairchild-ChannelF/)
+* [coleco](https://retropie.org.uk/docs/Colecovision/)
+* [fds](https://retropie.org.uk/docs/Famicom-Disk-System/)
+* [gamegear](https://retropie.org.uk/docs/Game-Gear/)
+* [gb](https://retropie.org.uk/docs/Game-Boy/)
+* [gba](https://retropie.org.uk/docs/Game-Boy-Advance/)
+* [gbc](https://retropie.org.uk/docs/Game-Boy-Color/)
+* [mastersystem](https://retropie.org.uk/docs/Master-System/)
+* [megadrive](https://retropie.org.uk/docs/Mega-Drive-Genesis/)
+* [n64](https://retropie.org.uk/docs/Nintendo-64/)
+* [nes](https://retropie.org.uk/docs/Nintendo-Entertainment-System/)
+* [ngp](https://retropie.org.uk/docs/Neo-Geo-Pocket/)
+* [ngpc](https://retropie.org.uk/docs/Neo-Geo-Pocket-Color/)
+* [pcengine](https://retropie.org.uk/docs/PC-Engine/)
+* [psx](https://retropie.org.uk/docs/Playstation-1/)
+* [sega32x](https://retropie.org.uk/docs/Sega-32X/)
+* [segacd](https://retropie.org.uk/docs/Sega-CD/)
+* [sg-1000](https://retropie.org.uk/docs/SG-1000/)
+* [snes](https://retropie.org.uk/docs/Super-Nintendo-Entertainment-System/)
+* [vectrex](https://retropie.org.uk/docs/Vectrex/)
+* [zxspectrum](https://retropie.org.uk/docs/ZX-Spectrum/)
