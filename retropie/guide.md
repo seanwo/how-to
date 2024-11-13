@@ -13,12 +13,14 @@
 
 ## Quick Setup
 
-Plug the things in and press the power button the console...
+Plug the power, hdmi cable, usb drive ("labeled ROMS"), and the wireless controller dongle in and press the power button on the console...</br>
+</br>
 ![alt text](setup.jpeg "quick setup")
 
 ## Controller Button Mapping
 
-Press and hold the "hotkey"/power button the controller until it vibrates and connects to the console...
+Press and hold the "hotkey" (power) button the controller until it vibrates and connects to the console...</br>
+</br>
 ![alt text](controller.labeled.jpeg "controller mapping")
 
 ## Console Specific Details
