@@ -268,3 +268,7 @@ Add the top 10 games for each major console to the favorites collection:
 8. Super Mario World 2: Yoshi's Island
 9. Street Fighter II Turbo
 10. Star Fox
+
+### User's Guide
+
+Here is the [User's Guide](retropie/guide.md).
