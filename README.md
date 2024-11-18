@@ -9,3 +9,4 @@ _"Because I can't remember any of this stuff weeks later."_
 * [Upscaling miniDV SD Video to HD Video](upscaling/minidv2hd.md)
 * [Digitizing and Enhancing VHS Tapes](vhs/vhs.md)
 * [Modded Xbox Instructions](xbox/xbox.md)
+* [RetroPie Instructions](retropie/retropie.md)
