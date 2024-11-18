@@ -271,4 +271,4 @@ Add the top 10 games for each major console to the favorites collection:
 
 ### User's Guide
 
-Here is the [User's Guide](retropie/guide.md).
+Here is the [User's Guide](guide.md).
