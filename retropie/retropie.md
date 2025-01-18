@@ -161,6 +161,16 @@ mv /home/pi/.emulationstation/gamelists/psx/gameslist.xml.bak /home/pi/.emulatio
 
 Now, update all image references in the /home/pi/RetroPie/roms/psx/gameslist.xml to point to the external storage directory you moved them to.</br>
 
+### Splash Screens
+
+In order to have custom splash screens for each emulator, from the RetroPie main menu select "RetroPie", "RetroPie Setup", "Configuration / Tools", "Run Command", and "Launch Menu Art" needs to be set to "Enabled".</br>
+</br>
+Now, download all the custom pixel splash screens from [Rookervik](https://retropie.org.uk/forum/topic/4611/runcommand-system-splashscreens/2) or [GitHub](https://github.com/ehettervik/es-runcommand-splash)</br>
+</br>
+Finally, copy all the corresponding launching.png to each console's folder in the configs directory and restart the emulation station.</br>
+</br>
+For a more detailed splash screen setup tutorial, you can watch this youtube [video](https://www.youtube.com/watch?v=_aXerbx4TpA)</br>
+
 ### Favorites
 
 Add the top 10 games for each major console to the favorites collection:
