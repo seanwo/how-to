@@ -17,9 +17,9 @@ Sample upscaling using each method (see https://ffmpeg.org/ffmpeg-filters.html#s
 		<th>Artemis</th>
 	</tr>
 	<tr>
-		<td><a href="https://drive.google.com/file/d/18dHpIBo6D94n_xgGodMyX0uAODjSFaQ4/view?usp=sharing"><img src="sample.1440x1080.bicubic.jpg"></a></td>
-		<td><a href="https://drive.google.com/file/d/1f-DHb_HQRwJB0qMVCu8ScXOItmT5mbgQ/view?usp=sharing"><img src="sample.1440x1080.lanczos.jpg"></a></td>
-		<td><a href="https://drive.google.com/file/d/1rWfJ2rZImn0crlUTz3JzJL3eRt2zqcPX/view?usp=sharing"><img src="sample.1440x1080.artemis.jpg"></a></td>
+		<td><a href="https://github.com/seanwo/how-to/releases/download/encoding-samples/sample.1440x1080.bicubic.mp4"><img src="sample.1440x1080.bicubic.jpg"></a></td>
+		<td><a href="https://github.com/seanwo/how-to/releases/download/encoding-samples/sample.1440x1080.lanczos.mp4"><img src="sample.1440x1080.lanczos.jpg"></a></td>
+		<td><a href="https://github.com/seanwo/how-to/releases/download/encoding-samples/sample.1440x1080.artemis.mp4"><img src="sample.1440x1080.artemis.jpg"></a></td>
 	</tr>
 </table>
 
@@ -38,9 +38,9 @@ Side by side comparisons of each method:
 		<th>Lanczos vs. Artemis</th>
 	</tr>
 	<tr>
-		<td><a href="https://drive.google.com/file/d/1oUeqMl5Q10lus7rWFZNuXx1k2ke1mn4C/view?usp=sharing"><img src="sample.sxs.bicubic.vs.lanczos.jpg"></a></td>
-		<td><a href="https://drive.google.com/file/d/1yzVmM_SlTc5JvNrr1BnLThc1VLNd6CXC/view?usp=sharing"><img src="sample.sxs.bicubic.vs.artemis.jpg"></a></td>
-		<td><a href="https://drive.google.com/file/d/180MsjZ8bRWbvbGYWgtvf8dSpelcwv7Hj/view?usp=sharing"><img src="sample.sxs.lanczos.vs.artemis.jpg"></a></td>
+		<td><a href="https://github.com/seanwo/how-to/releases/download/encoding-samples/sample.sxs.bicubic.vs.lanczos.mp4"><img src="sample.sxs.bicubic.vs.lanczos.jpg"></a></td>
+		<td><a href="https://github.com/seanwo/how-to/releases/download/encoding-samples/sample.sxs.bicubic.vs.artemis.mp4"><img src="sample.sxs.bicubic.vs.artemis.jpg"></a></td>
+		<td><a href="https://github.com/seanwo/how-to/releases/download/encoding-samples/sample.sxs.lanczos.vs.artemis.mp4"><img src="sample.sxs.lanczos.vs.artemis.jpg"></a></td>
 	</tr>
 </table>
 
@@ -59,9 +59,9 @@ Split screen comparisons of each method:
 		<th>Lanczos vs. Artemis</th>
 	</tr>
 	<tr>
-		<td><a href="https://drive.google.com/file/d/1FWwZY-d08sEa8ms_iayjidSC5DYjKGXv/view?usp=sharing"><img src="sample.split.bicubic.vs.lanczos.jpg"></a></td>
-		<td><a href="https://drive.google.com/file/d/18yuLThkUQGlNh-w-xQGoQhr1QIX_cVsD/view?usp=sharing"><img src="sample.split.bicubic.vs.artemis.jpg"></a></td>
-		<td><a href="https://drive.google.com/file/d/12wuVJNXOK-5QZyt0h6vHN_dBoobC2LUw/view?usp=sharing"><img src="sample.split.lanczos.vs.artemis.jpg"></a></td>
+		<td><a href="https://github.com/seanwo/how-to/releases/download/encoding-samples/sample.split.bicubic.vs.lanczos.mp4"><img src="sample.split.bicubic.vs.lanczos.jpg"></a></td>
+		<td><a href="https://github.com/seanwo/how-to/releases/download/encoding-samples/sample.split.bicubic.vs.artemis.mp4"><img src="sample.split.bicubic.vs.artemis.jpg"></a></td>
+		<td><a href="https://github.com/seanwo/how-to/releases/download/encoding-samples/sample.split.lanczos.vs.artemis.mp4"><img src="sample.split.lanczos.vs.artemis.jpg"></a></td>
 	</tr>
 </table>
 
@@ -73,12 +73,12 @@ ffmpeg -y -i sample.1440x1080.lanczos.mp4 -i empty.mp4 -i sample.1440x1080.artem
 ```
 
 **Original miniDV Sample Clip**
-<p><a href="https://drive.google.com/file/d/1li2k33yte_PwajIoNXFwGstyBjAR9wOT/view?usp=sharing"><img src="sample.jpg" width="33%"></a></p>
+<p><a href="https://github.com/seanwo/how-to/releases/download/encoding-samples/sample.dv"><img src="sample.jpg" width="33%"></a></p>
 
 During my research, I also tried [iSIZE AI Upscaling](https://www.isize.co/upscale/) but ruled it out since there were flashing black frames being encoded by their AI algorithm.
 
 **iSize Sample**
-</p><a href="https://drive.google.com/file/d/1j5iPQe7Vk2AesD6YFdTVQ7n_W9rjJZtY/view?usp=sharing"><img src="sample.1440x1080.bitsave.jpg" width="33%"></a><p>
+<p><a href="https://github.com/seanwo/how-to/releases/download/encoding-samples/sample.1440x1080.bitsave.mp4"><img src="sample.1440x1080.bitsave.jpg" width="33%"></a></p>
 
 In my opinion, the upscaling methods ranked from best to worst are:
 - Artemis
